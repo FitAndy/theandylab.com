@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Andy Lab — 404</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/img/pepper.png">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html[lang="en"] [data-lang="es"]{display:none}
+html[lang="es"] [data-lang="en"]{display:none}
+body{
+  font-family:'Inter',sans-serif;font-weight:300;color:#fff;min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  padding:6rem clamp(1.5rem,5.5vw,6rem);
+  background:radial-gradient(125% 95% at 50% -8%,#5a0202 0%,#4a0101 26%,#2a0101 58%,#150101 100%) #150101;
+  background-attachment:fixed;
+}
+.tag{font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:rgba(255,255,255,.48);margin-bottom:1.4rem}
+.num{font-family:'Bebas Neue',sans-serif;font-size:clamp(7rem,22vw,16rem);line-height:.84;letter-spacing:.02em}
+.num span{color:#d40e26}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,3rem);letter-spacing:.04em;margin:1.4rem 0 .6rem;line-height:1}
+p{font-size:1rem;color:rgba(255,255,255,.7);max-width:42ch;line-height:1.8;margin-bottom:2.4rem}
+.links{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+a.btn{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;padding:1.1rem 2.6rem;text-decoration:none;font-weight:400;transition:transform .35s cubic-bezier(.22,1,.36,1),background .3s,border-color .3s,color .3s;display:inline-block}
+a.p{background:#d40e26;color:#fff}
+a.p:hover{background:#a90b1d;transform:translateY(-2px)}
+a.f{background:transparent;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.16)}
+a.f:hover{color:#fff;border-color:rgba(255,255,255,.5);transform:translateY(-2px)}
+</style>
+</head>
+<body>
+  <div class="tag">The Andy Lab — Error 404</div>
+  <div class="num">4<span>0</span>4</div>
+  <h1><span data-lang="es">Esta página se fue a entrenar.</span><span data-lang="en">This page went to train.</span></h1>
+  <p><span data-lang="es">No encontramos lo que buscabas. Pero el Lab sigue abierto.</span><span data-lang="en">We couldn't find what you were looking for. But the Lab is still open.</span></p>
+  <div class="links">
+    <a href="/index.html" class="btn p"><span data-lang="es">Volver al inicio</span><span data-lang="en">Back to home</span></a>
+    <a href="/shop.html" class="btn f">THE Shop</a>
+  </div>
+<script>
+(function(){var l;try{l=localStorage.getItem('tal_lang');}catch(e){}document.documentElement.lang=(l==='en'||l==='es')?l:'es';})();
+</script>
+</body>
+</html>
