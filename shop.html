@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE Method — The Andy Lab</title>
+<meta name="description" content="THE Method — tres guías gratis sobre proteína, suplementos y viaje. Las decisiones que realmente mueven la aguja.">
+<link rel="canonical" href="https://theandylab.com/shop.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Andy Lab">
+<meta property="og:title" content="THE Method — The Andy Lab">
+<meta property="og:description" content="Proteína, suplementos, viaje. Tres guías gratis. Las decisiones que realmente mueven la aguja.">
+<meta property="og:url" content="https://theandylab.com/shop.html">
+<meta property="og:image" content="https://theandylab.com/assets/img/hero-sheep.png">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/pepper.png">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+/* HERO */
+.method-hero{position:relative;padding:clamp(9rem,15vw,14rem) var(--gut) clamp(4rem,8vw,7rem);overflow:hidden;border-bottom:1px solid var(--line)}
+.method-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 28% 46%,rgba(94,3,3,.5) 0%,transparent 60%);pointer-events:none}
+.method-hero>*{position:relative;z-index:1}
+.method-hero .hero-tag{font-size:.6rem;letter-spacing:.36em;text-transform:uppercase;color:var(--b50);margin-bottom:1.4rem}
+.method-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,9vw,8rem);line-height:.9;letter-spacing:.04em;color:#fff;margin-bottom:1.5rem}
+.method-hero h1 span{color:var(--accent)}
+.method-hero .hero-desc{font-size:clamp(.95rem,1.5vw,1.1rem);font-weight:300;color:var(--b85);max-width:54ch;line-height:1.8}
+.method-hero .hero-desc strong{color:#fff;font-weight:500}
+
+/* THESIS */
+.thesis{padding:clamp(3rem,6vw,4.5rem) var(--gut);background:var(--burg-deep);border-top:1px solid var(--line)}
+.thesis-inner{max-width:1100px}
+.thesis h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,6rem);line-height:.88;color:#fff;margin-bottom:clamp(1.2rem,2.5vw,2rem);max-width:22ch}
+.thesis-lead{font-size:clamp(1.04rem,1.2vw,1.18rem);font-weight:300;color:var(--b85);line-height:1.9;max-width:58ch;margin-bottom:1rem}
+.thesis-lead strong{color:#fff;font-weight:500}
+.thesis-punch{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.06;letter-spacing:.01em;color:#fff;margin-top:clamp(1.2rem,2.5vw,2rem);max-width:30ch}
+.thesis-punch .red{color:var(--accent)}
+
+/* FREE GUIDES */
+.free-section{padding:var(--sec) var(--gut)}
+.shop-etiq{display:inline-flex;align-items:center;gap:.7rem;font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
+.shop-etiq::before{content:'';width:26px;height:1px;background:var(--accent);display:inline-block;flex-shrink:0}
+.free-head{margin-bottom:clamp(2.5rem,5vw,4rem)}
+.free-head h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,6rem);line-height:.88;color:#fff;margin-bottom:1rem}
+.free-head p{font-size:clamp(1rem,1.2vw,1.14rem);font-weight:300;color:var(--b50);max-width:52ch;line-height:1.8}
+
+.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px}
+.gcard{position:relative;background:#f6f3f0;padding:clamp(2.2rem,3.5vw,3.5rem);display:flex;flex-direction:column;gap:1.2rem;transition:background .4s var(--ease)}
+.gcard:hover{background:#fff}
+.gcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent)}
+.gcard .glabel{color:rgba(28,6,6,.45);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase}
+.gcard .gbadge{display:inline-block;font-size:.52rem;letter-spacing:.22em;text-transform:uppercase;background:var(--accent);color:#fff;padding:.25rem .6rem;align-self:flex-start}
+.gcard h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,3vw,2.8rem);letter-spacing:.03em;color:#2a0505;line-height:.96}
+.gcard .gwhy{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.6vw,1.5rem);color:#2a0505;line-height:1.05;letter-spacing:.02em}
+.gcard p{font-size:.96rem;font-weight:300;color:rgba(28,6,6,.62);line-height:1.85;flex:1}
+.gcard .glink{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:#2a0505;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:gap .3s var(--ease);border-bottom:1px solid var(--accent);padding-bottom:.3rem;align-self:flex-start;margin-top:auto}
+.gcard .glink:hover{gap:1rem}
+.gcard .glink.soon{color:rgba(28,6,6,.35);border-bottom-color:rgba(28,6,6,.15);pointer-events:none}
+
+/* COMING SOON */
+.coming-section{padding:0 var(--gut) var(--sec)}
+.coming-head{margin-bottom:clamp(2rem,4vw,3rem)}
+.coming-head h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);letter-spacing:.05em;color:#fff;margin-bottom:.5rem}
+.coming-head p{font-size:.92rem;color:var(--b50);max-width:52ch;line-height:1.7}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1px;background:transparent;margin-top:2.5rem;max-width:1200px;border:none}
+.pcard{background:#f6f3f0;padding:2.5rem 2rem;display:flex;flex-direction:column;gap:1.25rem;transition:background .4s var(--ease)}
+.pcard:hover{background:#fff}
+.pcard-tag{font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(28,6,6,.45)}
+.pcard-title{font-family:'Bebas Neue',sans-serif;font-size:1.75rem;line-height:.95;letter-spacing:.04em;color:#2a0505}
+.pcard-desc{font-size:.9rem;color:rgba(28,6,6,.6);line-height:1.75;flex:1}
+.pcard-foot{display:flex;align-items:center;justify-content:space-between;padding-top:1.25rem;border-top:1px solid rgba(28,6,6,.1)}
+.soon-badge{font-size:.56rem;letter-spacing:.24em;text-transform:uppercase;color:#fff;background:var(--accent);border:none;padding:.35rem .75rem}
+
+/* CLOSE */
+.mclose{position:relative;padding:var(--sec) var(--gut);text-align:center;border-top:1px solid var(--line);overflow:hidden}
+.mclose::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 50% 120%,rgba(94,3,3,.6) 0%,transparent 60%);pointer-events:none}
+.mclose>*{position:relative;z-index:1}
+.mclose h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,5rem);letter-spacing:.06em;color:#fff;margin-bottom:1.5rem;line-height:1}
+.mclose-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+@media(max-width:880px){.guide-grid{grid-template-columns:1fr}}
+@media(max-width:560px){
+  .gcard{padding:clamp(1.6rem,5vw,2.2rem)}
+  .gcard h3{font-size:clamp(1.8rem,6vw,2rem)}
+  .pcard{padding:1.9rem 1.6rem}
+  .mclose-btns{flex-direction:column;align-items:stretch}
+  .mclose-btns .btn-p,.mclose-btns .btn-f{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="assets/img/pepper.png" class="logo-pepper" alt=""><span>The Andy Lab</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="andy.html">Andy</a></li>
+    <li><a href="manifesto.html">THE Manifesto</a></li>
+    <li><a href="lab.html">THE Lab</a></li>
+    <li><a href="shop.html" class="active">THE Method</a></li>
+    <li class="nav-cta-m"><a href="https://tally.so/r/XxNP4Y" target="_blank" rel="noopener"><span data-lang="es">Lista de espera</span><span data-lang="en">Waitlist</span></a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-setlang="es">ES</button>
+      <button type="button" data-setlang="en">EN</button>
+    </div>
+    <a href="https://tally.so/r/XxNP4Y" target="_blank" rel="noopener" class="btn-nav"><span data-lang="es">Lista de espera</span><span data-lang="en">Waitlist</span></a>
+    <button class="nav-toggle" type="button" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="method-hero">
+  <div class="hero-tag">The Andy Lab — THE Method</div>
+  <h1>THE<br><span>Method</span></h1>
+  <p class="hero-desc" data-lang="es">Soy economista. Obsesionada con la ciencia del comportamiento. Con entender por qué no haces lo que sabes que deberías hacer — y <strong>cómo desarmar ese patrón</strong>. Ese cerebro, aplicado a tu cuerpo, es lo que estás a punto de leer.</p>
+  <p class="hero-desc" data-lang="en">I'm an economist. Obsessed with behavioural science. With understanding why you don't do what you know you should — and <strong>how to dismantle that pattern</strong>. That brain, applied to your body, is what you're about to read.</p>
+</section>
+
+<!-- THESIS -->
+<section class="thesis">
+  <div class="thesis-inner">
+    <span class="etiq"><span data-lang="es">Por qué leerme</span><span data-lang="en">Why read me</span></span>
+    <h2 data-lang="es">Mi cerebro es<br><span class="hl">el producto.</span></h2>
+    <h2 data-lang="en">My brain is<br><span class="hl">the product.</span></h2>
+    <p class="thesis-lead reveal" data-lang="es">No te digo qué hacer. <strong>Te explico por qué no lo estás haciendo</strong> — y te doy un sistema para que esta vez funcione. La ciencia del comportamiento, la evidencia y una década levantando pesas. Eso es lo que hay detrás de cada guía.</p>
+    <p class="thesis-lead reveal" data-lang="en">I don't tell you what to do. <strong>I explain why you're not doing it</strong> — and give you a system so this time it actually works. Behavioural science, evidence, and a decade of lifting. That's what's behind every guide.</p>
+  </div>
+</section>
+
+<!-- FREE GUIDES -->
+<section class="free-section" id="guias">
+  <div class="free-head">
+    <div class="shop-etiq"><span data-lang="es">Acceso abierto</span><span data-lang="en">Open access</span></div>
+    <h2 data-lang="es">Empieza aquí.</h2>
+    <h2 data-lang="en">Start here.</h2>
+    <p data-lang="es">Léelas, aplícalas. Y cada semana la newsletter te da contexto nuevo para que lo que leíste aquí siga funcionando como sistema, no como impulso de domingo.</p>
+    <p data-lang="en">Read them, apply them. And every week the newsletter gives you new context so what you read here keeps working as a system, not a Sunday impulse.</p>
+    <a href="https://theandylab.substack.com" target="_blank" rel="noopener" style="font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--b50);text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:color .25s;margin-top:.5rem"><span data-lang="es">Suscríbete a la newsletter →</span><span data-lang="en">Subscribe to the newsletter →</span></a>
+  </div>
+
+  <div class="guide-grid">
+    <div class="gcard reveal">
+      <span class="glabel"><span data-lang="es">Guía 01 · Proteína</span><span data-lang="en">Guide 01 · Protein</span></span>
+      <span class="gbadge"><span data-lang="es">Disponible</span><span data-lang="en">Available</span></span>
+      <h3 data-lang="es">Cuánta, de dónde,<br>y cómo no rendirte<br>en el intento</h3>
+      <h3 data-lang="en">How much, from where,<br>and how not to<br>give up trying</h3>
+      <div class="gwhy" data-lang="es">→ Por qué esta guía</div>
+      <div class="gwhy" data-lang="en">→ Why this guide</div>
+      <p data-lang="es">Sin proteína suficiente no construyes músculo. Da igual cuánto entrenes. La mayoría de mujeres come la mitad de lo que necesita y no lo sabe. Esta guía te da los números reales y un sistema para llegar a ellos sin pesar cada gramo ni comer pollo hervido el resto de tu vida.</p>
+      <p data-lang="en">Without enough protein you don't build muscle. No matter how hard you train. Most women eat half of what they need and don't know it. This guide gives you the real numbers and a system to hit them without weighing every gram or eating boiled chicken for the rest of your life.</p>
+      <a href="proteina.html" class="glink"><span data-lang="es">Leer ahora →</span><span data-lang="en">Read now →</span></a>
+    </div>
+    <div class="gcard reveal d1">
+      <span class="glabel"><span data-lang="es">Guía 02 · Suplementos</span><span data-lang="en">Guide 02 · Supplements</span></span>
+      <span class="gbadge"><span data-lang="es">Disponible</span><span data-lang="en">Available</span></span>
+      <h3 data-lang="es">La lista corta.<br>Lo que funciona,<br>lo que no.</h3>
+      <h3 data-lang="en">The short list.<br>What works,<br>what doesn't.</h3>
+      <div class="gwhy" data-lang="es">→ Por qué esta guía</div>
+      <div class="gwhy" data-lang="en">→ Why this guide</div>
+      <p data-lang="es">La industria vende cientos de suplementos. Los que sirven son tres. Si tienes una vida ocupada y un presupuesto que no es infinito, necesitas saber cuáles merecen tu dinero y cuáles son marketing con bata de laboratorio.</p>
+      <p data-lang="en">The industry sells hundreds of supplements. Three actually work. If you have a busy life and a budget that isn't infinite, you need to know which deserve your money and which are marketing in a lab coat.</p>
+      <a href="suplementos.html" class="glink"><span data-lang="es">Leer ahora →</span><span data-lang="en">Read now →</span></a>
+    </div>
+    <div class="gcard reveal d2">
+      <span class="glabel"><span data-lang="es">Guía 03 · Viaje</span><span data-lang="en">Guide 03 · Travel</span></span>
+      <span class="gbadge"><span data-lang="es">Disponible</span><span data-lang="en">Available</span></span>
+      <h3 data-lang="es">Entrenar y comer<br>cuando viajas</h3>
+      <h3 data-lang="en">Training and eating<br>when you travel</h3>
+      <div class="gwhy" data-lang="es">→ Por qué esta guía</div>
+      <div class="gwhy" data-lang="en">→ Why this guide</div>
+      <p data-lang="es">Cada viaje no debería ser un reset. Si viajas por trabajo, por placer, o las dos — esta guía te da las herramientas para gestionar la comida y el movimiento sin culpa y sin perder lo que ya construiste.</p>
+      <p data-lang="en">Every trip shouldn't be a reset. Whether you travel for work, pleasure, or both — this guide gives you the tools to manage food and movement without guilt and without losing what you've already built.</p>
+      <a href="viaje.html" class="glink"><span data-lang="es">Leer ahora →</span><span data-lang="en">Read now →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- COMING SOON -->
+<section class="coming-section">
+  <div class="coming-head">
+    <div class="shop-etiq"><span data-lang="es">Mi cerebro, en formato guía</span><span data-lang="en">My brain, in guide format</span></div>
+    <h2 data-lang="es">El sistema completo.</h2>
+    <h2 data-lang="en">The full system.</h2>
+    <p data-lang="es" style="color: rgb(255, 255, 255)">El 1:1 tiene plazas limitadas y lista de espera. Estas guías son lo más cerca que puedes estar de trabajar conmigo sin estar dentro del Lab — el mismo cerebro, la misma obsesión, el mismo criterio. Tu segunda mejor opción. Un solo pago, tuyas para siempre.</p>
+    <p data-lang="en">The 1:1 has limited spots and a waitlist. These guides are the closest you can get to working with me without being inside the Lab — the same brain, the same obsession, the same criteria. Your second best option. One payment, yours forever.</p>
+  </div>
+
+  <div class="pgrid">
+    <div class="pcard reveal">
+      <div class="pcard-tag"><span data-lang="es">Guía · Comportamiento</span><span data-lang="en">Guide · Behaviour</span></div>
+      <div class="pcard-title" data-lang="es">Por qué no haces lo<br>que sabes que<br>tienes que hacer</div>
+      <div class="pcard-title" data-lang="en">Why you don't do<br>what you know<br>you should</div>
+      <p class="pcard-desc" data-lang="es" style="color: rgb(0, 0, 0)">La guía que más me piden. Tu cerebro trabaja en tu contra y lleva haciéndolo un buen rato. Aquí te explico exactamente cómo y qué hacer al respecto. Economía del comportamiento aplicada a tu cuerpo.</p>
+      <p class="pcard-desc" data-lang="en">The guide people ask me for most. Your brain has been working against you for a while. Here I explain exactly how, and what to do about it. Behavioural economics applied to your body.</p>
+      <div class="pcard-foot"><span class="soon-badge"><span data-lang="es">Próximamente</span><span data-lang="en">Coming soon</span></span><a href="https://tally.so/r/japBl1" target="_blank" rel="noopener" style="font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:#2a0505;text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:.2rem;transition:gap .3s"><span data-lang="es">Avísame →</span><span data-lang="en">Notify me →</span></a></div>
+    </div>
+    <div class="pcard reveal d1">
+      <div class="pcard-tag"><span data-lang="es">Guía · Entrenamiento</span><span data-lang="en">Guide · Training</span></div>
+      <div class="pcard-title" data-lang="es">Aprende a entrenar<br>de una vez<br>por todas</div>
+      <div class="pcard-title" data-lang="en">Learn to train<br>once and<br>for all</div>
+      <p class="pcard-desc" data-lang="es" style="color: rgb(0, 0, 0)">Deja de cambiar de rutina cada mes. Deja de hacer ejercicios porque los viste en Instagram. Esta guía te enseña a construir un sistema de entrenamiento que entiendas, que funcione, y que no necesites preguntarle a nadie más.</p>
+      <p class="pcard-desc" data-lang="en">Stop switching routines every month. Stop doing exercises because you saw them on Instagram. This guide teaches you to build a training system you understand, that works, and that you don't need to ask anyone else about.</p>
+      <div class="pcard-foot"><span class="soon-badge"><span data-lang="es">Próximamente</span><span data-lang="en">Coming soon</span></span><a href="https://tally.so/r/japBl1" target="_blank" rel="noopener" style="font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:#2a0505;text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:.2rem;transition:gap .3s"><span data-lang="es">Avísame →</span><span data-lang="en">Notify me →</span></a></div>
+    </div>
+    <div class="pcard reveal d2">
+      <div class="pcard-tag"><span data-lang="es">Guía · Nutrición</span><span data-lang="en">Guide · Nutrition</span></div>
+      <div class="pcard-title" data-lang="es">Aprende a comer<br>de una vez<br>por todas</div>
+      <div class="pcard-title" data-lang="en">Learn to eat<br>once and<br>for all</div>
+      <p class="pcard-desc" data-lang="es" style="color: rgb(0, 0, 0)">Todas las dietas que has hecho han fallado porque estaban diseñadas para fallar. Esta guía te enseña a construir algo que funcione con tu vida real — la que tienes, no la que desearías tener. La última guía de nutrición que vas a necesitar.</p>
+      <p class="pcard-desc" data-lang="en">Every diet you've tried failed because it was designed to fail. This guide teaches you to build something that works with your actual life — the one you have, not the one you wish you had. The last nutrition guide you'll ever need.</p>
+      <div class="pcard-foot"><span class="soon-badge"><span data-lang="es">Próximamente</span><span data-lang="en">Coming soon</span></span><a href="https://tally.so/r/japBl1" target="_blank" rel="noopener" style="font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:#2a0505;text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:.2rem;transition:gap .3s"><span data-lang="es">Avísame →</span><span data-lang="en">Notify me →</span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section class="mclose">
+  <h2 data-lang="es">Más músculo.<br>Menos culpa.</h2>
+  <h2 data-lang="en">More muscle.<br>Less guilt.</h2>
+  <div class="mclose-btns">
+    <a href="lab.html" class="btn-p"><span data-lang="es">Conoce THE Lab 1:1 →</span><span data-lang="en">Learn about THE Lab 1:1 →</span></a>
+    <a href="https://theandylab.substack.com" target="_blank" rel="noopener" class="btn-f"><span data-lang="es">Suscríbete a la newsletter</span><span data-lang="en">Subscribe to the newsletter</span></a>
+    <a href="index.html" class="btn-f"><span data-lang="es">← Volver al inicio</span><span data-lang="en">← Back to home</span></a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <a href="index.html" class="flogo"><img src="assets/img/pepper.png" class="flogo-pepper" alt=""><span>The Andy Lab</span></a>
+  <ul class="flinks">
+    <li><a href="https://theandylab.substack.com" target="_blank" rel="noopener">Newsletter</a></li>
+    <li><a href="shop.html">THE Method</a></li>
+    <li><a href="manifesto.html">THE Manifesto</a></li>
+    <li><a href="lab.html">THE Lab 1:1</a></li>
+    <li><a href="https://www.instagram.com/the_andy_lab/" target="_blank" rel="noopener">Instagram</a></li>
+  </ul>
+  <span class="fcopy">© 2026 The Andy Lab</span>
+  <span class="ftagline">Más músculo. Menos culpa.</span>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

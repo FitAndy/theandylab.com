@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Andy Lab</title>
+<meta name="description" content="The Andy Lab — Más músculo. Menos culpa. Entrenamiento de fuerza y nutrición 1:1 con criterio, no con motivación.">
+<link rel="canonical" href="https://theandylab.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Andy Lab">
+<meta property="og:title" content="The Andy Lab — Más músculo. Menos culpa.">
+<meta property="og:description" content="Entrenamiento de fuerza y nutrición 1:1 con criterio, no con motivación.">
+<meta property="og:url" content="https://theandylab.com/">
+<meta property="og:image" content="https://theandylab.com/assets/img/hero-sheep.png">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/pepper.png">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-start;gap:clamp(2rem,5vw,6rem);padding:clamp(8rem,12vw,12rem) var(--gut) clamp(4rem,8vw,7rem);overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 64% 44%,rgba(94,3,3,.55) 0%,transparent 62%);pointer-events:none}
+.hero-content{position:relative;flex:0 0 52%;display:flex;flex-direction:column;z-index:2}
+.hero-tag{font-size:.64rem;letter-spacing:.36em;text-transform:uppercase;color:var(--b50);margin-bottom:2rem}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.8rem,8vw,9.5rem);line-height:.84;letter-spacing:.01em;color:#fff;margin-bottom:2rem}
+.hero h1 .hl{color:#fff}
+.hero-sub{font-size:clamp(1rem,1.2vw,1.16rem);font-weight:300;color:var(--b85);max-width:44ch;margin-bottom:2.5rem;line-height:1.88}
+.hero-ctas{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
+.hero-text-link{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--b50);text-decoration:none;transition:color .25s;white-space:nowrap}
+.hero-text-link:hover{color:#fff}
+.scroll-hint{position:absolute;bottom:clamp(2rem,4vw,3.5rem);right:var(--gut);display:flex;align-items:center;gap:.85rem;font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--b25);z-index:2}
+.scroll-hint::before{content:'';display:block;width:42px;height:1px;background:var(--accent)}
+.hero-photo-col{position:relative;flex:1;display:flex;align-items:flex-start;justify-content:center;min-width:0;z-index:1;margin-top:3.1rem}
+.hero-photo-wrap{position:relative;width:min(500px,100%)}
+.hero-photo{width:100%;height:auto;-webkit-mask-image:radial-gradient(ellipse 96% 96% at 50% 46%,#000 72%,transparent 97%);mask-image:radial-gradient(ellipse 96% 96% at 50% 46%,#000 72%,transparent 97%)}
+
+/* ---------- ticker ---------- */
+.ticker-wrap{overflow:hidden;border-top:1px solid var(--burg-vivo);border-bottom:1px solid var(--burg-vivo);padding:1.25rem 0;background:var(--burg)}
+.ticker-track{display:flex;gap:3rem;animation:run 30s linear infinite;width:max-content}
+.ticker-track span{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.14em;color:rgba(255,255,255,.5);white-space:nowrap}
+.ticker-track span.ac{color:#fff}
+@keyframes run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- shift ---------- */
+.shift{padding:var(--sec) var(--gut);background:var(--burg-deep);border-top:1px solid var(--line)}
+.shift-inner{max-width:1100px}
+.shift h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.4rem,8vw,7rem);line-height:.86;letter-spacing:.004em;color:#fff;margin-bottom:clamp(2.4rem,4.5vw,3.4rem);max-width:22ch}
+.shift-lead{font-size:clamp(1.08rem,1.3vw,1.26rem);font-weight:300;color:var(--b85);line-height:1.9;max-width:58ch}
+.shift-lead+.shift-lead{margin-top:1.3rem}
+.shift-lead strong{color:#fff;font-weight:500}
+.shift-indict{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,4.5vw,3.4rem);line-height:1.06;letter-spacing:.01em;margin:clamp(2.4rem,4.5vw,3.4rem) 0;max-width:30ch}
+.shift-indict .red{color:var(--accent)}
+.shift-close{font-size:clamp(1.2rem,1.8vw,1.6rem);font-weight:400;color:#fff;max-width:34ch;line-height:1.5;margin-top:2rem}
+.shift-close em{color:var(--accent);font-style:normal}
+
+/* ---------- actions ---------- */
+.actions{padding:var(--sec) var(--gut);border-top:1px solid var(--line)}
+.actions-hdr{margin-bottom:clamp(3rem,6vw,5rem)}
+.actions-hdr h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.4rem,8vw,8rem);line-height:.86;color:#fff}
+.action-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px}
+.acard{position:relative;background:#f6f3f0;padding:clamp(2.2rem,3.5vw,3.5rem);display:flex;flex-direction:column;gap:1.2rem;transition:background .4s var(--ease)}
+.acard:hover{background:#fff}
+.acard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent)}
+.acard .alabel{color:rgba(28,6,6,.45);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase}
+.acard h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,3vw,2.8rem);letter-spacing:.03em;color:#2a0505;line-height:.96}
+.acard p{font-size:.96rem;font-weight:300;color:rgba(28,6,6,.62);line-height:1.85;flex:1}
+.acard .alink{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:#2a0505;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:gap .3s var(--ease);border-bottom:1px solid var(--accent);padding-bottom:.3rem;align-self:flex-start;margin-top:auto}
+.acard .alink:hover{gap:1rem}
+
+/* ---------- cta ---------- */
+.cta-f{position:relative;padding:clamp(8rem,15vw,12rem) var(--gut);text-align:center;border-top:1px solid var(--borde);overflow:hidden}
+.cta-f::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 38%,rgba(94,3,3,.55) 0%,transparent 60%);pointer-events:none}
+.cta-f>*{position:relative;z-index:1}
+.cta-f h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,11vw,10rem);line-height:.86;letter-spacing:.005em;color:#fff;margin-bottom:2.25rem}
+.cta-line{font-size:clamp(1.1rem,1.4vw,1.35rem);font-weight:300;color:var(--b50);max-width:38ch;margin:0 auto 2.5rem;line-height:1.7}
+
+/* ---------- responsive ---------- */
+@media(max-width:960px){
+  .hero{flex-direction:column;gap:2.5rem;padding-top:8.5rem;min-height:auto;align-items:flex-start}
+  .hero-content{flex:none;width:100%;order:1}
+  .hero-photo-col{width:100%;max-width:360px;align-self:center;order:2;opacity:.85;margin-top:0}
+  .scroll-hint{display:none}
+}
+@media(max-width:880px){.action-grid{grid-template-columns:1fr}}
+@media(max-width:560px){
+  .hero{padding-top:7rem}
+  .hero h1{font-size:clamp(2.7rem,12vw,4rem);line-height:.9}
+  .hero-sub{font-size:1rem}
+  .hero-ctas{flex-direction:column;align-items:stretch}
+  .hero-ctas .btn-p,.hero-ctas .hero-text-link{text-align:center}
+  .actions-hdr h2{font-size:clamp(2.8rem,10vw,4rem)}
+  .acard{padding:clamp(1.6rem,5vw,2.2rem)}
+  .acard h3{font-size:clamp(1.8rem,6vw,2rem)}
+  .cta-f h2{font-size:clamp(2.6rem,10vw,4rem)}
+  .cta-f .btn-p{width:100%;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="assets/img/pepper.png" class="logo-pepper" alt=""><span>The Andy Lab</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Inicio</a></li>
+    <li><a href="andy.html">Andy</a></li>
+    <li><a href="manifesto.html">THE Manifesto</a></li>
+    <li><a href="lab.html">THE Lab</a></li>
+    <li><a href="shop.html">THE Method</a></li>
+    <li class="nav-cta-m"><a href="https://tally.so/r/XxNP4Y" target="_blank" rel="noopener"><span data-lang="es">Lista de espera</span><span data-lang="en">Waitlist</span></a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-setlang="es">ES</button>
+      <button type="button" data-setlang="en">EN</button>
+    </div>
+    <a href="https://tally.so/r/XxNP4Y" target="_blank" rel="noopener" class="btn-nav"><span data-lang="es">Lista de espera</span><span data-lang="en">Waitlist</span></a>
+    <button class="nav-toggle" type="button" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-photo-col">
+    <div class="hero-photo-wrap">
+      <img src="assets/img/andy-nyc.jpeg" alt="Andy en Nueva York" class="hero-photo">
+    </div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-tag">The Andy Lab — Madrid</div>
+    <h1 data-lang="es">Te enseñaron a <span style="color: var(--accent)">tenerle miedo</span><br>a tu propio cuerpo.</h1>
+    <h1 data-lang="en">You were taught<br>to fear<br><span class="hl">your own<br>body</span></h1>
+    <p class="hero-sub" data-lang="es">Haces cardio para no "volverte grande". Levantas pesos que no inspiran a nadie. Pasas horas entrenando (o ni siquiera te atreves a empezar) y sigues en el mismo punto, sumando culpa. Y la culpa no construye músculo. Ni una mejor relación con tu cuerpo.<br><br><span style="color:#ffffff">The Andy Lab rompe este círculo. Bienvenida.</span></p>
+    <p class="hero-sub" data-lang="en">You do cardio so you don't "get bulky." You lift weights that inspire no one. You spend hours training (or you haven't even dared to start) and you're still in the same spot, piling on guilt. And guilt doesn't build muscle. Or a better relationship with your body.<br><br>The Andy Lab breaks that loop. Welcome.</p>
+    <div class="hero-ctas">
+      <a href="#oferta" class="btn-p"><span data-lang="es">DEJA DE ADIVINAR.</span><span data-lang="en">STOP GUESSING.</span></a>
+      <a href="lab.html" class="hero-text-link"><span data-lang="es">Mira cómo funciona →</span><span data-lang="en">See how it works →</span></a>
+    </div>
+  </div>
+  <div class="scroll-hint"><span data-lang="es">Baja</span><span data-lang="en">Scroll</span></div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="ac">Women are not fragile</span><span>—</span>
+    <span>Evidence. Not motivation.</span><span>—</span>
+    <span class="ac">More muscle. Less guilt.</span><span>—</span>
+    <span>Not a transformation. This is just who you are now.</span><span>—</span>
+    <span class="ac">Women are not fragile</span><span>—</span>
+    <span>Evidence. Not motivation.</span><span>—</span>
+    <span class="ac">More muscle. Less guilt.</span><span>—</span>
+    <span>Not a transformation. This is just who you are now.</span><span>—</span>
+  </div>
+</div>
+
+<!-- SHIFT -->
+<section class="shift" id="shift">
+  <div class="shift-inner">
+    <span class="etiq">The Shift</span>
+    <h2 data-lang="es">Vas a recordar<br>el día <span class="hl">exacto.</span></h2>
+    <h2 data-lang="en">You'll remember<br>the <span class="hl">exact day.</span></h2>
+    <div class="shift-lead reveal" data-lang="es"><p>No pasa poco a poco. Pasa de golpe, y te vas a acordar de cuándo. La primera vez que levantas un peso que jurabas imposible. La primera vez que tu cuerpo hace lo que le pediste sin negociar. Algo en tu forma de verte, cambia y no habrá vuelta atrás.</p></div>
+    <div class="shift-lead reveal" data-lang="en"><p>It doesn't happen slowly. It hits all at once, and you'll know exactly when. The first time you lift something you swore you couldn't. The first time your body does what you asked without negotiating. Something shifts in how you see yourself, and there's no going back.</p></div>
+    <div class="shift-lead reveal d1" data-lang="es"><p>Ese día tu cuerpo deja de ser el problema. Deja de ser algo que tienes que corregir, esconder, y pasa a ser algo que construyes. Que funciona. Que hace lo que le pides.</p><p>Y un día lo sientes. Sin que nadie te lo confirme. </p></div>
+    <div class="shift-lead reveal d1" data-lang="en"><p>That day your body stops being the problem. Stops being something you fix, something you hide, and becomes something you build. That works. That does what you ask.</p><p>And one day you just feel it. Without anyone confirming it for you.</p></div>
+    <p class="shift-indict reveal d2"><span class="red" style="color: var(--accent)">Capable.</span> Not as a concept. As something you've felt and can't unfeel.</p>
+  </div>
+</section>
+
+<!-- ACTIONS -->
+<section class="actions" id="oferta">
+  <div class="actions-hdr">
+    <span class="etiq"><span data-lang="es">Qué puedes hacer</span><span data-lang="en">What you can do</span></span>
+    <h2 data-lang="es">Elige por
+dónde empiezas.</h2>
+    <h2 data-lang="en">Pick your<br>entry point.</h2>
+  </div>
+  <div class="action-grid">
+    <div class="acard reveal">
+      <span class="alabel"><span data-lang="es">200€/mes</span><span data-lang="en">€200/mo · 13 weeks</span></span>
+      <h3>THE Lab 1:1</h3>
+      <p data-lang="es">Mi cerebro, aplicado a tu cuerpo. Entrenamiento y nutrición hechos para ti, ajustados cada semana. Plazas limitadas.</p>
+      <p data-lang="en">My brain, applied to your body. Training and nutrition built for you, tuned every week. Limited spots.</p>
+      <a href="lab.html" class="alink"><span data-lang="es">Conoce THE Lab →</span><span data-lang="en">Learn about THE Lab →</span></a>
+    </div>
+    <div class="acard reveal d1">
+      <span class="alabel"><span data-lang="es">Gratis · Semanal</span><span data-lang="en">Free · Weekly</span></span>
+      <h3>THE Newsletter</h3>
+      <p data-lang="es">Cada semana: músculo, comida, y por qué tu cerebro se niega a cooperar. Mi cabeza, en tu bandeja de entrada.</p>
+      <p data-lang="en">Every week: muscle, food, and why your brain won't cooperate. How I think, in your inbox.</p>
+      <a href="https://theandylab.substack.com" target="_blank" rel="noopener" class="alink"><span data-lang="es">Suscribirse →</span><span data-lang="en">Subscribe →</span></a>
+    </div>
+    <div class="acard reveal d2">
+      <span class="alabel"><span data-lang="es">Acceso abierto · 3 guías</span><span data-lang="en">Open access · 3 guides</span></span>
+      <h3>THE Method</h3>
+      <p data-lang="es">Proteína, suplementos, viaje. Tres guías con el mismo criterio que uso dentro del Lab. Lee cómo pienso antes de decidir.</p>
+      <p data-lang="en">Protein, supplements, travel. Three guides, same criteria I use inside the Lab. Read how I think before you decide.</p>
+      <a href="shop.html" class="alink"><span data-lang="es">Ver THE Method →</span><span data-lang="en">See THE Method →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-f" id="cta">
+  <span class="etiq" style="display:inline-flex;margin-bottom:2.5rem">The Andy Lab</span>
+  <h2 data-lang="es">Más músculo.<br>Menos culpa.</h2>
+  <h2 data-lang="en">More muscle.<br>Less guilt.</h2>
+  <p class="cta-line" data-lang="es">Entrenamiento de fuerza y nutrición con criterio. Cero motivación.</p>
+  <p class="cta-line" data-lang="en">Strength training and nutrition built on criteria. Zero motivation.</p>
+  <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:.5rem">
+    <a href="https://tally.so/r/XxNP4Y" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Apúntate a la lista de espera</span><span data-lang="en">Join the waitlist</span></a>
+    <a href="https://theandylab.substack.com" target="_blank" rel="noopener" class="btn-f"><span data-lang="es">Suscríbete a la newsletter</span><span data-lang="en">Subscribe to the newsletter</span></a>
+    <a href="shop.html" class="btn-f"><span data-lang="es">Lee THE Method →</span><span data-lang="en">Read THE Method →</span></a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <a href="index.html" class="flogo"><img src="assets/img/pepper.png" class="flogo-pepper" alt=""><span style="color: rgb(255, 255, 255)">The Andy Lab</span></a>
+  <ul class="flinks">
+    <li><a href="https://theandylab.substack.com" target="_blank" rel="noopener">Newsletter</a></li>
+    <li><a href="shop.html">THE Method</a></li>
+    <li><a href="manifesto.html">THE Manifesto</a></li>
+    <li><a href="lab.html">THE Lab 1:1</a></li>
+    <li><a href="https://www.instagram.com/the_andy_lab/" target="_blank" rel="noopener">Instagram</a></li>
+  </ul>
+  <span class="fcopy">© 2026 The Andy Lab</span>
+  <span class="ftagline">Más músculo. Menos culpa.</span>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
