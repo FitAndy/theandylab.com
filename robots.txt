@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://theandylab.com/sitemap.xml
