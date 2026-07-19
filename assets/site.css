@@ -104,6 +104,8 @@ nav.scrolled{background:rgba(21,1,1,0.95);border-bottom-color:rgba(255,255,255,.
 .nav-right{display:flex;align-items:center;gap:1.1rem}
 .btn-nav{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;padding:.68rem 1.5rem;border:1px solid rgba(212,14,38,.35);background:transparent;color:var(--blanco);cursor:pointer;transition:background .3s,border-color .3s;font-family:'Inter',sans-serif;text-decoration:none;white-space:nowrap;border-radius:var(--r-input)}
 .btn-nav:hover{background:var(--accent);border-color:var(--accent);color:#fff;border-radius:var(--r-input)}
+.nav-links-brain{font-family:"Inter",sans-serif;font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);text-decoration:none;transition:color .3s}
+.nav-links-brain:hover{color:#fff}
 .lang-switch{display:flex;border:1px solid rgba(212,14,38,.28);overflow:hidden;flex-shrink:0;border-radius:var(--r-tag)}
 .lang-switch button{font-family:'Inter',sans-serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;padding:.5rem .7rem;background:transparent;color:var(--b50);border:none;cursor:pointer;transition:background .25s,color .25s;line-height:1}
 .lang-switch button.on{background:var(--burg);color:#fff}
@@ -140,6 +142,8 @@ body.theme-light::after{display:none}
 .theme-light .nav-links a:hover,.theme-light .nav-links a.active{color:#1a1a1a}
 .theme-light .nav-toggle span{background:#1a1a1a}
 .theme-light .btn-nav{color:#1a1a1a;border-color:rgba(212,14,38,.4)}
+.theme-light .nav-links-brain{color:var(--accent)}
+.theme-light .nav-links-brain:hover{color:#1a1a1a}
 .theme-light .btn-nav:hover{color:#fff}
 .theme-light .lang-switch button{color:rgba(0,0,0,.4)}
 .theme-light .lang-switch button:not(.on):hover{color:#1a1a1a}
