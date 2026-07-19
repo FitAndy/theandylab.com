@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE Lab 1:1 — The Andy Lab</title>
+<meta name="description" content="Un sistema de entrenamiento y nutrición construido para ti, ajustado cada semana. Ciclos renovables de 13 semanas. THE Lab 1:1 por The Andy Lab.">
+<link rel="canonical" href="https://theandylab.com/lab.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Andy Lab">
+<meta property="og:title" content="THE Lab 1:1 — The Andy Lab">
+<meta property="og:description" content="Un sistema de entrenamiento y nutrición construido para ti, ajustado cada semana. Ciclos renovables de 13 semanas.">
+<meta property="og:url" content="https://theandylab.com/lab.html">
+<meta property="og:image" content="https://theandylab.com/assets/img/og-logo.png">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/pepper.png">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20260720">
+<style>
+/* ---------- oferta ---------- */
+.oferta{padding:var(--sec) var(--gut);padding-top:clamp(8rem,12vw,12rem)}
+.oferta-hdr{margin-bottom:clamp(3rem,6vw,5rem);padding-bottom:3rem;border-bottom:1px solid var(--line)}
+.oferta-hdr h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.4rem,8vw,8rem);line-height:.86;color:#fff}
+.lab-feature{position:relative;display:grid;grid-template-columns:1.1fr 1fr;gap:0;background:linear-gradient(135deg,rgba(74,1,1,0.3),rgba(41,4,5,0.5));border:1px solid rgba(212,14,38,.12);border-radius:16px;overflow:hidden}
+.lab-feature::after{content:'';position:absolute;top:0;left:16px;right:16px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-bright));z-index:2;border-radius:0 0 2px 2px}
+.lab-feature-l{padding:clamp(2.6rem,4vw,4.25rem);display:flex;flex-direction:column;gap:1.4rem}
+.onivel{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--b50)}
+.lab-feature-l .onivel{color:#fff}
+.lab-feature-l h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,5.5vw,5.5rem);line-height:.88;letter-spacing:.03em;color:#fff}
+.oprecio{font-size:.96rem;font-weight:300;color:var(--b70)}
+.oprecio strong{color:#fff;font-weight:500;font-size:1.1rem}
+.lab-feature-l p{font-size:1.04rem;font-weight:300;color:var(--b70);line-height:1.9}
+.lab-feature-l .btn-p{align-self:flex-start;margin-top:.4rem}
+.lab-feature-r{padding:clamp(2.6rem,4vw,4.25rem);border-left:1px solid var(--borde);display:flex;flex-direction:column;justify-content:space-between;gap:2rem;background:rgba(94,3,3,.12)}
+.lf-quote{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.1rem,3.2vw,3.5rem);line-height:1.0;letter-spacing:.01em;color:#fff;margin:0}
+.lf-quote em{color:var(--accent);font-style:normal}
+.lf-sub{font-size:1rem;font-weight:300;color:var(--b70);line-height:1.85;max-width:42ch;margin:0}
+@media(max-width:880px){
+  .lab-feature{grid-template-columns:1fr}
+  .lab-feature-r{border-left:none;border-top:1px solid var(--borde)}
+}
+@media(max-width:560px){
+  .oferta{padding-top:7rem}
+  .oferta-hdr h2{font-size:clamp(2.8rem,10vw,4rem)}
+  .lab-feature-l h3{font-size:clamp(2.5rem,10vw,3.5rem)}
+  .lab-feature-l,.lab-feature-r{padding:clamp(1.6rem,5vw,2.6rem)}
+  .bloque{padding:clamp(1.4rem,4vw,1.75rem) clamp(1rem,3vw,1.25rem)}
+  .app-hdr h2{font-size:clamp(2.5rem,10vw,3.5rem)}
+}
+
+/* ---------- lab-full ---------- */
+.lab-full{padding:var(--sec) var(--gut);border-top:1px solid var(--line)}
+.lab-full-hdr{max-width:1100px;margin-bottom:clamp(3rem,6vw,4.5rem)}
+.lab-full-hdr h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,5.5vw,5.75rem);line-height:.88;color:#fff;margin-bottom:2rem}
+.izq-intro{font-size:clamp(1rem,1.1vw,1.12rem);font-weight:300;color:var(--b50);line-height:1.9;margin-bottom:1.2rem;max-width:38ch}
+.lab-steps{display:flex;flex-direction:column;max-width:1100px}
+.lab-step{display:grid;grid-template-columns:minmax(160px,.28fr) 1fr;gap:clamp(2rem,4vw,4rem);padding:clamp(2.5rem,4vw,3.5rem) 0;border-top:1px solid rgba(255,255,255,.1)}
+.lab-step:last-child{border-bottom:1px solid rgba(255,255,255,.1)}
+.lab-step-label{position:sticky;top:96px;align-self:start}
+.lab-step-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,56px);color:#fff;line-height:1;margin-bottom:.4rem;letter-spacing:.02em}
+.lab-step-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,2.2vw,2.2rem);letter-spacing:.04em;color:#fff;line-height:1}
+.lab-step-body p{font-size:clamp(1rem,1.1vw,1.12rem);font-weight:300;color:var(--b70);line-height:1.9;margin-bottom:1rem;max-width:60ch}
+.lab-step-body p:last-child{margin-bottom:0}
+.lab-step-body p strong{color:#fff;font-weight:500}
+.lab-step-body p.dest{color:#fff;font-weight:400;font-style:italic;font-size:clamp(1.05rem,1.25vw,1.2rem)}
+@media(max-width:680px){.lab-step{grid-template-columns:1fr;gap:1rem}.lab-step-label{position:static;display:flex;align-items:baseline;gap:1rem}.lab-step-num{font-size:32px;margin-bottom:0}}
+
+/* ---------- app / platform ---------- */
+.app-s{padding:var(--sec) var(--gut);border-top:1px solid var(--line);overflow:hidden}
+.app-hdr{margin-bottom:clamp(4rem,7vw,6rem);max-width:60ch}
+.app-hdr h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,5.75rem);line-height:.9;color:#fff;margin-bottom:1.75rem}
+.app-hdr p{font-size:clamp(1.02rem,1.15vw,1.16rem);font-weight:300;color:var(--b50);max-width:54ch;line-height:1.9}
+.app-mocks{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(1.5rem,3vw,3rem);align-items:stretch;max-width:760px;margin:0 auto}
+.pframe{position:relative;background:linear-gradient(155deg,#1c1010,#0c0606);border:1px solid rgba(255,255,255,.07);border-radius:32px;padding:7px;box-shadow:0 40px 70px -30px rgba(0,0,0,.9),0 14px 30px -14px rgba(0,0,0,.7);transition:transform .6s var(--ease);display:flex;flex-direction:column}
+.pframe:hover{transform:translateY(-8px)}
+.pnotch{height:22px;display:flex;align-items:center;justify-content:center}
+.pnotch::after{content:'';width:64px;height:5px;background:#000;border-radius:10px}
+.pscreen{position:relative;background:#160a0a;padding:1rem;border-radius:26px;overflow:hidden;flex:1;display:flex;flex-direction:column}
+.shdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.35rem}
+.stitle{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:.08em;color:#fff}
+.stag{font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--b50);background:rgba(41,4,5,.6);padding:.28rem .62rem;border-radius:var(--r-tag)}
+.snav{display:flex;gap:.4rem;margin-bottom:1.35rem}
+.sday{flex:1;padding:.45rem 0;text-align:center;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--b25);border-bottom:1px solid transparent}
+.sday.on{color:#fff;border-bottom-color:var(--accent)}
+.ecard{background:rgba(41,4,5,.4);border:1px solid rgba(255,255,255,.04);border-radius:12px;padding:.9rem 1rem;margin-bottom:.55rem;display:flex;justify-content:space-between;align-items:center}
+.ecard.hi{background:rgba(212,14,38,.1);border-color:rgba(212,14,38,.15)}
+.enom{font-size:.74rem;font-weight:400;color:#fff}
+.eset{font-size:.62rem;font-weight:300;color:var(--b50);margin-top:.18rem}
+.echk{width:19px;height:19px;border-radius:50%;border:1px solid var(--b25);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.echk.done{background:var(--accent);border-color:var(--accent)}
+.echk.done::after{content:"\2713";font-size:.55rem;color:#fff}
+.pbwrap{margin-top:1.35rem}
+.pblbl{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--b25);margin-bottom:.55rem;display:flex;justify-content:space-between}
+.pbar{height:4px;background:var(--b08);border-radius:2px;overflow:hidden}
+.pfill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-bright));border-radius:2px;width:50%}
+.mlbl{font-size:.5rem;letter-spacing:.15em;text-transform:uppercase;color:var(--b25);margin:.2rem 0 1rem;display:flex;justify-content:space-between;align-items:baseline}
+.mcircles{display:flex;gap:1rem;margin-bottom:1.5rem;justify-content:space-between}
+.mcircle-row{display:flex;flex-direction:column;align-items:center;flex:1}
+.mcircle-wrap{position:relative;width:68px;height:68px}
+.mcircle-svg{width:100%;height:100%}
+.mcircle-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.mcircle-num{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:700;color:#fff;line-height:1}
+.mcircle-label{text-align:center;margin-top:.4rem}
+.mcircle-name{display:block;font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;color:var(--b50)}
+.mcircle-val{display:block;font-size:.5rem;color:var(--b25);margin-top:.15rem}
+.mcircle-val b{font-family:'Space Grotesk',sans-serif;font-size:.65rem;color:#fff;font-weight:700}
+.citem{display:flex;justify-content:space-between;align-items:center;padding:.68rem 0;border-bottom:1px solid var(--b08)}
+.cnom{font-size:.74rem;color:var(--b70)}
+.cprot{font-size:.62rem;color:#fff;background:rgba(212,14,38,.15);padding:.18rem .5rem;border-radius:var(--r-tag)}
+.cbars{display:flex;align-items:flex-end;gap:.4rem;height:84px;margin-bottom:.45rem}
+.cbar{flex:1;background:var(--b08);border-radius:3px 3px 0 0;min-height:10px}
+.cbar.hi{background:var(--accent)}
+.clbls{display:flex;gap:.4rem}
+.clbl{flex:1;text-align:center;font-size:.48rem;color:var(--b25)}
+.srow{display:flex;gap:.5rem;margin-bottom:1rem}
+.sbox{flex:1;background:rgba(41,4,5,.4);border:1px solid rgba(255,255,255,.04);border-radius:12px;padding:.8rem;text-align:center}
+.snum{font-family:'Space Grotesk',sans-serif;font-size:1.55rem;color:#fff;line-height:1;font-weight:700}
+.sdsc{font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--b25);margin-top:.22rem}
+.nota{background:rgba(212,14,38,.08);border:1px solid rgba(212,14,38,.15);border-radius:12px;padding:.9rem 1rem;margin-top:.8rem}
+.nlbl{font-size:.5rem;letter-spacing:.15em;text-transform:uppercase;color:var(--b50);margin-bottom:.38rem}
+.ntxt{font-size:.68rem;font-weight:300;color:var(--b70);line-height:1.6;font-style:italic}
+
+/* ---------- cta ---------- */
+.cta-f{position:relative;padding:clamp(8rem,15vw,15rem) var(--gut);text-align:center;border-top:1px solid var(--borde);overflow:hidden}
+.cta-f::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 38%,rgba(212,14,38,.06) 0%,transparent 60%);pointer-events:none}
+.cta-f>*{position:relative;z-index:1}
+.cta-f h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,11vw,10rem);line-height:.86;letter-spacing:.005em;color:#fff;margin-bottom:2.25rem}
+.cta-line{font-size:clamp(1.2rem,1.8vw,1.7rem);font-weight:400;font-style:italic;color:#fff;max-width:30ch;margin:0 auto 2rem;line-height:1.5}
+.invest-card{position:relative;max-width:860px;margin:4rem auto 0;display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(212,14,38,.12);text-align:left;background:rgba(41,4,5,.4);border-radius:16px;overflow:hidden}
+.invest-left{padding:clamp(2rem,4vw,3.5rem);border-right:1px solid var(--borde)}
+.invest-right{padding:clamp(2rem,4vw,3.5rem);display:flex;flex-direction:column;justify-content:space-between;gap:2rem;background:rgba(94,3,3,.12)}
+.inversion-lista{list-style:none;display:flex;flex-direction:column;gap:0;margin:0}
+.inversion-lista li{font-size:1rem;font-weight:300;color:var(--b70);display:flex;gap:.8rem;padding:1rem 0;border-bottom:1px solid var(--b08);line-height:1.4}
+.inversion-lista li:first-child{border-top:1px solid var(--b08)}
+.inversion-lista li::before{content:"\2192";color:var(--accent);flex-shrink:0}
+.invest-label{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--b25);margin-bottom:.75rem}
+.precio-final{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,6vw,6rem);color:var(--accent-bright);line-height:1}
+.invest-sub{font-size:.8rem;color:var(--b25);margin-top:.4rem}
+.invest-note{font-size:.9rem;font-weight:300;color:var(--b50);line-height:1.8}
+.invest-right .btn-p{justify-content:center}
+
+/* ---------- responsive ---------- */
+@media(max-width:960px){
+  .app-mocks{gap:.6rem}
+  .pframe.tall{transform:none}
+}
+@media(max-width:768px){
+  .app-mocks{grid-template-columns:1fr;max-width:300px}
+  .pframe,.pframe.tall{transform:none;box-shadow:0 30px 60px -20px rgba(0,0,0,.7)}
+  .pscreen{min-height:auto}
+}
+@media(max-width:700px){.invest-card{grid-template-columns:1fr}.invest-left{border-right:none;border-bottom:1px solid var(--borde)}}
+@media(max-width:560px){
+  .app-mocks{max-width:280px}
+  .cta-f h2{font-size:clamp(2.6rem,10vw,4rem)}
+  .invest-card{margin-top:2.5rem}
+  .invest-left,.invest-right{padding:clamp(1.4rem,5vw,2rem)}
+  .inversion-lista li{font-size:.92rem}
+  .precio-final{font-size:clamp(3rem,10vw,3.5rem)}
+  .invest-right .btn-p{width:100%;text-align:center}
+}
+
+/* exercise type & reps */
+.etype{font-size:.42rem;letter-spacing:.1em;text-transform:uppercase;color:var(--b25);margin-bottom:.1rem}
+.erep{display:inline-block;background:rgba(212,14,38,0.7);border-radius:3px;padding:1px 5px;font-size:.5rem;color:#fff;margin-right:2px}
+.erep.off{background:rgba(255,255,255,0.06);color:var(--b25)}
+.rpe-row{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.03);border-radius:8px;padding:.35rem .65rem;margin-top:.5rem;font-size:.48rem;color:var(--b25)}
+.rpe-dots{display:flex;gap:2px}
+.rpe-dots span{width:17px;height:17px;border-radius:50%;background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;font-size:.44rem;color:var(--b25)}
+.rpe-dots span.on{background:rgba(212,14,38,0.6);color:#fff;font-weight:600}
+.coach-line{text-align:center;font-size:.42rem;color:rgba(255,255,255,.15);margin-top:.18rem;font-style:italic}
+.app-bnav{display:flex;justify-content:space-around;padding:.4rem 0 .1rem;border-top:1px solid rgba(255,255,255,0.06);margin-top:.55rem;font-size:.38rem;letter-spacing:.03em;text-transform:uppercase;color:var(--b25)}
+.app-bnav .on{color:var(--accent)}
+.nudge{background:rgba(255,255,255,0.03);border:1px dashed rgba(255,255,255,0.06);border-radius:8px;padding:.5rem .65rem;font-size:.48rem;color:var(--b25);line-height:1.4;margin-bottom:.55rem}
+.nudge-title{font-weight:500;color:var(--b50);margin-bottom:.12rem;font-size:.5rem}
+.meal{background:rgba(41,4,5,.4);border:1px solid rgba(255,255,255,.04);border-radius:10px;padding:.45rem .55rem;margin-bottom:.3rem;display:flex;justify-content:space-between;align-items:flex-start}
+.meal.hi{background:rgba(212,14,38,.08);border-color:rgba(212,14,38,.12)}
+.meal-meta{display:flex;align-items:center;gap:.35rem}
+.meal-time{font-size:.48rem;color:var(--b25)}
+.meal-name{font-size:.62rem;font-weight:600;color:#fff}
+.meal-desc{font-size:.46rem;color:var(--b25);margin-top:.12rem}
+.mbadge{display:inline-block;padding:1px 4px;border-radius:3px;font-size:.46rem}
+.mbadge-p{background:rgba(212,14,38,0.3);color:var(--accent)}
+.mbadge-c{background:rgba(255,55,55,0.12);color:var(--accent-bright)}
+.mbadge-f{background:rgba(255,255,255,0.04);color:var(--b25)}
+.food-btns{display:flex;gap:.25rem;margin-top:.35rem}
+.food-btn{flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:.3rem;text-align:center;font-size:.46rem;color:var(--b35);text-transform:uppercase;letter-spacing:.02em}
+/* report */
+.report-s{padding:var(--sec) var(--gut);border-top:1px solid var(--line)}
+.report-wrap{max-width:780px;background:linear-gradient(170deg,rgba(26,8,8,0.95),rgba(13,2,2,1));border-radius:14px;padding:clamp(1.4rem,3vw,1.8rem);border:1px solid rgba(200,100,100,0.08)}
+.rp-hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.2rem;padding-bottom:.8rem;border-bottom:1px solid rgba(200,100,100,0.08)}
+.rp-tag{display:inline-block;background:rgba(212,14,38,0.15);color:var(--accent);font-size:.5rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding:2px 8px;border-radius:14px;border:1px solid rgba(212,14,38,0.15)}
+.rp-sec{font-size:.55rem;color:var(--accent);text-transform:uppercase;letter-spacing:.07em;font-weight:600;margin:1rem 0 .45rem;display:flex;align-items:center;gap:.5rem}
+.rp-sec::after{content:"";flex:1;height:1px;background:rgba(200,100,100,0.08)}
+.rp-card{background:rgba(80,15,15,0.2);border:1px solid rgba(200,100,100,0.08);border-radius:10px;padding:.65rem .8rem}
+.rp-g4{display:grid;grid-template-columns:repeat(4,1fr);gap:.45rem}
+.rp-g3{display:grid;grid-template-columns:repeat(3,1fr);gap:.45rem}
+.rp-g2{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}
+.rp-ln{font-size:.55rem;color:var(--b35)}
+.rp-val{font-size:1.05rem;font-weight:600;margin-top:.12rem}
+.rp-dl{font-size:.55rem;margin-top:.08rem}
+.rp-up{color:#4ade80}
+.rp-sl{color:#D4CECE}
+.rp-blur{background:rgba(80,15,15,0.18);border:1px solid rgba(200,100,100,0.08);border-radius:10px;padding:.7rem .9rem;font-size:.7rem;line-height:1.6;color:rgba(250,249,246,0.65);margin-bottom:.3rem;filter:blur(5px);-webkit-filter:blur(5px);user-select:none;-webkit-user-select:none;pointer-events:none}
+.rp-id{background:rgba(74,1,1,0.25);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:.75rem 1rem;font-size:.72rem;line-height:1.55;color:#fff;margin-top:.2rem;filter:blur(5px);-webkit-filter:blur(5px);user-select:none;-webkit-user-select:none;pointer-events:none}
+.rp-cv{display:inline-flex;align-items:center;gap:.25rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.05);border-radius:5px;padding:2px 6px;font-size:.48rem;color:var(--b25)}
+.rp-ft{text-align:center;font-size:.44rem;color:rgba(255,255,255,.1);margin-top:.8rem;padding-top:.5rem;border-top:1px solid rgba(200,100,100,0.05)}
+@media(max-width:700px){.rp-g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.rp-g3,.rp-g2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="assets/img/pepper.png" class="logo-pepper" alt=""><span>The Andy <span style="color:#FF3737">Lab</span></span></a>
+  <ul class="nav-links">
+    <li><a href="andy.html">Andy</a></li>
+    <li><a href="manifesto.html">THE Manifesto</a></li>
+    <li><a href="shop.html">THE Method</a></li>
+    <li><a href="lab.html" class="active">THE Lab</a></li>
+    <li class="nav-cta-m"><a href="newsletter.html">The Brain</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-setlang="es">ES</button>
+      <button type="button" data-setlang="en">EN</button>
+    </div>
+    <a href="newsletter.html" class="btn-nav">The Brain</a>
+    <button class="nav-toggle" type="button" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- OFERTA -->
+<section class="oferta" id="oferta">
+  <div class="oferta-hdr">
+    <span class="etiq"><span data-lang="es">Entra al Lab</span><span data-lang="en">Enter the Lab</span></span>
+    <h2 data-lang="es">Esta vez sí.</h2>
+    <h2 data-lang="en">This time<br>it works.</h2>
+    <p style="font-size:clamp(1.05rem,1.3vw,1.25rem);font-weight:300;color:var(--b70);line-height:1.85;max-width:52ch;margin-top:clamp(1.5rem,3vw,2.5rem)" data-lang="es">Sé por qué dejaste el último programa. Y si todavía no has empezado, sé por qué. El problema no eras tú — era un sistema que no estaba hecho para cómo funciona tu cabeza. Este sí. Entrenamiento, nutrición y cada decisión del programa diseñados alrededor de cómo tomas decisiones de verdad — el jueves sin energía, no el lunes con motivación.</p>
+    <p style="font-size:clamp(1.05rem,1.3vw,1.25rem);font-weight:300;color:var(--b70);line-height:1.85;max-width:52ch;margin-top:clamp(1.5rem,3vw,2.5rem)" data-lang="en">I know why you quit the last program. And if you haven't started yet, I know why. The problem wasn't you — it was a system that wasn't built for how your brain works. This one is. Training, nutrition, and every decision in the program designed around how you actually make decisions — Thursday with no energy, not Monday with motivation.</p>
+  </div>
+
+  <div class="lab-feature reveal">
+    <div class="lab-feature-l">
+      <span class="onivel"><span data-lang="es">THE Lab — 600€/ciclo</span><span data-lang="en">THE Lab — €600/cycle</span></span>
+      <h3>THE Lab 1:1</h3>
+      <div class="oprecio" data-lang="es"><strong>600€ por ciclo.</strong> Trece semanas, renovable. Plazas limitadas.</div>
+      <div class="oprecio" data-lang="en"><strong>€600 per cycle.</strong> Thirteen weeks, renewable. Limited spots.</div>
+      <p data-lang="es">Mi cerebro, aplicado a tu cuerpo. Con el músculo al centro. Un sistema construido para ti — ajustado semana a semana según cómo responde tu cuerpo, no según lo que diga una plantilla.</p>
+      <p data-lang="en">My brain, applied to your body. With muscle at the center. A system built for you — adjusted week by week based on how your body responds, not what a template says.</p>
+      <a href="https://tally.so/r/XxNP4Y" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Apúntate a la lista de espera →</span><span data-lang="en">Join the waitlist →</span></a>
+    </div>
+    <div class="lab-feature-r">
+      <div style="margin-bottom:1.5rem"><img src="assets/img/andy-leather.jpeg" alt="Andy" style="width:100%;height:auto;filter:grayscale(1) contrast(1.04) brightness(.96);border-radius:12px;max-height:280px;object-fit:cover;object-position:center top"></div>
+      <p class="lf-quote" data-lang="es"><span style="font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:300;color:rgba(255,255,255,0.6);display:block;margin-bottom:0.5rem">Construimos lo que siempre has querido:</span><span style="font-size:clamp(2.4rem,6vw,60px)">un cuerpo que hace lo que le pides.</span></p>
+      <p class="lf-quote" data-lang="en"><span style="font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:300;color:rgba(255,255,255,0.6);display:block;margin-bottom:0.5rem">We build what you've always wanted:</span><span style="font-size:clamp(2.4rem,6vw,60px)">a body that does what you ask.</span></p>
+
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORM -->
+<section class="app-s">
+  <div class="app-hdr">
+    <span class="etiq">THE Platform</span>
+    <h2 data-lang="es">Así se ve<br>por dentro.</h2>
+    <h2 data-lang="en">This is what it<br>looks like inside.</h2>
+    <p data-lang="es" style="color: rgb(255, 255, 255)">Tu entrenamiento, tu nutrición, tu progreso — en un solo lugar. Existe para que yo tenga todo lo que necesito para que el sistema funcione.</p>
+    <p data-lang="en">Your training, your nutrition, your progress — in one place. It exists so I have everything I need to make the system work.</p>
+  </div>
+  <div class="app-mocks">
+    <div class="pframe reveal">
+      <div class="pnotch"></div>
+      <div class="pscreen">
+        <div class="shdr"><span class="stitle">THE GYM</span><span class="stag"><span data-lang="es">Día 1</span><span data-lang="en">Day 1</span></span></div>
+        <div class="etype" style="margin-bottom:.35rem"><span data-lang="es">Ciclo 1 · Bloque 2 · Semana 2</span><span data-lang="en">Cycle 1 · Block 2 · Week 2</span></div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:.92rem;letter-spacing:.04em;color:#fff;margin-bottom:.08rem">Posterior Lower + Pull</div>
+        <div style="font-size:.46rem;color:var(--b25);margin-bottom:.5rem"><span data-lang="es">6 ejercicios · ~60 min</span><span data-lang="en">6 exercises · ~60 min</span></div>
+        <div class="ecard hi"><div><div class="etype"><span data-lang="es">Compuesto · Glúteos</span><span data-lang="en">Compound · Glutes</span></div><div class="enom">Hip Thrust (Machine)</div><div class="eset">3 × 10–12 · 60 kg</div><div style="margin-top:.18rem"><span class="erep">12</span><span class="erep">11</span><span class="erep off">—</span></div></div></div>
+        <div class="ecard hi"><div><div class="etype"><span data-lang="es">Compuesto · Espalda</span><span data-lang="en">Compound · Back</span></div><div class="enom">Lat Pulldown</div><div class="eset">3 × 10–12 · 35 kg</div><div style="margin-top:.18rem"><span class="erep">12</span><span class="erep">10</span><span class="erep off">—</span></div></div></div>
+        <div class="ecard"><div><div class="etype"><span data-lang="es">Aislamiento · Isquios</span><span data-lang="en">Isolation · Hamstrings</span></div><div class="enom">Seated Leg Curl</div><div class="eset">3 × 12–15 · 25 kg</div></div></div>
+        <div class="ecard"><div><div class="etype"><span data-lang="es">Aislamiento · Espalda</span><span data-lang="en">Isolation · Back</span></div><div class="enom">Cable Row (Seated)</div><div class="eset">3 × 12–15 · 20 kg</div></div></div>
+        <div class="ecard"><div><div class="etype"><span data-lang="es">Aislamiento · Deltoides lat.</span><span data-lang="en">Isolation · Lateral delt</span></div><div class="enom">Cable Lateral Raise</div><div class="eset">3 × 12–15 · 7.5 kg</div></div></div>
+        <div class="ecard"><div><div class="etype"><span data-lang="es">Aislamiento · Deltoides post.</span><span data-lang="en">Isolation · Rear delt</span></div><div class="enom">Face Pull</div><div class="eset">3 × 12–15 · 10 kg</div></div></div>
+        <div class="rpe-row"><span><span data-lang="es">Esfuerzo hoy</span><span data-lang="en">Effort today</span></span><div class="rpe-dots"><span>7</span><span class="on">8</span><span>9</span><span>10</span></div></div>
+        <div class="coach-line"><span data-lang="es">Empuja más fuerte que la semana pasada.</span><span data-lang="en">Push harder than last week.</span></div>
+        <div class="app-bnav"><span>Home</span><span class="on">The Gym</span><span>The Food</span><span>The Data</span><span>The Brain</span></div>
+      </div>
+    </div>
+    <div class="pframe reveal d1">
+      <div class="pnotch"></div>
+      <div class="pscreen">
+        <div class="shdr"><span class="stitle">THE FOOD</span><span class="stag"><span data-lang="es">Domingo 19 julio</span><span data-lang="en">Sunday 19 July</span></span></div>
+        <div class="mcircles">
+          <div class="mcircle-row">
+            <div class="mcircle-wrap"><svg viewBox="0 0 80 80" class="mcircle-svg"><circle cx="40" cy="40" r="34" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="6"/><circle cx="40" cy="40" r="34" fill="none" stroke="#D40E26" stroke-width="6" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="53" transform="rotate(-90 40 40)"/></svg><div class="mcircle-inner"><span class="mcircle-num">105</span></div></div>
+            <div class="mcircle-label"><span class="mcircle-name"><span data-lang="es">Proteína</span><span data-lang="en">Protein</span></span><span class="mcircle-val"><b>105</b> / 140 g</span></div>
+          </div>
+          <div class="mcircle-row">
+            <div class="mcircle-wrap"><svg viewBox="0 0 80 80" class="mcircle-svg"><circle cx="40" cy="40" r="34" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="6"/><circle cx="40" cy="40" r="34" fill="none" stroke="#FF3737" stroke-width="6" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="83" transform="rotate(-90 40 40)"/></svg><div class="mcircle-inner"><span class="mcircle-num">130</span></div></div>
+            <div class="mcircle-label"><span class="mcircle-name"><span data-lang="es">Carbos</span><span data-lang="en">Carbs</span></span><span class="mcircle-val"><b>130</b> / 213 g</span></div>
+          </div>
+          <div class="mcircle-row">
+            <div class="mcircle-wrap"><svg viewBox="0 0 80 80" class="mcircle-svg"><circle cx="40" cy="40" r="34" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="6"/><circle cx="40" cy="40" r="34" fill="none" stroke="rgba(250,249,246,0.4)" stroke-width="6" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="36" transform="rotate(-90 40 40)"/></svg><div class="mcircle-inner"><span class="mcircle-num">38</span></div></div>
+            <div class="mcircle-label"><span class="mcircle-name"><span data-lang="es">Grasas</span><span data-lang="en">Fat</span></span><span class="mcircle-val"><b>38</b> / 46 g</span></div>
+          </div>
+        </div>
+        <div class="nudge"><div class="nudge-title"><span data-lang="es">Cómo registrar sin complicarte</span><span data-lang="en">How to track without overthinking</span></div><span data-lang="es">Guarda tus comidas frecuentes y repítelas con un toque. Empieza por la proteína — lo demás encaja solo.</span><span data-lang="en">Save your go-to meals and one-tap them. Focus on protein first — the rest falls into place.</span></div>
+        <div class="meal hi"><div><div class="meal-meta"><span class="meal-time">~9:00</span><span class="meal-name"><span data-lang="es">Desayuno</span><span data-lang="en">Breakfast</span></span></div><div class="meal-desc"><span data-lang="es">Avena con leche, plátano, whey</span><span data-lang="en">Oats with milk, banana, whey</span></div></div><div style="display:flex;gap:3px;flex-shrink:0"><span class="mbadge mbadge-p">P 32</span><span class="mbadge mbadge-c">C 45</span><span class="mbadge mbadge-f">F 8</span></div></div>
+        <div class="meal hi"><div><div class="meal-meta"><span class="meal-time">~13:00</span><span class="meal-name"><span data-lang="es">Comida</span><span data-lang="en">Lunch</span></span></div><div class="meal-desc"><span data-lang="es">Pollo a la plancha, arroz, ensalada</span><span data-lang="en">Grilled chicken, rice, salad</span></div></div><div style="display:flex;gap:3px;flex-shrink:0"><span class="mbadge mbadge-p">P 42</span><span class="mbadge mbadge-c">C 50</span><span class="mbadge mbadge-f">F 12</span></div></div>
+        <div class="meal"><div><div class="meal-meta"><span class="meal-time">~17:00</span><span class="meal-name"><span data-lang="es">Merienda</span><span data-lang="en">Snack</span></span></div><div class="meal-desc"><span data-lang="es">Yogur griego, nueces, miel</span><span data-lang="en">Greek yogurt, nuts, honey</span></div></div><div style="display:flex;gap:3px;flex-shrink:0"><span class="mbadge mbadge-p">P 18</span><span class="mbadge mbadge-c">C 20</span><span class="mbadge mbadge-f">F 14</span></div></div>
+        <div class="meal" style="opacity:.5"><div><div class="meal-meta"><span class="meal-time">~19:30</span><span class="meal-name"><span data-lang="es">Cena</span><span data-lang="en">Dinner</span></span></div></div><span style="font-size:.5rem;color:var(--b25);font-style:italic"><span data-lang="es">pendiente</span><span data-lang="en">not logged yet</span></span></div>
+        <div class="food-btns"><div class="food-btn"><span data-lang="es">Repetir de ayer</span><span data-lang="en">Copy from yesterday</span></div><div class="food-btn"><span data-lang="es">+ Añadir comida</span><span data-lang="en">+ Add food</span></div></div>
+        <div class="app-bnav"><span>Home</span><span>The Gym</span><span class="on">The Food</span><span>The Data</span><span>The Brain</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REPORT -->
+<section class="report-s">
+  <div style="max-width:800px">
+    <div style="margin-bottom:clamp(2rem,4vw,3rem)" class="reveal">
+      <span class="etiq"><span data-lang="es">Lo que Andy ve</span><span data-lang="en">What Andy sees</span></span>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4.5rem);line-height:.88;color:#fff;margin-bottom:1rem" data-lang="es">Tu informe<br>de bloque.</h2>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4.5rem);line-height:.88;color:#fff;margin-bottom:1rem" data-lang="en">Your block<br>report.</h2>
+      <p style="font-size:clamp(1rem,1.1vw,1.12rem);font-weight:300;color:var(--b70);line-height:1.9;max-width:50ch" data-lang="es">Cada cuatro semanas, cruzo tus datos de entrenamiento, nutrición y composición corporal. Lo comparto en pantalla durante la llamada — y leemos juntas lo que tu cuerpo está diciendo.</p>
+      <p style="font-size:clamp(1rem,1.1vw,1.12rem);font-weight:300;color:var(--b70);line-height:1.9;max-width:50ch" data-lang="en">Every four weeks, I cross-reference your training, nutrition, and body composition data. I share it on screen during the call — and we read together what your body is telling us.</p>
+    </div>
+    <div class="report-wrap reveal d1">
+      <div class="rp-hdr">
+        <div>
+          <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.25rem"><span style="font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.04em;text-transform:uppercase" data-lang="es">Tu informe</span><span style="font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.04em;text-transform:uppercase" data-lang="en">Your report</span><span class="rp-tag">Bloque 2</span></div>
+          <div style="font-size:.6rem;color:var(--b35)"><span data-lang="es">Semanas 5–8 · Ciclo 1 · Acumulación</span><span data-lang="en">Weeks 5–8 · Cycle 1 · Accumulation</span></div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:.55rem;color:var(--b25)"><span data-lang="es">Sesiones</span><span data-lang="en">Sessions</span></div>
+          <div style="font-size:1.3rem;font-weight:600">11<span style="font-size:.7rem;color:var(--b25)"> / 12</span></div>
+          <div class="rp-cv" style="margin-top:.25rem"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);display:inline-block"></span><span data-lang="es">Vista de coaching de Andy</span><span data-lang="en">Andy's coaching view</span></div>
+        </div>
+      </div>
+      <div class="rp-sec"><span data-lang="es">Fuerza — ejercicios clave</span><span data-lang="en">Strength — key lifts</span></div>
+      <div class="rp-g4">
+        <div class="rp-card"><div class="rp-ln">Hip Thrust (Machine)</div><div class="rp-val">68 kg</div><div class="rp-dl rp-up">+13% vs B1</div><svg width="100%" height="20" viewBox="0 0 100 20" style="margin-top:4px"><polyline points="0,17 25,14 50,9 75,5 100,2" fill="none" stroke="#D40E26" stroke-width="1.5" stroke-linecap="round"/><circle cx="100" cy="2" r="2" fill="#D40E26"/></svg></div>
+        <div class="rp-card"><div class="rp-ln">Lat Pulldown</div><div class="rp-val">42 kg</div><div class="rp-dl rp-up">+9% vs B1</div><svg width="100%" height="20" viewBox="0 0 100 20" style="margin-top:4px"><polyline points="0,16 25,13 50,8 75,5 100,3" fill="none" stroke="#D40E26" stroke-width="1.5" stroke-linecap="round"/><circle cx="100" cy="3" r="2" fill="#D40E26"/></svg></div>
+        <div class="rp-card"><div class="rp-ln">Leg Press</div><div class="rp-val">90 kg</div><div class="rp-dl rp-up">+8% vs B1</div><svg width="100%" height="20" viewBox="0 0 100 20" style="margin-top:4px"><polyline points="0,17 25,13 50,10 75,6 100,4" fill="none" stroke="#D40E26" stroke-width="1.5" stroke-linecap="round"/><circle cx="100" cy="4" r="2" fill="#D40E26"/></svg></div>
+        <div class="rp-card"><div class="rp-ln">Seated Press</div><div class="rp-val">22 kg</div><div class="rp-dl rp-sl">+2% vs B1</div><svg width="100%" height="20" viewBox="0 0 100 20" style="margin-top:4px"><polyline points="0,10 25,9 50,8 75,8 100,7" fill="none" stroke="#D4CECE" stroke-width="1.5" stroke-linecap="round"/><circle cx="100" cy="7" r="2" fill="#D4CECE"/></svg></div>
+      </div>
+      <div class="rp-sec"><span data-lang="es">Nutrición</span><span data-lang="en">Nutrition</span></div>
+      <div class="rp-g3">
+        <div class="rp-card" style="text-align:center"><div class="rp-ln"><span data-lang="es">Proteína en rango</span><span data-lang="en">Protein in range</span></div><div class="rp-val" style="margin-top:.15rem">87%</div><div class="rp-dl rp-up"><span data-lang="es">dentro del objetivo</span><span data-lang="en">within tolerance</span></div></div>
+        <div class="rp-card" style="text-align:center"><div class="rp-ln"><span data-lang="es">Días registrados</span><span data-lang="en">Days logged</span></div><div class="rp-val" style="margin-top:.15rem">22 <span style="font-size:.65rem;color:var(--b25)">/ 28</span></div><div class="rp-dl" style="color:var(--b35)"><span data-lang="es">fines de semana: 4 / 8</span><span data-lang="en">weekends: 4 / 8</span></div></div>
+        <div class="rp-card" style="text-align:center"><div class="rp-ln"><span data-lang="es">Grasas (% diario)</span><span data-lang="en">Fat (% daily)</span></div><div class="rp-val" style="margin-top:.15rem">23%</div><div class="rp-dl rp-up"><span data-lang="es">por encima del 20%</span><span data-lang="en">above 20% floor</span></div></div>
+      </div>
+      <div class="rp-sec"><span data-lang="es">Composición corporal</span><span data-lang="en">Body composition</span></div>
+      <div class="rp-g2">
+        <div class="rp-card"><div class="rp-ln"><span data-lang="es">Masa grasa</span><span data-lang="en">Fat mass</span></div><div style="display:flex;align-items:baseline;gap:.4rem;margin-top:.12rem"><span class="rp-val">18.2 kg</span><span style="font-size:.6rem" class="rp-up">−1.1 kg</span></div><div class="rp-dl" style="color:var(--b35)"><span data-lang="es">vs inicio del ciclo</span><span data-lang="en">vs cycle start</span></div></div>
+        <div class="rp-card"><div class="rp-ln"><span data-lang="es">Peso corporal</span><span data-lang="en">Body weight</span></div><div style="display:flex;align-items:baseline;gap:.4rem;margin-top:.12rem"><span class="rp-val">64.8 kg</span><span style="font-size:.6rem;color:var(--b35)">−0.4 kg</span></div><div class="rp-dl" style="color:var(--b35)"><span data-lang="es">la báscula se mueve menos porque tu músculo sostiene</span><span data-lang="en">the scale moves less because your muscle holds</span></div></div>
+      </div>
+      <div class="rp-sec"><span data-lang="es">Lo que veo</span><span data-lang="en">What I see</span></div>
+      <div class="rp-blur" data-lang="es">Tu tren inferior está volando — hip thrust subió un 13% en cuatro semanas y leg press un 8%. Eso me dice que tu cuerpo está respondiendo bien al volumen y que la nutrición está acompañando. El seated press se movió poco. Llevas tres semanas cogiendo el mismo peso — tu primera serie llega a 12 pero no subes. La próxima sesión, prueba con 2 kilos más.</div>
+      <div class="rp-blur" data-lang="en">Your lower body is flying — hip thrust up 13% in four weeks and leg press up 8%. That tells me your body is responding well to the volume and the nutrition is supporting it. The seated press barely moved. You've been grabbing the same weight for three weeks — your first set hits 12 but you don't go up.</div>
+      <div class="rp-blur" data-lang="es">En nutrición, tu proteína entre semana está perfecta — 87% de los días dentro de rango. Los fines de semana se caen: solo registraste la mitad. Tu cuerpo sigue reconstruyendo músculo esos días. No necesito que registres todo — pero sí la proteína del sábado y domingo.</div>
+      <div class="rp-blur" data-lang="en">On nutrition, your weekday protein is spot on — 87% of days within range. Weekends drop off: you only logged half. Your body is still rebuilding muscle on those days. I don't need you to log everything — but I do need the protein on Saturday and Sunday.</div>
+      <div class="rp-id" data-lang="es">11 de 12 sesiones. Tu masa grasa bajó 1.1 kg y tu fuerza subió en los cuatro ejercicios principales. Eso no pasa por accidente — pasa porque llevas ocho semanas siendo consistente. Ya no estás intentando entrenar. Eres una persona que entrena.</div>
+      <div class="rp-id" data-lang="en">11 out of 12 sessions. Your fat mass dropped 1.1 kg and your strength went up on all four key lifts. That doesn't happen by accident — it happens because you've been consistent for eight weeks. You're no longer trying to train. You're someone who trains.</div>
+      <div class="rp-ft">The Andy Lab · <span data-lang="es">Tu informe de bloque</span><span data-lang="en">Your block report</span> · <span data-lang="es">Julio</span><span data-lang="en">July</span> 2026</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- LAB FULL -->
+<section class="lab-full" id="lab-full">
+  <div class="lab-full-hdr reveal">
+    <span class="etiq">THE Lab 1:1</span>
+    <h2 data-lang="es">Cómo<br>funciona.</h2>
+    <h2 data-lang="en">How<br>it works.</h2>
+    <p class="izq-intro" data-lang="es" style="color: rgb(255, 255, 255)">Ciclos de trece semanas que se renuevan. Un sistema construido alrededor de ti — ajustado cada semana según cómo responde tu cuerpo. Los cambios reales no pasan en un ciclo. Pasan cuando te comprometes con el proceso.</p>
+    <p class="izq-intro" data-lang="en">Thirteen-week cycles that renew. A system built around you — adjusted every week based on how your body responds. Real changes don't happen in one cycle. They happen when you commit to the process.</p>
+    <p class="izq-intro" data-lang="es" style="color: rgb(255, 255, 255)">Esto es lo que pasa cuando entras al Lab.</p>
+    <p class="izq-intro" data-lang="en">This is what happens when you enter the Lab.</p>
+  </div>
+  <div class="lab-steps">
+    <div class="lab-step reveal">
+      <div class="lab-step-label">
+        <div class="lab-step-num">01</div>
+        <div class="lab-step-title">THE Client</div>
+      </div>
+      <div class="lab-step-body">
+        <p class="dest" data-lang="es">Tienes 32 años, energía de sobra y sin excusas. O tienes 38, dos hijos y seis horas de sueño interrumpido. O tienes 45 y te preguntas por qué todo se siente diferente de repente.</p>
+        <p class="dest" data-lang="en">You're 32, with energy to spare and no excuses. Or you're 38, with two kids and six hours of broken sleep. Or you're 45 and wondering why everything suddenly feels different.</p>
+        <p data-lang="es">Los requerimientos de tu cuerpo cambian — a nivel hormonal, metabólico y estructural. La mayoría de los programas ignoran esto. Te dan el mismo mapa sin importar dónde estás.</p>
+        <p data-lang="en">Your body's requirements change — hormonally, metabolically, structurally. Most programs ignore this. They hand you the same map no matter where you are.</p>
+        <p data-lang="es"><strong>Yo no.</strong></p>
+        <p data-lang="en"><strong>I don't.</strong></p>
+      </div>
+    </div>
+    <div class="lab-step reveal">
+      <div class="lab-step-label">
+        <div class="lab-step-num">02</div>
+        <div class="lab-step-title">THE Gym</div>
+      </div>
+      <div class="lab-step-body">
+        <p data-lang="es">Te construyo un programa. Tuyo. No una plantilla con tu nombre encima.</p>
+        <p data-lang="en">I build you a program. Yours. Not a template with your name on it.</p>
+        <p data-lang="es">El programa es repetitivo a propósito. Tu cuerpo se vuelve más fuerte haciendo lo mismo mejor — no haciendo cosas nuevas cada semana. Lo que cambia es la exigencia. Más peso, más series, más control. El progreso no tiene cara de novedad. Tiene cara de 5 kilos más en la barra.</p>
+        <p data-lang="en">The program is repetitive on purpose. Your body gets stronger by doing the same thing better — not by doing new things every week. What changes is the demand. More weight, more sets, more control. Progress doesn't look like novelty. It looks like 5 more kilos on the bar.</p>
+        <p data-lang="es">Pero el programa también está diseñado para que lo hagas. Eso suena obvio hasta que piensas en cuántas rutinas has abandonado. Yo sé por qué las abandonaste — y diseño para que eso no pase. Cada variable del programa tiene dos razones: una fisiológica y una de comportamiento. Si tu cerebro no coopera, tu cuerpo no cambia. Yo trabajo con los dos.</p>
+        <p data-lang="en">But the program is also designed so you actually do it. That sounds obvious until you think about how many routines you've abandoned. I know why you abandoned them — and I design so that doesn't happen. Every variable in the program has two reasons: a physiological one and a behavioural one. If your brain won't cooperate, your body won't change. I work with both.</p>
+        <p data-lang="es">El peso lo eliges tú. Siempre. Porque un sistema que necesita que alguien te diga qué hacer caduca el día que esa persona desaparece. El tuyo no depende de mí — se queda contigo.</p>
+        <p data-lang="en">You choose the weight. Always. Because a system that needs someone to tell you what to do expires the day that person disappears. Yours doesn't depend on me — it stays with you.</p>
+        <p data-lang="es">Detrás de tu programa hay un sistema que me dice si te estás haciendo más fuerte. Ejercicio por ejercicio, semana a semana. Tú no lo ves. Yo sí. Y cuando algo se frena, lo sé antes que tú.</p>
+        <p data-lang="en">Behind your program is a system that tells me whether you're getting stronger. Exercise by exercise, week by week. You don't see it. I do. And when something stalls, I know before you do.</p>
+      </div>
+    </div>
+    <div class="lab-step reveal">
+      <div class="lab-step-label">
+        <div class="lab-step-num">03</div>
+        <div class="lab-step-title">THE Food</div>
+      </div>
+      <div class="lab-step-body">
+        <p data-lang="es">El músculo no solo se construye en el gym. Se construye en la mesa.</p>
+        <p data-lang="en">Muscle isn't only built in the gym. It's built at the table.</p>
+        <p data-lang="es">No te doy una dieta. Te doy un sistema que funciona con tu vida real — la del viernes a las nueve de la noche, no la del lunes con energía.</p>
+        <p data-lang="en">I don't give you a diet. I give you a system that works with your real life — Friday at nine p.m., not Monday with energy.</p>
+        <p data-lang="es">Ves tres barras: proteína, carbohidratos, grasa. Ya. Sin calorías, sin porcentajes, sin nada que te genere estrés. Comes, registras, las barras te dicen cómo vas. El primer día cuesta. A la semana tu desayuno se registra con un toque.</p>
+        <p data-lang="en">You see three bars: protein, carbs, fat. That's it. No calories, no percentages, nothing that creates stress. You eat, you log, the bars tell you where you stand. The first day is hard. Within a week, your breakfast logs with a single tap.</p>
+        <p data-lang="es">No espero que lo hagas perfecto. Espero que sea fácil. Por eso el sistema aprende contigo: tus comidas favoritas aparecen primero, un botón copia lo de ayer, y si buscas un producto del súper los datos ya están ahí. Cada día es más rápido que el anterior.</p>
+        <p data-lang="en">I don't expect perfection. I expect it to be easy. That's why the system learns with you: your favourite meals show up first, one button copies yesterday, and if you search for a product at the supermarket the data is already there. Every day is faster than the one before.</p>
+        <p data-lang="es">Lo que hay detrás de esas barras es mi trabajo. Si algo en tu nutrición me llama la atención, lo hablamos en la llamada. Sin alarmas, sin mensajes, sin culpa. Tú registras. Del resto me encargo yo.</p>
+        <p data-lang="en">What's behind those bars is my job. If something in your nutrition catches my eye, we talk about it on the call. No alarms, no messages, no guilt. You log. The rest is on me.</p>
+      </div>
+    </div>
+    <div class="lab-step reveal">
+      <div class="lab-step-label">
+        <div class="lab-step-num">04</div>
+        <div class="lab-step-title">THE Calls</div>
+      </div>
+      <div class="lab-step-body">
+        <p data-lang="es">Cada cuatro semanas, tú y yo en videollamada. No es para ver si cumpliste. Es para entender qué está pasando.</p>
+        <p data-lang="en">Every four weeks, you and me on a video call. This isn't to check if you stayed on track. It's to understand what's happening.</p>
+        <p data-lang="es">Te muestro tu progreso. Qué subió, qué se frenó, qué cambió en tu cuerpo. Pero lo que de verdad me interesa es lo otro: por qué dejaste de registrar el fin de semana, por qué llevas tres sesiones con el mismo peso cuando tu cuerpo ya puede con más, por qué la tercera semana siempre se siente más pesada.</p>
+        <p data-lang="en">I show you your progress. What went up, what stalled, what changed in your body. But what really interests me is the other thing: why you stopped logging on weekends, why you've been picking up the same weight for three sessions when your body can handle more, why the third week always feels heavier.</p>
+        <p data-lang="es">Esos patrones son los que frenan a todo el mundo. No es falta de ganas — es que nadie los ve a tiempo. Yo sí los veo. Y los corrijo a tiempo.</p>
+        <p data-lang="en">Those patterns are what stall everyone. It's not lack of effort — it's that no one sees them in time. I do. And I correct them in time.</p>
+      </div>
+    </div>
+    <div class="lab-step reveal">
+      <div class="lab-step-label">
+        <div class="lab-step-num">05</div>
+        <div class="lab-step-title">THE Platform</div>
+      </div>
+      <div class="lab-step-body">
+        <p data-lang="es">Lo que viste arriba no se descarga y no se compra. Es donde trabajo contigo — donde cruzo los datos de tu entrenamiento con tu nutrición y detecto los patrones que tú no ves.</p>
+        <p data-lang="en">What you saw above isn't downloaded and isn't bought. It's where I work with you — where I cross your training data with your nutrition and detect the patterns you can't see.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CTA -->
+<section class="cta-f" id="cta">
+  <span class="etiq" style="display:inline-flex;margin-bottom:2.5rem">THE Promise</span>
+  <h2 data-lang="es">Si llegaste<br>hasta aquí,<br>ya sabes.</h2>
+  <h2 data-lang="en">If you made it<br>this far,<br>you already know.</h2>
+  <p class="cta-line" data-lang="es">Si quieres que piense en tu cuerpo de la misma forma que pienso sobre el mío, el 1:1 es para ti.</p>
+  <p class="cta-line" data-lang="en">If you want me to think about your body the way I think about mine, the 1:1 is for you.</p>
+  <div class="invest-card">
+    <div class="invest-left">
+      <span class="etiq">THE Investment</span>
+      <ul class="inversion-lista" data-lang="es">
+        <li>Un punto de partida. No una promesa de 13 semanas — un sistema que se queda contigo.</li>
+        <li>Un sistema que funciona cuando tú no tienes ganas — no solo cuando estás motivada.</li>
+        <li>Alguien que lee los patrones que tú no ves y los corrige antes de que te frenen.</li>
+        <li>La última vez que empiezas de cero.</li>
+      </ul>
+      <ul class="inversion-lista" data-lang="en">
+        <li>A starting point. Not a 13-week promise — a system that stays with you.</li>
+        <li>A system that works when you don't feel like it — not just when you're motivated.</li>
+        <li>Someone who reads the patterns you can't see and corrects them before they stall you.</li>
+        <li>The last time you start from scratch.</li>
+      </ul>
+    </div>
+    <div class="invest-right">
+      <div>
+        <div class="invest-label" data-lang="es">Tu inversión</div>
+        <div class="invest-label" data-lang="en">Your investment</div>
+        <div class="precio-final"><span data-lang="es">600€</span><span data-lang="en">€600</span></div>
+        <div class="invest-sub" data-lang="es" style="color: rgb(255, 255, 255)">/ ciclo de 13 semanas · renovable</div>
+        <div class="invest-sub" data-lang="en">/ 13-week cycle · renewable</div>
+        <div class="invest-sub" data-lang="es" style="color:#fff;margin-top:.3rem"><span style="color: #FFFFFF; font-size: 15px">Renueva y sigue construyendo.</span></div>
+        <div class="invest-sub" data-lang="en" style="color: #FFFFFF; margin-top:.3rem; font-size: 15px">Renew and keep building.</div>
+      </div>
+      <p class="invest-note" data-lang="es" style="color: rgb(255, 255, 255)">Plazas limitadas. Lista de espera activa.</p>
+      <p class="invest-note" data-lang="en">Limited spots. Active waitlist.</p>
+      <a href="https://tally.so/r/XxNP4Y" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Apúntate a la lista de espera</span><span data-lang="en">Join the waitlist</span></a>
+      <a href="newsletter.html" class="btn-f" style="margin-top:.5rem"><span data-lang="es">O suscríbete a The Brain →</span><span data-lang="en">Or subscribe to The Brain →</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <a href="index.html" class="flogo"><img src="assets/img/pepper.png" class="flogo-pepper" alt=""><span style="color: rgb(255, 255, 255)">The Andy <span style="color:#FF3737">Lab</span></span></a>
+
+  <span class="fcopy">© 2026 The Andy Lab</span>
+  <span class="ftagline">Más músculo. Menos culpa.</span>
+</footer>
+
+<script src="assets/site.js?v=20260720"></script>
+</body>
+</html>
