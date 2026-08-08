@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proteína — The Andy Lab</title>
+<meta name="description" content="Tu cerebro lleva años complicando algo que cabe en una multiplicación. La guía completa de proteína, con el mecanismo que nadie te explica.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/pepper.png">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20260720">
+<style>
+.g{--ink:#1a1a1a;--ink70:rgba(0,0,0,.75);--ink55:rgba(0,0,0,.55);--ink40:rgba(0,0,0,.4);--ink30:rgba(0,0,0,.3);--paper:#fafafa;--burgd:#4a0101;--acc:#d40e26;font-family:'Inter',sans-serif;font-weight:300}
+.g .wrap{max-width:1100px;margin:0 auto;padding:0 clamp(2.5rem,6vw,6rem)}
+.g section{position:relative;overflow:hidden}
+.g .rule{height:1px;background:rgba(0,0,0,.08)}
+.g .pad{padding-top:clamp(3.5rem,7vw,5rem);padding-bottom:clamp(3.5rem,7vw,5rem)}
+.g .kicker{display:flex;align-items:center;gap:.7rem;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink30);margin-bottom:1.4rem}
+.g .kicker::before{content:'';width:22px;height:1px;background:var(--acc);flex:none}
+.g .kicker.red{color:var(--acc)}
+.g h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,8vw,96px);color:var(--burgd);line-height:.88;margin:0;letter-spacing:.02em}
+.g h2{font-family:'Bebas Neue',sans-serif;line-height:.88;margin:0;letter-spacing:.02em;color:var(--ink)}
+.g h3{font-family:'Bebas Neue',sans-serif;line-height:.92;margin:0;letter-spacing:.02em;color:var(--ink)}
+.g p{line-height:1.78;color:var(--ink70);margin:0;font-size:clamp(16px,1.2vw,18px)}
+.g .dash{width:72px;height:3px;background:var(--acc)}
+
+.g .cover{min-height:100vh;display:flex;flex-direction:column;background:radial-gradient(125% 95% at 50% -8%,#5a0202 0%,#4a0101 26%,#2a0101 58%,#150101 100%) #150101;align-items:flex-start;justify-content:center;padding:clamp(8rem,12vw,10rem) clamp(2.5rem,6vw,6rem) clamp(3rem,6vw,5rem)}
+.g .cover::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 28% 46%,rgba(94,3,3,.5) 0%,transparent 60%);pointer-events:none}
+.g .cover-inner{max-width:680px;position:relative;z-index:1}
+.g .cover h1{color:#fff}
+.g .cover .sub{font-size:clamp(16px,1.8vw,18px);color:rgba(255,255,255,.72);line-height:1.72;max-width:540px}
+.g .cover .kicker{color:rgba(255,255,255,.5);font-size:11px}
+
+.g .body{max-width:680px}
+.g .body p+p{margin-top:20px}
+
+.g .part{background:radial-gradient(125% 95% at 50% -8%,#5a0202 0%,#4a0101 26%,#2a0101 58%,#150101 100%) #150101;color:#fff;padding:clamp(3.5rem,7vw,4.5rem) 0;margin-top:16px}
+.g .part .big{position:absolute;right:-30px;top:50%;transform:translateY(-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(180px,28vw,360px);color:rgba(255,255,255,.05);line-height:.85;user-select:none;pointer-events:none;letter-spacing:-.02em}
+.g .part .k{display:flex;align-items:center;gap:.7rem;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:1.2rem}
+.g .part .k::before{content:'';width:22px;height:1px;background:var(--acc);flex:none}
+.g .part h2{color:#fff;font-size:clamp(48px,7vw,88px);margin-bottom:1.4rem}
+.g .part .hr{height:1px;background:rgba(255,255,255,.14);margin-bottom:1.3rem;max-width:560px}
+.g .part .sub{font-size:16px;color:rgba(255,255,255,.66);line-height:1.65;max-width:520px}
+
+.g .box-fill{background:rgba(0,0,0,.035);border-left:2px solid rgba(0,0,0,.12);padding:24px 28px}
+.g .box-fill.accent{border-left-color:var(--acc)}
+.g .box{border-left:2px solid rgba(0,0,0,.15);padding-left:24px}
+.g .box.accent{border-left-color:var(--acc)}
+
+.calc-wrap{background:#fff;border:1px solid rgba(0,0,0,.1);padding:clamp(1.5rem,3vw,2.5rem);max-width:560px;margin:2rem 0}
+.calc-wrap label{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--ink40);display:block;margin-bottom:12px}
+.calc-slider{width:100%;-webkit-appearance:none;appearance:none;height:4px;background:rgba(0,0,0,.1);border-radius:2px;outline:none;margin:8px 0 4px}
+.calc-slider::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--burgd);cursor:pointer;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.calc-slider::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--burgd);cursor:pointer;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.calc-weight{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,5vw,64px);color:var(--burgd);line-height:1;margin:12px 0 4px}
+.calc-weight span{font-size:.4em;color:var(--ink40)}
+.calc-result{display:flex;gap:clamp(1.5rem,3vw,3rem);margin-top:20px;padding-top:20px;border-top:1px solid rgba(0,0,0,.08)}
+.calc-col{flex:1}
+.calc-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.5vw,44px);line-height:1;color:var(--ink)}
+.calc-num span{font-size:.5em;color:var(--ink40)}
+.calc-label{font-size:11px;color:var(--ink40);margin-top:4px}
+.calc-range{font-size:11px;color:var(--ink30);margin-top:2px}
+
+.src-table{width:100%;border-collapse:collapse;margin:1.5rem 0}
+.src-table th{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink30);text-align:left;padding:10px 14px;border-bottom:2px solid rgba(0,0,0,.08)}
+.src-table td{padding:14px;border-bottom:1px solid rgba(0,0,0,.06);font-size:15px;color:var(--ink70)}
+.src-table td:first-child{font-weight:400;color:var(--ink)}
+.src-table .prot{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--acc);letter-spacing:.02em}
+.src-table .cal{font-size:13px;color:var(--ink40)}
+@media(max-width:640px){
+  .src-table thead{display:none}
+  .src-table tr{display:flex;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid rgba(0,0,0,.06);gap:4px 16px;align-items:baseline}
+  .src-table td{padding:0;border:none;font-size:14px}
+  .src-table td:first-child{width:100%;font-size:16px;font-weight:500}
+  .src-table td:nth-child(2){font-size:12px;color:var(--ink40)}
+  .src-table .prot{font-size:20px}
+}
+
+.sub-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,34px);color:var(--ink);letter-spacing:.02em;margin:2.5rem 0 1rem;line-height:.95}
+
+.g .closing{background:radial-gradient(125% 95% at 50% -8%,#5a0202 0%,#4a0101 26%,#2a0101 58%,#150101 100%) #150101;color:#fff;padding:clamp(5rem,9vw,6rem) 0;margin-top:16px}
+.g .closing h2{color:#fff;font-size:clamp(40px,5.5vw,72px);line-height:.9;margin-bottom:2rem;max-width:680px}
+.g .closing .hr{height:1px;background:rgba(255,255,255,.14);margin-bottom:2.5rem;max-width:480px}
+.g .closing .gp-final{font-size:16px;font-weight:300;color:rgba(255,255,255,.85);line-height:1.78;max-width:580px;margin-top:1.2rem}
+
+.post-cierre{background:#0d0102;border-top:3px solid var(--acc);padding:clamp(2.5rem,5vw,3.5rem);max-width:620px;margin:0 auto}
+.post-cierre p{color:rgba(250,249,246,.85);font-size:16px;line-height:1.78}
+
+@media(max-width:820px){
+  .g .cover{min-height:auto;padding:clamp(7rem,12vw,9rem) clamp(1.5rem,5vw,2.5rem) clamp(3rem,5vw,4rem)}
+  .g h1{font-size:clamp(36px,8vw,52px)}
+  .g .part .big{font-size:clamp(120px,20vw,180px)}
+  .calc-result{flex-direction:column;gap:1rem}
+}
+@media(max-width:480px){
+  .g .wrap{padding:0 clamp(1.25rem,5vw,2rem)}
+}
+</style>
+</head>
+<body class="theme-light">
+<style>
+  .theme-light nav{background:rgba(21,1,1,0.85)!important;border-bottom:1px solid rgba(255,255,255,.06)!important}
+  .theme-light nav.scrolled{background:rgba(21,1,1,0.95)!important;border-bottom-color:rgba(255,255,255,.1)!important}
+  .theme-light .nav-logo{color:#fff!important}
+  .theme-light .nav-links{background:transparent!important}
+  .theme-light .nav-links a{color:rgba(255,255,255,.5)!important}
+  .theme-light .nav-links a:hover,.theme-light .nav-links a.active{color:#fff!important}
+  .theme-light .nav-cta-m a{color:var(--acc)!important}
+  .theme-light .nav-toggle span{background:#fff!important}
+  .theme-light .btn-nav{color:#fff!important;border-color:rgba(212,14,38,.35)!important}
+  @media(max-width:1040px){.theme-light .nav-links{background:rgba(21,1,1,0.98)!important}}
+</style>
+
+<div class="progress-bar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="assets/img/pepper.png" class="logo-pepper" alt=""><span>The Andy <span style="color:#FF3737">Lab</span></span></a>
+  <ul class="nav-links">
+    <li><a href="andy.html">Andy</a></li>
+    <li><a href="manifesto.html">THE Manifesto</a></li>
+    <li><a href="shop.html">THE Method</a></li>
+    <li><a href="lab.html">THE Lab</a></li>
+    <li class="nav-cta-m"><a href="newsletter.html">The Brain</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="nav-toggle" type="button" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="g">
+
+  <!-- COVER -->
+  <section class="cover">
+    <div class="cover-inner">
+      <p class="kicker reveal" style="margin-bottom:36px">The Andy Lab · Proteína · Guía completa</p>
+      <h1 class="reveal d1" style="color:#fff">Tu cerebro lleva años complicando algo que cabe en una multiplicación.</h1>
+      <div class="dash reveal d1" style="margin:28px 0"></div>
+      <p class="kicker reveal d3" style="margin:0">EDICIÓN 2026</p>
+      <p style="font-size:13px;color:#fff;margin-top:2rem;line-height:1.6;background:rgba(212,14,38,.25);border:1px solid rgba(212,14,38,.4);padding:10px 16px;display:inline-block">📌 Guarda este link — esta página no está en la navegación y no la vas a encontrar buscando.</p>
+    </div>
+  </section>
+
+  <!-- APERTURA -->
+  <section style="background:var(--paper)">
+    <div class="wrap pad">
+      <div class="rule" style="margin-bottom:56px"></div>
+      <div class="body reveal">
+        <p>Busqué "cuánta proteína necesito" en Google. Diez resultados, diez números distintos. Uno decía 0,8 gramos por kilo. Otro decía 2,5. Otro me pedía que calculara mi masa magra, mi tasa metabólica basal y la fase lunar. Cerré Google.</p>
+        <p>Esto pasa por diseño.</p>
+        <p>La industria de suplementos de proteína mueve miles de millones de euros al año. Funciona exactamente igual que cualquier mercado que genera dinero con tu confusión: cuanto más contradictoria sea la información, más productos necesitas comprar para "estar segura." El batido, la barrita, el colágeno, los BCAA, el nuevo aislado de no sé qué. Siempre que veas confusión, busca la caja registradora.</p>
+        <p>La proteína es simple. Lo que necesitas saber cabe en tres ideas. Lo que la industria te ha hecho creer que necesitas saber llena estanterías enteras.</p>
+        <p>Esta guía tiene las tres ideas. Nada más.</p>
+        <p style="font-weight:400;color:var(--ink)">A lo que vinimos, vamos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PART 01 -->
+  <section class="part">
+    <div class="big" data-parallax="1">01</div>
+    <div class="wrap reveal" style="position:relative;z-index:1">
+      <p class="k">Parte 01 de 03 · The Number</p>
+      <h2>Cuánta proteína,<br>exactamente.</h2>
+      <div class="hr"></div>
+      <p class="sub">Una multiplicación y ya.</p>
+    </div>
+  </section>
+
+  <section style="background:var(--paper)">
+    <div class="wrap pad">
+      <div class="body reveal">
+        <p>Tu objetivo de proteína diaria está entre 1,6 y 2,2 gramos por kilo de peso corporal. ¿De dónde sale? Sale de un metaanálisis de Morton con casi 1.900 participantes (British Journal of Sports Medicine, 2018). Este estudio concluye que por encima de 1,6 g/kg los beneficios adicionales para construir músculo existen, pero son cada vez más pequeños. El 2,2 es el techo donde el beneficio extra se vuelve estadísticamente irrelevante.</p>
+        <p>El rango depende de cuánto entrenas. Si entrenas fuerza tres o más días a la semana, 1,6 a 2,2 g/kg. Si entrenas menos o estás empezando, 1,6 es tu número — y probablemente sea más del doble de lo que comes ahora. El 2,0 o 2,2 tiene sentido cuando entrenas duro y con consistencia. Si no estás ahí todavía, quedarte en 1,6 ya te pone por delante del 90% de la gente.</p>
+        <p>Con toda tranquilidad te digo: si estás en 1,6, estás bien. Si llegas a 2,0, estás muy bien. Si no llegas a 1,6, ahí es donde tienes trabajo.</p>
+      </div>
+
+      <div class="calc-wrap reveal d1" id="protCalc">
+        <label>Tu peso corporal</label>
+        <input type="range" class="calc-slider" id="weightSlider" min="45" max="110" value="65" step="1">
+        <div class="calc-weight"><span id="weightDisplay">65</span> <span>kg</span></div>
+        <div class="calc-result">
+          <div class="calc-col">
+            <div class="calc-num"><span id="protLow">104</span> <span>g/día</span></div>
+            <div class="calc-label">Objetivo mínimo</div>
+            <div class="calc-range">× 1.6 g/kg</div>
+          </div>
+          <div class="calc-col">
+            <div class="calc-num"><span id="protHigh">143</span> <span>g/día</span></div>
+            <div class="calc-label">Objetivo alto</div>
+            <div class="calc-range">× 2.2 g/kg</div>
+          </div>
+          <div class="calc-col">
+            <div class="calc-num"><span id="protMeals">26</span> <span>g/comida</span></div>
+            <div class="calc-label">Si comes 4 veces</div>
+            <div class="calc-range">÷ 4</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="body reveal d2" style="margin-top:2rem">
+        <p>Cuatro comidas al día, no tres. Meter 35-40 gramos de proteína en una comida es factible. Meter 50 es una pelea. Cuatro comidas te dan margen para que cada una sea razonable sin convertir cada plato en un ejercicio de ingeniería.</p>
+        <p>Ese número por comida es tu ancla. No tienes que pesarlo ni obsesionarte. Solo necesitas saber más o menos cuánto es para mirar un plato y pensar "aquí falta" o "esto está bien."</p>
+      </div>
+
+      <p class="reveal" style="font-size:13px;color:var(--ink30);line-height:1.65;margin-top:2rem;max-width:560px">Estos números son para mujeres sanas que entrenan fuerza. Si tienes enfermedad renal, hepática, o cualquier condición que afecte cómo tu cuerpo procesa proteína, habla con tu médico antes de cambiar tu ingesta. Esta guía no sustituye consejo médico.</p>
+    </div>
+  </section>
+
+  <!-- PART 02 -->
+  <section class="part">
+    <div class="big" data-parallax="1">02</div>
+    <div class="wrap reveal" style="position:relative;z-index:1">
+      <p class="k">Parte 02 de 03 · The Sources</p>
+      <h2>De dónde sacarla.</h2>
+      <div class="hr"></div>
+      <p class="sub">Los números reales por porción normal.</p>
+    </div>
+  </section>
+
+  <section style="background:var(--paper)">
+    <div class="wrap pad">
+      <div class="body reveal">
+        <p>Yo como pechuga de pollo casi todos los días de la semana. Me da igual cómo sabe. Mis prioridades son otras. Pero tú no tienes que tener mis prioridades ni seguir mi estilo de vida.</p>
+        <p>Lo que sí necesitas son los números reales por porción normal.</p>
+      </div>
+
+      <!-- Table 1 -->
+      <div class="reveal d1" style="margin-top:2.5rem">
+        <h3 style="font-size:clamp(28px,3.5vw,40px);margin-bottom:6px">Fuentes principales</h3>
+        <p style="font-size:14px;color:var(--ink40);margin-bottom:1.2rem">Las que arman una comida.</p>
+        <table class="src-table">
+          <thead><tr><th>Fuente</th><th>Porción</th><th>Proteína</th><th>Calorías</th></tr></thead>
+          <tbody>
+            <tr><td>Pechuga de pollo</td><td>150g cocinado</td><td class="prot">~47g</td><td class="cal">~248</td></tr>
+            <tr><td>Carne picada 5% grasa</td><td>150g cocinado</td><td class="prot">~39g</td><td class="cal">~225</td></tr>
+            <tr><td>Atún fresco</td><td>150g cocinado</td><td class="prot">~45g</td><td class="cal">~195</td></tr>
+            <tr><td>Salmón</td><td>150g cocinado</td><td class="prot">~38g</td><td class="cal">~330</td></tr>
+            <tr><td>Huevos</td><td>3 unidades</td><td class="prot">~18g</td><td class="cal">~234</td></tr>
+            <tr><td>Claras de huevo</td><td>200g</td><td class="prot">~22g</td><td class="cal">~104</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:1rem">Necesitas cuatro o cinco de estas que te gusten, que puedas comprar sin pensar, y que puedas rotar sin querer llorar al tercer día.</p>
+      </div>
+
+      <!-- Intro to table 2 -->
+      <div class="reveal d1" style="margin-top:3rem">
+        <h3 style="font-size:clamp(28px,3.5vw,40px);margin-bottom:6px">Fuentes que cierran la brecha</h3>
+        <p style="font-size:14px;color:var(--ink40);margin-bottom:1.2rem">Las de «abro y como.»</p>
+        <div class="body">
+          <p>Cero preparación, cero cocina. Estas son las que realmente sostienen tu proteína los días que no tienes tiempo ni ganas de planificar nada.</p>
+          <p>Sí, algunas de estas tienen edulcorantes. Sí, alguien te va a decir que eso es veneno. La evidencia acumulada a día de hoy — metaanálisis, revisiones sistemáticas, datos en humanos — dice que a dosis normales de consumo no tienen un efecto negativo demostrado en la salud. ¿Son la base de tu alimentación? No. La base son huevos, carne, pescado, yogur, verdura, fruta. Pero si un flan de clara de huevo de 13 gramos de proteína y 103 calorías me ayuda a llegar a mi número un martes que no me apetece cocinar, lo acepto con toda tranquilidad. Tu objetivo es llegar a tu proteína la mayoría de los días. Estas fuentes hacen que eso sea posible cuando lo perfecto no lo es.</p>
+        </div>
+        <table class="src-table" style="margin-top:1.5rem">
+          <thead><tr><th>Fuente</th><th>Porción</th><th>Proteína</th><th>Calorías</th></tr></thead>
+          <tbody>
+            <tr><td>FAGE yogur griego 0%</td><td>200g</td><td class="prot">~20g</td><td class="cal">~108</td></tr>
+            <tr><td>Cottage cheese</td><td>200g</td><td class="prot">~23g</td><td class="cal">~196</td></tr>
+            <tr><td>YoPro Natural</td><td>1 tarrina (160g)</td><td class="prot">~15g</td><td class="cal">~77</td></tr>
+            <tr><td>Flan de clara de huevo (Carrefour)</td><td>1 unidad (160g)</td><td class="prot">~13g</td><td class="cal">~103</td></tr>
+            <tr><td>Pudín al cacao proteína (Carrefour)</td><td>1 unidad (200g)</td><td class="prot">~20g</td><td class="cal">~148</td></tr>
+            <tr><td>Proteína whey</td><td>1 cazo (~30g)</td><td class="prot">~25g</td><td class="cal">~115</td></tr>
+          </tbody>
+        </table>
+
+        <p style="font-size:13px;color:var(--ink30);line-height:1.65;margin-top:1.5rem;max-width:560px">Si no las encuentras, busca equivalentes: yogur griego real (no «estilo griego»), cottage cheese y cualquier snack proteico con más de 12g de proteína y menos de 150 calorías por unidad.</p>
+      </div>
+
+      <!-- Nevera -->
+      <div class="body reveal" style="margin-top:3rem">
+        <h3 style="font-size:clamp(28px,3.5vw,40px);margin-bottom:1.2rem">Tu nevera decide por ti</h3>
+        <p>Ahora viene el "life changing moment" : tu nevera.</p>
+        <p>Tu nevera decide por ti más de lo que crees. A las dos de la tarde, después de cuatro horas de reuniones, tu cerebro coge lo que tiene delante. Si al abrirla lo primero que ves tiene proteína, comes proteína. Si lo primero que ves es queso curado y embutido, comes eso. Tu cerebro a esa hora del día no está evaluando macronutrientes. Está en piloto automático.</p>
+        <p>Mira, es cierto que puedes elegir conscientemente cada vez que abres la nevera. Pero esa capacidad de elegir funciona como una batería que se gasta a lo largo del día. A las siete de la mañana tienes carga completa. A las dos de la tarde, después de cuarenta decisiones laborales, la batería está a la mitad. A las nueve de la noche, lo que queda es inercia.</p>
+        <p>Lo que puedes hacer es preparar el terreno cuando la batería está llena para que cuando esté vacía, lo automático sea lo correcto. Yogur griego al frente de la nevera. Un YoPro en la puerta. Huevos duros ya hechos. Un pudín de proteína para cuando quieres algo dulce. Proteína whey al lado de la cafetera.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PART 03 -->
+  <section class="part">
+    <div class="big" data-parallax="1">03</div>
+    <div class="wrap reveal" style="position:relative;z-index:1">
+      <p class="k">Parte 03 de 03 · The Third Day</p>
+      <h2>Por qué todo el mundo<br>abandona al tercer día.</h2>
+      <div class="hr"></div>
+      <p class="sub">La mecánica detrás de lo que le pasa a todo el mundo.</p>
+    </div>
+  </section>
+
+  <section style="background:var(--paper)">
+    <div class="wrap pad">
+      <div class="body reveal">
+        <p>El día uno te sale perfecto. Cuatro comidas con proteína, las cantidades más o menos bien, hasta te sientes orgullosa. El día dos repites sin problema. El día tres abres la nevera, ves la pechuga de pollo, y algo dentro de ti dice <em>no</em>.</p>
+        <p>Esto tiene mecánica, y cuando la entiendes dejas de sentirte culpable por algo que le pasa a todo el mundo.</p>
+        <p>Cualquier comportamiento nuevo necesita tres cosas al mismo tiempo para ocurrir: que tengas ganas de hacerlo, que seas capaz de hacerlo, y que algo te lo recuerde en el momento. Las tres. Si falta una, el comportamiento no ocurre, da igual lo fuerte que estén las otras dos.</p>
+        <p>El día uno las ganas están por las nubes. Acabas de leer esta guía, estás decidida, todo parece posible. Ese nivel de ganas compensa el esfuerzo de pensar qué comer, buscar recetas, organizar la nevera. Las ganas son tan altas que aunque el esfuerzo sea grande, lo haces.</p>
+        <p>El día tres las ganas bajan a su nivel normal. No desaparecen — simplemente dejan de ser extraordinarias. Y en ese momento, el esfuerzo de planificar cuatro comidas con proteína pesa más que las ganas que quedan.</p>
+        <p>Entonces paras. Y piensas que te falta disciplina.</p>
+        <p>Lo que pasó es que diseñaste un plan para la versión motivada del lunes, y la que tiene que ejecutarlo es la versión agotada del miércoles. Un plan que solo funciona cuando estás motivada tiene fecha de caducidad. Un plan que funciona cuando estás cansada, eso dura.</p>
+        <p>Aquí es donde la mayoría de las guías de nutrición se despiden y te desean suerte. Esta guía empieza.</p>
+      </div>
+
+      <!-- Sub-section 1 -->
+      <div class="body reveal" style="margin-top:2.5rem">
+        <div class="sub-h">Hazlo más pequeño de lo que crees razonable.</div>
+        <p>No empieces clavando cuatro comidas perfectas. Empieza con una. Desayuno con proteína. Todos los días. Solo eso. Cuando eso ya no te cueste pensarlo — y van a pasar entre una y dos semanas — añades la comida del mediodía. Después la merienda. Después la cena.</p>
+        <p>Yo empecé así. Desayuno con huevos y ya. Sin tocar nada más. Las primeras dos semanas me sentí como si estuviera haciendo trampas, como si fuera demasiado fácil para contar. Seis semanas después comía proteína en las cuatro comidas sin pensarlo. El truco fue que cada paso era tan pequeño que mi cerebro nunca se resistió.</p>
+      </div>
+
+      <!-- Sub-section 2 -->
+      <div class="body reveal" style="margin-top:2.5rem">
+        <div class="sub-h">Conecta cada paso a algo que ya haces.</div>
+        <p>"Cuando ponga la cafetera, saco los huevos." Esa frase funciona porque el café ya es automático, ya lo haces sin decidirlo, y cualquier cosa que enganchas a algo automático hereda esa automaticidad. "Voy a comer más proteína mañana" depende de que te acuerdes y tengas ganas a la vez, en el mismo momento. Lo de la cafetera se activa solo.</p>
+        <p>Otros que funcionan: "Cuando me siente a comer, lo primero que sirvo es la proteína." "Cuando haga la lista del súper, las tres primeras cosas son fuentes de proteína." "Cuando abra la app para pedir comida, busco primero un plato con proteína visible."</p>
+        <p>El patrón es siempre el mismo: cuando [algo que ya hago], entonces [lo nuevo]. Específico. Concreto. Atado a un momento real de tu día.</p>
+      </div>
+
+      <!-- Sub-section 3 -->
+      <div class="body reveal" style="margin-top:2.5rem">
+        <div class="sub-h">El plan B importa más que el plan A.</div>
+        <p>El plan A es el plato que preparaste con tiempo, la compra organizada, la semana planificada. El plan B es lo que hay cuando nada de eso pasó. Martes por la noche, no fuiste al súper, tienes hambre y lo que encuentres es lo que vas a comer.</p>
+        <p>Si tu plan B tiene proteína, los días malos no te sacan del juego. Te sacan del plan ideal, que no es lo mismo. Un YoPro en la nevera. Un flan de clara de huevo. La lata de atún que llevas dos semanas sin abrir. Huevos duros que hiciste el domingo. Eso es tu red de seguridad.</p>
+        <p>Mis clientas que sostienen su proteína a largo plazo tienen todas lo mismo: un plan B que funciona en piloto automático. Las que dependen solo del plan A duran unas semanas, a veces un par de meses, y cuando la vida se complica — un viaje, un proyecto, una semana mala — todo se desarma.</p>
+      </div>
+
+      <!-- Sub-section 4 -->
+      <div class="body reveal" style="margin-top:2.5rem">
+        <div class="sub-h">El 80% la mayoría de los días le gana al 100% tres días.</div>
+        <p>Decidí hacer un test. Revisé los datos de las clientas que llevan más de seis meses conmigo. Las que llegan al 80% de su objetivo de proteína la mayoría de los días progresan prácticamente igual que las que clavan el 100%. La diferencia es mínima. Lo que sí marca diferencia es la consistencia: estar cerca casi todos los días le gana a estar perfecta tres días y desaparecer cuatro.</p>
+        <p>Un día de 85 gramos cuando tu objetivo son 104 no arruina nada. Siete días seguidos de 40 sí.</p>
+        <p style="font-weight:400;color:var(--ink)">No seas como la mayoría. No apuntes a perfecto. Apunta a suficiente, todos los días.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="wrap reveal">
+      <div class="hr"></div>
+      <p class="gp-final">Una multiplicación. Cuatro o cinco fuentes que te gusten. Tu nevera preparada para que lo automático sea lo correcto. Y la regla: el 80% la mayoría de los días.</p>
+      <p class="gp-final">Tu cerebro va a intentar complicarlo. La industria va a ayudarle. Ahora ya sabes cómo funciona el mecanismo.</p>
+    </div>
+  </section>
+
+  <!-- POST-CIERRE -->
+  <section style="background:#000;padding:clamp(4rem,7vw,6rem) 0">
+    <div class="wrap">
+      <div class="post-cierre reveal">
+        <p>Ya estás dentro. Cada miércoles recibirás mi newsletter con lo que no cabe en esta guía — músculo, comida y por qué tu cerebro se niega a cooperar.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="site-footer" style="background:#0d0102;border-top:1px solid rgba(255,255,255,.06)">
+  <a href="index.html" class="flogo"><img src="assets/img/pepper.png" class="flogo-pepper" alt=""><span style="color:#fff">The Andy <span style="color:#FF3737">Lab</span></span></a>
+  <span class="fcopy">© 2026 The Andy Lab</span>
+  <span class="ftagline">Más músculo. Menos culpa.</span>
+</footer>
+
+<button class="back-top" aria-label="Volver arriba">
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11V3" stroke="white" stroke-width="1.5" stroke-linecap="round"></path><path d="M3.5 6.5L7 3L10.5 6.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+
+<script src="assets/site.js?v=20260720"></script>
+<script>
+(function(){
+  var slider = document.getElementById('weightSlider');
+  if(!slider) return;
+  function update(){
+    var w = parseInt(slider.value);
+    document.getElementById('weightDisplay').textContent = w;
+    document.getElementById('protLow').textContent = Math.round(w * 1.6);
+    document.getElementById('protHigh').textContent = Math.round(w * 2.2);
+    document.getElementById('protMeals').textContent = Math.round((w * 1.6) / 4);
+  }
+  slider.addEventListener('input', update);
+  update();
+})();
+</script>
+</body>
+</html>
