@@ -17,7 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css?v=20260720">
 <style>
-.nl-page{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(6rem,12vw,10rem) var(--gut) clamp(4rem,8vw,6rem);text-align:center;position:relative}
+.nl-page{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(9rem,15vw,14rem) var(--gut) clamp(4rem,8vw,6rem);text-align:center;position:relative}
 .nl-page::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 40%,rgba(212,14,38,.06) 0%,transparent 62%);pointer-events:none}
 .nl-page>*{position:relative;z-index:1}
 .nl-tag{font-size:.6rem;letter-spacing:.36em;text-transform:uppercase;color:var(--b50);margin-bottom:2rem}
@@ -56,8 +56,8 @@
   <ul class="nav-links">
     <li><a href="andy.html">Andy</a></li>
     <li><a href="manifesto.html">THE Manifesto</a></li>
-    <li><a href="shop.html">THE Method</a></li>
     <li><a href="lab.html">THE Lab</a></li>
+    <li><a href="shop.html">THE Method</a></li>
     <li class="nav-cta-m"><a href="newsletter.html">The Brain</a></li>
   </ul>
   <div class="nav-right">
@@ -65,19 +65,20 @@
       <button type="button" data-setlang="es">ES</button>
       <button type="button" data-setlang="en">EN</button>
     </div>
-    <a href="newsletter.html" class="btn-nav active">The Brain</a>
     <button class="nav-toggle" type="button" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <div class="nl-page">
-  <div class="nl-tag">The Andy Lab · Newsletter</div>
+  <img src="assets/img/andy-brain.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.12;z-index:0;pointer-events:none">
+  <div class="nl-tag" data-lang="es">The Andy Lab · Newsletter</div>
+  <div class="nl-tag" data-lang="en">Override · Newsletter</div>
 
   <h1 class="nl-title" data-lang="es">MI CEREBRO,<br>EN TU BANDEJA<br>DE ENTRADA.</h1>
-  <h1 class="nl-title" data-lang="en">MY BRAIN,<br>IN YOUR<br>INBOX.</h1>
+  <h1 class="nl-title" data-lang="en">OVERRIDE.</h1>
 
-  <p class="nl-sub" data-lang="es">Cada semana: <strong>músculo, comida</strong>, y por qué tu cerebro se niega a cooperar. Sin fórmulas mágicas. Sin motivación. Con criterio.</p>
-  <p class="nl-sub" data-lang="en">Every week: <strong>muscle, food</strong>, and why your brain won't cooperate. No magic formulas. No motivation. Just criteria.</p>
+  <p class="nl-sub" data-lang="es">Cada semana: <strong>músculo, comida</strong>, y por qué tu cerebro se niega a cooperar. Sin fórmulas mágicas. Con criterio.</p>
+  <p class="nl-sub" data-lang="en">The Brain's English edition. Every week: <strong>muscle, food</strong>, and why your brain won't cooperate. No magic formulas. No motivation. Just evidence.</p>
 
   <div class="nl-topics">
     <span class="nl-topic" data-lang="es">Entrenamiento</span>
@@ -89,16 +90,19 @@
   </div>
 
   <!-- TALLY FORM EMBED -->
-  <div class="nl-form">
-    <iframe data-tally-src="https://tally.so/embed/2E5e79?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&theme=dark" loading="lazy" width="100%" height="120" frameborder="0" marginheight="0" marginwidth="0" title="Newsletter signup"></iframe>
+  <div class="nl-form" data-lang="es">
+    <iframe data-tally-src="https://tally.so/embed/2E5e79?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&theme=dark" loading="lazy" width="100%" height="120" frameborder="0" marginheight="0" marginwidth="0" title="Newsletter signup ES"></iframe>
+  </div>
+  <div class="nl-form" data-lang="en">
+    <iframe data-tally-src="https://tally.so/embed/ja8X0R?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&theme=dark" loading="lazy" width="100%" height="120" frameborder="0" marginheight="0" marginwidth="0" title="Newsletter signup EN"></iframe>
   </div>
 
 
 
 
 
-  <p class="nl-fine" data-lang="es">Gratis · Sin spam · Solo en español (por ahora) · Lee ediciones anteriores en <a href="https://theandylab.substack.com" target="_blank" rel="noopener">Substack</a></p>
-  <p class="nl-fine" data-lang="en">Free · No spam · Spanish only (for now) · Read past editions on <a href="https://theandylab.substack.com" target="_blank" rel="noopener">Substack</a></p>
+  <p class="nl-fine" data-lang="es">Gratis · Sin spam · Lee ediciones anteriores en <a href="https://theandylab.substack.com" target="_blank" rel="noopener">Substack</a></p>
+  <p class="nl-fine" data-lang="en">Free · No spam · Read past editions on <a href="https://theandylab.substack.com" target="_blank" rel="noopener">Substack</a></p>
 
   <div class="nl-bottom">
     <a href="index.html" class="nl-logo"><img src="assets/img/pepper.png" alt=""><span>The Andy <span style="color:#FF3737">Lab</span></span></a>

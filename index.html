@@ -19,9 +19,9 @@
 <link rel="stylesheet" href="assets/site.css?v=20260720">
 <style>
 /* ---------- hero ---------- */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:clamp(8rem,12vw,12rem) var(--gut) clamp(4rem,8vw,7rem);overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 44%,rgba(212,14,38,.06) 0%,transparent 62%);pointer-events:none}
-.hero-content{position:relative;flex:none;display:flex;flex-direction:column;align-items:center;z-index:2;width:100%}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:clamp(8rem,12vw,12rem) var(--gut) clamp(4rem,8vw,7rem);overflow:hidden;gap:clamp(2rem,5vw,5rem)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 44%,rgba(212,14,38,.08) 0%,transparent 62%);pointer-events:none}
+.hero-content{position:relative;flex:1;display:flex;flex-direction:column;align-items:flex-start;z-index:2;min-width:0;max-width:580px}
 .hero-tag{font-size:.64rem;letter-spacing:.36em;text-transform:uppercase;color:var(--b50);margin-bottom:2rem}
 .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.8rem,8vw,9.5rem);line-height:.84;letter-spacing:.01em;color:#fff;margin-bottom:2rem}
 .hero h1 .hl{color:#fff}
@@ -38,55 +38,31 @@
 /* ---------- ticker ---------- */
 .ticker-wrap{overflow:hidden;border-top:1px solid rgba(212,14,38,.12);border-bottom:1px solid rgba(212,14,38,.12);padding:1.25rem 0;background:rgba(41,4,5,0.6);border-radius:0}
 .ticker-track{display:flex;gap:3rem;animation:run 30s linear infinite;width:max-content}
-.ticker-track span{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.14em;color:rgba(255,255,255,.5);white-space:nowrap}
-.ticker-track span.ac{color:#fff}
+.ticker-track span{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.18em;color:rgba(255,255,255,.35);white-space:nowrap;transition:color .4s}
+.ticker-track span.ac{color:rgba(255,255,255,.7)}
+.ticker-wrap:hover .ticker-track{animation-play-state:paused}
+.ticker-wrap:hover .ticker-track span{color:rgba(255,255,255,.55)}
+.ticker-wrap:hover .ticker-track span.ac{color:#fff}
 @keyframes run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* ---------- newsletter strip ---------- */
-.nl-strip{padding:clamp(4rem,8vw,7rem) var(--gut);border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--burg-deep);position:relative}
-.nl-strip::before{content:'';position:absolute;top:50%;left:20%;width:400px;height:400px;background:rgba(212,14,38,.06);border-radius:50%;filter:blur(120px);transform:translate(-50%,-50%);pointer-events:none}
-.nl-strip-inner{display:flex;align-items:center;justify-content:space-between;gap:clamp(2rem,5vw,5rem);max-width:1200px}
-.nl-strip-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.6rem,5.5vw,5rem);line-height:.86;color:#fff;letter-spacing:.01em}
-.nl-strip-desc{font-size:clamp(.95rem,1.1vw,1.1rem);font-weight:300;color:var(--b70);line-height:1.8;max-width:36ch;margin-top:1rem}
-.nl-strip-action{display:flex;flex-direction:column;align-items:flex-start;gap:1rem;flex-shrink:0}
-.nl-strip-fine{font-size:.7rem;color:var(--b25);line-height:1.5}
-.nl-strip-fine a{color:var(--b35);text-decoration:none;transition:color .25s}
-.nl-strip-fine a:hover{color:var(--blanco)}
-@media(max-width:768px){
-  .nl-strip-inner{flex-direction:column;align-items:flex-start}
-  .nl-strip-action{width:100%}
-  .nl-strip-action .btn-p{width:100%;text-align:center;justify-content:center}
-}
-
-/* ---------- shift ---------- */
-.shift{padding:var(--sec) var(--gut);background:rgba(41,4,5,0.3);border-top:1px solid var(--line)}
-.shift-inner{max-width:1100px}
-.shift h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.4rem,8vw,7rem);line-height:.86;letter-spacing:.004em;color:#fff;margin-bottom:clamp(2.4rem,4.5vw,3.4rem);max-width:22ch}
-.shift-lead{font-size:clamp(1.08rem,1.3vw,1.26rem);font-weight:300;color:var(--b85);line-height:1.9;max-width:58ch}
-.shift-lead+.shift-lead{margin-top:1.3rem}
-.shift-lead strong{color:#fff;font-weight:500}
-.shift-indict{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,4.5vw,3.4rem);line-height:1.06;letter-spacing:.01em;margin:clamp(2.4rem,4.5vw,3.4rem) 0;max-width:30ch}
-.shift-indict .red{color:var(--accent)}
-.shift-close{font-size:clamp(1.2rem,1.8vw,1.6rem);font-weight:400;color:#fff;max-width:34ch;line-height:1.5;margin-top:2rem}
-.shift-close em{color:var(--accent);font-style:normal}
 
 /* ---------- actions ---------- */
 .actions{padding:var(--sec) var(--gut);border-top:1px solid var(--line)}
 .actions-hdr{margin-bottom:clamp(3rem,6vw,5rem)}
 .actions-hdr h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.4rem,8vw,8rem);line-height:.86;color:#fff}
 .action-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2vw,1.5rem)}
-.acard{position:relative;background:rgba(41,4,5,0.4);border:1px solid rgba(255,255,255,0.04);border-radius:var(--r-card);padding:clamp(2.2rem,3.5vw,3.5rem);display:flex;flex-direction:column;gap:1.2rem;transition:background .4s var(--ease),border-color .3s}
-.acard:hover{background:rgba(41,4,5,0.6);border-color:rgba(212,14,38,.12)}
-.acard::before{content:'';position:absolute;top:0;left:12px;right:12px;height:3px;background:var(--accent);border-radius:0 0 2px 2px}
+.acard{position:relative;background:rgba(41,4,5,0.4);border:1px solid rgba(255,255,255,0.04);border-radius:var(--r-card);padding:clamp(2.2rem,3.5vw,3.5rem);display:flex;flex-direction:column;gap:1.2rem;transition:background .4s var(--ease),border-color .4s,transform .5s var(--ease),box-shadow .5s var(--ease)}
+.acard:hover{background:rgba(41,4,5,0.6);border-color:rgba(212,14,38,.15);transform:translateY(-6px) scale(1.01);box-shadow:0 24px 48px -16px rgba(0,0,0,.6),0 0 0 1px rgba(212,14,38,.08)}
+.acard::before{content:none}
 .acard .alabel{color:var(--b50);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase}
 .acard h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,3vw,2.8rem);letter-spacing:.03em;color:#fff;line-height:.96}
 .acard p{font-size:.96rem;font-weight:300;color:var(--b70);line-height:1.85;flex:1}
 .acard .alink{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-bright);text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:gap .3s var(--ease);border-bottom:1px solid var(--accent);padding-bottom:.3rem;align-self:flex-start;margin-top:auto}
 .acard .alink:hover{gap:1rem;color:#fff}
 
+
 /* ---------- cta ---------- */
 .cta-f{position:relative;padding:clamp(8rem,15vw,12rem) var(--gut);text-align:center;border-top:1px solid var(--borde);overflow:hidden}
-.cta-f::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 38%,rgba(212,14,38,.06) 0%,transparent 60%);pointer-events:none}
+.cta-f::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 38%,rgba(212,14,38,.08) 0%,transparent 60%);pointer-events:none}
 .cta-f>*{position:relative;z-index:1}
 .cta-f h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,11vw,10rem);line-height:.86;letter-spacing:.005em;color:#fff;margin-bottom:2.25rem}
 .cta-line{font-size:clamp(1.1rem,1.4vw,1.35rem);font-weight:300;color:var(--b50);max-width:38ch;margin:0 auto 2.5rem;line-height:1.7}
@@ -94,7 +70,9 @@
 /* ---------- responsive ---------- */
 @media(max-width:960px){
   .hero{flex-direction:column;gap:2.5rem;padding-top:8.5rem;min-height:auto;align-items:center}
-  .hero-content{flex:none;width:100%}
+  .hero-content{flex:none;width:100%;align-items:center;text-align:center}
+  .hero-content .hero-sub{text-align:center;margin-left:0;margin-right:0}
+  .hero-photo-col{margin-top:1rem}
   .scroll-hint{display:none}
 }
 @media(max-width:880px){.action-grid{grid-template-columns:1fr}}
@@ -102,6 +80,7 @@
   .hero{padding-top:7rem}
   .hero h1{font-size:clamp(2.7rem,12vw,4rem);line-height:.9}
   .hero-sub{font-size:1rem}
+  .hero-photo-col{margin-top:0}
   .hero-ctas{flex-direction:column;align-items:stretch}
   .hero-ctas .btn-p,.hero-ctas .hero-text-link{text-align:center}
   .actions-hdr h2{font-size:clamp(2.8rem,10vw,4rem)}
@@ -119,8 +98,8 @@
   <ul class="nav-links">
     <li><a href="andy.html">Andy</a></li>
     <li><a href="manifesto.html">THE Manifesto</a></li>
-    <li><a href="shop.html">THE Method</a></li>
     <li><a href="lab.html">THE Lab</a></li>
+    <li><a href="shop.html">THE Method</a></li>
     <li class="nav-cta-m"><a href="newsletter.html">The Brain</a></li>
   </ul>
   <div class="nav-right">
@@ -134,16 +113,22 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-content" style="max-width:800px;margin:0 auto;text-align:center">
-    <div class="hero-tag">The Andy Lab — Madrid</div>
-    <h1 data-lang="es">Te enseñaron a <span style="color: #FFFFFF">tenerle miedo</span> a tu propio cuerpo.</h1>
-    <h1 data-lang="en">You were taught to fear <span class="hl">your own body</span></h1>
-    <p class="hero-sub" data-lang="es">Haces cardio para no "volverte grande". Levantas pesos que no inspiran a nadie. Sigues en el mismo punto, usando la culpa como combustible. Pero la culpa no construye músculo.</p>
-    <p class="hero-sub" data-lang="en">You do cardio so you don't "get bulky." You lift weights that inspire no one. You're stuck in the same spot, using guilt as fuel. But guilt doesn't build muscle.</p>
-    <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.05;color:#fff;text-align:center;margin:1.5rem auto 2.5rem;max-width:52ch;letter-spacing:.02em" data-lang="es">The Andy Lab rompe ese círculo.<br><span style="font-family:'Inter',sans-serif;font-size:clamp(.95rem,1.1vw,1.1rem);font-weight:300;color:var(--b70);line-height:1.85;letter-spacing:0;display:block;margin-top:1rem">Entrenamiento de fuerza, nutrición y ciencia del comportamiento. Tu cuerpo cambia porque cambia lo que haces, y lo que haces cambia porque cambias cómo te ves a ti misma.</span></p>
-    <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.05;color:#fff;text-align:center;margin:1.5rem auto 2.5rem;max-width:52ch;letter-spacing:.02em" data-lang="en">The Andy Lab breaks that cycle.<br><span style="font-family:'Inter',sans-serif;font-size:clamp(.95rem,1.1vw,1.1rem);font-weight:300;color:var(--b70);line-height:1.85;letter-spacing:0;display:block;margin-top:1rem">Strength training, nutrition, and behavioural science. Your body changes because what you do changes, and what you do changes because how you see yourself changes.</span></p>
-    <div class="hero-ctas" style="justify-content:center">
+  <div class="hero-content" style="max-width:none;text-align:left">
+    <div class="hero-tag">THE ANDY LAB</div>
+    <h1 data-lang="es">Te enseñaron a <span style="color: #FFFFFF">tenerle miedo</span> a tu cuerpo.</h1>
+    <h1 data-lang="en">You were taught to <span class="hl">fear</span> your own body.</h1>
+    <p class="hero-sub" style="text-align:left" data-lang="es">Te han vendido tantos reinicios que ya tienes un plan para cada mes del año. Llevas toda la vida haciendo cardio para no volverte grande, levantando pesos que no inspiran a nadie, usando la culpa como combustible. Pero la culpa no construye músculo.</p>
+    <p class="hero-sub" style="text-align:left" data-lang="en">You've spent your whole life doing cardio so you don't get bulky, lifting weights that inspire no one, using guilt as fuel. But guilt doesn't build muscle.</p>
+    <div class="hero-ctas">
       <a href="lab.html" class="btn-p"><span data-lang="es">CONOCE THE LAB →</span><span data-lang="en">DISCOVER THE LAB →</span></a>
+      <a href="#oferta" class="hero-text-link"><span data-lang="es">Elige por dónde empiezas</span><span data-lang="en">Pick your entry point</span></a>
+    </div>
+    <p style="font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-top:1.2rem" data-lang="es">SOLO TRABAJO CON 10 PERSONAS A LA VEZ</p>
+    <p style="font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-top:1.2rem" data-lang="en">I only work with 10 people at a time</p>
+  </div>
+  <div class="hero-photo-col">
+    <div class="hero-photo-wrap">
+      <img src="assets/img/andy-hero.jpg" alt="Andy" class="hero-photo">
     </div>
   </div>
   <div class="scroll-hint"><span data-lang="es">Baja</span><span data-lang="en">Scroll</span></div>
@@ -163,35 +148,76 @@
   </div>
 </div>
 
-<!-- NEWSLETTER -->
-<section class="nl-strip" id="newsletter">
-  <div class="nl-strip-inner">
-    <div class="nl-strip-text">
-      <span class="etiq"><span data-lang="es">Gratis · Cada semana</span><span data-lang="en">Free · Every week</span></span>
-      <h2 class="nl-strip-title" data-lang="es">MI CEREBRO,<br>EN TU BANDEJA DE ENTRADA.</h2>
-      <h2 class="nl-strip-title" data-lang="en">MY BRAIN,<br>IN YOUR INBOX.</h2>
-      <p class="nl-strip-desc" data-lang="es">Músculo, comida, y por qué tu cerebro se niega a cooperar. Sin fórmulas mágicas. Con criterio.</p>
-      <p class="nl-strip-desc" data-lang="en">Muscle, food, and why your brain won't cooperate. No magic formulas. Just criteria.</p>
+<!-- MID COPY — THE PROBLEM -->
+<section style="padding:clamp(5rem,10vw,9rem) var(--gut);border-top:1px solid var(--line);background:rgba(41,4,5,0.3)">
+  <div style="max-width:900px">
+    <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.6rem,5.5vw,4.2rem);line-height:.92;letter-spacing:.01em;color:#fff;margin-bottom:clamp(3rem,5vw,4.5rem)" data-lang="es">Programas genéricos hay muchos, todos están diseñados para la persona promedio.<br><span style="color:var(--accent)">Y tú de promedio no tienes nada.</span></p>
+    <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.6rem,5.5vw,4.2rem);line-height:.92;letter-spacing:.01em;color:#fff;margin-bottom:clamp(3rem,5vw,4.5rem)" data-lang="en">There are plenty of generic programs, but they're all designed for the average person.<br><span style="color:var(--accent)">And you're anything but average.</span></p>
+    <div style="display:flex;flex-direction:column;gap:clamp(2rem,4vw,3.2rem);border-left:2px solid var(--accent);padding-left:clamp(1.5rem,3vw,2.5rem);margin-bottom:clamp(3rem,5vw,4.5rem);position:relative">
+      <div data-lang="es">
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.6rem,3vw,2.4rem);line-height:1;color:#fff;letter-spacing:.01em;margin-bottom:.6rem">Un mapa para un cuerpo que no es el tuyo.</p>
+        <p style="font-size:clamp(.92rem,1.1vw,1.05rem);font-weight:300;color:var(--b50);line-height:1.7">Llevas años siguiendo programas diseñados para otra persona.</p>
+      </div>
+      <div data-lang="es">
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.6rem,3vw,2.4rem);line-height:1;color:#fff;letter-spacing:.01em;margin-bottom:.6rem">Una semana que no vives.</p>
+        <p style="font-size:clamp(.92rem,1.1vw,1.05rem);font-weight:300;color:var(--b50);line-height:1.7">Rutinas que no encajan en tu realidad. Y cuando fallas, la culpa es tuya.</p>
+      </div>
+      <div data-lang="es">
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.6rem,3vw,2.4rem);line-height:1;color:#fff;letter-spacing:.01em;margin-bottom:.6rem">Una vida que no reconoces.</p>
+        <p style="font-size:clamp(.92rem,1.1vw,1.05rem);font-weight:300;color:var(--b50);line-height:1.7">Y volvemos al mismo círculo: empezar los lunes, después del verano, o resignarte.</p>
+        <p style="font-size:clamp(.88rem,1vw,1rem);font-weight:300;color:var(--b35);line-height:1.7;font-style:italic;margin-top:.6rem">(Sí, te voy a decir lo que no quieres oír. También te voy a mandar un audio celebrando cuando subas 5kg en hip thrust.)</p>
+      </div>
+      <div data-lang="en">
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.6rem,3vw,2.4rem);line-height:1;color:#fff;letter-spacing:.01em;margin-bottom:.6rem">A map for a body that isn't yours.</p>
+        <p style="font-size:clamp(.92rem,1.1vw,1.05rem);font-weight:300;color:var(--b50);line-height:1.7">You've spent years following programs designed for someone else.</p>
+      </div>
+      <div data-lang="en">
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.6rem,3vw,2.4rem);line-height:1;color:#fff;letter-spacing:.01em;margin-bottom:.6rem">A week you don't live.</p>
+        <p style="font-size:clamp(.92rem,1.1vw,1.05rem);font-weight:300;color:var(--b50);line-height:1.7">Routines that don't fit your reality. And when you fail, the guilt is yours.</p>
+      </div>
+      <div data-lang="en">
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.6rem,3vw,2.4rem);line-height:1;color:#fff;letter-spacing:.01em;margin-bottom:.6rem">A life you don't recognize.</p>
+        <p style="font-size:clamp(.92rem,1.1vw,1.05rem);font-weight:300;color:var(--b50);line-height:1.7">And back we go: starting Monday, starting after summer, or giving up.</p>
+        <p style="font-size:clamp(.88rem,1vw,1rem);font-weight:300;color:var(--b35);line-height:1.7;font-style:italic;margin-top:.6rem">(Yes, I'll tell you what you don't want to hear. I'll also send you a voice note celebrating when you add 5kg to your hip thrust.)</p>
+      </div>
     </div>
-    <div class="nl-strip-action">
-      <a href="newsletter.html" class="btn-p"><span data-lang="es">SUSCRÍBETE →</span><span data-lang="en">SUBSCRIBE →</span></a>
-      <p class="nl-strip-fine" data-lang="es">Sin spam · Lee ediciones anteriores en <a href="newsletter.html">Substack</a></p>
-      <p class="nl-strip-fine" data-lang="en">No spam · Read past editions on <a href="newsletter.html">Substack</a></p>
+    <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,6vw,5rem);line-height:.88;letter-spacing:.01em;color:#fff;margin-bottom:clamp(2rem,3.5vw,2.8rem)" data-lang="es">The Andy Lab viene a romper<br>con esta dinámica.</p>
+    <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,6vw,5rem);line-height:.88;letter-spacing:.01em;color:#fff;margin-bottom:clamp(2rem,3.5vw,2.8rem)" data-lang="en">The Andy Lab is here<br>to break that cycle.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(1.2rem,2.5vw,2rem);margin-bottom:clamp(3rem,5vw,4rem)" class="reveal-stagger">
+      <div style="background:#D40E26;border:1px solid #D40E26;border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s" data-lang="es">
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.3rem,2vw,1.7rem);color:#fff;line-height:1.05;margin-bottom:.5rem">Tu mapa. No el de otra.</p>
+        <p style="font-size:.92rem;font-weight:300;color:rgba(255,255,255,.8);line-height:1.7">Construido para tu cuerpo, tu semana, tu vida. La culpa fuera de la ecuación.</p>
+      </div>
+      <div style="background:#D40E26;border:1px solid #D40E26;border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s" data-lang="es">
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.3rem,2vw,1.7rem);color:#fff;line-height:1.05;margin-bottom:.5rem">Un sistema a prueba de casi todo.</p>
+        <p style="font-size:.92rem;font-weight:300;color:rgba(255,255,255,.8);line-height:1.7">Cuando la semana no sale como esperabas. Cuando la motivación desaparece.</p>
+      </div>
+      <div style="background:#D40E26;border:1px solid #D40E26;border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s" data-lang="es">
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.3rem,2vw,1.7rem);color:#fff;line-height:1.05;margin-bottom:.5rem">Sin atajos. Pero sin vuelta atrás.</p>
+        <p style="font-size:.92rem;font-weight:300;color:rgba(255,255,255,.8);line-height:1.7">La persona que entra y la persona que sale no son la misma.</p>
+      </div>
+      <div style="background:#D40E26;border:1px solid #D40E26;border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s" data-lang="en">
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.3rem,2vw,1.7rem);color:#fff;line-height:1.05;margin-bottom:.5rem">Your map. Not someone else's.</p>
+        <p style="font-size:.92rem;font-weight:300;color:rgba(255,255,255,.8);line-height:1.7">Built for your body, your week, your life. Guilt out of the equation.</p>
+      </div>
+      <div style="background:#D40E26;border:1px solid #D40E26;border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s" data-lang="en">
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.3rem,2vw,1.7rem);color:#fff;line-height:1.05;margin-bottom:.5rem">A system that holds up.</p>
+        <p style="font-size:.92rem;font-weight:300;color:rgba(255,255,255,.8);line-height:1.7">When the week doesn't go as planned. When motivation disappears.</p>
+      </div>
+      <div style="background:#D40E26;border:1px solid #D40E26;border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s" data-lang="en">
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.3rem,2vw,1.7rem);color:#fff;line-height:1.05;margin-bottom:.5rem">No shortcuts. But no going back.</p>
+        <p style="font-size:.92rem;font-weight:300;color:rgba(255,255,255,.8);line-height:1.7">The person who walks in and the person who walks out are not the same.</p>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- SHIFT -->
-<section class="shift" id="shift">
-  <div class="shift-inner">
-    <span class="etiq">The Shift</span>
-    <h2 data-lang="es">Vas a recordar<br>el día <span class="hl" style="color: #FFFFFF">exacto.</span></h2>
-    <h2 data-lang="en">You'll remember<br>the <span class="hl">exact day.</span></h2>
-    <div class="shift-lead reveal" data-lang="es"><p>No pasa poco a poco. Pasa de golpe y te vas a acordar de cuándo. La primera vez que levantas un peso que jurabas imposible, algo en tu forma de verte cambia y no habrá vuelta atrás.</p></div>
-    <div class="shift-lead reveal" data-lang="en"><p>It doesn't happen slowly. It hits all at once, and you'll know exactly when. The first time you lift something you swore you couldn't, something shifts in how you see yourself, and there's no going back.</p></div>
-    <div class="shift-lead reveal d1" data-lang="es"><p>Ese día tu cuerpo deja de ser el problema. Deja de ser algo que tienes que corregir, esconder, y pasa a ser algo que construyes. Que funciona. Que hace lo que le pides.</p><p>Y un día lo sientes. Sin que nadie te lo confirme. </p></div>
-    <div class="shift-lead reveal d1" data-lang="en"><p>That day your body stops being the problem. Stops being something you fix, something you hide, and becomes something you build. That works. That does what you ask.</p></div>
-    <p class="shift-indict reveal d2"><span class="red" style="color: #FFFFFF">Capable.</span> Not as a concept. As something you've felt and can't unfeel.</p>
+    <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;color:#fff" data-lang="en">Welcome to The Andy Lab.</p>
+    <!-- testimonial teaser -->
+    <div style="margin-top:clamp(3rem,5vw,4.5rem);border-top:1px solid var(--line);padding-top:clamp(2rem,4vw,3rem);max-width:520px">
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.4rem,2.2vw,1.8rem);color:#fff;line-height:1.1;margin-bottom:.8rem" data-lang="es">"Ese odio a las pesas se puede cambiar, y suma más de lo que uno cree."</p>
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.4rem,2.2vw,1.8rem);color:#fff;line-height:1.1;margin-bottom:.8rem" data-lang="en">"That hatred of weights can change — it adds up more than you think."</p>
+      <p style="font-size:.78rem;font-weight:500;color:var(--accent)"><a href="lab.html" style="color:inherit;text-decoration:none">Laura C. · <span style="color:var(--b35)">The Andy Lab member</span></a></p>
+      <a href="lab.html#testimonials" style="font-size:.78rem;font-weight:400;color:var(--b50);text-decoration:none;margin-top:.8rem;display:inline-block;border-bottom:1px solid var(--b20)" data-lang="es">Lee más testimonios →</a>
+      <a href="lab.html#testimonials" style="font-size:.78rem;font-weight:400;color:var(--b50);text-decoration:none;margin-top:.8rem;display:inline-block;border-bottom:1px solid var(--b20)" data-lang="en">Read more testimonials →</a>
+    </div>
   </div>
 </section>
 
@@ -203,44 +229,48 @@
 dónde empiezas.</h2>
     <h2 data-lang="en">Pick your<br>entry point.</h2>
   </div>
-  <div class="action-grid">
-    <div class="acard reveal">
-      <span class="alabel"><span data-lang="es">600€/ciclo · 13 semanas</span><span data-lang="en">€600/cycle · 13 weeks</span></span>
-      <h3>THE Lab 1:1</h3>
-      <p data-lang="es">Mi cerebro, aplicado a tu cuerpo. Entrenamiento y nutrición hechos para ti, con un sistema de datos que detecta patrones antes de que tú los notes. Plazas limitadas.</p>
-      <p data-lang="en">My brain, applied to your body. Training and nutrition built for you, with a data system that catches patterns before you notice them. Limited spots.</p>
-      <a href="lab.html" class="alink"><span data-lang="es">Conoce THE Lab →</span><span data-lang="en">Learn about THE Lab →</span></a>
+  <div class="action-grid reveal-stagger">
+    <div class="acard reveal" style="padding:0;overflow:hidden">
+      <div style="height:280px;overflow:hidden">
+        <img src="assets/img/andy-gym.jpg" alt="Andy en el gimnasio" style="width:100%;height:100%;object-fit:cover;object-position:center 30%">
+      </div>
+      <div style="padding:clamp(1.6rem,2.5vw,2.5rem);display:flex;flex-direction:column;gap:1rem;flex:1">
+        <span class="alabel"><span data-lang="es">350€/mes · mínimo 3 meses</span><span data-lang="en">€350/month · 3-month minimum</span></span>
+        <h3 style="color:var(--accent)">THE Lab 1:1</h3>
+        <p data-lang="es" style="color:#fff">Tu programa, construido conmigo. Ajustado cada semana. No hay plantilla; hay llamadas, datos, cerebro y la forma en que vives tu vida como punto de partida.</p>
+        <p data-lang="en" style="color:#fff">Your program adjusted every week. Video call with report every 4 weeks. Direct chat with me. A data system that catches patterns before you notice them.</p>
+        <span style="display:inline-block;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:4px;padding:.35rem .7rem;align-self:flex-start"><span data-lang="es">Solo trabajo con 10 personas a la vez</span><span data-lang="en">I only work with 10 people at a time</span></span>
+        <a href="lab.html" class="btn-p" style="font-size:.68rem;letter-spacing:.2em;margin-top:auto;align-self:flex-start"><span data-lang="es">SOLICITAR PLAZA →</span><span data-lang="en">APPLY NOW →</span></a>
+      </div>
     </div>
-    <div class="acard reveal d1">
-      <span class="alabel"><span data-lang="es">Gratis · Semanal</span><span data-lang="en">Free · Weekly</span></span>
-      <h3>THE Brain</h3>
-      <p data-lang="es">Una newsletter semanal: músculo, comida, y por qué tu cerebro se niega a cooperar. Mi cabeza, en tu bandeja de entrada.</p>
-      <p data-lang="en">A weekly newsletter: muscle, food, and why your brain won't cooperate. How I think, in your inbox.</p>
-      <a href="newsletter.html" class="alink"><span data-lang="es">Suscribirse →</span><span data-lang="en">Subscribe →</span></a>
+    <div class="acard reveal d1" style="padding:0;overflow:hidden">
+      <div style="height:280px;overflow:hidden">
+        <img src="assets/img/andy-brain.jpg" alt="Andy" style="width:100%;height:100%;object-fit:cover;object-position:center 30%">
+      </div>
+      <div style="padding:clamp(1.6rem,2.5vw,2.5rem);display:flex;flex-direction:column;gap:1rem;flex:1">
+        <span class="alabel"><span data-lang="es">Gratis · Semanal</span><span data-lang="en">Free · Weekly</span></span>
+        <h3 style="color:var(--accent)">THE Brain</h3>
+        <p data-lang="es" style="color:#fff">Una newsletter semanal: músculo, comida, y por qué tu cerebro se niega a cooperar. Mi cabeza, en tu bandeja de entrada.</p>
+        <p data-lang="en" style="color:#fff">A weekly newsletter: muscle, food, and why your brain won't cooperate. How I think, in your inbox.</p>
+        <a href="newsletter.html" class="alink"><span data-lang="es">Suscribirse →</span><span data-lang="en">Subscribe →</span></a>
+      </div>
     </div>
-    <div class="acard reveal d2">
-      <span class="alabel"><span data-lang="es">Guías prácticas</span><span data-lang="en">Practical guides</span></span>
-      <h3>THE Method</h3>
-      <p data-lang="es">Guías con el mismo criterio que uso dentro del Lab. Lee cómo pienso antes de decidir.</p>
-      <p data-lang="en">Guides with the same criteria I use inside the Lab. Read how I think before you decide.</p>
-      <a href="shop.html" class="alink"><span data-lang="es">Ver THE Method →</span><span data-lang="en">See THE Method →</span></a>
+    <div class="acard reveal d2" style="padding:0;overflow:hidden">
+      <div style="height:280px;overflow:hidden">
+        <img src="assets/img/andy-flex.jpeg" alt="The Method" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:none">
+      </div>
+      <div style="padding:clamp(1.6rem,2.5vw,2.5rem);display:flex;flex-direction:column;gap:1rem;flex:1">
+        <span class="alabel"><span data-lang="es">Guías prácticas</span><span data-lang="en">Practical guides</span></span>
+        <h3 style="color:var(--accent)">THE Method</h3>
+        <p data-lang="es" style="color:#fff">Guías con el mismo criterio que uso dentro del Lab. Lee cómo pienso antes de decidir.</p>
+        <p data-lang="en" style="color:#fff">Guides with the same criteria I use inside the Lab. Read how I think before you decide.</p>
+        <a href="shop.html" class="alink"><span data-lang="es">Ver THE Method →</span><span data-lang="en">See THE Method →</span></a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-f" id="cta">
-  <span class="etiq" style="display:inline-flex;margin-bottom:2.5rem">The Andy Lab</span>
-  <h2 data-lang="es">Más músculo.<br>Menos culpa.</h2>
-  <h2 data-lang="en">More muscle.<br>Less guilt.</h2>
-  <p class="cta-line" data-lang="es">Entrenamiento de fuerza y nutrición con criterio. Cero motivación.</p>
-  <p class="cta-line" data-lang="en">Strength training and nutrition built on criteria. Zero motivation.</p>
-  <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:.5rem">
-    <a href="newsletter.html" class="btn-p"><span data-lang="es">Suscríbete a The Brain →</span><span data-lang="en">Subscribe to The Brain →</span></a>
-    <a href="lab.html" class="btn-f"><span data-lang="es">Conoce THE Lab 1:1 →</span><span data-lang="en">Learn about THE Lab 1:1 →</span></a>
-    <a href="shop.html" class="btn-f"><span data-lang="es">Lee THE Method →</span><span data-lang="en">Read THE Method →</span></a>
-  </div>
-</section>
+<!-- FOOTER -->
 
 <footer class="site-footer">
   <a href="index.html" class="flogo"><img src="assets/img/pepper.png" class="flogo-pepper" alt=""><span style="color: rgb(255, 255, 255)">The Andy <span style="color:#FF3737">Lab</span></span></a>

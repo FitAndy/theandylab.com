@@ -27,14 +27,14 @@
   }
 
   /* ---- scroll reveals ---- */
-  var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal, .reveal-stagger'));
   if(revealEls.length){
     if(!('IntersectionObserver' in window)){
       revealEls.forEach(function(n){ n.classList.add('in'); });
     } else {
       var io = new IntersectionObserver(function(entries){
         entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-      }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+      }, {threshold:0.08, rootMargin:'0px 0px -6% 0px'});
       revealEls.forEach(function(n){ io.observe(n); });
     }
   }

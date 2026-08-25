@@ -29,16 +29,16 @@
 .intro-tag{font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:.22em;color:var(--accent)}
 
 /* PRINCIPLES */
-.principle{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;border-top:1px solid var(--line)}
-.principle:nth-child(odd of .principle){background:var(--burg-deep)}
-.p-txt{padding:var(--sec) var(--gut);display:flex;flex-direction:column;justify-content:center}
-.p-poster{position:relative;overflow:hidden;min-height:520px;background:var(--burg-abyss);border-radius:0}
+.principles-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.principle{display:flex;flex-direction:column;background:var(--burg-deep);overflow:hidden}
+.principle:nth-child(odd){background:rgba(41,4,5,.4)}
+.p-poster{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--burg-abyss)}
 .p-poster img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease);filter:contrast(1.04)}
 .principle:hover .p-poster img{transform:scale(1.04)}
-.principle:nth-child(even) .p-poster{order:-1}
-.p-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,7vw,8rem);line-height:1;color:var(--accent);letter-spacing:.02em;margin-bottom:.75rem}
-.p-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.2rem,6.5vw,8rem);line-height:.88;letter-spacing:.01em;color:#fff;margin-bottom:2rem;text-wrap:balance}
-.p-text{font-size:clamp(1.04rem,1.2vw,1.2rem);font-weight:300;color:var(--b70);line-height:1.95;max-width:46ch}
+.p-txt{padding:clamp(1.2rem,2vw,1.6rem);display:flex;flex-direction:column;gap:.4rem;flex:1}
+.p-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.6vw,1.4rem);line-height:1;color:var(--accent);letter-spacing:.02em}
+.p-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.3rem,2vw,1.7rem);line-height:.92;letter-spacing:.01em;color:#fff;text-wrap:balance}
+.p-text{font-size:clamp(.78rem,.85vw,.85rem);font-weight:300;color:var(--b70);line-height:1.65;max-width:46ch}
 .p-text strong{color:#fff;font-weight:500}
 
 /* CLOSE */
@@ -51,9 +51,7 @@
 .mclose-ctas{display:flex;gap:1rem;align-items:center;justify-content:center;flex-wrap:wrap}
 
 @media(max-width:880px){
-  .principle{grid-template-columns:1fr}
-  .principle:nth-child(even) .p-poster{order:0}
-  .p-poster{order:-1;min-height:62vw}
+  .principles-grid{grid-template-columns:1fr}
 }
 @media(max-width:560px){
   .mclose-ctas{flex-direction:column;align-items:stretch}
@@ -68,8 +66,8 @@
   <ul class="nav-links">
     <li><a href="andy.html">Andy</a></li>
     <li><a href="manifesto.html" class="active">THE Manifesto</a></li>
-    <li><a href="shop.html">THE Method</a></li>
     <li><a href="lab.html">THE Lab</a></li>
+    <li><a href="shop.html">THE Method</a></li>
     <li class="nav-cta-m"><a href="newsletter.html">The Brain</a></li>
   </ul>
   <div class="nav-right">
@@ -92,7 +90,8 @@
   </div>
 </section>
 
-<section class="principle">
+<div class="principles-grid">
+<div class="principle">
   <div class="p-txt reveal">
     <div class="p-num">01</div>
     <h2 class="p-title" data-lang="es">Deja de<br>hacerte pequeña.</h2>
@@ -101,9 +100,9 @@
     <p class="p-text" data-lang="en">You've spent years shrinking — eating less, taking up less, asking for less. This is the opposite: <strong>more strength, more space, more presence.</strong> It starts with deciding you deserve to take up room.</p>
   </div>
   <div class="p-poster"><img src="assets/img/principle-01.png" alt="Calling all women. Done making themselves smaller." loading="lazy"></div>
-</section>
+</div>
 
-<section class="principle">
+<div class="principle">
   <div class="p-txt reveal">
     <div class="p-num">02</div>
     <h2 class="p-title" data-lang="es">Fuerte no es<br>un tipo de cuerpo.</h2>
@@ -112,9 +111,9 @@
     <p class="p-text" data-lang="en">You weren't born strong or not. Strength isn't genetics or luck — it's <strong>a decision</strong> you make and remake every week. Your body is something you build, not a verdict to accept.</p>
   </div>
   <div class="p-poster"><img src="assets/img/principle-02.png" alt="Strong is not a body type. It's a decision." loading="lazy"></div>
-</section>
+</div>
 
-<section class="principle">
+<div class="principle">
   <div class="p-txt reveal">
     <div class="p-num">03</div>
     <h2 class="p-title" data-lang="es">El músculo no es<br>un efecto secundario.</h2>
@@ -123,9 +122,9 @@
     <p class="p-text" data-lang="en">It's not what happens by accident while you chase being thin. <strong>It's the point.</strong> Muscle is what makes you strong, capable and free — inside the gym and out. We put it at the center.</p>
   </div>
   <div class="p-poster"><img src="assets/img/principle-03.png" alt="Muscle is not a side effect. It's the point." loading="lazy"></div>
-</section>
+</div>
 
-<section class="principle">
+<div class="principle">
   <div class="p-txt reveal">
     <div class="p-num">04</div>
     <h2 class="p-title" data-lang="es">Las mancuernas rosas<br>eran una sugerencia.</h2>
@@ -134,9 +133,9 @@
     <p class="p-text" data-lang="en">They told you to lift light so you wouldn't "get bulky." It was a lie. You won't grow by accident. You won't build muscle without intention. <strong>Lift the bar.</strong></p>
   </div>
   <div class="p-poster"><img src="assets/img/principle-04.png" alt="The pink dumbbells were a suggestion, ignore it." loading="lazy"></div>
-</section>
+</div>
 
-<section class="principle">
+<div class="principle">
   <div class="p-txt reveal">
     <div class="p-num">05</div>
     <h2 class="p-title" data-lang="es">La confusión<br>se vende.</h2>
@@ -145,9 +144,9 @@
     <p class="p-text" data-lang="en">The industry wins when you understand nothing. A thousand accounts, a thousand diets, a thousand opinions — built to keep you buying, not to make you strong. <strong>I work the other way:</strong> clarity and evidence.</p>
   </div>
   <div class="p-poster"><img src="assets/img/principle-05.png" alt="Confusion is the product. You're the customer." loading="lazy"></div>
-</section>
+</div>
 
-<section class="principle">
+<div class="principle">
   <div class="p-txt reveal">
     <div class="p-num">06</div>
     <h2 class="p-title" data-lang="es">La industria vive<br>de tu próximo intento.</h2>
@@ -156,28 +155,29 @@
     <p class="p-text" data-lang="en">Their business isn't your success — it's your <strong>restart.</strong> Every reset, every new plan, every January. A system that works gets you out of that loop for good. That's what we build.</p>
   </div>
   <div class="p-poster"><img src="assets/img/principle-06.png" alt="The industry runs on your next attempt." loading="lazy"></div>
-</section>
+</div>
 
-<section class="principle">
+<div class="principle">
   <div class="p-txt reveal">
     <div class="p-num">07</div>
     <h2 class="p-title" data-lang="es">Constancia,<br>no perfección.</h2>
     <h2 class="p-title" data-lang="en">Consistency over<br>perfection.</h2>
-    <p class="p-text" data-lang="es">No necesitas comer perfecto. No necesitas no fallar nunca. La copa de vino no arruina nada. Lo que construye músculo es <strong>volver</strong> — otra vez, y otra. Aquí las pecadoras son bienvenidas.</p>
+    <p class="p-text" data-lang="es">No necesitas comer perfectamente. No necesitas no fallar nunca. La copa de vino no arruina nada. Lo que construye músculo es <strong>la constancia, no la perfección.</strong> Aquí las pecadoras son bienvenidas.</p>
     <p class="p-text" data-lang="en">You don't need to eat perfectly. You don't need to never slip. The glass of wine ruins nothing. What builds muscle is <strong>coming back</strong> — again, and again. Here, sinners are welcome.</p>
   </div>
   <div class="p-poster"><img src="assets/img/principle-07.png" alt="Sinners welcome. Consistency over perfection." loading="lazy"></div>
-</section>
+</div>
+</div>
 
 <section class="mclose">
   <span class="etiq" style="justify-content:center"><span data-lang="es">El siguiente paso</span><span data-lang="en">The next step</span></span>
-  <h2 class="reveal" data-lang="es">¿Lista para dejar<br>de <span style="color: #FFFFFF">adivinar</span>?</h2>
-  <h2 class="reveal" data-lang="en">Ready to<br>stop <span style="color: #FFFFFF">guessing</span>?</h2>
-  <p class="reveal d1" data-lang="es">Si esto suena a ti, el Lab es para ti.</p>
-  <p class="reveal d1" data-lang="en">If this sounds like you, the Lab is for you.</p>
+  <h2 class="reveal" data-lang="es">Eso es lo<br>que creo.</h2>
+  <h2 class="reveal" data-lang="en">That's what<br>I believe.</h2>
+  <p class="reveal d1" data-lang="es">Si pensamos igual, el Lab es donde pasamos a la acción.</p>
+  <p class="reveal d1" data-lang="en">If something resonated, the Lab is where it gets built.</p>
   <div class="mclose-ctas reveal d2">
-    <a href="newsletter.html" class="btn-p" style="color: #FFFFFF; background-color: #4A0101"><span data-lang="es">Suscríbete a The Brain →</span><span data-lang="en">Subscribe to The Brain →</span></a>
-    <a href="lab.html" class="btn-f"><span data-lang="es">Entra al Lab →</span><span data-lang="en">Enter the Lab →</span></a>
+    <a href="lab.html" class="btn-p"><span data-lang="es">Entra al Lab →</span><span data-lang="en">Enter the Lab →</span></a>
+    <a href="newsletter.html" class="btn-f"><span data-lang="es">O lee cómo pienso →</span><span data-lang="en">Or read how I think →</span></a>
   </div>
 </section>
 
