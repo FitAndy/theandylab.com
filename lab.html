@@ -208,7 +208,7 @@
 .rp-id{background:rgba(74,1,1,0.25);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:.75rem 1rem;font-size:.72rem;line-height:1.55;color:#fff;margin-top:.2rem;filter:blur(5px);-webkit-filter:blur(5px);user-select:none;-webkit-user-select:none;pointer-events:none}
 .rp-cv{display:inline-flex;align-items:center;gap:.25rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.05);border-radius:5px;padding:2px 6px;font-size:.48rem;color:var(--b25)}
 .rp-ft{text-align:center;font-size:.44rem;color:rgba(255,255,255,.1);margin-top:.8rem;padding-top:.5rem;border-top:1px solid rgba(200,100,100,0.05)}
-@media(max-width:700px){.rp-g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.rp-g4{grid-template-columns:repeat(2,1fr)};.invest-card{grid-template-columns:1fr!important}.invest-card > div:nth-child(2){grid-column:1;grid-row:auto!important}}
 @media(max-width:480px){.rp-g3,.rp-g2{grid-template-columns:1fr}}
 
 /* testimonial + screenshot hover */
@@ -238,39 +238,44 @@
 
 <!-- OFERTA -->
 <section class="oferta" id="oferta">
-  <div class="invest-card" style="grid-template-columns:1fr;max-width:860px;margin:0 auto">
-    <div style="padding:clamp(2rem,4vw,3rem);display:flex;flex-direction:column;gap:1.5rem">
+  <div class="invest-card" style="grid-template-columns:1fr 1fr;max-width:860px;margin:0 auto;display:grid;gap:0">
+    <div style="grid-column:1;padding:clamp(2rem,4vw,3rem);display:flex;flex-direction:column;gap:1.5rem">
       <div>
         <span class="etiq">THE Lab 1:1</span>
-        <h2 data-lang="es" style="margin:.5rem 0 0 0;font-size:clamp(2rem,4vw,3rem);line-height:.92">Tu último<br>primer día.</h2>
-        <h2 data-lang="en" style="margin:.5rem 0 0 0;font-size:clamp(2rem,4vw,3rem);line-height:.92">Your last<br>first day.</h2>
+        <h2 data-lang="es" style="margin:.5rem 0 0 0;font-size:clamp(2rem,4vw,3rem);line-height:.92;text-transform:uppercase;font-family:'Bebas Neue',sans-serif">Tu último<br>primer día.</h2>
+        <h2 data-lang="en" style="margin:.5rem 0 0 0;font-size:clamp(2rem,4vw,3rem);line-height:.92;text-transform:uppercase">Your last<br>first day.</h2>
       </div>
       <div>
         <div class="precio-final"><span data-lang="es">300€</span><span data-lang="en">€300</span></div>
         <div class="invest-sub" data-lang="es" style="color:#fff">/ mes · mínimo 3 meses (3 bloques de 4 semanas)</div>
         <div class="invest-sub" data-lang="en" style="color:#fff">/ month · 3-month minimum (3 blocks of 4 weeks)</div>
       </div>
-      <p data-lang="es" style="color:#fff;font-size:clamp(1.05rem,1.3vw,1.25rem);line-height:1.85;margin:0">El sistema que cierra la brecha entre querer y hacer.</p>
+      <p data-lang="es" style="color:#fff;font-size:clamp(1.05rem,1.3vw,1.25rem);line-height:1.85;margin:0">Un sistema diseñado para que ser constante cada vez menos.<br><strong style="color:#FF3838;font-weight:700">Más músculo. Menos culpa.</strong></p>
+      <p data-lang="en" style="color:#fff;font-size:clamp(1.05rem,1.3vw,1.25rem);line-height:1.85;margin:0">A system designed to make consistency easier every week.<br><strong style="color:#FF3838;font-weight:700">More muscle. Less guilt.</strong></p>
       <p data-lang="en" style="color:#fff;font-size:clamp(1.05rem,1.3vw,1.25rem);line-height:1.85;margin:0">Your program, built with me. Adjusted every week. No template — a call, your data, and my judgment deciding what's next.</p>
     </div>
-    <div style="padding:clamp(1.5rem,3vw,2.5rem);display:grid;grid-template-columns:1fr 1fr;gap:.5rem 2rem;border-top:1px solid var(--b08)">
-      <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Llamada de calibración. Empezamos por entender quién eres y tus objetivos, no por darte un plan nuevo.</div>
-      <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Tu nutrición ajustada a cómo comes tú, no a cómo te dijeron que comieras.</div>
-      <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Revisión de técnica por vídeo. Te corrijo antes de que el cuerpo se queje.</div>
-      <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Informe cada 4 semanas con tus datos: qué mejoró, qué cambió, qué sigue.</div>
-      <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Chat directo conmigo para resolver cualquier duda.</div>
-      <div style="display:flex;gap:.6rem;padding:.7rem 0;font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Ciencia del comportamiento aplicada a tus hábitos. Para que no dependas de las ganas.</div>
-      <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Calibration call. We build your program from scratch.</div>
-      <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Your meal plan — built from how you actually eat, not how you "should".</div>
-      <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Technique video checks. I correct your form before your body complains.</div>
-      <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Video call every 4 weeks. With a progress report.</div>
-      <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Direct chat. Between calls, I'm there.</div>
-      <div style="display:flex;gap:.6rem;padding:.7rem 0;font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Behavioral science applied to your habits. You won't depend on motivation.</div>
+    <div style="grid-column:2;grid-row:1;overflow:hidden;background:rgba(41,4,5,.6);padding:1rem;border-top:none">
+      <img src="assets/img/andy-flex.jpeg" alt="Andy" style="width:406px;height:428px;object-fit:contain;display:block">
     </div>
-    <div style="padding:clamp(1.5rem,3vw,2.5rem);display:flex;flex-direction:column;gap:1rem;border-top:1px solid var(--b08)">
-      <a href="https://tally.so/r/XxNP4Y" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">SOLICITAR PLAZA →</span><span data-lang="en">APPLY NOW →</span></a>
-      <span style="font-size:.78rem;color:var(--b35)" data-lang="es">Solo trabajo con 10 personas a la vez</span>
-      <span style="font-size:.78rem;color:var(--b35)" data-lang="en">I only work with 10 people at a time</span>
+    <div style="grid-column:1/3;padding:clamp(1.5rem,3vw,2.5rem);display:grid;grid-template-columns:1fr 1fr;gap:.5rem 2rem;border-top:1px solid var(--b08)">
+        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Llamada de calibración. Empezamos por ti: tu semana, tus prioridades, lo que te gusta y lo que quieres lograr. De ahí sale el plan.</div>
+        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Entrenamiento de fuerza a tu medida. Bloques de 4 semanas.</div>
+        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Nutrición. Basada en lo que comes y lo que disfrutas. La proteína primero y nada de extremos.</div>
+        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Revisión de técnica por vídeo. Te corrijo antes de que el cuerpo se queje.</div>
+        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Informe cada 4 semanas con tus datos. Qué mejoró, qué tenemos que reforzar y por qué tu cerebro hace lo que hace.</div>
+        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Chat directo conmigo. Dudas y respaldo en semanas difíciles.</div>
+        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Calibration call. We start with you: your week, your priorities, what you like and what you want to achieve. That's where the plan comes from.</div>
+        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Strength training tailored to you. 4-week blocks.</div>
+        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Nutrition. Based on what you eat and what you enjoy. Protein first, no extremes.</div>
+        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Technique video checks. I correct your form before your body complains.</div>
+        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Progress report every 4 weeks. What improved, what we need to strengthen, and why your brain does what it does.</div>
+        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Direct chat with me. Support and answers on tough weeks.</div>
+    </div>
+    <div style="grid-column:1;padding:clamp(1.5rem,3vw,2.5rem);display:flex;flex-direction:column;gap:1rem;border-top:1px solid var(--b08)">
+        <a href="https://tally.so/r/XxNP4Y" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">SOLICITAR PLAZA →</span><span data-lang="en">APPLY NOW →</span></a>
+        <span style="font-size:.78rem;color:var(--b35)" data-lang="es">Solo trabajo con 10 personas a la vez</span>
+        <span style="font-size:.78rem;color:var(--b35)" data-lang="en">I only work with 10 people at a time</span>
+      </div>
     </div>
   </div>
 </section>
@@ -278,6 +283,8 @@
 <!-- TESTIMONIALS — moved before platform -->
 <section id="testimonials" style="padding:clamp(2rem,4vw,3rem) var(--gut);border-top:1px solid var(--line)">
   <span class="etiq reveal" style="display:inline-flex;margin-bottom:clamp(2rem,4vw,3rem)">THE Lab members</span>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;line-height:.9;margin-bottom:clamp(2rem,4vw,3rem)" data-lang="es">Testimonios</h2>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;line-height:.9;margin-bottom:clamp(2rem,4vw,3rem)" data-lang="en">Testimonials</h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(1rem,2vw,1.5rem)" class="reveal-stagger">
     <!-- Amy B — highlighted -->
     <div style="background:rgba(212,14,38,.06);border:1px solid rgba(212,14,38,.18);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
