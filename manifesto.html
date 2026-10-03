@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Andy Lab — Manifesto</title>
-<meta name="description" content="El manifiesto de The Andy Lab — siete principios sobre los que está construido todo lo que hago.">
+<meta name="description" content="El manifiesto de The Andy Lab — cinco principios sobre los que está construido todo lo que hago.">
 <link rel="canonical" href="https://theandylab.com/manifesto.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="The Andy Lab">
 <meta property="og:title" content="The Andy Lab — Manifesto">
-<meta property="og:description" content="Siete principios sobre los que está construido todo lo que hago.">
+<meta property="og:description" content="Cinco principios sobre los que está construido todo lo que hago.">
 <meta property="og:url" content="https://theandylab.com/manifesto.html">
 <meta property="og:image" content="https://theandylab.com/assets/img/principle-01.png">
 <meta property="og:locale" content="es_ES">
@@ -29,16 +29,19 @@
 .intro-tag{font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:.22em;color:var(--accent)}
 
 /* PRINCIPLES */
-.principles-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
-.principle{display:flex;flex-direction:column;background:var(--burg-deep);overflow:hidden}
-.principle:nth-child(odd){background:rgba(41,4,5,.4)}
-.p-poster{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--burg-abyss)}
+.principles-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--burg-deep);max-width:100%;margin:0}
+.principle{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--burg-deep);overflow:hidden;border:1px solid var(--line);border-right:none;border-bottom:none}
+.principle:nth-child(odd) .p-txt{background:rgba(41,4,5,.4)}
+.principle:nth-child(2n) .p-txt{background:var(--burg-deep)}
+.principle:nth-child(even){border-right:1px solid var(--line)}
+.principle:nth-last-child(-n+2){border-bottom:1px solid var(--line)}
+.p-poster{position:relative;overflow:hidden;aspect-ratio:auto;background:var(--burg-abyss);width:100%;height:100%;min-height:320px}
 .p-poster img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease);filter:contrast(1.04)}
 .principle:hover .p-poster img{transform:scale(1.04)}
-.p-txt{padding:clamp(1.2rem,2vw,1.6rem);display:flex;flex-direction:column;gap:.4rem;flex:1}
-.p-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.6vw,1.4rem);line-height:1;color:var(--accent);letter-spacing:.02em}
-.p-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.3rem,2vw,1.7rem);line-height:.92;letter-spacing:.01em;color:#fff;text-wrap:balance}
-.p-text{font-size:clamp(.78rem,.85vw,.85rem);font-weight:300;color:var(--b70);line-height:1.65;max-width:46ch}
+.p-txt{padding:clamp(1.5rem,2vw,2rem);display:flex;flex-direction:column;gap:.8rem;flex:1;justify-content:center}
+.p-num{font-family:'Bebas Neue',sans-serif;font-size:.85rem;line-height:1;color:var(--accent);letter-spacing:.02em}
+.p-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.1rem,1.3vw,1.3rem);line-height:.95;letter-spacing:.01em;color:#fff;text-wrap:balance;margin-bottom:.3rem}
+.p-text{font-size:.9rem;font-weight:300;color:var(--b85);line-height:1.5;max-width:none}
 .p-text strong{color:#fff;font-weight:500}
 
 /* CLOSE */
@@ -84,8 +87,8 @@
     <span class="etiq"><span data-lang="es">The Andy Lab — Manifiesto</span><span data-lang="en">The Andy Lab — Manifesto</span></span>
     <h1 class="reveal" data-lang="es" style="font-size:100px">En lo que<br><span style="color: #FFFFFF">creo.</span></h1>
     <h1 class="reveal" data-lang="en">What I<br><span class="hl">believe</span></h1>
-    <p class="intro-sub reveal d1" data-lang="es">No te lo cuento. <strong>Te lo enseño.</strong> Siete principios sobre los que está construido todo lo que hago.</p>
-    <p class="intro-sub reveal d1" data-lang="en">I don't tell you. <strong>I show you.</strong> Seven principles everything I do is built on.</p>
+    <p class="intro-sub reveal d1" data-lang="es"><span style="font-size: 14.4px; background-color: rgba(41, 4, 5, 0.4);">Llevas años encogiéndote comiendo menos, haciendo solo cardio y pilates. Este proyecto es todo lo contrario.</span></p>
+    <p class="intro-sub reveal d1" data-lang="en">You've spent years shrinking — eating less, doing only cardio and pilates. This project is everything opposite.</p>
     <span class="intro-tag reveal d2" style="color: #FFFFFF">Más músculo. Menos culpa.</span>
   </div>
 </section>
@@ -96,8 +99,8 @@
     <div class="p-num">01</div>
     <h2 class="p-title" data-lang="es">Deja de<br>hacerte pequeña.</h2>
     <h2 class="p-title" data-lang="en">Stop making<br>yourself smaller.</h2>
-    <p class="p-text" data-lang="es">Llevas años encogiéndote — comiendo menos, ocupando menos, pidiendo menos. Esto es lo contrario: <strong>más fuerza, más espacio, más presencia.</strong> Empieza por decidir que mereces ocupar tu lugar.</p>
-    <p class="p-text" data-lang="en">You've spent years shrinking — eating less, taking up less, asking for less. This is the opposite: <strong>more strength, more space, more presence.</strong> It starts with deciding you deserve to take up room.</p>
+    <p class="p-text" data-lang="es">Años comiendo menos, escondida en la clase grupal, esperando a que se desocupe la zona de pesas, diciendo que sí cuando quieres decir que no. Aquí se ocupa espacio. En el gym, en la mesa y en la sala de reuniones.</p>
+    <p class="p-text" data-lang="en">You've spent years hiding — eating less, stuck in group classes, waiting for the weights area to empty, saying yes when you meant no. Here you take up space. In the gym, at the table, in the boardroom.</p>
   </div>
   <div class="p-poster"><img src="assets/img/principle-01.png" alt="Calling all women. Done making themselves smaller." loading="lazy"></div>
 </div>
@@ -105,65 +108,21 @@
 <div class="principle">
   <div class="p-txt reveal">
     <div class="p-num">02</div>
-    <h2 class="p-title" data-lang="es">Fuerte no es<br>un tipo de cuerpo.</h2>
-    <h2 class="p-title" data-lang="en">Strong is not<br>a body type.</h2>
-    <p class="p-text" data-lang="es">No naciste para ser fuerte o no. La fuerza no es genética ni suerte — es <strong>una decisión</strong> que tomas y vuelves a tomar cada semana. El cuerpo es algo que construyes, no una sentencia que aceptar.</p>
-    <p class="p-text" data-lang="en">You weren't born strong or not. Strength isn't genetics or luck — it's <strong>a decision</strong> you make and remake every week. Your body is something you build, not a verdict to accept.</p>
-  </div>
-  <div class="p-poster"><img src="assets/img/principle-02.png" alt="Strong is not a body type. It's a decision." loading="lazy"></div>
-</div>
-
-<div class="principle">
-  <div class="p-txt reveal">
-    <div class="p-num">03</div>
     <h2 class="p-title" data-lang="es">El músculo no es<br>un efecto secundario.</h2>
     <h2 class="p-title" data-lang="en">Muscle is not<br>a side effect.</h2>
-    <p class="p-text" data-lang="es">No es lo que pasa por accidente mientras persigues estar delgada. <strong>Es el objetivo.</strong> El músculo es lo que te hace fuerte, capaz y libre — dentro del gym y fuera de él. Lo ponemos en el centro.</p>
-    <p class="p-text" data-lang="en">It's not what happens by accident while you chase being thin. <strong>It's the point.</strong> Muscle is what makes you strong, capable and free — inside the gym and out. We put it at the center.</p>
+    <p class="p-text" data-lang="es">El músculo no llega de rebote mientras persigues otra cosa. Se busca, se planea y se construye a propósito. Tonificar es una palabra de revista. Aquí se entrena fuerza para no depender de nadie a los 70. Tampoco ahora. Fuerte, capaz y libre, dentro del gym y fuera de él.</p>
+    <p class="p-text" data-lang="en">Muscle doesn't come as a side effect while chasing something else. You search for it, plan it and build it on purpose. Toning is a magazine word. Here we train for strength so you don't need anyone at 70. Not now either. Strong, capable and free — inside the gym and out.</p>
   </div>
   <div class="p-poster"><img src="assets/img/principle-03.png" alt="Muscle is not a side effect. It's the point." loading="lazy"></div>
 </div>
 
 <div class="principle">
   <div class="p-txt reveal">
-    <div class="p-num">04</div>
-    <h2 class="p-title" data-lang="es">Las mancuernas rosas<br>eran una sugerencia.</h2>
-    <h2 class="p-title" data-lang="en">The pink dumbbells<br>were a suggestion.</h2>
-    <p class="p-text" data-lang="es">Te dijeron que levantaras ligero para no «ponerte grande». Era mentira. No vas a crecer sin querer. No vas a construir músculo sin intención. <strong>Levanta la barra.</strong></p>
-    <p class="p-text" data-lang="en">They told you to lift light so you wouldn't "get bulky." It was a lie. You won't grow by accident. You won't build muscle without intention. <strong>Lift the bar.</strong></p>
-  </div>
-  <div class="p-poster"><img src="assets/img/principle-04.png" alt="The pink dumbbells were a suggestion, ignore it." loading="lazy"></div>
-</div>
-
-<div class="principle">
-  <div class="p-txt reveal">
-    <div class="p-num">05</div>
-    <h2 class="p-title" data-lang="es">La confusión<br>se vende.</h2>
-    <h2 class="p-title" data-lang="en">Confusion<br>is the product.</h2>
-    <p class="p-text" data-lang="es">La industria gana cuando no entiendes nada. Mil cuentas, mil dietas, mil opiniones — diseñadas para mantenerte comprando, no para hacerte fuerte. <strong>Yo trabajo al revés:</strong> claridad y evidencia.</p>
-    <p class="p-text" data-lang="en">The industry wins when you understand nothing. A thousand accounts, a thousand diets, a thousand opinions — built to keep you buying, not to make you strong. <strong>I work the other way:</strong> clarity and evidence.</p>
-  </div>
-  <div class="p-poster"><img src="assets/img/principle-05.png" alt="Confusion is the product. You're the customer." loading="lazy"></div>
-</div>
-
-<div class="principle">
-  <div class="p-txt reveal">
-    <div class="p-num">06</div>
-    <h2 class="p-title" data-lang="es">La industria vive<br>de tu próximo intento.</h2>
-    <h2 class="p-title" data-lang="en">The industry runs<br>on your next attempt.</h2>
-    <p class="p-text" data-lang="es">Su negocio no es que lo logres — es que <strong>vuelvas a empezar.</strong> Cada reinicio, cada plan nuevo, cada enero. Un sistema que funciona te saca de ese ciclo para siempre. Eso es lo que construimos.</p>
-    <p class="p-text" data-lang="en">Their business isn't your success — it's your <strong>restart.</strong> Every reset, every new plan, every January. A system that works gets you out of that loop for good. That's what we build.</p>
-  </div>
-  <div class="p-poster"><img src="assets/img/principle-06.png" alt="The industry runs on your next attempt." loading="lazy"></div>
-</div>
-
-<div class="principle">
-  <div class="p-txt reveal">
-    <div class="p-num">07</div>
+    <div class="p-num">03</div>
     <h2 class="p-title" data-lang="es">Constancia,<br>no perfección.</h2>
     <h2 class="p-title" data-lang="en">Consistency over<br>perfection.</h2>
-    <p class="p-text" data-lang="es">No necesitas comer perfectamente. No necesitas no fallar nunca. La copa de vino no arruina nada. Lo que construye músculo es <strong>la constancia, no la perfección.</strong> Aquí las pecadoras son bienvenidas.</p>
-    <p class="p-text" data-lang="en">You don't need to eat perfectly. You don't need to never slip. The glass of wine ruins nothing. What builds muscle is <strong>coming back</strong> — again, and again. Here, sinners are welcome.</p>
+    <p class="p-text" data-lang="es">Perfección es una palabra que aquí no se usa. Motivación y disciplina tampoco, porque se acaban un martes cualquiera. Lo que queda es entender cómo decide tu cerebro, para que la culpa pierda su sitio y armes un sistema a tu medida. Aquí las pecadoras son bienvenidas.</p>
+    <p class="p-text" data-lang="en">Perfection is a word we don't use here. Motivation and discipline either, because they disappear any Tuesday. What's left is understanding how your brain decides, so guilt loses its place and you build a system that fits you. Here sinners are welcome.</p>
   </div>
   <div class="p-poster"><img src="assets/img/principle-07.png" alt="Sinners welcome. Consistency over perfection." loading="lazy"></div>
 </div>
