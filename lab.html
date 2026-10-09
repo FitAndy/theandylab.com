@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>THE Lab — The Andy Lab</title>
-<meta name="description" content="Entrenamiento y nutrición construidos desde cero contigo. THE Lab 1:1 (300€/mes). The Andy Lab.">
+<meta name="description" content="THE Lab: entrenamiento de fuerza y nutrición a tu medida. Tres niveles: Extra Spicy, Spicy y Mild. The Andy Lab.">
 <link rel="canonical" href="https://theandylab.com/lab.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Andy Lab">
@@ -214,6 +214,66 @@
 /* testimonial + screenshot hover */
 #testimonials > div > div:hover{transform:translateY(-3px);border-color:rgba(212,14,38,.15);box-shadow:0 16px 32px -12px rgba(0,0,0,.5)}
 .app-s [style*="width:140px"]:hover{transform:translateY(-4px);box-shadow:0 24px 48px -12px rgba(0,0,0,.8)!important}
+
+/* ---------- lab v5 ---------- */
+.lv{padding:clamp(3.5rem,7vw,6rem) var(--gut);border-top:1px solid var(--line)}
+.lv-in{max-width:1100px;margin:0 auto}
+.lv h1,.lv h2{font-family:'Bebas Neue',sans-serif;color:#fff;line-height:.9;letter-spacing:.01em;text-transform:uppercase}
+.lv-h1{font-size:clamp(3.4rem,9vw,7.5rem);margin:.6rem 0 1.2rem}
+.lv-h2{font-size:clamp(2.2rem,5vw,4rem);margin:.6rem 0 clamp(1.5rem,3vw,2.5rem)}
+.lv-hot{color:#FF3838;font-weight:700}
+.lv-p{font-size:clamp(1rem,1.15vw,1.15rem);font-weight:300;color:var(--b70);line-height:1.8;max-width:62ch;margin:0 0 1rem}
+.lv-p strong{color:#fff;font-weight:500}
+.lv-hero{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center;padding-top:clamp(7rem,10vw,9rem);border-top:none}
+.lv-hero img{width:100%;max-height:520px;object-fit:contain;display:block;border-radius:14px;background:rgba(41,4,5,.6)}
+.lv-note{font-size:.8rem;color:var(--b50);margin-top:1rem}
+.lv-cta{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-top:1.6rem}
+.lv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2vw,1.5rem)}
+.lv-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:.9rem}
+.lv-card h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.6rem,2.4vw,2.1rem);line-height:.95;color:#fff;letter-spacing:.01em}
+.lv-card p{font-size:.95rem;font-weight:300;color:var(--b70);line-height:1.75;margin:0}
+.lv-tag{margin-top:auto;padding-top:.8rem;border-top:1px solid var(--b08);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+.lv-tag b{color:#FF3838;font-weight:600}
+.lv-tier{position:relative;background:linear-gradient(160deg,rgba(74,1,1,.28),rgba(41,4,5,.5));border:1px solid rgba(212,14,38,.14);border-radius:16px;padding:clamp(1.6rem,2.8vw,2.4rem);display:flex;flex-direction:column;gap:1rem}
+.lv-tier.feat{border-color:rgba(255,56,56,.55);box-shadow:0 24px 48px -20px rgba(212,14,38,.35)}
+.lv-badge{position:absolute;top:-.7rem;left:1.4rem;background:#D40E26;color:#fff;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;padding:.3rem .7rem;border-radius:99px}
+.lv-tier h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,3vw,2.6rem);line-height:.9;color:#fff}
+.lv-price{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,4.5vw,3.8rem);line-height:1;color:var(--accent-bright)}
+.lv-price small{font-family:'Inter',sans-serif;font-size:.8rem;font-weight:300;color:#fff;letter-spacing:0;margin-left:.3rem}
+.lv-sub{font-size:.8rem;color:#fff;margin:-.4rem 0 0;line-height:1.5}
+.lv-tier>p{font-size:.95rem;font-weight:300;color:rgba(255,255,255,.88);line-height:1.7;margin:0}
+.lv-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.lv-list li{display:flex;gap:.6rem;padding:.6rem 0;border-bottom:1px solid var(--b08);font-size:.9rem;font-weight:300;color:var(--b70);line-height:1.45}
+.lv-list li::before{content:"\2192";color:var(--accent);flex-shrink:0}
+.lv-alt{font-size:.82rem;color:var(--b50);line-height:1.6;margin:0}
+.lv-tier .btn-p{justify-content:center;margin-top:auto}
+.lv-faq details{border-top:1px solid rgba(255,255,255,.1);padding:1.1rem 0}
+.lv-faq details:last-child{border-bottom:1px solid rgba(255,255,255,.1)}
+.lv-faq summary{cursor:pointer;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.3rem,2vw,1.7rem);color:#fff;letter-spacing:.02em;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.lv-faq summary::-webkit-details-marker{display:none}
+.lv-faq summary::after{content:"+";color:var(--accent);flex-shrink:0}
+.lv-faq details[open] summary::after{content:"\2212"}
+.lv-faq details p{font-size:.98rem;font-weight:300;color:var(--b70);line-height:1.8;margin:.8rem 0 0;max-width:68ch}
+.lv-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2vw,1.5rem)}
+.lv-split a{display:block;text-decoration:none;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:clamp(1.4rem,2.5vw,2rem);transition:border-color .3s,transform .3s}
+.lv-split a:hover{border-color:rgba(255,56,56,.4);transform:translateY(-3px)}
+.lv-split h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,2.6vw,2.3rem);color:#fff;margin-bottom:.5rem}
+.lv-split p{font-size:.95rem;font-weight:300;color:var(--b70);line-height:1.7;margin:0}
+.lv-talk{text-align:center}
+.lv-talk .lv-p{margin-left:auto;margin-right:auto}
+.lv-talk .lv-cta{justify-content:center}
+@media(max-width:900px){.lv-grid{grid-template-columns:1fr}.lv-hero{grid-template-columns:1fr}.lv-hero img{max-height:380px}}
+@media(max-width:600px){.lv-split{grid-template-columns:1fr}.lv-cta .btn-p,.lv-cta .btn-f,.lv-tier .btn-p{width:100%;justify-content:center;text-align:center}}
+.lv-h{font-size:1.05rem!important;font-weight:500!important;color:#fff!important;line-height:1.4!important}
+.lv-lbl{font-size:.72rem!important;letter-spacing:.14em;text-transform:uppercase;color:#FF3838!important;margin:0!important}
+.lv-bonus{border:1px dashed rgba(255,56,56,.45);border-radius:10px;padding:.9rem 1rem;font-size:.88rem;font-weight:300;color:rgba(255,255,255,.88);line-height:1.6}
+.lv-bonus b{color:#FF3838;font-weight:600}
+@media(max-width:900px){.lv-grid{max-width:560px;margin-left:auto;margin-right:auto}}
+.lv-fine{text-align:center;margin:-.2rem 0 0!important;font-size:.76rem!important}
+.lv-peps{display:inline-flex;gap:.12em;margin-left:.3em;vertical-align:middle}
+.lv-peps img{height:.8em;width:auto;display:block}
+.lv-tag .lv-peps img{height:1.15em}
+.lv-tier .btn-p{white-space:nowrap}
 </style>
 </head>
 <body>
@@ -236,125 +296,70 @@
   </div>
 </nav>
 
-<!-- OFERTA -->
-<section class="oferta" id="oferta">
-  <div class="invest-card" style="grid-template-columns:1fr 1fr;max-width:860px;margin:0 auto;display:grid;gap:0">
-    <div style="grid-column:1;padding:clamp(2rem,4vw,3rem);display:flex;flex-direction:column;gap:1.5rem">
-      <div>
-        <span class="etiq">THE Lab 1:1</span>
-        <h2 data-lang="es" style="margin:.5rem 0 0 0;font-size:clamp(2rem,4vw,3rem);line-height:.92;text-transform:uppercase;font-family:'Bebas Neue',sans-serif">Tu último<br>primer día.</h2>
-        <h2 data-lang="en" style="margin:.5rem 0 0 0;font-size:clamp(2rem,4vw,3rem);line-height:.92;text-transform:uppercase">Your last<br>first day.</h2>
-      </div>
-      <div>
-        <div class="precio-final"><span data-lang="es">300€</span><span data-lang="en">€300</span></div>
-        <div class="invest-sub" data-lang="es" style="color:#fff">/ mes · mínimo 3 meses (3 bloques de 4 semanas)</div>
-        <div class="invest-sub" data-lang="en" style="color:#fff">/ month · 3-month minimum (3 blocks of 4 weeks)</div>
-      </div>
-      <p data-lang="es" style="color:#fff;font-size:clamp(1.05rem,1.3vw,1.25rem);line-height:1.85;margin:0">Un sistema diseñado para que ser constante cada vez menos.<br><strong style="color:#FF3838;font-weight:700">Más músculo. Menos culpa.</strong></p>
-      <p data-lang="en" style="color:#fff;font-size:clamp(1.05rem,1.3vw,1.25rem);line-height:1.85;margin:0">A system designed to make consistency easier every week.<br><strong style="color:#FF3838;font-weight:700">More muscle. Less guilt.</strong></p>
-      <p data-lang="en" style="color:#fff;font-size:clamp(1.05rem,1.3vw,1.25rem);line-height:1.85;margin:0">Your program, built with me. Adjusted every week. No template — a call, your data, and my judgment deciding what's next.</p>
-    </div>
-    <div style="grid-column:2;grid-row:1;overflow:hidden;background:rgba(41,4,5,.6);padding:1rem;border-top:none">
-      <img src="assets/img/andy-flex.jpeg" alt="Andy" style="width:406px;height:428px;object-fit:contain;display:block">
-    </div>
-    <div style="grid-column:1/3;padding:clamp(1.5rem,3vw,2.5rem);display:grid;grid-template-columns:1fr 1fr;gap:.5rem 2rem;border-top:1px solid var(--b08)">
-        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Llamada de calibración. Empezamos por ti: tu semana, tus prioridades, lo que te gusta y lo que quieres lograr. De ahí sale el plan.</div>
-        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Entrenamiento de fuerza a tu medida. Bloques de 4 semanas.</div>
-        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Nutrición. Basada en lo que comes y lo que disfrutas. La proteína primero y nada de extremos.</div>
-        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Revisión de técnica por vídeo. Te corrijo antes de que el cuerpo se queje.</div>
-        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Informe cada 4 semanas con tus datos. Qué mejoró, qué tenemos que reforzar y por qué tu cerebro hace lo que hace.</div>
-        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="es"><span style="color:var(--accent);flex-shrink:0">→</span>Chat directo conmigo. Dudas y respaldo en semanas difíciles.</div>
-        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Calibration call. We start with you: your week, your priorities, what you like and what you want to achieve. That's where the plan comes from.</div>
-        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Strength training tailored to you. 4-week blocks.</div>
-        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Nutrition. Based on what you eat and what you enjoy. Protein first, no extremes.</div>
-        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Technique video checks. I correct your form before your body complains.</div>
-        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Progress report every 4 weeks. What improved, what we need to strengthen, and why your brain does what it does.</div>
-        <div style="display:flex;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--b08);font-size:.92rem;font-weight:300;color:var(--b70);line-height:1.4" data-lang="en"><span style="color:var(--accent);flex-shrink:0">→</span>Direct chat with me. Support and answers on tough weeks.</div>
-    </div>
-    <div style="grid-column:1;padding:clamp(1.5rem,3vw,2.5rem);display:flex;flex-direction:column;gap:1rem;border-top:1px solid var(--b08)">
-        <a href="https://tally.so/r/XxNP4Y" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">SOLICITAR PLAZA →</span><span data-lang="en">APPLY NOW →</span></a>
-        <span style="font-size:.78rem;color:var(--b35)" data-lang="es">Solo trabajo con 10 personas a la vez</span>
-        <span style="font-size:.78rem;color:var(--b35)" data-lang="en">I only work with 10 people at a time</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS — moved before platform -->
-<section id="testimonials" style="padding:clamp(2rem,4vw,3rem) var(--gut);border-top:1px solid var(--line)">
-  <span class="etiq reveal" style="display:inline-flex;margin-bottom:clamp(2rem,4vw,3rem)">THE Lab members</span>
-  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;line-height:.9;margin-bottom:clamp(2rem,4vw,3rem)" data-lang="es">Testimonios</h2>
-  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;line-height:.9;margin-bottom:clamp(2rem,4vw,3rem)" data-lang="en">Testimonials</h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(1rem,2vw,1.5rem)" class="reveal-stagger">
-    <!-- Amy B — highlighted -->
-    <div style="background:rgba(212,14,38,.06);border:1px solid rgba(212,14,38,.18);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1">"I've literally never looked, or felt, better."</p>
-      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7">The Andy Lab has completely changed the way I see fitness as a way to feel stronger and healthier, rather than a way to stay 'small'. It's the first app I've tried that has helped me improve my nutrition without making me feel like I'm on a diet, and I've literally never looked (or felt!!) better. I recommend it to every woman I know.</p>
-      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Amy B. · London</p>
-    </div>
-    <!-- Laura C -->
-    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"Ese odio a las pesas se puede cambiar."</p>
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"That hatred of weights can change."</p>
-      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">Siempre me consideré deportista (correr, nadar, bici, pilates) pero las pesas siempre las vi con malos ojos. Hoy rindo mucho más en cardio, me siento más equilibrada, y todo empezó con un entrenamiento a mi medida. Soy una muestra fiel de que suma más de lo que uno cree.</p>
-      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">I always looked down on weights. Today I perform much better in cardio, I feel more balanced, and it all started with a program tailored to me. I'm living proof it adds up more than you think.</p>
-      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Laura C. · Madrid</p>
-    </div>
-    <!-- Bea C -->
-    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"El gran punto de inflexión."</p>
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"The turning point."</p>
-      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">Trabajar con Andrea me ha permitido ver que tenemos cierta barrera las mujeres. Poder enfrentarme a las máquinas desconocidas y que me hicieran un programa a mi medida ha sido el gran punto de inflexión, Andreíta. Y ya si además me lleva a bailar, fenomenal.</p>
-      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">Working with Andrea showed me the barriers we women carry. Facing unfamiliar machines with a program made for me was the real turning point.</p>
-      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Bea C. · Madrid</p>
-    </div>
-    <!-- Laura E — highlighted -->
-    <div style="background:rgba(212,14,38,.06);border:1px solid rgba(212,14,38,.18);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"Me ayudó a sentirme fuerte en el postparto."</p>
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"It helped me feel strong postpartum."</p>
-      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">The Andy Lab me dio las herramientas para volver poco a poco a sentirme fuerte después de dar a luz. Tomar conciencia de mi cuerpo y su capacidad ha sido clave.</p>
-      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">The Andy Lab gave me the tools to gradually feel strong again after giving birth. Becoming aware of my body and its capacity has been key.</p>
-      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Laura E. · Madrid</p>
-    </div>
-    <!-- Laura G -->
-    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"No sabía que iba a ser tan fácil engancharme."</p>
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"I didn't know it'd be so easy to get hooked."</p>
-      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">Yo sabía que tener fuerza era esencial para mi salud. Lo que no sabía es que iba a ser tan fácil engancharme y ver resultados. ¡Gracias Andy por guiarme y siempre estar ahí!</p>
-      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">I knew strength was essential for my health. What I didn't know was how easy it'd be to get hooked and see results. Thank you Andy for guiding me and always being there!</p>
-      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Laura G. · Madrid</p>
-    </div>
-    <!-- Nicole R -->
-    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1">"Every session leaves me feeling stronger."</p>
-      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7">The training is challenging, engaging, and incredibly effective. Even when you're unable to do certain movements, Andy tweaks the program so you don't lose out. I can't recommend The Andy Lab enough!</p>
-      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Nicole R. · Hamburg</p>
-    </div>
-    <!-- Sarah — highlighted -->
-    <div style="background:rgba(212,14,38,.06);border:1px solid rgba(212,14,38,.18);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1">"I finally just... go to the gym."</p>
-      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7">I'd been going to the gym on and off for years before working with Andrea. Having an actual program makes it so much easier to just show up, but what really changed things is how she thinks about behavior. She's helped me figure out how to fit healthier habits into my actual life, not some ideal version of it. It's not just about the workouts. It's how I eat, how I build routines, what's realistic for me. It adapts instead of fighting against how I actually live.</p>
-      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Sarah · Amsterdam</p>
-    </div>
-    <!-- Juliana -->
-    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"Totalmente personalizado. Eso lo hace diferente."</p>
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"Fully personalized. That's what makes it different."</p>
-      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">Me gusta esta propuesta de The Andy Lab porque se centra en la individualización, y no en lo masivo. Es totalmente personalizado y eso lo hace diferente. El componente de conocimiento, rigor y ejemplo que brinda Andrea como guía en el proceso generan confianza y despiertan un gran compromiso. Su plataforma es intuitiva y útil, lo que hace más agradable el entrenamiento.</p>
-      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">What I like about The Andy Lab is that it focuses on the individual, not the masses. It's fully personalized and that's what makes it different. Andrea's knowledge, rigor, and the example she sets as a guide build trust and create real commitment. The platform is intuitive and useful, which makes training more enjoyable.</p>
-      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Juliana O. · Abu Dhabi</p>
-    </div>
-    <!-- Cecilia -->
-    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"Tenía miedo de ir al gimnasio. Ni un paso atrás."</p>
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"I was afraid of the gym. Not one step back."</p>
-      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">Antes de comenzar el entrenamiento con Andy, tenía miedo de ir al gimnasio, sin ningún tipo de guía ni de formación. El plan individualizado y su cercanía me ayudaron a vencer ese miedo. Los vídeos explicativos son muy claros, y el plan de incremento de pesos te anima al ver el avance. La revisión de mi alimentación me ayudó a mejorar la distribución de nutrientes, tener mayor energía a lo largo del día y facilitar la construcción muscular. El proceso de cambio en mi cuerpo y los hábitos a largo plazo están siendo algo real.</p>
-      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">Before training with Andy, I was afraid of the gym, with no guidance or training. The individualized plan and her closeness helped me overcome that fear. The explanatory videos are very clear, and the progressive weight plan motivates you as you see progress. The nutrition review helped me improve how I distribute nutrients, have more energy throughout the day, and build muscle. The changes in my body and the long-term habits are becoming something real.</p>
-      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Cecilia P. · Madrid</p>
-    </div>
-  </div>
-</section>
-
+<section class="lv lv-hero" id="oferta"><div>
+<span class="etiq">THE Lab</span>
+<h1 class="lv-h1" data-lang="es">Tu último<br>primer día.</h1><h1 class="lv-h1" data-lang="en">Your last<br>first day.</h1>
+<p class="lv-p" data-lang="es" style="font-size:clamp(1.2rem,1.6vw,1.5rem)"><strong class="lv-hot">Más músculo. Menos culpa.</strong></p><p class="lv-p" data-lang="en" style="font-size:clamp(1.2rem,1.6vw,1.5rem)"><strong class="lv-hot">More muscle. Less guilt.</strong></p>
+<p class="lv-p" data-lang="es" >Entrenamiento de fuerza y nutrición personalizado, con datos, tu propia app y con alguien que te acompaña en el proceso. Hay tres maneras de trabajar conmigo, según cuánto de mí necesites.</p><p class="lv-p" data-lang="en" >Personalized strength training and nutrition, with data, your own app and someone beside you through the process. There are three ways to work with me, depending on how much of me you need.</p>
+<div class="lv-cta"><a href="#niveles" class="btn-p"><span data-lang="es">Ver los tres niveles →</span><span data-lang="en">See the three levels →</span></a><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-f"><span data-lang="es">Reserva tu llamada gratis</span><span data-lang="en">Book your free call</span></a></div>
+<p class="lv-note" data-lang="es" >Trabajo con diez personas a la vez, así que a veces hay lista de espera.</p><p class="lv-note" data-lang="en" >I work with ten people at a time, so there is sometimes a waitlist.</p>
+</div><img src="assets/img/andy-flex.jpeg" alt="Andy"></section><section class="lv"><div class="lv-in">
+<span class="etiq"><span data-lang="es">Con qué opción te identificas</span><span data-lang="en">Which one are you?</span></span>
+<div class="lv-grid" style="margin-top:1.5rem">
+<div class="lv-card"><h3 class="" data-lang="es">Tu semana es impredecible.</h3><h3 class="" data-lang="en">Your week is unpredictable.</h3>
+<p class="" data-lang="es" >Viajas mucho, tu trabajo es muy demandante, quizás tienes hijos, eres jefa y además tienes otras responsabilidades que hacen que tu semana sea un misterio hasta para ti. Planeamos y hablamos cada semana, según tu calendario y el tiempo que tengas de verdad.</p><p class="" data-lang="en" >You travel a lot, your job is demanding, maybe you have kids, you’re the boss, and you have other responsibilities that make your week a mystery even to you. We plan and talk every week, around your calendar and the time you really have.</p>
+<div class="lv-tag"><b>Extra Spicy</b> <span class="lv-peps"><img src="assets/img/pepper.png" alt=""><img src="assets/img/pepper.png" alt=""><img src="assets/img/pepper.png" alt=""></span> · €500 <span data-lang="es">al mes</span><span data-lang="en">/ month</span></div></div>
+<div class="lv-card"><h3 class="" data-lang="es">Ya sabes cuándo puedes entrenar.</h3><h3 class="" data-lang="en">You know when you can train.</h3>
+<p class="" data-lang="es" >Tienes cierta visibilidad de tu semana y no me necesitas cada semana. Estás empezando en el gym o llevas tiempo, pero nunca has seguido un plan hecho para ti. Hablar cada cuatro semanas te viene bien, además de poder escribirme cuando lo necesites. Dos alternativas: con o sin nutrición.</p><p class="" data-lang="en" >You have some visibility into your week and don’t need me every week. You’re just starting at the gym or you’ve been going for a while, but never followed a plan made for you. Talking every four weeks works for you, plus you can message me whenever you need. Two options: with or without nutrition.</p>
+<div class="lv-tag"><b>Spicy</b> <span class="lv-peps"><img src="assets/img/pepper.png" alt=""><img src="assets/img/pepper.png" alt=""></span> · €300 / €200 <span data-lang="es">al mes</span><span data-lang="en">/ month</span></div></div>
+<div class="lv-card"><h3 class="" data-lang="es">Ya sabes moverte en un gym.</h3><h3 class="" data-lang="en">You know your way around a gym.</h3>
+<p class="" data-lang="es" >Lo que quieres es un plan hecho para ti. Los planes de las apps son para la persona promedio, y tú de promedio no tienes nada. Hablamos una vez; yo te armo el año y tú lo sigues desde la app. Si necesitas que adapte algo, podemos agendar una llamada de 30 minutos extra.</p><p class="" data-lang="en" >What you want is a plan made for you. App plans are for the average person, and you are nothing like average. We talk once; I build your year and you follow it from the app. If you need me to adapt something, we can book an extra 30-minute call.</p>
+<div class="lv-tag"><b>Mild</b> <span class="lv-peps"><img src="assets/img/pepper.png" alt=""></span> · €350 <span data-lang="es">al año</span><span data-lang="en">/ year</span></div></div>
+</div></div></section><section class="lv"><div class="lv-in" style="max-width:820px">
+<span class="etiq">THE Lab</span>
+<h2 class="lv-h2" data-lang="es">Aquí se entrena en gym.</h2><h2 class="lv-h2" data-lang="en">Here we train in a gym.</h2>
+<p class="lv-p" data-lang="es" >Sé que en casa también se puede entrenar. Aquí no, y te explico por qué.</p><p class="lv-p" data-lang="en" >I know you can train at home too. Not here, and here is why.</p>
+<p class="lv-p" data-lang="es" ><strong>Primero, el músculo.</strong> Todo esto es para construir músculo, y los glúteos y la espalda, por ejemplo, necesitan estímulos que en casa son difíciles de dar. Las mancuernas pequeñas no son suficientes para el tipo de mujer en quien te quieres convertir.</p><p class="lv-p" data-lang="en" ><strong>First, muscle.</strong> This is all about building muscle, and glutes and back, for example, need stimulus that is hard to give at home. Small dumbbells aren’t enough for the kind of woman you want to become.</p>
+<p class="lv-p" data-lang="es" ><strong>Segundo, la cabeza.</strong> En tu casa están el computador, el sofá, el teléfono y alguien que te necesita. El gym tiene un solo trabajo. Llegar ya es media decisión tomada. Ir al gym es demostrarte que eres prioridad.</p><p class="lv-p" data-lang="en" ><strong>Second, your head.</strong> At home there’s the computer, the couch, the phone and someone who needs you. The gym has one job. Showing up is already half the decision made. Going to the gym is showing yourself you’re a priority.</p>
+<p class="lv-p" data-lang="es" style="color:#fff">Si no tienes pensado ir al gym, THE Lab todavía no es para ti. Cuando lo tengas, escríbeme.</p><p class="lv-p" data-lang="en" style="color:#fff">If you don’t plan on going to the gym, THE Lab isn’t for you yet. When you do, write to me.</p>
+</div></section><section class="lv" id="niveles"><div class="lv-in">
+<span class="etiq"><span data-lang="es">Los tres niveles</span><span data-lang="en">The three levels</span></span>
+<h2 class="lv-h2" data-lang="es">Elige cuánto de mí necesitas.</h2><h2 class="lv-h2" data-lang="en">Choose how much of me you need.</h2>
+<div class="lv-grid" style="align-items:stretch;margin-top:2rem">
+<div class="lv-tier">
+<h3>Spicy <span class="lv-peps"><img src="assets/img/pepper.png" alt=""><img src="assets/img/pepper.png" alt=""></span></h3><div class="lv-price">€300<small data-lang="es">/ mes</small><small data-lang="en">/ month</small></div>
+<p class="lv-sub" data-lang="es">€200/mes solo entrenamiento · Mínimo 3 meses (3 bloques de 4 semanas)</p><p class="lv-sub" data-lang="en">€200/month training only · 3-month minimum (3 blocks of 4 weeks)</p>
+<p class="lv-h" data-lang="es">Un plan hecho para ti, y alguien que lo ajusta contigo.</p><p class="lv-h" data-lang="en">A plan made for you, and someone who adjusts it with you.</p>
+<p class="" data-lang="es">Si estás empezando a ir al gym, o llevas tiempo yendo pero nunca has seguido un plan pensado para ti, esto es para ti. La idea es que llegues al gym y ya sepas qué te toca hacer, que cada cuatro semanas nos sentemos a ver qué funcionó y qué no, y que poco a poco ir deje de ser algo que decides cada vez y pase a ser parte de quién eres.</p><p class="" data-lang="en">If you’re just starting at the gym, or you’ve been going for a while but never followed a plan designed for you, this is for you. The idea is that you walk into the gym already knowing what to do, that every four weeks we sit down to see what worked and what didn’t, and that little by little going stops being something you decide every time and becomes part of who you are.</p>
+<ul class="lv-list"><li data-lang="es">Sabes qué te toca entrenar cada día, porque el plan lo armamos sobre tu semana, tus prioridades y lo que quieres lograr. Todo empieza con una llamada de calibración.</li><li data-lang="en">You know what to train each day, because we build the plan around your week, your priorities and what you want to achieve. It all starts with a calibration call.</li><li data-lang="es">Te vas poniendo más fuerte y lo ves en los números, porque cada bloque de 4 semanas va subiendo el peso.</li><li data-lang="en">You get stronger and you see it in the numbers, because every 4-week block raises the weight.</li><li data-lang="es">Comes sin prohibiciones y con la proteína primero, sin extremos. Esto va en la opción de €300.</li><li data-lang="en">You eat with no banned foods and protein first, no extremes. This comes with the €300 option.</li><li data-lang="es">Te reviso la técnica por vídeo, así no tienes que adivinar si lo estás haciendo bien.</li><li data-lang="en">I review your technique on video, so you don’t have to guess if you’re doing it right.</li><li data-lang="es">Cada cuatro semanas hablamos con tu informe en la mano, para ver qué ha funcionado, qué no y por qué.</li><li data-lang="en">Every four weeks we talk with your report in hand, to see what worked, what didn’t and why.</li><li data-lang="es">Si tienes una duda o una semana difícil, me escribes y lo solucionamos.</li><li data-lang="en">If you have a question or a hard week, you message me and we sort it out.</li></ul>
+<div class="lv-bonus" data-lang="es"><b>Bonus:</b> acceso a todo lo que publico en THE Method: las guías de entrenamiento, nutrición y ciencia del comportamiento, y cualquier pieza de pensamiento nueva que saque.</div><div class="lv-bonus" data-lang="en"><b>Bonus:</b> access to everything I publish in THE Method: the training, nutrition and behavioral science guides, plus any new piece of thinking I put out.</div>
+<p class="lv-alt" data-lang="es">Si tu semana es tan impredecible que necesitas planearla conmigo cada semana, mira Extra Spicy.</p><p class="lv-alt" data-lang="en">If your week is so unpredictable you need to plan it with me every week, look at Extra Spicy.</p>
+<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Reservar llamada →</span><span data-lang="en">Book a call →</span></a><p class="lv-alt lv-fine" data-lang="es">Primero una llamada gratis de 20 minutos. No pagas nada hasta que hablemos.</p><p class="lv-alt lv-fine" data-lang="en">First a free 20-minute call. You pay nothing until we talk.</p></div>
+<div class="lv-tier feat"><span class="lv-badge" data-lang="es">Más completo</span><span class="lv-badge" data-lang="en">Most complete</span>
+<h3>Extra Spicy <span class="lv-peps"><img src="assets/img/pepper.png" alt=""><img src="assets/img/pepper.png" alt=""><img src="assets/img/pepper.png" alt=""></span></h3><div class="lv-price">€500<small data-lang="es">/ mes</small><small data-lang="en">/ month</small></div>
+<p class="lv-sub" data-lang="es">Mínimo 3 meses</p><p class="lv-sub" data-lang="en">3-month minimum</p>
+<p class="lv-h" data-lang="es">Tu semana es impredecible, y el plan se adapta a eso.</p><p class="lv-h" data-lang="en">Your week is unpredictable, and the plan adapts to it.</p>
+<p class="" data-lang="es">Viajas mucho, tienes un trabajo muy demandante y otras responsabilidades. La mayoría de tus semanas son un misterio, hasta para ti. Si este es tu caso, cada semana nos sentamos, miramos tu calendario y armamos el plan según el tiempo que de verdad vas a tener. Así dejas de decidir cada martes si vas o no vas, porque el plan ya está hecho, y entrenas igual aunque la semana sea un caos.</p><p class="" data-lang="en">You travel a lot, you have a very demanding job and other responsibilities. Most of your weeks are a mystery, even to you. If that’s you, every week we sit down, look at your calendar and build the plan around the time you’ll really have. So you stop deciding every Tuesday whether to go or not, because the plan is already made, and you train anyway even when the week is chaos.</p>
+<p class="lv-lbl" data-lang="es">Todo lo que incluye Spicy, y además:</p><p class="lv-lbl" data-lang="en">Everything in Spicy, plus:</p>
+<ul class="lv-list"><li data-lang="es">Una llamada de arranque de 60 minutos para conocernos bien y armar tu primera semana. Después te mando una página con lo que escuché de ti y por dónde empezamos.</li><li data-lang="en">A 60-minute kickoff call to get to know each other and build your first week. Afterwards I send you a page with what I heard from you and where we start.</li><li data-lang="es">Una llamada cada semana para planear la siguiente con tu calendario abierto.</li><li data-lang="en">A call every week to plan the next one with your calendar open.</li><li data-lang="es">Yo reviso tu progreso cada lunes y, si veo algo, te escribo sin que tengas que avisarme.</li><li data-lang="en">I review your progress every Monday and, if I see something, I message you without you having to tell me.</li><li data-lang="es">Antes de un viaje, te mando el plan de esa semana. Si me compartes tu calendario, voy en automático. Si no, me avisas tú.</li><li data-lang="en">Before a trip, I send you that week’s plan. If you share your calendar, I’m on it automatically. If not, you let me know.</li><li data-lang="es">Notas de voz mías, para cuando la semana se complica y un mensaje escrito no alcanza.</li><li data-lang="en">Voice notes from me, for when the week gets complicated and a written message isn’t enough.</li><li data-lang="es">Una revisión trimestral de 45 minutos para mirar los tres meses juntos y decidir hacia dónde avanzamos.</li><li data-lang="en">A 45-minute quarterly review to look at the three months together and decide where we go next.</li><li data-lang="es">Prioridad absoluta en el chat: tus mensajes son los primeros que contesto.</li><li data-lang="en">Top priority in the chat: your messages are the first I answer.</li></ul>
+<div class="lv-bonus" data-lang="es"><b>Bonus:</b> todo lo de Spicy, y un plan corto para las semanas en que no puedes ir a tu gym.</div><div class="lv-bonus" data-lang="en"><b>Bonus:</b> everything in Spicy, plus a short plan for the weeks you can’t get to your gym.</div>
+<p class="lv-alt" data-lang="es">Trabajo con diez personas a la vez, entre Spicy y Extra Spicy.</p><p class="lv-alt" data-lang="en">I work with ten people at a time, across Spicy and Extra Spicy.</p>
+<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Reservar llamada →</span><span data-lang="en">Book a call →</span></a><p class="lv-alt lv-fine" data-lang="es">Primero una llamada gratis de 20 minutos. No pagas nada hasta que hablemos.</p><p class="lv-alt lv-fine" data-lang="en">First a free 20-minute call. You pay nothing until we talk.</p></div>
+<div class="lv-tier">
+<h3>Mild <span class="lv-peps"><img src="assets/img/pepper.png" alt=""></span></h3><div class="lv-price">€350<small data-lang="es">/ año</small><small data-lang="en">/ year</small></div>
+<p class="lv-sub" data-lang="es">Sin mensualidades</p><p class="lv-sub" data-lang="en">No monthly fees</p>
+<p class="lv-h" data-lang="es">Un plan hecho para ti para todo el año, sin mensualidades.</p><p class="lv-h" data-lang="en">A plan made for you for the whole year, no monthly fees.</p>
+<p class="" data-lang="es">Hablamos una vez al principio, me cuentas tu nivel y los músculos que quieres priorizar, y yo te armo el plan. Tú lo sigues desde la app, y cuando terminas un bloque, ya sea que te tome cuatro, seis u ocho semanas, yo te actualizo el siguiente. No tienes que hablar conmigo cada mes.</p><p class="" data-lang="en">We talk once at the start, you tell me your level and the muscles you want to prioritize, and I build the plan. You follow it from the app, and when you finish a block, whether it takes four, six or eight weeks, I update the next one. You don’t have to talk to me every month.</p>
+<ul class="lv-list"><li data-lang="es">Una llamada conmigo al principio para armar tu año.</li><li data-lang="en">A call with me at the start to build your year.</li><li data-lang="es">Un plan según tu nivel (principiante o intermedio) y los músculos que quieres priorizar.</li><li data-lang="en">A plan for your level (beginner or intermediate) and the muscles you want to prioritize.</li><li data-lang="es">Cuando terminas un bloque, te mando el siguiente, a tu ritmo.</li><li data-lang="en">When you finish a block, I send you the next one, at your pace.</li><li data-lang="es">En la app puedes cambiar ejercicios y ver tu progreso.</li><li data-lang="en">In the app you can swap exercises and see your progress.</li><li data-lang="es">Si algo cambia y quieres ajustar el plan conmigo, son 30 minutos por €80.</li><li data-lang="en">If something changes and you want to adjust the plan with me, it’s 30 minutes for €80.</li></ul>
+<p class="lv-alt" data-lang="es">Mild no incluye nutrición, chat ni revisión de técnica. Si los quieres, mira Spicy.</p><p class="lv-alt" data-lang="en">Mild doesn’t include nutrition, chat or technique review. If you want those, look at Spicy.</p>
+<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Reservar llamada →</span><span data-lang="en">Book a call →</span></a><p class="lv-alt lv-fine" data-lang="es">Primero una llamada gratis de 20 minutos. No pagas nada hasta que hablemos.</p><p class="lv-alt lv-fine" data-lang="en">First a free 20-minute call. You pay nothing until we talk.</p></div>
+</div></div></section><section class="lv lv-talk"><div class="lv-in" style="max-width:720px">
+<span class="etiq" style="justify-content:center"><span data-lang="es">Primero hablamos</span><span data-lang="en">We talk first</span></span>
+<h2 class="lv-h2" data-lang="es">Aquí no se compra<br>nada sin hablar antes.</h2><h2 class="lv-h2" data-lang="en">Nothing is bought<br>without talking first.</h2>
+<p class="lv-p" data-lang="es" >Hacemos una llamada de 20 minutos, gratis. Me cuentas cómo es tu semana y qué has intentado antes, y yo te digo si esto es para ti y en qué nivel. Si no lo es, también te lo digo.</p><p class="lv-p" data-lang="en" >We do a free 20-minute call. You tell me what your week looks like and what you’ve tried before, and I tell you if this is for you and at which level. If it isn’t, I’ll tell you that too.</p>
+<p class="lv-p" data-lang="es" >Si hay cupo, entras. Si no, te anotas en la lista de espera y tú decides si te quedas en ella.</p><p class="lv-p" data-lang="en" >If there’s room, you’re in. If not, you join the waitlist and you decide whether to stay on it.</p>
+<div class="lv-cta"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar llamada de 20 minutos →</span><span data-lang="en">Book a 20-minute call →</span></a><a href="manifesto.html#testimonials" class="btn-f"><span data-lang="es">Lee lo que dicen las clientas →</span><span data-lang="en">Read what clients say →</span></a></div>
+</div></section>
 <!-- PLATFORM — compact single row -->
 <section class="app-s">
   <div class="app-hdr reveal">
@@ -381,8 +386,19 @@
       </div>
     </div>
   </div>
+<p data-lang="es" style="font-size:.85rem;color:var(--b50);max-width:760px;margin-top:1.5rem">En Mild tienes la app. En Spicy y en Extra Spicy tienes todo.</p><p data-lang="en" style="font-size:.85rem;color:var(--b50);max-width:760px;margin-top:1.5rem">In Mild you get the app. In Spicy and Extra Spicy you get everything.</p>
 </section>
 
+<section class="lv"><div class="lv-in" style="max-width:860px">
+<span class="etiq">FAQ</span><h2 class="lv-h2" data-lang="es">Antes de que preguntes.</h2><h2 class="lv-h2" data-lang="en">Before you ask.</h2>
+<div class="lv-faq"><details data-lang="es"><summary>¿Qué pasa en la llamada de 20 minutos?</summary><p>Me cuentas cómo es tu semana, qué has intentado antes y por qué no se sostuvo. Yo te digo qué nivel te conviene. Sin rollo de venta.</p></details><details data-lang="en"><summary>What happens on the 20-minute call?</summary><p>You tell me what your week looks like, what you’ve tried and why it didn’t stick. I tell you which level fits. No sales pitch.</p></details><details data-lang="es"><summary>¿Y si no hay cupo?</summary><p>Hay lista de espera. En la llamada decidimos si te anotas o si esto no es lo tuyo.</p></details><details data-lang="en"><summary>What if there’s no room?</summary><p>There’s a waitlist. On the call we decide if you join it or if this isn’t for you.</p></details><details data-lang="es"><summary>¿Por qué hay un mínimo de tres meses?</summary><p>Las primeras semanas son las que más cuestan. Un estudio de 2010 midió cuánto tarda una conducta sencilla en volverse automática: 66 días en promedio, con un rango de 18 a 254 según la persona. Tres bloques de cuatro semanas es lo mínimo para tener cifras tuyas y para que ir al gym empiece a costar menos.</p></details><details data-lang="en"><summary>Why a 3-month minimum?</summary><p>The first weeks are the hardest. A 2010 study measured how long a simple behavior takes to become automatic: 66 days on average, ranging from 18 to 254 depending on the person. Three 4-week blocks is the minimum to get your own numbers and for going to the gym to start costing less.</p></details><details data-lang="es"><summary>¿Cuál es la diferencia entre Extra Spicy y Spicy?</summary><p>La frecuencia. En Extra Spicy hablamos todas las semanas. En Spicy, cada cuatro, y entre medias tienes el chat. Si dudas, empieza por Spicy.</p></details><details data-lang="en"><summary>What’s the difference between Extra Spicy and Spicy?</summary><p>Frequency. In Extra Spicy we talk every week. In Spicy, every four, with chat in between. If in doubt, start with Spicy.</p></details><details data-lang="es"><summary>¿Qué pasa si falto varias semanas?</summary><p>Pasa. En Extra Spicy y Spicy te escribo a las 24 o 48 horas. Faltar un día es un dato, nada más. El lunes sigues donde lo dejaste. En Mild no te escribo: el plan espera a que termines el bloque.</p></details><details data-lang="en"><summary>What if I miss several weeks?</summary><p>It happens. In Extra Spicy and Spicy I message you within 24 or 48 hours. Missing a day is data, nothing more. Monday you pick up where you left off. In Mild I don’t message you: the plan waits until you finish the block.</p></details><details data-lang="es"><summary>¿Puedo entrenar en casa?</summary><p>No. Arriba te explico por qué.</p></details><details data-lang="en"><summary>Can I train at home?</summary><p>No. I explain why above.</p></details><details data-lang="es"><summary>¿Incluye nutrición?</summary><p>Extra Spicy: sí. Spicy de €300: sí. Spicy de €200: no. Mild: no.</p></details><details data-lang="en"><summary>Is nutrition included?</summary><p>Extra Spicy: yes. Spicy €300: yes. Spicy €200: no. Mild: no.</p></details><details data-lang="es"><summary>¿En qué se diferencia de una app o de una entrenadora personal?</summary><p>Una app te da un plan. Una entrenadora online te da un plan y lo ajusta cuando algo no funciona. Yo hago las dos cosas y además miro tus datos para entender por qué haces lo que haces: por qué dejas de registrar la comida el día catorce, por qué coges siempre las mismas mancuernas. Estudié economía para entender cómo decide la gente, y casi nunca es falta de información. Por eso diseño el plan alrededor de tu cerebro, no solo de tu cuerpo.</p></details><details data-lang="en"><summary>How is it different from an app or a personal trainer?</summary><p>An app gives you a plan. An online coach gives you a plan and adjusts it when something isn’t working. I do both, and I also read your data to understand why you do what you do: why you stop logging food on day fourteen, why you always grab the same dumbbells. I studied economics to understand how people decide, and it’s almost never a lack of information. That’s why I design the plan around your brain, not just your body.</p></details><details data-lang="es"><summary>En Mild, ¿qué pasa si mi vida cambia?</summary><p>Reservas 30 minutos conmigo por €80 y ajustamos el plan. Una cosa a cambiar por sesión.</p></details><details data-lang="en"><summary>In Mild, what if my life changes?</summary><p>You book 30 minutes with me for €80 and we adjust the plan. One thing to change per session.</p></details></div>
+</div></section>
+<section class="lv"><div class="lv-in">
+<span class="etiq"><span data-lang="es">Si hoy no es el momento</span><span data-lang="en">If today isn’t the day</span></span>
+<div class="lv-split" style="margin-top:1.5rem">
+<a href="newsletter.html"><h3>THE Brain</h3><p class="" data-lang="es" >Mi newsletter semanal, gratis. Músculo, comida y por qué tu cerebro se niega a cooperar.</p><p class="" data-lang="en" >My weekly newsletter, free. Muscle, food and why your brain refuses to cooperate.</p></a>
+<a href="shop.html"><h3>THE Method</h3><p class="" data-lang="es" >Guías con el mismo criterio que uso dentro del Lab. Lee cómo pienso antes de decidir.</p><p class="" data-lang="en" >Guides with the same thinking I use inside the Lab. Read how I think before you decide.</p></a>
+</div></div></section>
 <footer class="site-footer">
   <a href="index.html" class="flogo"><img src="assets/img/pepper.png" class="flogo-pepper" alt=""><span style="color: rgb(255, 255, 255)">The Andy <span style="color:#FF3737">Lab</span></span></a>
 
