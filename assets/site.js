@@ -78,4 +78,28 @@
     window.addEventListener('scroll', onDoc, {passive:true});
     if(backTop) backTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
   }
+
+  /* ---- mobile swipe carousels ---- */
+  document.querySelectorAll('[data-swipe],.action-grid,.lv-grid,.guide-grid,.pgrid').forEach(function(g){
+    if(g.children.length<2) return;
+    g.classList.add('swipe');
+    var ctl=document.createElement('div'); ctl.className='swipe-ctl';
+    ctl.innerHTML='<button type="button" aria-label="Previous">&#8249;</button><span class="swipe-count"></span><button type="button" aria-label="Next">&#8250;</button>';
+    g.parentNode.insertBefore(ctl,g.nextSibling);
+    var b=ctl.querySelectorAll('button'),cnt=ctl.querySelector('.swipe-count'),n=g.children.length;
+    function idx(){var w=g.children[0].getBoundingClientRect().width+14;return Math.min(n-1,Math.max(0,Math.round(g.scrollLeft/w)));}
+    function upd(){var i=idx();cnt.textContent=(i+1)+'/'+n;b[0].disabled=i===0;b[1].disabled=g.scrollLeft+g.clientWidth>=g.scrollWidth-4;}
+    function go(d){var w=g.children[0].getBoundingClientRect().width+14;g.scrollTo({left:(idx()+d)*w,behavior:'smooth'});}
+    b[0].onclick=function(){go(-1)};b[1].onclick=function(){go(1)};
+    g.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
+  });
+
+  /* ---- sticky mobile CTA ---- */
+  if(!document.body.classList.contains('theme-light')){
+    var sb=document.createElement('div'); sb.className='sticky-cta';
+    sb.innerHTML='<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener"><span data-lang="es">Reserva tu llamada gratis · 20 min</span><span data-lang="en">Book your free 20-min call</span></a>';
+    document.body.appendChild(sb); document.body.classList.add('has-sticky');
+    var st=function(){sb.classList.toggle('show',window.scrollY>window.innerHeight*0.7);};
+    st(); window.addEventListener('scroll',st,{passive:true});
+  }
 })();

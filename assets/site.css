@@ -205,3 +205,31 @@ body.theme-light::after{display:none}
   .nav-logo{font-size:1.2rem}
   .site-footer{flex-direction:column;align-items:flex-start;gap:1.2rem}
 }
+
+/* ============================================================
+   MOBILE SWIPE CAROUSELS (horizontal scroll-snap)
+   ============================================================ */
+.swipe-ctl{display:none}
+@media (max-width:768px){
+  .swipe{display:flex!important;grid-template-columns:none!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:.9rem!important;margin-left:calc(var(--gut)*-1);margin-right:calc(var(--gut)*-1);padding:0 var(--gut) .25rem;scroll-padding:0 var(--gut);-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior-x:contain;max-width:none!important}
+  .swipe::-webkit-scrollbar{display:none}
+  .swipe>*{flex:0 0 84%;min-width:0;scroll-snap-align:start;transform:none!important}
+  .swipe>.acard:hover{transform:none}
+  .swipe-ctl{display:flex;align-items:center;justify-content:center;gap:1.6rem;margin-top:1.4rem}
+  .swipe-ctl button{width:44px;height:44px;border-radius:50%;border:1px solid var(--borde-accent);background:var(--card-bg);color:#fff;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .25s,opacity .25s}
+  .swipe-ctl button:active{background:var(--accent)}
+  .swipe-ctl button:disabled{opacity:.3}
+  .swipe-count{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.14em;color:var(--b50);min-width:3.2rem;text-align:center}
+}
+
+@media (max-width:768px){
+  :root{--sec:3.5rem}
+  .cta-f{padding:4rem var(--gut)!important}
+  body.has-sticky{padding-bottom:76px}
+}
+.sticky-cta{display:none}
+@media (max-width:768px){
+  .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:99;padding:.7rem var(--gut) calc(.7rem + env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(21,1,1,.96) 60%,rgba(21,1,1,0));transform:translateY(110%);transition:transform .4s var(--ease)}
+  .sticky-cta.show{transform:none}
+  .sticky-cta a{flex:1;display:flex;align-items:center;justify-content:center;height:54px;border-radius:var(--r-pill);background:var(--accent);color:#fff;font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:.06em;text-decoration:none;box-shadow:0 8px 24px -8px rgba(212,14,38,.6)}
+}
