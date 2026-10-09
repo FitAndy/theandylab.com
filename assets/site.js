@@ -107,7 +107,7 @@
   document.querySelectorAll('.lv-tier').forEach(function(t){
     var kids=[].slice.call(t.children),subs=kids.filter(function(e){return e.classList.contains('lv-sub')}),btn=t.querySelector('.btn-p');
     if(!subs.length||!btn) return;
-    var from=kids.indexOf(subs[subs.length-1])+1,to=kids.indexOf(btn),more=document.createElement('div');
+    var from=kids.indexOf(subs[subs.length-1])+1;while(kids[from]&&kids[from].classList.contains('lv-h'))from++;var to=kids.indexOf(btn),more=document.createElement('div');
     more.className='lv-more';
     kids.slice(from,to).forEach(function(e){more.appendChild(e)});
     t.insertBefore(more,btn);

@@ -241,3 +241,4 @@ body.theme-light::after{display:none}
   .lv-more-btn{align-self:flex-start;background:none;border:1px solid var(--borde-accent);color:#fff;border-radius:99px;padding:.65rem 1.1rem;min-height:44px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
 }
 @media (min-width:769px){.lv-more-btn{display:none}}
+@media (max-width:768px){.swipe{padding-top:1rem!important}.lv-badge{white-space:nowrap}}
