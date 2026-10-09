@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="assets/img/pepper.png">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=20261009b">
+<link rel="stylesheet" href="assets/site.css?v=20261009c">
 <style>
 .g{--ink:#1a1a1a;--ink70:rgba(0,0,0,.75);--ink55:rgba(0,0,0,.55);--ink40:rgba(0,0,0,.4);--ink30:rgba(0,0,0,.3);--paper:#fafafa;--burgd:#4a0101;--acc:#d40e26;font-family:'Inter',sans-serif;font-weight:300}
 .g .wrap{max-width:1100px;margin:0 auto;padding:0 clamp(2.5rem,6vw,6rem)}
@@ -108,6 +108,9 @@
   .theme-light .nav-cta-m a{color:var(--acc)!important}
   .theme-light .nav-toggle span{background:#fff!important}
   .theme-light .btn-nav{color:#fff!important;border-color:rgba(212,14,38,.35)!important}
+  .theme-light .lang-switch button{color:rgba(255,255,255,.55)!important}
+  .theme-light .lang-switch button.on{color:#fff!important;background:var(--burg,#4a0101)!important}
+  .theme-light .nav-links .nav-cta-m a{color:#FF3737!important}
   @media(max-width:1040px){.theme-light .nav-links{background:rgba(21,1,1,0.98)!important}}
 </style>
 
@@ -123,6 +126,7 @@
     <li class="nav-cta-m"><a href="newsletter.html">The Brain</a></li>
   </ul>
   <div class="nav-right">
+    <div class="lang-switch" role="group" aria-label="Language"><button type="button" data-setlang="es">ES</button><button type="button" data-setlang="en">EN</button></div>
     <button class="nav-toggle" type="button" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -132,11 +136,11 @@
   <!-- COVER -->
   <section class="cover">
     <div class="cover-inner">
-      <p class="kicker reveal" style="margin-bottom:36px">The Andy Lab · Proteína · Guía completa</p>
-      <h1 class="reveal d1" style="color:#fff">Tu cerebro lleva años complicando algo que cabe en una multiplicación.</h1>
+      <p class="kicker reveal" style="margin-bottom:36px"><span data-lang="es">The Andy Lab · Proteína · Guía completa</span><span data-lang="en">The Andy Lab · Protein · Complete guide</span></p>
+      <h1 class="reveal d1" style="color:#fff"><span data-lang="es">Tu cerebro lleva años complicando algo que cabe en una multiplicación.</span><span data-lang="en">Your brain has spent years complicating something that fits in one multiplication.</span></h1>
       <div class="dash reveal d1" style="margin:28px 0"></div>
-      <p class="kicker reveal d3" style="margin:0">EDICIÓN 2026</p>
-      <p style="font-size:13px;color:#fff;margin-top:2rem;line-height:1.6;background:rgba(212,14,38,.25);border:1px solid rgba(212,14,38,.4);padding:10px 16px;display:inline-block">📌 Guarda este link — esta página no está en la navegación y no la vas a encontrar buscando.</p>
+      <p class="kicker reveal d3" style="margin:0"><span data-lang="es">EDICIÓN 2026</span><span data-lang="en">2026 EDITION</span></p>
+      <p style="font-size:13px;color:#fff;margin-top:2rem;line-height:1.6;background:rgba(212,14,38,.25);border:1px solid rgba(212,14,38,.4);padding:10px 16px;display:inline-block"><span data-lang="es">📌 Guarda este link — esta página no está en la navegación y no la vas a encontrar buscando.</span><span data-lang="en">📌 Save this link — this page isn't in the navigation and you won't find it by searching.</span></p>
     </div>
   </section>
 
@@ -145,12 +149,12 @@
     <div class="wrap pad">
       <div class="rule" style="margin-bottom:56px"></div>
       <div class="body reveal">
-        <p>Busqué "cuánta proteína necesito" en Google. Diez resultados, diez números distintos. Uno decía 0,8 gramos por kilo. Otro decía 2,5. Otro me pedía que calculara mi masa magra, mi tasa metabólica basal y la fase lunar. Cerré Google.</p>
-        <p>Esto pasa por diseño.</p>
-        <p>La industria de suplementos de proteína mueve miles de millones de euros al año. Funciona exactamente igual que cualquier mercado que genera dinero con tu confusión: cuanto más contradictoria sea la información, más productos necesitas comprar para "estar segura." El batido, la barrita, el colágeno, los BCAA, el nuevo aislado de no sé qué. Siempre que veas confusión, busca la caja registradora.</p>
-        <p>La proteína es simple. Lo que necesitas saber cabe en tres ideas. Lo que la industria te ha hecho creer que necesitas saber llena estanterías enteras.</p>
-        <p>Esta guía tiene las tres ideas. Nada más.</p>
-        <p style="font-weight:400;color:var(--ink)">A lo que vinimos, vamos.</p>
+        <p><span data-lang="es">Busqué "cuánta proteína necesito" en Google. Diez resultados, diez números distintos. Uno decía 0,8 gramos por kilo. Otro decía 2,5. Otro me pedía que calculara mi masa magra, mi tasa metabólica basal y la fase lunar. Cerré Google.</span><span data-lang="en">I searched "how much protein do I need" on Google. Ten results, ten different numbers. One said 0.8 grams per kilo. Another said 2.5. Another asked me to calculate my lean mass, my basal metabolic rate and the lunar phase. I closed Google.</span></p>
+        <p><span data-lang="es">Esto pasa por diseño.</span><span data-lang="en">This is by design.</span></p>
+        <p><span data-lang="es">La industria de suplementos de proteína mueve miles de millones de euros al año. Funciona exactamente igual que cualquier mercado que genera dinero con tu confusión: cuanto más contradictoria sea la información, más productos necesitas comprar para "estar segura." El batido, la barrita, el colágeno, los BCAA, el nuevo aislado de no sé qué. Siempre que veas confusión, busca la caja registradora.</span><span data-lang="en">The protein supplement industry moves billions of euros a year. It works exactly like any market that makes money from your confusion: the more contradictory the information, the more products you need to buy to feel "sure." The shake, the bar, the collagen, the BCAAs, the new isolate of whatever. Whenever you see confusion, look for the cash register.</span></p>
+        <p><span data-lang="es">La proteína es simple. Lo que necesitas saber cabe en tres ideas. Lo que la industria te ha hecho creer que necesitas saber llena estanterías enteras.</span><span data-lang="en">Protein is simple. What you need to know fits in three ideas. What the industry has made you believe you need to know fills entire shelves.</span></p>
+        <p><span data-lang="es">Esta guía tiene las tres ideas. Nada más.</span><span data-lang="en">This guide has the three ideas. Nothing more.</span></p>
+        <p style="font-weight:400;color:var(--ink)"><span data-lang="es">A lo que vinimos, vamos.</span><span data-lang="en">Let's get to it.</span></p>
       </div>
     </div>
   </section>
@@ -159,50 +163,50 @@
   <section class="part">
     <div class="big" data-parallax="1">01</div>
     <div class="wrap reveal" style="position:relative;z-index:1">
-      <p class="k">Parte 01 de 03 · The Number</p>
-      <h2>Cuánta proteína,<br>exactamente.</h2>
+      <p class="k"><span data-lang="es">Parte 01 de 03 · The Number</span><span data-lang="en">Part 01 of 03 · The Number</span></p>
+      <h2><span data-lang="es">Cuánta proteína,<br>exactamente.</span><span data-lang="en">How much protein,<br>exactly.</span></h2>
       <div class="hr"></div>
-      <p class="sub">Una multiplicación y ya.</p>
+      <p class="sub"><span data-lang="es">Una multiplicación y ya.</span><span data-lang="en">One multiplication, that's it.</span></p>
     </div>
   </section>
 
   <section style="background:var(--paper)">
     <div class="wrap pad">
       <div class="body reveal">
-        <p>Tu objetivo de proteína diaria está entre 1,6 y 2,2 gramos por kilo de peso corporal. ¿De dónde sale? Sale de un metaanálisis de Morton con casi 1.900 participantes (British Journal of Sports Medicine, 2018). Este estudio concluye que por encima de 1,6 g/kg los beneficios adicionales para construir músculo existen, pero son cada vez más pequeños. El 2,2 es el techo donde el beneficio extra se vuelve estadísticamente irrelevante.</p>
-        <p>El rango depende de cuánto entrenas. Si entrenas fuerza tres o más días a la semana, 1,6 a 2,2 g/kg. Si entrenas menos o estás empezando, 1,6 es tu número — y probablemente sea más del doble de lo que comes ahora. El 2,0 o 2,2 tiene sentido cuando entrenas duro y con consistencia. Si no estás ahí todavía, quedarte en 1,6 ya te pone por delante del 90% de la gente.</p>
-        <p>Con toda tranquilidad te digo: si estás en 1,6, estás bien. Si llegas a 2,0, estás muy bien. Si no llegas a 1,6, ahí es donde tienes trabajo.</p>
+        <p><span data-lang="es">Tu objetivo de proteína diaria está entre 1,6 y 2,2 gramos por kilo de peso corporal. ¿De dónde sale? Sale de un metaanálisis de Morton con casi 1.900 participantes (British Journal of Sports Medicine, 2018). Este estudio concluye que por encima de 1,6 g/kg los beneficios adicionales para construir músculo existen, pero son cada vez más pequeños. El 2,2 es el techo donde el beneficio extra se vuelve estadísticamente irrelevante.</span><span data-lang="en">Your daily protein target is between 1.6 and 2.2 grams per kilo of body weight. Where does it come from? From a Morton meta-analysis of almost 1,900 participants (British Journal of Sports Medicine, 2018). The study concludes that above 1.6 g/kg the additional benefits for building muscle exist, but get smaller and smaller. 2.2 is the ceiling where the extra benefit becomes statistically irrelevant.</span></p>
+        <p><span data-lang="es">El rango depende de cuánto entrenas. Si entrenas fuerza tres o más días a la semana, 1,6 a 2,2 g/kg. Si entrenas menos o estás empezando, 1,6 es tu número — y probablemente sea más del doble de lo que comes ahora. El 2,0 o 2,2 tiene sentido cuando entrenas duro y con consistencia. Si no estás ahí todavía, quedarte en 1,6 ya te pone por delante del 90% de la gente.</span><span data-lang="en">The range depends on how much you train. If you strength train three or more days a week, 1.6 to 2.2 g/kg. If you train less or are just starting, 1.6 is your number — and it's probably more than double what you eat now. 2.0 or 2.2 makes sense when you train hard and consistently. If you're not there yet, staying at 1.6 already puts you ahead of 90% of people.</span></p>
+        <p><span data-lang="es">Con toda tranquilidad te digo: si estás en 1,6, estás bien. Si llegas a 2,0, estás muy bien. Si no llegas a 1,6, ahí es donde tienes trabajo.</span><span data-lang="en">Calmly, I'll tell you: if you're at 1.6, you're fine. If you reach 2.0, you're doing very well. If you don't reach 1.6, that's where you have work to do.</span></p>
       </div>
 
       <div class="calc-wrap reveal d1" id="protCalc">
-        <label>Tu peso corporal</label>
+        <label><span data-lang="es">Tu peso corporal</span><span data-lang="en">Your body weight</span></label>
         <input type="range" class="calc-slider" id="weightSlider" min="45" max="110" value="65" step="1">
         <div class="calc-weight"><span id="weightDisplay">65</span> <span>kg</span></div>
         <div class="calc-result">
           <div class="calc-col">
-            <div class="calc-num"><span id="protLow">104</span> <span>g/día</span></div>
-            <div class="calc-label">Objetivo mínimo</div>
+            <div class="calc-num"><span id="protLow">104</span> <span><span data-lang="es">g/día</span><span data-lang="en">g/day</span></span></div>
+            <div class="calc-label"><span data-lang="es">Objetivo mínimo</span><span data-lang="en">Minimum target</span></div>
             <div class="calc-range">× 1.6 g/kg</div>
           </div>
           <div class="calc-col">
             <div class="calc-num"><span id="protHigh">143</span> <span>g/día</span></div>
-            <div class="calc-label">Objetivo alto</div>
+            <div class="calc-label"><span data-lang="es">Objetivo alto</span><span data-lang="en">High target</span></div>
             <div class="calc-range">× 2.2 g/kg</div>
           </div>
           <div class="calc-col">
-            <div class="calc-num"><span id="protMeals">26</span> <span>g/comida</span></div>
-            <div class="calc-label">Si comes 4 veces</div>
+            <div class="calc-num"><span id="protMeals">26</span> <span><span data-lang="es">g/comida</span><span data-lang="en">g/meal</span></span></div>
+            <div class="calc-label"><span data-lang="es">Si comes 4 veces</span><span data-lang="en">If you eat 4 times</span></div>
             <div class="calc-range">÷ 4</div>
           </div>
         </div>
       </div>
 
       <div class="body reveal d2" style="margin-top:2rem">
-        <p>Cuatro comidas al día, no tres. Meter 35-40 gramos de proteína en una comida es factible. Meter 50 es una pelea. Cuatro comidas te dan margen para que cada una sea razonable sin convertir cada plato en un ejercicio de ingeniería.</p>
-        <p>Ese número por comida es tu ancla. No tienes que pesarlo ni obsesionarte. Solo necesitas saber más o menos cuánto es para mirar un plato y pensar "aquí falta" o "esto está bien."</p>
+        <p><span data-lang="es">Cuatro comidas al día, no tres. Meter 35-40 gramos de proteína en una comida es factible. Meter 50 es una pelea. Cuatro comidas te dan margen para que cada una sea razonable sin convertir cada plato en un ejercicio de ingeniería.</span><span data-lang="en">Four meals a day, not three. Fitting 35-40 grams of protein into one meal is doable. Fitting 50 is a fight. Four meals give you room so each one is reasonable without turning every plate into an engineering exercise.</span></p>
+        <p><span data-lang="es">Ese número por comida es tu ancla. No tienes que pesarlo ni obsesionarte. Solo necesitas saber más o menos cuánto es para mirar un plato y pensar "aquí falta" o "esto está bien."</span><span data-lang="en">That per-meal number is your anchor. You don't have to weigh it or obsess over it. You just need to know roughly how much it is so you can look at a plate and think "this is missing something" or "this is fine."</span></p>
       </div>
 
-      <p class="reveal" style="font-size:13px;color:var(--ink30);line-height:1.65;margin-top:2rem;max-width:560px">Estos números son para mujeres sanas que entrenan fuerza. Si tienes enfermedad renal, hepática, o cualquier condición que afecte cómo tu cuerpo procesa proteína, habla con tu médico antes de cambiar tu ingesta. Esta guía no sustituye consejo médico.</p>
+      <p class="reveal" style="font-size:13px;color:var(--ink30);line-height:1.65;margin-top:2rem;max-width:560px"><span data-lang="es">Estos números son para mujeres sanas que entrenan fuerza. Si tienes enfermedad renal, hepática, o cualquier condición que afecte cómo tu cuerpo procesa proteína, habla con tu médico antes de cambiar tu ingesta. Esta guía no sustituye consejo médico.</span><span data-lang="en">These numbers are for healthy women who strength train. If you have kidney or liver disease, or any condition that affects how your body processes protein, talk to your doctor before changing your intake. This guide is not a substitute for medical advice.</span></p>
     </div>
   </section>
 
@@ -210,68 +214,68 @@
   <section class="part">
     <div class="big" data-parallax="1">02</div>
     <div class="wrap reveal" style="position:relative;z-index:1">
-      <p class="k">Parte 02 de 03 · The Sources</p>
-      <h2>De dónde sacarla.</h2>
+      <p class="k"><span data-lang="es">Parte 02 de 03 · The Sources</span><span data-lang="en">Part 02 of 03 · The Sources</span></p>
+      <h2><span data-lang="es">De dónde sacarla.</span><span data-lang="en">Where to get it.</span></h2>
       <div class="hr"></div>
-      <p class="sub">Los números reales por porción normal.</p>
+      <p class="sub"><span data-lang="es">Los números reales por porción normal.</span><span data-lang="en">The real numbers for a normal serving.</span></p>
     </div>
   </section>
 
   <section style="background:var(--paper)">
     <div class="wrap pad">
       <div class="body reveal">
-        <p>Yo como pechuga de pollo casi todos los días de la semana. Me da igual cómo sabe. Mis prioridades son otras. Pero tú no tienes que tener mis prioridades ni seguir mi estilo de vida.</p>
-        <p>Lo que sí necesitas son los números reales por porción normal.</p>
+        <p><span data-lang="es">Yo como pechuga de pollo casi todos los días de la semana. Me da igual cómo sabe. Mis prioridades son otras. Pero tú no tienes que tener mis prioridades ni seguir mi estilo de vida.</span><span data-lang="en">I eat chicken breast almost every day of the week. I don't care how it tastes. My priorities are elsewhere. But you don't have to have my priorities or follow my lifestyle.</span></p>
+        <p><span data-lang="es">Lo que sí necesitas son los números reales por porción normal.</span><span data-lang="en">What you do need are the real numbers for a normal serving.</span></p>
       </div>
 
       <!-- Table 1 -->
       <div class="reveal d1" style="margin-top:2.5rem">
-        <h3 style="font-size:clamp(28px,3.5vw,40px);margin-bottom:6px">Fuentes principales</h3>
-        <p style="font-size:14px;color:var(--ink40);margin-bottom:1.2rem">Las que arman una comida.</p>
+        <h3 style="font-size:clamp(28px,3.5vw,40px);margin-bottom:6px"><span data-lang="es">Fuentes principales</span><span data-lang="en">Main sources</span></h3>
+        <p style="font-size:14px;color:var(--ink40);margin-bottom:1.2rem"><span data-lang="es">Las que arman una comida.</span><span data-lang="en">The ones that build a meal.</span></p>
         <table class="src-table">
-          <thead><tr><th>Fuente</th><th>Porción</th><th>Proteína</th><th>Calorías</th></tr></thead>
+          <thead><tr><th><span data-lang="es">Fuente</span><span data-lang="en">Source</span></th><th><span data-lang="es">Porción</span><span data-lang="en">Serving</span></th><th><span data-lang="es">Proteína</span><span data-lang="en">Protein</span></th><th><span data-lang="es">Calorías</span><span data-lang="en">Calories</span></th></tr></thead>
           <tbody>
-            <tr><td>Pechuga de pollo</td><td>150g cocinado</td><td class="prot">~47g</td><td class="cal">~248</td></tr>
-            <tr><td>Carne picada 5% grasa</td><td>150g cocinado</td><td class="prot">~39g</td><td class="cal">~225</td></tr>
-            <tr><td>Atún fresco</td><td>150g cocinado</td><td class="prot">~45g</td><td class="cal">~195</td></tr>
-            <tr><td>Salmón</td><td>150g cocinado</td><td class="prot">~38g</td><td class="cal">~330</td></tr>
-            <tr><td>Huevos</td><td>3 unidades</td><td class="prot">~18g</td><td class="cal">~234</td></tr>
-            <tr><td>Claras de huevo</td><td>200g</td><td class="prot">~22g</td><td class="cal">~104</td></tr>
+            <tr><td><span data-lang="es">Pechuga de pollo</span><span data-lang="en">Chicken breast</span></td><td><span data-lang="es">150g cocinado</span><span data-lang="en">150g cooked</span></td><td class="prot">~47g</td><td class="cal">~248</td></tr>
+            <tr><td><span data-lang="es">Carne picada 5% grasa</span><span data-lang="en">Ground beef 5% fat</span></td><td><span data-lang="es">150g cocinado</span><span data-lang="en">150g cooked</span></td><td class="prot">~39g</td><td class="cal">~225</td></tr>
+            <tr><td><span data-lang="es">Atún fresco</span><span data-lang="en">Fresh tuna</span></td><td><span data-lang="es">150g cocinado</span><span data-lang="en">150g cooked</span></td><td class="prot">~45g</td><td class="cal">~195</td></tr>
+            <tr><td><span data-lang="es">Salmón</span><span data-lang="en">Salmon</span></td><td><span data-lang="es">150g cocinado</span><span data-lang="en">150g cooked</span></td><td class="prot">~38g</td><td class="cal">~330</td></tr>
+            <tr><td><span data-lang="es">Huevos</span><span data-lang="en">Eggs</span></td><td><span data-lang="es">3 unidades</span><span data-lang="en">3 eggs</span></td><td class="prot">~18g</td><td class="cal">~234</td></tr>
+            <tr><td><span data-lang="es">Claras de huevo</span><span data-lang="en">Egg whites</span></td><td>200g</td><td class="prot">~22g</td><td class="cal">~104</td></tr>
           </tbody>
         </table>
-        <p style="margin-top:1rem">Necesitas cuatro o cinco de estas que te gusten, que puedas comprar sin pensar, y que puedas rotar sin querer llorar al tercer día.</p>
+        <p style="margin-top:1rem"><span data-lang="es">Necesitas cuatro o cinco de estas que te gusten, que puedas comprar sin pensar, y que puedas rotar sin querer llorar al tercer día.</span><span data-lang="en">You need four or five of these that you like, that you can buy without thinking, and that you can rotate without wanting to cry by day three.</span></p>
       </div>
 
       <!-- Intro to table 2 -->
       <div class="reveal d1" style="margin-top:3rem">
-        <h3 style="font-size:clamp(28px,3.5vw,40px);margin-bottom:6px">Fuentes que cierran la brecha</h3>
-        <p style="font-size:14px;color:var(--ink40);margin-bottom:1.2rem">Las de «abro y como.»</p>
+        <h3 style="font-size:clamp(28px,3.5vw,40px);margin-bottom:6px"><span data-lang="es">Fuentes que cierran la brecha</span><span data-lang="en">Sources that close the gap</span></h3>
+        <p style="font-size:14px;color:var(--ink40);margin-bottom:1.2rem"><span data-lang="es">Las de «abro y como.»</span><span data-lang="en">The «open and eat» ones.</span></p>
         <div class="body">
-          <p>Cero preparación, cero cocina. Estas son las que realmente sostienen tu proteína los días que no tienes tiempo ni ganas de planificar nada.</p>
-          <p>Sí, algunas de estas tienen edulcorantes. Sí, alguien te va a decir que eso es veneno. La evidencia acumulada a día de hoy — metaanálisis, revisiones sistemáticas, datos en humanos — dice que a dosis normales de consumo no tienen un efecto negativo demostrado en la salud. ¿Son la base de tu alimentación? No. La base son huevos, carne, pescado, yogur, verdura, fruta. Pero si un flan de clara de huevo de 13 gramos de proteína y 103 calorías me ayuda a llegar a mi número un martes que no me apetece cocinar, lo acepto con toda tranquilidad. Tu objetivo es llegar a tu proteína la mayoría de los días. Estas fuentes hacen que eso sea posible cuando lo perfecto no lo es.</p>
+          <p><span data-lang="es">Cero preparación, cero cocina. Estas son las que realmente sostienen tu proteína los días que no tienes tiempo ni ganas de planificar nada.</span><span data-lang="en">Zero prep, zero cooking. These are the ones that actually hold up your protein on the days you have no time or energy to plan anything.</span></p>
+          <p><span data-lang="es">Sí, algunas de estas tienen edulcorantes. Sí, alguien te va a decir que eso es veneno. La evidencia acumulada a día de hoy — metaanálisis, revisiones sistemáticas, datos en humanos — dice que a dosis normales de consumo no tienen un efecto negativo demostrado en la salud. ¿Son la base de tu alimentación? No. La base son huevos, carne, pescado, yogur, verdura, fruta. Pero si un flan de clara de huevo de 13 gramos de proteína y 103 calorías me ayuda a llegar a mi número un martes que no me apetece cocinar, lo acepto con toda tranquilidad. Tu objetivo es llegar a tu proteína la mayoría de los días. Estas fuentes hacen que eso sea posible cuando lo perfecto no lo es.</span><span data-lang="en">Yes, some of these have sweeteners. Yes, someone will tell you that's poison. The accumulated evidence to date — meta-analyses, systematic reviews, human data — says that at normal consumption doses they have no demonstrated negative effect on health. Are they the base of your diet? No. The base is eggs, meat, fish, yogurt, vegetables, fruit. But if a 13-gram-protein, 103-calorie egg white flan helps me reach my number on a Tuesday I don't feel like cooking, I accept it calmly. Your goal is to hit your protein most days. These sources make that possible when perfect isn't.</span></p>
         </div>
         <table class="src-table" style="margin-top:1.5rem">
-          <thead><tr><th>Fuente</th><th>Porción</th><th>Proteína</th><th>Calorías</th></tr></thead>
+          <thead><tr><th><span data-lang="es">Fuente</span><span data-lang="en">Source</span></th><th><span data-lang="es">Porción</span><span data-lang="en">Serving</span></th><th><span data-lang="es">Proteína</span><span data-lang="en">Protein</span></th><th><span data-lang="es">Calorías</span><span data-lang="en">Calories</span></th></tr></thead>
           <tbody>
-            <tr><td>FAGE yogur griego 0%</td><td>200g</td><td class="prot">~20g</td><td class="cal">~108</td></tr>
+            <tr><td><span data-lang="es">FAGE yogur griego 0%</span><span data-lang="en">FAGE Greek yogurt 0%</span></td><td>200g</td><td class="prot">~20g</td><td class="cal">~108</td></tr>
             <tr><td>Cottage cheese</td><td>200g</td><td class="prot">~23g</td><td class="cal">~196</td></tr>
-            <tr><td>YoPro Natural</td><td>1 tarrina (160g)</td><td class="prot">~15g</td><td class="cal">~77</td></tr>
-            <tr><td>Flan de clara de huevo (Carrefour)</td><td>1 unidad (160g)</td><td class="prot">~13g</td><td class="cal">~103</td></tr>
-            <tr><td>Pudín al cacao proteína (Carrefour)</td><td>1 unidad (200g)</td><td class="prot">~20g</td><td class="cal">~148</td></tr>
-            <tr><td>Proteína whey</td><td>1 cazo (~30g)</td><td class="prot">~25g</td><td class="cal">~115</td></tr>
+            <tr><td>YoPro Natural</td><td><span data-lang="es">1 tarrina (160g)</span><span data-lang="en">1 tub (160g)</span></td><td class="prot">~15g</td><td class="cal">~77</td></tr>
+            <tr><td><span data-lang="es">Flan de clara de huevo (Carrefour)</span><span data-lang="en">Egg white flan (Carrefour)</span></td><td><span data-lang="es">1 unidad (160g)</span><span data-lang="en">1 unit (160g)</span></td><td class="prot">~13g</td><td class="cal">~103</td></tr>
+            <tr><td><span data-lang="es">Pudín al cacao proteína (Carrefour)</span><span data-lang="en">Protein chocolate pudding (Carrefour)</span></td><td><span data-lang="es">1 unidad (200g)</span><span data-lang="en">1 unit (200g)</span></td><td class="prot">~20g</td><td class="cal">~148</td></tr>
+            <tr><td><span data-lang="es">Proteína whey</span><span data-lang="en">Whey protein</span></td><td><span data-lang="es">1 cazo (~30g)</span><span data-lang="en">1 scoop (~30g)</span></td><td class="prot">~25g</td><td class="cal">~115</td></tr>
           </tbody>
         </table>
 
-        <p style="font-size:13px;color:var(--ink30);line-height:1.65;margin-top:1.5rem;max-width:560px">Si no las encuentras, busca equivalentes: yogur griego real (no «estilo griego»), cottage cheese y cualquier snack proteico con más de 12g de proteína y menos de 150 calorías por unidad.</p>
+        <p style="font-size:13px;color:var(--ink30);line-height:1.65;margin-top:1.5rem;max-width:560px"><span data-lang="es">Si no las encuentras, busca equivalentes: yogur griego real (no «estilo griego»), cottage cheese y cualquier snack proteico con más de 12g de proteína y menos de 150 calorías por unidad.</span><span data-lang="en">If you can't find them, look for equivalents: real Greek yogurt (not "Greek style"), cottage cheese and any protein snack with more than 12g of protein and fewer than 150 calories per unit.</span></p>
       </div>
 
       <!-- Nevera -->
       <div class="body reveal" style="margin-top:3rem">
-        <h3 style="font-size:clamp(28px,3.5vw,40px);margin-bottom:1.2rem">Tu nevera decide por ti</h3>
-        <p>Ahora viene el "life changing moment" : tu nevera.</p>
-        <p>Tu nevera decide por ti más de lo que crees. A las dos de la tarde, después de cuatro horas de reuniones, tu cerebro coge lo que tiene delante. Si al abrirla lo primero que ves tiene proteína, comes proteína. Si lo primero que ves es queso curado y embutido, comes eso. Tu cerebro a esa hora del día no está evaluando macronutrientes. Está en piloto automático.</p>
-        <p>Mira, es cierto que puedes elegir conscientemente cada vez que abres la nevera. Pero esa capacidad de elegir funciona como una batería que se gasta a lo largo del día. A las siete de la mañana tienes carga completa. A las dos de la tarde, después de cuarenta decisiones laborales, la batería está a la mitad. A las nueve de la noche, lo que queda es inercia.</p>
-        <p>Lo que puedes hacer es preparar el terreno cuando la batería está llena para que cuando esté vacía, lo automático sea lo correcto. Yogur griego al frente de la nevera. Un YoPro en la puerta. Huevos duros ya hechos. Un pudín de proteína para cuando quieres algo dulce. Proteína whey al lado de la cafetera.</p>
+        <h3 style="font-size:clamp(28px,3.5vw,40px);margin-bottom:1.2rem"><span data-lang="es">Tu nevera decide por ti</span><span data-lang="en">Your fridge decides for you</span></h3>
+        <p><span data-lang="es">Ahora viene el "life changing moment" : tu nevera.</span><span data-lang="en">Now comes the "life changing moment": your fridge.</span></p>
+        <p><span data-lang="es">Tu nevera decide por ti más de lo que crees. A las dos de la tarde, después de cuatro horas de reuniones, tu cerebro coge lo que tiene delante. Si al abrirla lo primero que ves tiene proteína, comes proteína. Si lo primero que ves es queso curado y embutido, comes eso. Tu cerebro a esa hora del día no está evaluando macronutrientes. Está en piloto automático.</span><span data-lang="en">Your fridge decides for you more than you think. At two in the afternoon, after four hours of meetings, your brain grabs whatever is in front of it. If the first thing you see when you open it has protein, you eat protein. If the first thing you see is cured cheese and cold cuts, you eat that. At that time of day your brain isn't evaluating macronutrients. It's on autopilot.</span></p>
+        <p><span data-lang="es">Mira, es cierto que puedes elegir conscientemente cada vez que abres la nevera. Pero esa capacidad de elegir funciona como una batería que se gasta a lo largo del día. A las siete de la mañana tienes carga completa. A las dos de la tarde, después de cuarenta decisiones laborales, la batería está a la mitad. A las nueve de la noche, lo que queda es inercia.</span><span data-lang="en">Look, it's true that you can choose consciously every time you open the fridge. But that ability to choose works like a battery that drains over the day. At seven in the morning you have a full charge. At two in the afternoon, after forty work decisions, the battery is at half. At nine at night, what's left is inertia.</span></p>
+        <p><span data-lang="es">Lo que puedes hacer es preparar el terreno cuando la batería está llena para que cuando esté vacía, lo automático sea lo correcto. Yogur griego al frente de la nevera. Un YoPro en la puerta. Huevos duros ya hechos. Un pudín de proteína para cuando quieres algo dulce. Proteína whey al lado de la cafetera.</span><span data-lang="en">What you can do is prepare the ground when the battery is full so that when it's empty, the automatic thing is the right thing. Greek yogurt at the front of the fridge. A YoPro in the door. Hard-boiled eggs already made. A protein pudding for when you want something sweet. Whey protein next to the coffee machine.</span></p>
       </div>
     </div>
   </section>
@@ -280,55 +284,55 @@
   <section class="part">
     <div class="big" data-parallax="1">03</div>
     <div class="wrap reveal" style="position:relative;z-index:1">
-      <p class="k">Parte 03 de 03 · The Third Day</p>
-      <h2>Por qué todo el mundo<br>abandona al tercer día.</h2>
+      <p class="k"><span data-lang="es">Parte 03 de 03 · The Third Day</span><span data-lang="en">Part 03 of 03 · The Third Day</span></p>
+      <h2><span data-lang="es">Por qué todo el mundo<br>abandona al tercer día.</span><span data-lang="en">Why everyone<br>quits on day three.</span></h2>
       <div class="hr"></div>
-      <p class="sub">La mecánica detrás de lo que le pasa a todo el mundo.</p>
+      <p class="sub"><span data-lang="es">La mecánica detrás de lo que le pasa a todo el mundo.</span><span data-lang="en">The mechanics behind what happens to everyone.</span></p>
     </div>
   </section>
 
   <section style="background:var(--paper)">
     <div class="wrap pad">
       <div class="body reveal">
-        <p>El día uno te sale perfecto. Cuatro comidas con proteína, las cantidades más o menos bien, hasta te sientes orgullosa. El día dos repites sin problema. El día tres abres la nevera, ves la pechuga de pollo, y algo dentro de ti dice <em>no</em>.</p>
-        <p>Esto tiene mecánica, y cuando la entiendes dejas de sentirte culpable por algo que le pasa a todo el mundo.</p>
-        <p>Cualquier comportamiento nuevo necesita tres cosas al mismo tiempo para ocurrir: que tengas ganas de hacerlo, que seas capaz de hacerlo, y que algo te lo recuerde en el momento. Las tres. Si falta una, el comportamiento no ocurre, da igual lo fuerte que estén las otras dos.</p>
-        <p>El día uno las ganas están por las nubes. Acabas de leer esta guía, estás decidida, todo parece posible. Ese nivel de ganas compensa el esfuerzo de pensar qué comer, buscar recetas, organizar la nevera. Las ganas son tan altas que aunque el esfuerzo sea grande, lo haces.</p>
-        <p>El día tres las ganas bajan a su nivel normal. No desaparecen — simplemente dejan de ser extraordinarias. Y en ese momento, el esfuerzo de planificar cuatro comidas con proteína pesa más que las ganas que quedan.</p>
-        <p>Entonces paras. Y piensas que te falta disciplina.</p>
-        <p>Lo que pasó es que diseñaste un plan para la versión motivada del lunes, y la que tiene que ejecutarlo es la versión agotada del miércoles. Un plan que solo funciona cuando estás motivada tiene fecha de caducidad. Un plan que funciona cuando estás cansada, eso dura.</p>
-        <p>Aquí es donde la mayoría de las guías de nutrición se despiden y te desean suerte. Esta guía empieza.</p>
+        <p><span data-lang="es">El día uno te sale perfecto. Cuatro comidas con proteína, las cantidades más o menos bien, hasta te sientes orgullosa. El día dos repites sin problema. El día tres abres la nevera, ves la pechuga de pollo, y algo dentro de ti dice <em>no</em>.</span><span data-lang="en">Day one goes perfectly. Four meals with protein, the amounts roughly right, you even feel proud. Day two you repeat without a problem. Day three you open the fridge, see the chicken breast, and something inside you says <em>no</em>.</span></p>
+        <p><span data-lang="es">Esto tiene mecánica, y cuando la entiendes dejas de sentirte culpable por algo que le pasa a todo el mundo.</span><span data-lang="en">This has mechanics, and once you understand them you stop feeling guilty about something that happens to everyone.</span></p>
+        <p><span data-lang="es">Cualquier comportamiento nuevo necesita tres cosas al mismo tiempo para ocurrir: que tengas ganas de hacerlo, que seas capaz de hacerlo, y que algo te lo recuerde en el momento. Las tres. Si falta una, el comportamiento no ocurre, da igual lo fuerte que estén las otras dos.</span><span data-lang="en">Any new behavior needs three things at the same time to happen: you want to do it, you're able to do it, and something reminds you at the right moment. All three. If one is missing, the behavior doesn't happen, no matter how strong the other two are.</span></p>
+        <p><span data-lang="es">El día uno las ganas están por las nubes. Acabas de leer esta guía, estás decidida, todo parece posible. Ese nivel de ganas compensa el esfuerzo de pensar qué comer, buscar recetas, organizar la nevera. Las ganas son tan altas que aunque el esfuerzo sea grande, lo haces.</span><span data-lang="en">On day one, motivation is through the roof. You've just read this guide, you're decided, everything seems possible. That level of motivation makes up for the effort of thinking about what to eat, looking up recipes, organizing the fridge. Motivation is so high that even if the effort is big, you do it.</span></p>
+        <p><span data-lang="es">El día tres las ganas bajan a su nivel normal. No desaparecen — simplemente dejan de ser extraordinarias. Y en ese momento, el esfuerzo de planificar cuatro comidas con proteína pesa más que las ganas que quedan.</span><span data-lang="en">On day three motivation drops to its normal level. It doesn't disappear — it just stops being extraordinary. And at that moment, the effort of planning four meals with protein weighs more than the motivation you have left.</span></p>
+        <p><span data-lang="es">Entonces paras. Y piensas que te falta disciplina.</span><span data-lang="en">Then you stop. And you think you lack discipline.</span></p>
+        <p><span data-lang="es">Lo que pasó es que diseñaste un plan para la versión motivada del lunes, y la que tiene que ejecutarlo es la versión agotada del miércoles. Un plan que solo funciona cuando estás motivada tiene fecha de caducidad. Un plan que funciona cuando estás cansada, eso dura.</span><span data-lang="en">What happened is that you designed a plan for the motivated Monday version of you, and the one who has to carry it out is the exhausted Wednesday version. A plan that only works when you're motivated has an expiry date. A plan that works when you're tired lasts.</span></p>
+        <p><span data-lang="es">Aquí es donde la mayoría de las guías de nutrición se despiden y te desean suerte. Esta guía empieza.</span><span data-lang="en">This is where most nutrition guides say goodbye and wish you luck. This guide begins.</span></p>
       </div>
 
       <!-- Sub-section 1 -->
       <div class="body reveal" style="margin-top:2.5rem">
-        <div class="sub-h">Hazlo más pequeño de lo que crees razonable.</div>
-        <p>No empieces clavando cuatro comidas perfectas. Empieza con una. Desayuno con proteína. Todos los días. Solo eso. Cuando eso ya no te cueste pensarlo — y van a pasar entre una y dos semanas — añades la comida del mediodía. Después la merienda. Después la cena.</p>
-        <p>Yo empecé así. Desayuno con huevos y ya. Sin tocar nada más. Las primeras dos semanas me sentí como si estuviera haciendo trampas, como si fuera demasiado fácil para contar. Seis semanas después comía proteína en las cuatro comidas sin pensarlo. El truco fue que cada paso era tan pequeño que mi cerebro nunca se resistió.</p>
+        <div class="sub-h"><span data-lang="es">Hazlo más pequeño de lo que crees razonable.</span><span data-lang="en">Make it smaller than seems reasonable.</span></div>
+        <p><span data-lang="es">No empieces clavando cuatro comidas perfectas. Empieza con una. Desayuno con proteína. Todos los días. Solo eso. Cuando eso ya no te cueste pensarlo — y van a pasar entre una y dos semanas — añades la comida del mediodía. Después la merienda. Después la cena.</span><span data-lang="en">Don't start by nailing four perfect meals. Start with one. Breakfast with protein. Every day. Just that. When that no longer takes thought — and it will take one to two weeks — you add lunch. Then the afternoon snack. Then dinner.</span></p>
+        <p><span data-lang="es">Yo empecé así. Desayuno con huevos y ya. Sin tocar nada más. Las primeras dos semanas me sentí como si estuviera haciendo trampas, como si fuera demasiado fácil para contar. Seis semanas después comía proteína en las cuatro comidas sin pensarlo. El truco fue que cada paso era tan pequeño que mi cerebro nunca se resistió.</span><span data-lang="en">I started like that. Breakfast with eggs and that was it. Without touching anything else. For the first two weeks I felt like I was cheating, like it was too easy to count. Six weeks later I was eating protein at all four meals without thinking about it. The trick was that each step was so small my brain never resisted.</span></p>
       </div>
 
       <!-- Sub-section 2 -->
       <div class="body reveal" style="margin-top:2.5rem">
-        <div class="sub-h">Conecta cada paso a algo que ya haces.</div>
-        <p>"Cuando ponga la cafetera, saco los huevos." Esa frase funciona porque el café ya es automático, ya lo haces sin decidirlo, y cualquier cosa que enganchas a algo automático hereda esa automaticidad. "Voy a comer más proteína mañana" depende de que te acuerdes y tengas ganas a la vez, en el mismo momento. Lo de la cafetera se activa solo.</p>
-        <p>Otros que funcionan: "Cuando me siente a comer, lo primero que sirvo es la proteína." "Cuando haga la lista del súper, las tres primeras cosas son fuentes de proteína." "Cuando abra la app para pedir comida, busco primero un plato con proteína visible."</p>
-        <p>El patrón es siempre el mismo: cuando [algo que ya hago], entonces [lo nuevo]. Específico. Concreto. Atado a un momento real de tu día.</p>
+        <div class="sub-h"><span data-lang="es">Conecta cada paso a algo que ya haces.</span><span data-lang="en">Attach each step to something you already do.</span></div>
+        <p><span data-lang="es">"Cuando ponga la cafetera, saco los huevos." Esa frase funciona porque el café ya es automático, ya lo haces sin decidirlo, y cualquier cosa que enganchas a algo automático hereda esa automaticidad. "Voy a comer más proteína mañana" depende de que te acuerdes y tengas ganas a la vez, en el mismo momento. Lo de la cafetera se activa solo.</span><span data-lang="en">"When I start the coffee machine, I take out the eggs." That sentence works because coffee is already automatic, you already do it without deciding, and anything you attach to something automatic inherits that automaticity. "I'll eat more protein tomorrow" depends on you remembering and wanting to at the same time, in the same moment. The coffee machine one triggers itself.</span></p>
+        <p><span data-lang="es">Otros que funcionan: "Cuando me siente a comer, lo primero que sirvo es la proteína." "Cuando haga la lista del súper, las tres primeras cosas son fuentes de proteína." "Cuando abra la app para pedir comida, busco primero un plato con proteína visible."</span><span data-lang="en">Others that work: "When I sit down to eat, the first thing I serve is the protein." "When I make the grocery list, the first three items are protein sources." "When I open the app to order food, I first look for a dish with visible protein."</span></p>
+        <p><span data-lang="es">El patrón es siempre el mismo: cuando [algo que ya hago], entonces [lo nuevo]. Específico. Concreto. Atado a un momento real de tu día.</span><span data-lang="en">The pattern is always the same: when [something I already do], then [the new thing]. Specific. Concrete. Tied to a real moment in your day.</span></p>
       </div>
 
       <!-- Sub-section 3 -->
       <div class="body reveal" style="margin-top:2.5rem">
-        <div class="sub-h">El plan B importa más que el plan A.</div>
-        <p>El plan A es el plato que preparaste con tiempo, la compra organizada, la semana planificada. El plan B es lo que hay cuando nada de eso pasó. Martes por la noche, no fuiste al súper, tienes hambre y lo que encuentres es lo que vas a comer.</p>
-        <p>Si tu plan B tiene proteína, los días malos no te sacan del juego. Te sacan del plan ideal, que no es lo mismo. Un YoPro en la nevera. Un flan de clara de huevo. La lata de atún que llevas dos semanas sin abrir. Huevos duros que hiciste el domingo. Eso es tu red de seguridad.</p>
-        <p>Mis clientas que sostienen su proteína a largo plazo tienen todas lo mismo: un plan B que funciona en piloto automático. Las que dependen solo del plan A duran unas semanas, a veces un par de meses, y cuando la vida se complica — un viaje, un proyecto, una semana mala — todo se desarma.</p>
+        <div class="sub-h"><span data-lang="es">El plan B importa más que el plan A.</span><span data-lang="en">Plan B matters more than plan A.</span></div>
+        <p><span data-lang="es">El plan A es el plato que preparaste con tiempo, la compra organizada, la semana planificada. El plan B es lo que hay cuando nada de eso pasó. Martes por la noche, no fuiste al súper, tienes hambre y lo que encuentres es lo que vas a comer.</span><span data-lang="en">Plan A is the plate you prepared ahead of time, the organized shopping, the planned week. Plan B is what you have when none of that happened. Tuesday night, you didn't go to the store, you're hungry and whatever you find is what you'll eat.</span></p>
+        <p><span data-lang="es">Si tu plan B tiene proteína, los días malos no te sacan del juego. Te sacan del plan ideal, que no es lo mismo. Un YoPro en la nevera. Un flan de clara de huevo. La lata de atún que llevas dos semanas sin abrir. Huevos duros que hiciste el domingo. Eso es tu red de seguridad.</span><span data-lang="en">If your plan B has protein, bad days don't knock you out of the game. They knock you out of the ideal plan, which is not the same. A YoPro in the fridge. An egg white flan. The can of tuna you've left unopened for two weeks. Hard-boiled eggs you made on Sunday. That's your safety net.</span></p>
+        <p><span data-lang="es">Mis clientas que sostienen su proteína a largo plazo tienen todas lo mismo: un plan B que funciona en piloto automático. Las que dependen solo del plan A duran unas semanas, a veces un par de meses, y cuando la vida se complica — un viaje, un proyecto, una semana mala — todo se desarma.</span><span data-lang="en">The clients of mine who sustain their protein long term all have the same thing: a plan B that works on autopilot. Those who depend only on plan A last a few weeks, sometimes a couple of months, and when life gets complicated — a trip, a project, a bad week — everything falls apart.</span></p>
       </div>
 
       <!-- Sub-section 4 -->
       <div class="body reveal" style="margin-top:2.5rem">
-        <div class="sub-h">El 80% la mayoría de los días le gana al 100% tres días.</div>
-        <p>Decidí hacer un test. Revisé los datos de las clientas que llevan más de seis meses conmigo. Las que llegan al 80% de su objetivo de proteína la mayoría de los días progresan prácticamente igual que las que clavan el 100%. La diferencia es mínima. Lo que sí marca diferencia es la consistencia: estar cerca casi todos los días le gana a estar perfecta tres días y desaparecer cuatro.</p>
-        <p>Un día de 85 gramos cuando tu objetivo son 104 no arruina nada. Siete días seguidos de 40 sí.</p>
-        <p style="font-weight:400;color:var(--ink)">No seas como la mayoría. No apuntes a perfecto. Apunta a suficiente, todos los días.</p>
+        <div class="sub-h"><span data-lang="es">El 80% la mayoría de los días le gana al 100% tres días.</span><span data-lang="en">80% most days beats 100% three days.</span></div>
+        <p><span data-lang="es">Decidí hacer un test. Revisé los datos de las clientas que llevan más de seis meses conmigo. Las que llegan al 80% de su objetivo de proteína la mayoría de los días progresan prácticamente igual que las que clavan el 100%. La diferencia es mínima. Lo que sí marca diferencia es la consistencia: estar cerca casi todos los días le gana a estar perfecta tres días y desaparecer cuatro.</span><span data-lang="en">I decided to run a test. I reviewed the data of clients who have been with me for more than six months. Those who hit 80% of their protein target most days progress practically the same as those who nail 100%. The difference is minimal. What does make a difference is consistency: being close almost every day beats being perfect three days and disappearing four.</span></p>
+        <p><span data-lang="es">Un día de 85 gramos cuando tu objetivo son 104 no arruina nada. Siete días seguidos de 40 sí.</span><span data-lang="en">A day of 85 grams when your target is 104 ruins nothing. Seven days in a row of 40 does.</span></p>
+        <p style="font-weight:400;color:var(--ink)"><span data-lang="es">No seas como la mayoría. No apuntes a perfecto. Apunta a suficiente, todos los días.</span><span data-lang="en">Don't be like most people. Don't aim for perfect. Aim for enough, every day.</span></p>
       </div>
     </div>
   </section>
@@ -337,8 +341,8 @@
   <section class="closing">
     <div class="wrap reveal">
       <div class="hr"></div>
-      <p class="gp-final">Una multiplicación. Cuatro o cinco fuentes que te gusten. Tu nevera preparada para que lo automático sea lo correcto. Y la regla: el 80% la mayoría de los días.</p>
-      <p class="gp-final">Tu cerebro va a intentar complicarlo. La industria va a ayudarle. Ahora ya sabes cómo funciona el mecanismo.</p>
+      <p class="gp-final"><span data-lang="es">Una multiplicación. Cuatro o cinco fuentes que te gusten. Tu nevera preparada para que lo automático sea lo correcto. Y la regla: el 80% la mayoría de los días.</span><span data-lang="en">One multiplication. Four or five sources you like. Your fridge set up so the automatic thing is the right thing. And the rule: 80% most days.</span></p>
+      <p class="gp-final"><span data-lang="es">Tu cerebro va a intentar complicarlo. La industria va a ayudarle. Ahora ya sabes cómo funciona el mecanismo.</span><span data-lang="en">Your brain is going to try to complicate it. The industry is going to help. Now you know how the mechanism works.</span></p>
     </div>
   </section>
 
@@ -346,7 +350,7 @@
   <section style="background:#000;padding:clamp(4rem,7vw,6rem) 0">
     <div class="wrap">
       <div class="post-cierre reveal">
-        <p>Ya estás dentro. Cada miércoles recibirás mi newsletter con lo que no cabe en esta guía — músculo, comida y por qué tu cerebro se niega a cooperar.</p>
+        <p><span data-lang="es">Ya estás dentro. Cada miércoles recibirás mi newsletter con lo que no cabe en esta guía — músculo, comida y por qué tu cerebro se niega a cooperar.</span><span data-lang="en">You're in. Every Wednesday you'll get my newsletter with what doesn't fit in this guide — muscle, food and why your brain refuses to cooperate.</span></p>
       </div>
     </div>
   </section>
@@ -356,14 +360,14 @@
 <footer class="site-footer" style="background:#0d0102;border-top:1px solid rgba(255,255,255,.06)">
   <a href="index.html" class="flogo"><img src="assets/img/pepper.png" class="flogo-pepper" alt=""><span style="color:#fff">The Andy <span style="color:#FF3737">Lab</span></span></a>
   <span class="fcopy">© 2026 The Andy Lab</span>
-  <span class="ftagline">Más músculo. Menos culpa.</span>
+  <span class="ftagline"><span data-lang="es">Más músculo. Menos culpa.</span><span data-lang="en">More muscle. Less guilt.</span></span>
 </footer>
 
 <button class="back-top" aria-label="Volver arriba">
   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11V3" stroke="white" stroke-width="1.5" stroke-linecap="round"></path><path d="M3.5 6.5L7 3L10.5 6.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </button>
 
-<script src="assets/site.js?v=20261009b"></script>
+<script src="assets/site.js?v=20261009c"></script>
 <script>
 (function(){
   var slider = document.getElementById('weightSlider');
@@ -378,6 +382,12 @@
   slider.addEventListener('input', update);
   update();
 })();
+</script>
+<script>
+(function(){var tt={es:'Proteína — The Andy Lab',en:'Protein — The Andy Lab'},md=document.querySelector('meta[name="description"]'),
+dd={es:md&&md.content,en:'How much protein you need, where to get it, and how not to quit on day three. Three ideas, nothing more.'};
+function a(){var l=document.documentElement.lang==='en'?'en':'es';document.title=tt[l];if(md)md.content=dd[l];var b=document.querySelector('.back-top');if(b)b.setAttribute('aria-label',l==='en'?'Back to top':'Volver arriba');var t=document.querySelector('.nav-toggle');if(t)t.setAttribute('aria-label',l==='en'?'Menu':'Menú');}
+new MutationObserver(a).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});a();})();
 </script>
 </body>
 </html>

@@ -242,3 +242,10 @@ body.theme-light::after{display:none}
 }
 @media (min-width:769px){.lv-more-btn{display:none}}
 @media (max-width:768px){.swipe{padding-top:1rem!important}.lv-badge{white-space:nowrap}}
+@media (max-width:900px) and (min-width:769px){[data-swipe]{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:.8rem!important}}
+
+#globe a[data-ll]::after{content:'';position:absolute;inset:-18px;border-radius:50%}
+@media (max-width:560px){
+  #globe{max-width:340px!important}
+  #globe [data-ll] span{font-size:.54rem!important;letter-spacing:.1em!important;white-space:normal!important;width:max-content;max-width:84px;line-height:1.25!important;text-shadow:0 1px 6px rgba(0,0,0,.9)}
+}
