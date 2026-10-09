@@ -233,3 +233,11 @@ body.theme-light::after{display:none}
   .sticky-cta.show{transform:none}
   .sticky-cta a{flex:1;display:flex;align-items:center;justify-content:center;height:54px;border-radius:var(--r-pill);background:var(--accent);color:#fff;font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:.06em;text-decoration:none;box-shadow:0 8px 24px -8px rgba(212,14,38,.6)}
 }
+
+@media (max-width:768px){
+  .swipe>.lv-tier{flex-basis:92%;padding:1.5rem 1.2rem}
+  .lv-tier .lv-more{display:none;flex-direction:column;gap:.9rem}
+  .lv-tier .lv-more.open{display:flex}
+  .lv-more-btn{align-self:flex-start;background:none;border:1px solid var(--borde-accent);color:#fff;border-radius:99px;padding:.65rem 1.1rem;min-height:44px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+}
+@media (min-width:769px){.lv-more-btn{display:none}}

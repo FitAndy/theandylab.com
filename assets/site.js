@@ -102,4 +102,19 @@
     var st=function(){sb.classList.toggle('show',window.scrollY>window.innerHeight*0.7);};
     st(); window.addEventListener('scroll',st,{passive:true});
   }
+
+  /* ---- collapsible tier details (mobile) ---- */
+  document.querySelectorAll('.lv-tier').forEach(function(t){
+    var kids=[].slice.call(t.children),subs=kids.filter(function(e){return e.classList.contains('lv-sub')}),btn=t.querySelector('.btn-p');
+    if(!subs.length||!btn) return;
+    var from=kids.indexOf(subs[subs.length-1])+1,to=kids.indexOf(btn),more=document.createElement('div');
+    more.className='lv-more';
+    kids.slice(from,to).forEach(function(e){more.appendChild(e)});
+    t.insertBefore(more,btn);
+    var b=document.createElement('button');b.type='button';b.className='lv-more-btn';
+    function lbl(){var o=more.classList.contains('open'),es=document.documentElement.lang!=='en';b.textContent=o?(es?'Ver menos −':'Show less −'):(es?'Ver detalles +':'Show details +');}
+    b.onclick=function(){more.classList.toggle('open');lbl()};lbl();
+    t.insertBefore(b,btn);
+    new MutationObserver(lbl).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+  });
 })();
