@@ -211,6 +211,15 @@
 @media(max-width:700px){.rp-g4{grid-template-columns:repeat(2,1fr)};.invest-card{grid-template-columns:1fr!important}.invest-card > div:nth-child(2){grid-column:1;grid-row:auto!important}}
 @media(max-width:480px){.rp-g3,.rp-g2{grid-template-columns:1fr}}
 
+@media(max-width:768px){
+.app-strip{overflow-x:auto;scroll-snap-type:x mandatory;margin-left:calc(var(--gut)*-1);margin-right:calc(var(--gut)*-1);padding:0 var(--gut) .4rem;scroll-padding:0 var(--gut);scrollbar-width:none;-webkit-overflow-scrolling:touch;max-width:none!important}
+.app-strip::-webkit-scrollbar{display:none}
+.app-strip>*{scroll-snap-align:start}
+.app-strip>div:not(.app-rep){width:148px!important}
+.app-strip .app-rep{flex:0 0 min(80vw,320px)!important;min-width:0!important;margin-left:0!important}
+.app-strip .app-rep>div{max-width:none!important}
+.app-strip::after{content:"";flex:0 0 1px}
+}
 /* testimonial + screenshot hover */
 #testimonials > div > div:hover{transform:translateY(-3px);border-color:rgba(212,14,38,.15);box-shadow:0 16px 32px -12px rgba(0,0,0,.5)}
 .app-s [style*="width:140px"]:hover{transform:translateY(-4px);box-shadow:0 24px 48px -12px rgba(0,0,0,.8)!important}
@@ -369,7 +378,7 @@
     <p data-lang="es" style="color:#fff">Tu sistema. Tu app.</p>
     <p data-lang="en" style="color:#fff">My system. My rules. Your app.</p>
   </div>
-  <div style="display:flex;gap:clamp(.8rem,1.5vw,1.2rem);align-items:flex-start;max-width:1000px">
+  <div class="app-strip" style="display:flex;gap:clamp(.8rem,1.5vw,1.2rem);align-items:flex-start;max-width:1000px">
     <div style="width:clamp(100px,14vw,140px);flex-shrink:0;border-radius:14px;overflow:hidden;border:2px solid rgba(255,255,255,.08);box-shadow:0 20px 40px -15px rgba(0,0,0,.9)">
       <img src="assets/img/app-gym.png" alt="THE Lab — Gym" style="width:100%;height:auto;display:block">
     </div>
@@ -379,7 +388,7 @@
     <div style="width:clamp(100px,14vw,140px);flex-shrink:0;border-radius:14px;overflow:hidden;border:2px solid rgba(255,255,255,.08);box-shadow:0 20px 40px -15px rgba(0,0,0,.9)">
       <img src="assets/img/app-food.png" alt="THE Lab — Food" style="width:100%;height:auto;display:block">
     </div>
-    <div style="flex:1;min-width:200px;margin-left:clamp(.5rem,2vw,1.5rem)">
+    <div class="app-rep" style="flex:1;min-width:200px;margin-left:clamp(.5rem,2vw,1.5rem)">
 
       <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(200,100,100,0.08);max-width:380px">
         <img src="assets/img/report-preview.png?v=2" alt="Block report preview" style="width:100%;height:auto;display:block">
