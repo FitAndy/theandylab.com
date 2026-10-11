@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/pepper.png">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=20261009c">
+<link rel="stylesheet" href="assets/site.css?v=20261011b">
 <style>
 :root{--acc:#D40E26}
 body{background:#150101;margin:0}
@@ -28,7 +28,7 @@ body{background:#150101;margin:0}
 .lp-form iframe{width:100%;border:none;min-height:200px}
 .lp-consent{font-size:12px;color:rgba(250,249,246,.3);line-height:1.6;max-width:440px;margin:1rem auto 0;text-align:center}
 .lp-context{width:100%;max-width:560px;margin:0 auto;padding:clamp(3rem,5vw,4rem) clamp(1.5rem,5vw,4rem);border-top:1px solid rgba(200,100,100,.1)}
-.lp-context h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,20px);letter-spacing:.15em;color:rgba(250,249,246,.35);margin:0 0 1rem}
+.lp-context h2,.lp-context h2[data-lang]{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,20px);letter-spacing:.15em;color:rgba(250,249,246,.35);margin:0 0 1rem}
 .lp-context p{font-size:clamp(15px,1.4vw,17px);color:rgba(250,249,246,.6);line-height:1.78}
 nav{background:rgba(21,1,1,0.85)!important;border-bottom:1px solid rgba(255,255,255,.06)!important}
 nav.scrolled{background:rgba(21,1,1,0.95)!important}
@@ -48,30 +48,30 @@ nav.scrolled{background:rgba(21,1,1,0.95)!important}
   <ul class="nav-links">
     <li><a href="andy.html">Andy</a></li>
     <li><a href="manifesto.html">THE Manifesto</a></li>
-    <li><a href="lab.html">THE Lab</a></li>
-    <li><a href="shop.html">THE Method</a></li>
-    <li class="nav-cta-m"><a href="newsletter.html">The Brain</a></li>
+    <li><a href="newsletter.html">THE Brain</a></li>
+    <li class="nav-cta-m"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener"><span data-lang="es">Reservar llamada</span><span data-lang="en">Book a call</span></a></li>
   </ul>
   <div class="nav-right">
+    <div class="lang-switch" role="group" aria-label="Language"><button type="button" data-setlang="es">ES</button><button type="button" data-setlang="en">EN</button></div>
     <button class="nav-toggle" type="button" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <div class="lp">
   <div class="lp-main">
-    <h1 class="lp-h1">Por fin vas a comer suficiente proteína.</h1>
-    <p class="lp-sub">Cómo ganarle a tu cerebro cuando dice que no al tercer día</p>
+    <h1 class="lp-h1" data-lang="es">Por fin vas a comer suficiente proteína.</h1><h1 class="lp-h1" data-lang="en">You’re finally going to eat enough protein.</h1>
+    <p class="lp-sub" data-lang="es">Cómo ganarle a tu cerebro cuando dice que no al tercer día</p><p class="lp-sub" data-lang="en">How to beat your brain when it says no on day three</p>
 
     <div class="lp-form">
       <iframe data-tally-src="https://tally.so/embed/9qYKDV?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="200" frameborder="0" marginheight="0" marginwidth="0" title="Guía de Proteína"></iframe>
       <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s)}</script>
-      <p class="lp-consent">Al enviar tu email recibirás la guía de proteína completa y te suscribirás al newsletter semanal de The Andy Lab — músculo, comida y decisiones, cada miércoles. Sin spam. Te puedes dar de baja cuando quieras.</p>
+      <p class="lp-consent" data-lang="es">Al enviar tu email recibirás la guía de proteína completa y te suscribirás al newsletter semanal de The Andy Lab — músculo, comida y decisiones, cada miércoles. Sin spam. Te puedes dar de baja cuando quieras.</p><p class="lp-consent" data-lang="en">By submitting your email you’ll receive the complete protein guide and subscribe to The Andy Lab weekly newsletter — muscle, food and decisions, every Wednesday. No spam. Unsubscribe whenever you want.</p>
     </div>
   </div>
 
   <div class="lp-context">
-    <h2>Qué hay dentro</h2>
-    <p>Una calculadora que te da tu número exacto de proteína sin que multipliques nada. Las fuentes que yo como y las que uso con mis clientas, incluyendo las de "abro y como" que salvan los martes sin ganas de cocinar. Y la parte que me importa más: qué pasa en tu cerebro cuando abandonas al tercer día y cómo montar algo que aguante el miércoles.</p>
+    <h2 data-lang="es">Qué hay dentro</h2><h2 data-lang="en">What’s inside</h2>
+    <p data-lang="es">Una calculadora que te da tu número exacto de proteína sin que multipliques nada. Las fuentes que yo como y las que uso con mis clientas, incluyendo las de "abro y como" que salvan los martes sin ganas de cocinar. Y la parte que me importa más: qué pasa en tu cerebro cuando abandonas al tercer día y cómo montar algo que aguante el miércoles.</p><p data-lang="en">A calculator that gives you your exact protein number without any multiplying. The sources I eat and the ones I use with my clients, including the “open and eat” ones that save the Tuesdays you don’t feel like cooking. And the part I care about most: what happens in your brain when you quit on day three, and how to build something that survives Wednesday.</p>
   </div>
 </div>
 
@@ -81,6 +81,6 @@ nav.scrolled{background:rgba(21,1,1,0.95)!important}
   <span class="ftagline">Más músculo. Menos culpa.</span>
 </footer>
 
-<script src="assets/site.js?v=20261009c"></script>
+<script src="assets/site.js?v=20261011b"></script>
 </body>
 </html>

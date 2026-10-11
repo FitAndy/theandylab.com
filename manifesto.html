@@ -16,11 +16,17 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/pepper.png">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=20261009c">
+<link rel="stylesheet" href="assets/site.css?v=20261011b">
 <style>
 /* INTRO */
-.intro{position:relative;min-height:78vh;display:flex;flex-direction:column;justify-content:center;padding:clamp(7rem,11vw,10rem) var(--gut) clamp(4rem,8vw,7rem);overflow:hidden}
+.intro{position:relative;min-height:78vh;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(1.5rem,4vw,4rem);align-items:center;padding:clamp(7rem,11vw,10rem) var(--gut) clamp(4rem,8vw,7rem);overflow:hidden}
 .intro::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 28% 32%,rgba(212,14,38,.06) 0%,transparent 58%);pointer-events:none}
+html{scroll-behavior:smooth}
+.intro-globe{position:relative;z-index:1;min-width:0}
+.intro-globe{padding:0 clamp(0rem,3vw,2.5rem) 0 0}
+.intro-globe #globe{max-width:440px}
+.intro-globe #globe [data-ll] span{white-space:normal!important;width:max-content;max-width:96px;line-height:1.25!important;text-shadow:0 1px 6px rgba(0,0,0,.9)}
+@media(max-width:820px){.intro{grid-template-columns:minmax(0,1fr);min-height:0}.intro-globe #globe{max-width:300px}}
 .intro-left{position:relative;display:flex;flex-direction:column;gap:1rem;z-index:1}
 .intro-left .etiq{margin-bottom:0}
 .intro h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.8rem,8vw,9.5rem);line-height:.84;letter-spacing:.01em;color:#fff}
@@ -80,9 +86,8 @@
   <ul class="nav-links">
     <li><a href="andy.html">Andy</a></li>
     <li><a href="manifesto.html" class="active">THE Manifesto</a></li>
-    <li><a href="lab.html">THE Lab</a></li>
-    <li><a href="shop.html">THE Method</a></li>
-    <li class="nav-cta-m"><a href="newsletter.html">The Brain</a></li>
+    <li><a href="newsletter.html">THE Brain</a></li>
+    <li class="nav-cta-m"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener"><span data-lang="es">Reservar llamada</span><span data-lang="en">Book a call</span></a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-switch" role="group" aria-label="Language">
@@ -102,6 +107,43 @@
     <p class="intro-sub reveal d1" data-lang="en">You've spent years shrinking — eating less, doing only cardio and pilates. This project is everything opposite.</p>
     <span class="intro-tag reveal d2" style="color: #FFFFFF">Más músculo. Menos culpa.</span>
   </div>
+  <div class="intro-globe">
+<!-- client map -->
+    <div>
+      <div id="globe" style="position:relative;width:100%;aspect-ratio:1/1;max-width:520px;margin:0 auto">
+        <div style="position:absolute;inset:2%;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(60,6,10,.6)"></div><canvas style="position:absolute;inset:0;display:block;width:100%;height:100%;touch-action:pan-y;cursor:grab" aria-hidden="true"></canvas>
+        <span data-ll="-99.13,19.43" style="opacity:0;pointer-events:none;position:absolute;width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%);width:14px;height:14px;background:var(--accent);box-shadow:0 0 0 5px rgba(212,14,38,.25),0 0 18px rgba(212,14,38,.7)"><span style="position:absolute;font-family:Inter,sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:#fff;line-height:1.2;left:18px;top:-6px;color:#fff"><span data-lang="es">México</span><span data-lang="en">Mexico</span></span></span>
+        <a href="manifesto.html?city=Madrid#testimonials" data-ll="-3.7,40.42" style="opacity:0;pointer-events:none;position:absolute;width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%);background:var(--accent);box-shadow:0 0 0 5px rgba(212,14,38,.25),0 0 18px rgba(212,14,38,.7);text-decoration:none;display:block" aria-label="Madrid"><span style="position:absolute;font-family:Inter,sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:#fff;line-height:1.2;right:20px;top:-6px;text-decoration:none"><span data-lang="es">Madrid</span><span data-lang="en">Madrid</span></span></a>
+        <a href="manifesto.html?city=London,Hamburg,Amsterdam#testimonials" data-ll="4.9,52.37" style="opacity:0;pointer-events:none;position:absolute;width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%);background:var(--accent);box-shadow:0 0 0 5px rgba(212,14,38,.25),0 0 18px rgba(212,14,38,.7);text-decoration:none;display:block" aria-label="London · Hamburg · Amsterdam"><span style="position:absolute;font-family:Inter,sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:#fff;line-height:1.2;left:20px;top:-18px;text-decoration:none"><span data-lang="es">Londres · Hamburgo · Ámsterdam</span><span data-lang="en">London · Hamburg · Amsterdam</span></span></a>
+        <span data-ll="54.37,24.45" style="opacity:0;pointer-events:none;position:absolute;width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%);width:14px;height:14px;background:var(--accent);box-shadow:0 0 0 5px rgba(212,14,38,.25),0 0 18px rgba(212,14,38,.7)"><span style="position:absolute;font-family:Inter,sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:#fff;line-height:1.2;left:18px;top:-6px;color:rgba(255,255,255,.7)"><span data-lang="es">Abu Dabi</span><span data-lang="en">Abu Dhabi</span></span></span>
+      </div>
+    </div>
+<a href="#testimonials" class="btn-p" style="margin:1.2rem auto 0;display:flex;width:fit-content"><span data-lang="es">LEER TESTIMONIOS ↓</span><span data-lang="en">READ TESTIMONIALS ↓</span></a>
+  </div>
+<script>
+(function(){var wrap=document.getElementById('globe');if(!wrap)return;
+var cv=wrap.querySelector('canvas'),pins=[].slice.call(wrap.querySelectorAll('[data-ll]'));
+function load(src,integ,cb){var s=document.createElement('script');s.src=src;s.integrity=integ;s.crossOrigin='anonymous';s.onload=cb;document.head.appendChild(s);}
+function init(land){var S=500,dpr=Math.min(2,window.devicePixelRatio||1);cv.width=cv.height=S*dpr;var c=cv.getContext('2d');c.scale(dpr,dpr);
+var proj=d3.geoOrthographic().scale(228).translate([250,250]).clipAngle(90).precision(.5),path=d3.geoPath(proj,c),grat=d3.geoGraticule10(),sph={type:'Sphere'};
+var rot=[25,-24],drag=false,hover=false,run=false,lx,ly,t0,still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function draw(){proj.rotate(rot);c.clearRect(0,0,S,S);
+c.beginPath();path(sph);c.fillStyle='rgba(60,6,10,.6)';c.fill();c.strokeStyle='rgba(255,255,255,.28)';c.lineWidth=1;c.stroke();
+c.beginPath();path(grat);c.strokeStyle='rgba(255,255,255,.06)';c.lineWidth=.6;c.stroke();
+c.beginPath();path(land);c.fillStyle='rgba(255,255,255,.24)';c.fill();c.strokeStyle='rgba(255,255,255,.4)';c.lineWidth=.5;c.stroke();
+pins.forEach(function(p){var g=p.getAttribute('data-ll').split(',').map(Number),xy=proj(g),v=d3.geoDistance(g,[-rot[0],-rot[1]])<1.4;
+p.style.left=(xy[0]/S*100)+'%';p.style.top=(xy[1]/S*100)+'%';p.style.opacity=v?1:0;p.style.pointerEvents=v?'auto':'none';p.style.transition='opacity .25s';});}
+function tick(t){if(!run)return;var dt=t0?Math.min(50,t-t0):16;t0=t;if(!drag&&!hover&&!still)rot[0]-=dt*0.008;draw();requestAnimationFrame(tick);}
+draw();
+if('IntersectionObserver' in window){new IntersectionObserver(function(en){var on=en[0].isIntersecting;if(on&&!run){run=true;t0=0;requestAnimationFrame(tick);}else if(!on)run=false;}).observe(wrap);}else{run=true;requestAnimationFrame(tick);}
+cv.addEventListener('pointerdown',function(e){drag=true;lx=e.clientX;ly=e.clientY;cv.style.cursor='grabbing';try{cv.setPointerCapture(e.pointerId)}catch(_){}});
+cv.addEventListener('pointermove',function(e){if(!drag)return;rot[0]+=(e.clientX-lx)*.4;rot[1]=Math.max(-60,Math.min(15,rot[1]+(e.clientY-ly)*.25));lx=e.clientX;ly=e.clientY;if(still)draw();});
+function up(){drag=false;cv.style.cursor='grab';}cv.addEventListener('pointerup',up);cv.addEventListener('pointercancel',up);
+wrap.addEventListener('mouseenter',function(){hover=true});wrap.addEventListener('mouseleave',function(){hover=false});}
+function go(){load('https://unpkg.com/d3@7.9.0/dist/d3.min.js','sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i',function(){load('https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js','sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67',function(){fetch('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json').then(function(r){return r.json()}).then(function(t){init(topojson.feature(t,t.objects.countries));}).catch(function(){});});});}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){if(en[0].isIntersecting){io.disconnect();go();}},{rootMargin:'400px'});io.observe(wrap);}else go();
+})();
+</script>
 </section>
 
 <div class="principles-grid">
@@ -145,7 +187,13 @@
   <span class="etiq reveal" style="display:inline-flex;margin-bottom:clamp(1.5rem,3vw,2rem)"><span data-lang="es">Clientas de THE Lab</span><span data-lang="en">THE Lab clients</span></span>
   <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;line-height:.9;margin-bottom:clamp(2rem,4vw,3rem)" data-lang="es">Clientas de THE Lab</h2>
   <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;line-height:.9;margin-bottom:clamp(2rem,4vw,3rem)" data-lang="en">THE Lab clients</h2>
-  <div data-swipe style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(1rem,2vw,1.5rem)" class="reveal-stagger">
+  <div style="max-width:900px;margin:0 auto clamp(1.5rem,3vw,2.5rem);text-align:center">
+<p style="font-family:system-ui,-apple-system,sans-serif;font-size:clamp(1.3rem,2.4vw,1.9rem);line-height:1.15;font-weight:400;color:#fff;margin-bottom:1rem" data-lang="es">Programas genéricos hay muchos, todos están diseñados para la persona promedio.</p><p style="font-family:system-ui,-apple-system,sans-serif;font-size:clamp(1.3rem,2.4vw,1.9rem);line-height:1.15;font-weight:400;color:#fff;margin-bottom:1rem" data-lang="en">There are plenty of generic programs, but they're all designed for the average person.</p>
+<p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);line-height:.95;color:var(--accent);margin-bottom:1.6rem" data-lang="es">Y tú de promedio no tienes nada.</p><p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);line-height:.95;color:var(--accent);margin-bottom:1.6rem" data-lang="en">And you're anything but average.</p>
+<p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:.95;color:#fff;margin-bottom:clamp(1.8rem,3vw,2.6rem)" data-lang="es">The Andy Lab viene a romper con esta dinámica.</p><p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:.95;color:#fff;margin-bottom:clamp(1.8rem,3vw,2.6rem)" data-lang="en">The Andy Lab is here to break that cycle.</p>
+</div>
+
+<div data-swipe style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(1rem,2vw,1.5rem)" class="reveal-stagger">
     <!-- Amy B — highlighted -->
     <div style="background:rgba(212,14,38,.06);border:1px solid rgba(212,14,38,.18);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
       <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1">"I've literally never looked, or felt, better."</p>
@@ -233,7 +281,7 @@ g.parentNode.insertBefore(bar,g);})();
   <p class="reveal d1" data-lang="es">Si pensamos igual, el Lab es donde pasamos a la acción.</p>
   <p class="reveal d1" data-lang="en">If something resonated, the Lab is where it gets built.</p>
   <div class="mclose-ctas reveal d2">
-    <a href="lab.html" class="btn-p"><span data-lang="es">Entra al Lab →</span><span data-lang="en">Enter the Lab →</span></a>
+    <a href="index.html#niveles" class="btn-p"><span data-lang="es">Entra al Lab →</span><span data-lang="en">Enter the Lab →</span></a>
     <a href="newsletter.html" class="btn-f"><span data-lang="es">O lee cómo pienso →</span><span data-lang="en">Or read how I think →</span></a>
   </div>
 </section>
@@ -245,6 +293,6 @@ g.parentNode.insertBefore(bar,g);})();
   <span class="ftagline">Más músculo. Menos culpa.</span>
 </footer>
 
-<script src="assets/site.js?v=20261009c"></script>
+<script src="assets/site.js?v=20261011b"></script>
 </body>
 </html>

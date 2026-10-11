@@ -118,4 +118,27 @@
     t.insertBefore(b,btn);
     new MutationObserver(lbl).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
   });
+
+  /* ---- localised page title / description / aria ---- */
+  var META={
+   'index.html':['The Andy Lab','The Andy Lab — More muscle. Less guilt. Strength training and nutrition made for you, with criteria, not motivation.'],
+   'manifesto.html':['The Andy Lab — Manifesto','The Andy Lab manifesto — the five principles everything I do is built on.'],
+   'newsletter.html':['The Brain — Newsletter and guides — The Andy Lab','My brain, in your inbox. Muscle, food, and why your brain refuses to cooperate. Every week.'],
+   'andy.html':['Andy — The Andy Lab','Economist. Colombian. Obsessed with understanding why people don’t do what they know they should.'],
+   'guia-proteina.html':['Protein — The Andy Lab','Your brain has spent years overcomplicating something that fits in one multiplication. The complete protein guide, with the mechanism nobody explains.'],
+   'proteina.html':['Protein — The Andy Lab','How much protein you need, where to get it, and how not to give up halfway.'],
+   'suplementos.html':['Supplements — The Andy Lab','The short list for building muscle and losing fat. The ones that work, the ones that don’t, and why.'],
+   'viaje.html':['Training and eating when you travel — The Andy Lab','The free guide I use myself when I travel. No gym, no guilt, no pretending to be an elite athlete in a hotel.'],
+   'proteina-leadmagnet.html':['Protein Guide — The Andy Lab','Your exact protein number. My real sources. And why your brain says no on day three.']
+  };
+  var pg=(location.pathname.split('/').pop()||'index.html'),M=META[pg],T0=document.title;
+  var dm=document.querySelector('meta[name="description"]'),D0=dm&&dm.content;
+  function loc(lang){
+    var en=lang==='en';
+    if(M){document.title=en?M[0]:T0;if(dm)dm.setAttribute('content',en?M[1]:D0);}
+    document.querySelectorAll('.nav-toggle').forEach(function(b){b.setAttribute('aria-label',en?'Menu':'Menú');});
+    document.querySelectorAll('[aria-label="Volver arriba"],[aria-label="Back to top"]').forEach(function(b){b.setAttribute('aria-label',en?'Back to top':'Volver arriba');});
+  }
+  loc(html.getAttribute('lang'));
+  new MutationObserver(function(){loc(html.getAttribute('lang'));}).observe(html,{attributes:true,attributeFilter:['lang']});
 })();

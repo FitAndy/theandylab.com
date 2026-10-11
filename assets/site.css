@@ -249,3 +249,15 @@ body.theme-light::after{display:none}
   #globe{max-width:340px!important}
   #globe [data-ll] span{font-size:.54rem!important;letter-spacing:.1em!important;white-space:normal!important;width:max-content;max-width:84px;line-height:1.25!important;text-shadow:0 1px 6px rgba(0,0,0,.9)}
 }
+
+/* ---- mobile touch targets & legibility ---- */
+@media (max-width:768px){
+  .lang-switch button{min-height:40px;min-width:44px;padding:0 .7rem}
+  .hero-ctas .hero-text-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.5rem 0}
+  .lv-faq summary,.lv-faq details>summary{min-height:44px;display:flex;align-items:center}
+  .site-footer a,.fsocial a,.site-footer .flinks a{display:inline-flex;align-items:center;min-height:44px;padding:0 .4rem}
+  .etiq,.lv-badge,.lv-for,.hero-tag{font-size:max(.7rem,11px)!important}
+  #globe [data-ll] span{font-size:.62rem!important}
+  .sticky-cta a{font-size:1.2rem}
+}
+@media (max-width:768px){.btn-f{min-height:44px;display:inline-flex;align-items:center;justify-content:center}}
