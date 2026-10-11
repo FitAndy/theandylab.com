@@ -275,14 +275,22 @@
 <div class="lv-cta"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar llamada de 20 minutos →</span><span data-lang="en">Book a 20-minute call →</span></a><a href="manifesto.html#testimonials" class="btn-f"><span data-lang="es">Lee lo que dicen las clientas →</span><span data-lang="en">Read what clients say →</span></a></div>
 <p data-lang="es" style="font-size:.85rem;color:var(--b50);margin-top:1.4rem">En Mild tienes la app. En Spicy y en Extra Spicy tienes todo.</p><p data-lang="en" style="font-size:.85rem;color:var(--b50);margin-top:1.4rem">In Mild you get the app. In Spicy and Extra Spicy you get everything.</p>
 </div>
-<div class="lt2-vid"><div class="lt2-frame"><video id="labreel" data-es="assets/reel.mp4" data-en="assets/reel_en.mp4" src="assets/reel.mp4" muted loop playsinline preload="metadata" aria-label="THE Lab app walkthrough"></video></div></div>
+<div class="lt2-vid"><div class="lt2-frame" style="position:relative"><video id="labreel" data-es="assets/reel.mp4" data-en="assets/reel_en.mp4" src="assets/reel.mp4" muted autoplay loop playsinline webkit-playsinline preload="auto" aria-label="THE Lab app walkthrough"></video><button type="button" id="labreel-play" aria-label="Play" style="display:none;position:absolute;inset:0;width:100%;height:100%;border:0;background:rgba(21,1,1,.45);cursor:pointer;align-items:center;justify-content:center"><span style="width:64px;height:64px;border-radius:50%;background:#D40E26;color:#fff;font-size:1.6rem;display:flex;align-items:center;justify-content:center;padding-left:5px">&#9654;</span></button></div></div>
 </div>
 <script>
-(function(){var v=document.getElementById('labreel');if(!v)return;
-function sync(){var l=document.documentElement.lang==='en'?'en':'es',u=v.getAttribute('data-'+l);if(v.getAttribute('src')!==u){v.setAttribute('src',u);v.load();if(v.dataset.on==='1')v.play().catch(function(){});}}
+(function(){var v=document.getElementById('labreel'),pb=document.getElementById('labreel-play');if(!v)return;
+v.muted=true;v.defaultMuted=true;
+function show(on){pb.style.display=on?'flex':'none';}
+function tryPlay(){v.muted=true;var p=v.play();if(p&&p.then){p.then(function(){show(false)}).catch(function(){show(true)});}}
+function sync(){var l=document.documentElement.lang==='en'?'en':'es',u=v.getAttribute('data-'+l);if(v.getAttribute('src')!==u){v.setAttribute('src',u);v.load();if(v.dataset.on==='1')tryPlay();}}
 sync();new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
-function pl(){v.dataset.on='1';v.play().catch(function(){});}function ps(){v.dataset.on='0';v.pause();}
-if('IntersectionObserver' in window)new IntersectionObserver(function(en){en[0].isIntersecting?pl():ps();},{threshold:.4}).observe(v);else pl();})();
+pb.onclick=function(){v.dataset.on='1';tryPlay();};
+v.addEventListener('click',function(){if(v.paused){v.dataset.on='1';tryPlay();}});
+v.addEventListener('error',function(){show(false);});
+function pl(){v.dataset.on='1';tryPlay();}function ps(){v.dataset.on='0';v.pause();}
+if('IntersectionObserver' in window)new IntersectionObserver(function(en){en[0].isIntersecting?pl():ps();},{threshold:.25}).observe(v);else pl();
+document.addEventListener('touchstart',function f(){if(v.paused&&v.dataset.on==='1')tryPlay();document.removeEventListener('touchstart',f);},{passive:true});
+})();
 </script>
 </section>
 <section class="lv"><div class="lv-in faq2">
