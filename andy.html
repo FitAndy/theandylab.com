@@ -15,43 +15,92 @@
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/pepper.png">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=20261012a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20261025b">
 <style>
-/* ---------- brain ---------- */
-.brain{padding:var(--sec) var(--gut);padding-top:clamp(8rem,12vw,12rem)}
-.brain>.etiq{margin-bottom:1.4rem}
-.brain-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(5.5rem,15vw,16rem);line-height:.82;letter-spacing:.01em;color:#fff;margin-bottom:clamp(2.5rem,5vw,4rem)}
-.brain-name span{color:var(--accent)}
-.brain-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(2.5rem,5vw,5.5rem);align-items:start}
-.brain-photo{position:sticky;top:96px}
-.brain-photo img{width:100%;height:auto;display:block;filter:grayscale(1) contrast(1.04) brightness(.96);border:1px solid rgba(255,255,255,.04);border-radius:var(--r-card)}
-.brain-photo::after{content:'';position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent-bright));border-radius:0 0 var(--r-card) var(--r-card)}
-.brain-txt{padding-top:.4rem}
-.brain-intro{font-size:clamp(1.2rem,1.5vw,1.55rem);font-weight:400;color:#fff;line-height:1.6;margin-bottom:1.6rem}
-.brain-txt p{font-size:clamp(1.04rem,1.15vw,1.18rem);font-weight:300;color:var(--b85);line-height:1.9;margin-bottom:1.3rem;max-width:60ch}
-.brain-txt p:last-child{margin-bottom:0}
-.brain-txt p strong{color:#fff;font-weight:500}
-.brain-txt p strong .hl{color:var(--accent)}
+/* PRINCIPLES */
+.principles-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;background:transparent;max-width:100%;margin:0}
+.principle{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;background:rgba(41,4,5,.35);overflow:hidden;border:1px solid var(--line);border-right:none;border-bottom:none}
+.principle:nth-child(even){border-right:1px solid var(--line)}
+.principle:nth-last-child(-n+2){border-bottom:1px solid var(--line)}
+.p-poster{position:relative;overflow:hidden;background:transparent;width:100%;display:flex;align-items:center}
+.p-poster img{width:100%;height:auto;object-fit:contain;display:block;transition:transform 1.4s var(--ease);filter:contrast(1.04)}
+.principle:hover .p-poster img{transform:scale(1.04)}
+.p-txt{padding:clamp(1.8rem,3vw,2.4rem);display:flex;flex-direction:column;gap:.8rem;flex:1;justify-content:center}
+.p-num{font-family:'Bebas Neue',sans-serif;font-size:.85rem;line-height:1;color:var(--accent);letter-spacing:.02em}
+.p-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.1rem,1.3vw,1.3rem);line-height:.95;letter-spacing:.01em;color:#fff;text-wrap:balance;margin-bottom:1rem}
+.p-text{font-size:.95rem;font-weight:300;color:rgba(255,255,255,.9);line-height:1.8;max-width:none}
+.p-text strong{color:#fff;font-weight:500}
+
+@media(min-width:821px){.op .op-pic{left:auto;right:0;width:60%}.op-pic img{object-position:50% 10%;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%);mask-image:linear-gradient(to right,transparent 0,#000 30%)}.op-pic::after{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%);mask-image:linear-gradient(to right,transparent 0,#000 30%)}}
+@media(max-width:880px){.principles-grid{grid-template-columns:1fr}.principle{grid-template-columns:1fr;border:1px solid var(--line)!important;border-radius:12px;align-items:start}.principle .p-poster{order:-1;height:auto;min-height:0;aspect-ratio:auto}.principle .p-poster img{height:auto;display:block;object-fit:contain}.p-txt{padding:1.4rem 1.3rem 1.6rem;justify-content:flex-start}.p-title{margin-bottom:.4rem}.p-text{font-size:1rem;line-height:1.7}}
+@media(max-width:768px){.principles-grid{background:transparent;padding-top:1.6rem;padding-bottom:.4rem}.principles-grid+.swipe-ctl{margin-bottom:2rem}.principles-grid.swipe>*{flex-basis:86%;align-self:stretch}}
+.manif{padding:clamp(3.5rem,7vw,6rem) var(--gut) 0;border-top:1px solid var(--line)}
+.manif-head{max-width:1100px;margin:0 auto clamp(2rem,4vw,3rem)}
+.m-rules{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.6rem,3.6vw,3.2rem);line-height:1;letter-spacing:.03em;color:var(--b35);margin:0 0 1rem;display:flex;flex-wrap:wrap;gap:.2em .6em}
+.m-rules span{position:relative;display:inline-block}
+.m-rules span::after{content:'';position:absolute;left:-2%;top:52%;height:.09em;width:0;background:var(--accent-bright);transition:width .55s var(--ease)}
+.m-rules span.x::after{width:104%}
+.m-rules span.x{color:var(--b25)}
+.manif-head h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,6.5vw,5.6rem);max-width:14ch;line-height:.88;color:#fff;margin:.6rem 0 1rem}
+.manif-head p{font-size:clamp(1rem,1.15vw,1.15rem);font-weight:300;color:var(--b85);line-height:1.8;max-width:52ch;margin:0}
+.manif-head .tag{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.22em;color:var(--accent-bright);display:block;margin-top:1rem}
+.manif .principles-grid{max-width:1100px;margin:0 auto;grid-template-columns:1fr;gap:1rem;background:transparent}
+.manif .principle{border:1px solid var(--line)!important;border-radius:12px}
+.manif .principle:nth-child(even) .p-poster{order:-1}
+.p-text{font-size:1rem}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.rv.in{opacity:1;transform:none}
+/* opener */
+.op{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:clamp(7rem,12vw,10rem) var(--gut) clamp(2.5rem,5vw,4rem);overflow:hidden}
+.op-pic{position:absolute;inset:0;z-index:0}
+.op-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;filter:grayscale(1) contrast(1.05) brightness(.8)}
+.op-pic::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(21,1,1,1) 0%,rgba(21,1,1,.85) 25%,rgba(21,1,1,.25) 60%,rgba(21,1,1,.4) 100%),linear-gradient(160deg,rgba(212,14,38,.3),transparent 50%)}
+.op-in{position:relative;z-index:1;max-width:1100px;margin:0 auto;width:100%}
+.op h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(6rem,22vw,20rem);line-height:.9;letter-spacing:.01em;color:#fff;margin:0 0 1.2rem;display:block}
+.op h1 span{display:inline-block}
+.op h1 span{color:var(--accent-bright)}
+.op-line{margin-top:.6rem;position:relative;z-index:2;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,2.8vw,2.5rem);letter-spacing:.04em;color:#fff;line-height:1.05;max-width:24ch}
+/* story */
+.st{padding:clamp(3.5rem,7vw,6rem) var(--gut)}
+.st-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(1.2rem,3vw,3rem);align-items:start}
+.st-txt{grid-column:1/9}
+.st-pic{grid-column:8/13;position:sticky;top:6rem}
+.st-pic img{width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.06);filter:grayscale(1) contrast(1.05)}
+.st-lead{font-size:clamp(1.25rem,1.7vw,1.7rem);font-weight:400;color:#fff;line-height:1.5;margin:0 0 1.8rem;text-wrap:pretty}
+.st-txt p{font-size:clamp(1.02rem,1.15vw,1.15rem);font-weight:300;color:var(--b85);line-height:1.85;margin:0 0 1.3rem;max-width:62ch}
+.st-txt p strong{color:#fff;font-weight:500}
+.st-pull{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,4.5vw,4rem);line-height:.92;color:#fff;margin:2.2rem 0;padding-left:1rem;border-left:3px solid var(--accent-bright);max-width:16ch}
+.st-mid{display:none}
+/* statement */
+.stmt{padding:clamp(4rem,8vw,7rem) var(--gut);text-align:center;border-top:1px solid var(--line)}
+.stmt h2{position:relative;font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,5.5vw,5.2rem);line-height:.92;color:#fff;max-width:22ch;margin:0 auto}
+.stmt h2 span{color:var(--accent-bright)}
+.stmt p{position:relative;font-size:clamp(1rem,1.2vw,1.15rem);font-weight:300;color:var(--b85);max-width:50ch;margin:1.6rem auto 0;line-height:1.75}
+.stmt p a{color:var(--accent-bright)}
+.tl{padding:0 var(--gut) clamp(3.5rem,7vw,6rem)}
+.tl-in{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.1)}
+.tl-row{border-bottom:1px solid rgba(255,255,255,.1);padding:1.3rem 0}
+.tl-row p{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,3vw,2.6rem);line-height:1.05;color:var(--b70);margin:0;letter-spacing:.01em}
+.tl-row b{font-weight:400;color:#fff;display:block}
+.today{padding-top:0}
+.today .etiq{margin-bottom:1.2rem}
+.today .st-txt{grid-column:1/9}
+/* cta */
+.cta-f{position:relative;padding:clamp(5rem,10vw,8rem) var(--gut);text-align:center;border-top:1px solid var(--borde);overflow:hidden}
+.cta-f h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,7rem);line-height:.86;color:#fff;margin-bottom:1.5rem}
 @media(max-width:880px){
-  .brain-grid{grid-template-columns:1fr;gap:2.25rem}
-  .brain-photo{position:static;max-width:420px}
+    .st-in{display:block}.st-pic{position:static;margin:0 0 1.8rem}.st-pic img{aspect-ratio:4/5;object-fit:cover;object-position:50% 25%}
+  .st-mid{display:block;margin:1.6rem 0 2rem}.st-mid img{width:100%;height:auto;aspect-ratio:16/11;object-fit:cover;object-position:50% 30%;border-radius:14px;filter:grayscale(1) contrast(1.05)}
 }
 @media(max-width:560px){
-  .brain{padding-top:7rem}
-  .brain-name{font-size:clamp(4rem,14vw,5.5rem)}
-  .brain-intro{font-size:clamp(1.05rem,4vw,1.2rem)}
-  .brain-txt p{font-size:clamp(.96rem,3.5vw,1.04rem)}
-  .cta-f h2{font-size:clamp(2.2rem,8vw,3rem)}
+  .op{min-height:92svh}
+  .op h1{font-size:clamp(5.5rem,34vw,8rem)}
+  .op-line{font-size:1.3rem}
   .cta-f .btn-p,.cta-f .btn-f{width:100%;text-align:center;justify-content:center}
 }
-
-/* ---------- cta ---------- */
-.cta-f{position:relative;padding:clamp(6rem,12vw,10rem) var(--gut);text-align:center;border-top:1px solid var(--borde);overflow:hidden}
-.cta-f::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 38%,rgba(212,14,38,.06) 0%,transparent 60%);pointer-events:none}
-.cta-f>*{position:relative;z-index:1}
-.cta-f h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,7rem);line-height:.86;letter-spacing:.005em;color:#fff;margin-bottom:1.5rem}
-.cta-line{font-size:clamp(1.1rem,1.4vw,1.3rem);font-weight:300;color:var(--b50);max-width:38ch;margin:0 auto 2rem;line-height:1.7}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -60,9 +109,9 @@
   <a href="index.html" class="nav-logo"><img src="assets/img/pepper.png" class="logo-pepper" alt=""><span>The Andy <span style="color:#FF3737">Lab</span></span></a>
   <ul class="nav-links">
     <li><a href="andy.html" class="active">Andy</a></li>
-    <li><a href="manifesto.html">THE Manifesto</a></li>
+    <li><a href="metodo.html">THE Lab</a></li>
     <li><a href="newsletter.html">THE Brain</a></li>
-    <li class="nav-cta-m"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener"><span data-lang="es">Reservar llamada</span><span data-lang="en">Book a call</span></a></li>
+    <li class="nav-cta-m"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener"><span data-lang="es">Agendar llamada</span><span data-lang="en">Book a call</span></a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-switch" role="group" aria-label="Language">
@@ -73,47 +122,128 @@
   </div>
 </nav>
 
-<!-- BRAIN -->
-<section class="brain" id="brain">
-  <span class="etiq"><span data-lang="es">Quién soy</span><span data-lang="en">About</span></span>
-  <div class="brain-name"><span style="color: #FFFFFF">AN</span><span style="color: #FFFFFF">DY</span></div>
-  <div class="brain-grid">
-    <div class="brain-photo reveal"><img src="assets/img/andy-leather.jpeg" alt="Andy"></div>
-    <div class="brain-txt">
-      <p class="brain-intro reveal" data-lang="es" style="color: rgb(255, 255, 255)">Soy Andy. Economista. Colombiana, de Cali — importante que sepas que bailo bien. Con paradas en varios países antes de aterrizar en Madrid, donde de alguna forma mantengo tres vidas que no se parecen en nada: trabajo en salud pública internacional, invierto en bolsa y dirijo esto que estás leyendo. Las tres me gustan. Ninguna la cambio.</p>
-      <p class="brain-intro reveal" data-lang="en">I'm Andy. Economist. Colombian, from Cali — important that you know I dance well. Several countries before landing in Madrid, where I somehow maintain three lives that look nothing alike: I work in international public health, I invest in the stock market, and I run what you're reading. I like all three. I wouldn't trade any of them.</p>
-      <p class="reveal d1" data-lang="es" style="color: rgb(255, 255, 255)">Llevo más de una década levantando pesas. Empecé sin saber lo que hacía y a estas alturas es la cosa más estable de mi vida. El gym es donde pienso, donde proceso, donde mi cuerpo me recuerda que funciona. A estas alturas, no es fitness. Es identidad.</p>
-      <p class="reveal d1" data-lang="en">I've been lifting for over a decade. I started without knowing what I was doing, and at this point it's the most stable thing in my life. The gym is where I think, where I process, where my body reminds me it works. At this point, it's not fitness. It's identity.</p>
-      <p class="reveal d1" data-lang="es" style="color: rgb(255, 255, 255)">Esta identidad no se construye solo en el gym. Se construye también en la cocina, en el supermercado, en el viernes por la noche cuando decides qué comes y cómo te sientes al respecto. En algún momento me pregunté por qué yo podía tener una relación flexible con la comida, entrenar sin que fuera un castigo, y no vivir en guerra con mi cuerpo. Y la respuesta no era disciplina. La respuesta estaba en algo que me obsesiona desde hace años: por qué la gente no hace lo que sabe que debería hacer. La ciencia del comportamiento tiene mucho que decir sobre eso, y yo llevo mucho tiempo escuchando.</p>
-      <p class="reveal d1" data-lang="en">This identity isn't built only in the gym. It's also built in the kitchen, at the supermarket, on Friday night when you decide what to eat and how you feel about it. At some point I asked myself why I could have a flexible relationship with food, train without it being a punishment, and not live at war with my body. And the answer wasn't discipline. The answer was in something that's obsessed me for years: why people don't do what they know they should. Behavioural science has a lot to say about that, and I've been listening for a long time.</p>
-      <p class="reveal d1" data-lang="es" style="color: rgb(255, 255, 255)">The Andy Lab es donde todas esas obsesiones se juntan. Existe para ayudar a otras mujeres a cambiar la conversación que tienen consigo mismas. Entender cómo toman decisiones. Sacar la culpa de la ecuación. Dejar de pensar que es cuestión de voluntad y empezar a construir un entorno donde las decisiones correctas sean las más fáciles. Para que tu cuerpo haga lo que le pides. Más músculo. Menos culpa.</p>
-      <p class="reveal d1" data-lang="en">The Andy Lab is where all those obsessions come together. It exists to help other women change the conversation they have with themselves. Understand how they make decisions. Remove guilt from the equation. Stop thinking it's about willpower and start building an environment where the right decisions are the easiest ones. So your body does what you ask of it. More muscle. Less guilt.</p>
-      <p class="reveal d2" data-lang="es" style="color: #FFFFFF"><strong><span class="hl" style="font-size: 25px; color: #FFFFFF">Mi cerebro es el producto. Yo soy el producto.</span></strong></p>
-      <p class="reveal d2" data-lang="en"><strong><span class="hl" style="font-size: 25px; color: #FFFFFF">My brain is the product. I am the product.</span></strong></p>
-      <p class="reveal d2" data-lang="es" style="color: rgb(255, 255, 255)">Si quieres ese cerebro pensando en voz alta cada semana, <a href="newsletter.html" style="color:var(--accent)">el newsletter sale los miércoles</a>. Si quieres ese cerebro trabajando para ti, <a href="index.html#niveles" style="color:var(--accent)">entra al Lab</a>.</p>
-      <p class="reveal d2" data-lang="en">If you want that brain thinking out loud every week, <a href="newsletter.html" style="color:var(--accent)">the newsletter drops on Wednesdays</a>. If you want that brain working for you, <a href="index.html#niveles" style="color:var(--accent)">enter the Lab</a>.</p>
-    </div>
+<!-- OPENER -->
+<section class="op">
+  <div class="op-pic"><img src="assets/img/andy-flex.webp" width="1200" height="1246" alt="Andy" fetchpriority="high"></div>
+    <div class="op-in">
+    <h1>AN<span>DY</span></h1>
+    <p class="op-line" data-lang="es">Salí corriendo de mi primer gym. Hoy ayudo a mujeres a quedarse.</p>
+    <p class="op-line" data-lang="en">I ran out of my first gym. Today I help women stay.</p>
   </div>
 </section>
+
+<!-- STORY -->
+<section class="st"><div class="st-in">
+  <div class="st-txt rv">
+    <p class="st-lead" data-lang="es">Siempre fui deportista, pero nunca fui de gym. La primera vez que asomé la cabeza en uno, salí corriendo. Máquinas ocupadas por hombres enormes, mujeres en zumba. Me sentía incómoda, y me fui.</p>
+    <p class="st-lead" data-lang="en">I was always athletic, but never a gym person. The first time I poked my head into one, I ran out. Machines taken by enormous men, women in Zumba. I felt out of place, and I left.</p>
+    <p data-lang="es">Jugué baloncesto en Colombia y en Francia. En Suiza encontré el crossfit, la calistenia y el weightlifting, y se despertó un deseo casi frenético de ser fuerte. Luego vino Sudáfrica: seis años que me cambiaron la vida, y un crossfit muy serio. Yo, descendiente de indígenas y españoles, vengo en empaque pequeño. Decidí que necesitaba algo donde yo tuviera más poder de decisión.</p>
+    <p data-lang="en">I played basketball in Colombia and France. In Switzerland I found CrossFit, calisthenics and weightlifting, and an almost frantic desire to be strong woke up. Then came South Africa: six years that changed my life, and a very serious CrossFit scene. Me, descended from indigenous people and Spaniards, I come in a small package. I decided I needed something where I had more say.</p>
+    <div class="st-mid"><img src="assets/img/andy-gym.webp" width="1200" height="900" alt="Andy en el gym" loading="lazy"></div>
+    <p data-lang="es">Le di otra oportunidad al gym. Empecé a estudiar, a probar, a equivocarme, a entender cómo funcionaba mi cuerpo. Biomecánica, nutrición, curso tras curso tras curso. Entrené con una exbodybuilder sudafricana y llegué a un 16% de grasa corporal. Se me veían todos los músculos y vivía de mal genio. Lo hice para probarme que podía. No es la vida que me interesa.</p>
+    <p data-lang="en">I gave the gym another chance. I started studying, testing, getting it wrong, understanding how my body worked. Biomechanics, nutrition, course after course after course. I trained with a South African ex-bodybuilder and got down to 16% body fat. You could see every muscle and I was in a bad mood all the time. I did it to prove I could. It’s not the life I want.</p>
+    <p class="st-pull" data-lang="es">Soy economista. Shocking, I know.</p><p class="st-pull" data-lang="en">I’m an economist. Shocking, I know.</p>
+    <p data-lang="es">Pasé años aprendiendo cómo se supone que decidimos: de forma racional, lógica, óptima. Hasta que llegué a la economía del comportamiento, la parte que admite que no funcionamos como hojas de Excel. Ahí se conectaron mis dos mundos. Si decidiéramos racionalmente, todas comeríamos perfecto y entrenaríamos porque “es bueno”. Pero no somos robots.</p>
+    <p data-lang="en">I spent years learning how we’re supposed to decide: rationally, logically, optimally. Until I reached behavioural economics, the part that admits we don’t work like spreadsheets. That’s where my two worlds connected. If we decided rationally, we’d all eat perfectly and train because “it’s good for you”. But we’re not robots.</p>
+  </div>
+</div></section>
+
+<!-- THREE LINES -->
+<section class="tl"><div class="tl-in rv">
+  <div class="tl-row"><p data-lang="es">Entrenar fuerza no es solo mover peso. <b>Es cambiar tu comportamiento.</b></p><p data-lang="en">Strength training is more than moving weight. <b>It’s changing your behaviour.</b></p></div>
+  <div class="tl-row"><p data-lang="es">Comer suficiente proteína no es fuerza de voluntad. <b>Es diseño de tu entorno.</b></p><p data-lang="en">Eating enough protein takes no willpower. <b>It takes designing your environment.</b></p></div>
+  <div class="tl-row"><p data-lang="es">Ser constante no es “quererlo más”. <b>Es entender tus sesgos y trabajar con ellos.</b></p><p data-lang="en">Consistency has nothing to do with “wanting it more”. <b>It’s understanding your biases and working with them.</b></p></div>
+</div></section>
+
+<!-- TODAY -->
+<section class="st today"><div class="st-in">
+  <div class="st-txt rv">
+    <span class="etiq"><span data-lang="es">Hoy</span><span data-lang="en">Today</span></span>
+    <p data-lang="es">De 9 a 5 trabajo en proyectos de malnutrición en África y Asia. De 5 en adelante, ayudo a mujeres a entrenar, alimentarse mejor y recuperar el control de su cuerpo desde la ciencia y la simplicidad. Vivo en España. Vuelvo a Colombia una vez al año, con suerte.</p>
+    <p data-lang="en">From 9 to 5 I work on malnutrition projects in Africa and Asia. From 5 onwards, I help women train, eat better and take back control of their bodies through science and simplicity. I live in Spain. I go back to Colombia once a year, if I’m lucky.</p>
+    <p data-lang="es">Como economista, no puedo evitarlo: todo es ROI. Pocas cosas rinden tanto como entrenar fuerza, comer bien y construir hábitos que puedas mantener. Es la inversión con el mejor interés compuesto que existe.</p>
+    <p data-lang="en">As an economist, I can’t help it: everything is ROI. Few things pay back like strength training, eating well and building habits you can keep. It’s the investment with the best compound interest there is.</p>
+  </div>
+</div></section>
+
+<!-- STATEMENT -->
+<section class="stmt"><div class="rv">
+  <h2 data-lang="es">El día que le das a tu cuerpo la oportunidad de demostrar de qué estás hecha, <span>te sorprende.</span></h2>
+  <h2 data-lang="en">The day you give your body the chance to show what you’re made of, <span>it will surprise you.</span></h2>
+</div></section>
+
+<!-- MANIFESTO -->
+<section class="manif" id="manifesto">
+<div class="manif-head rv">
+<span class="etiq"><span data-lang="es">En lo que creo</span><span data-lang="en">What I believe</span></span>
+<p class="m-rules" data-lang="es" aria-hidden="true"><span>Levanta poco.</span><span>Ocupa poco espacio.</span><span>No te pongas demasiado grande.</span></p>
+<p class="m-rules" data-lang="en" aria-hidden="true"><span>Lift light.</span><span>Take up little space.</span><span>Don’t get too big.</span></p>
+<h2 data-lang="es">Te enseñaron a temerle a tu propio cuerpo.</h2><h2 data-lang="en">You were taught to fear your own body.</h2>
+<p data-lang="es">Muchas absorbimos esas reglas antes de poder cuestionarlas, y todavía influyen en cuánto peso ponemos en la barra. Este proyecto es todo lo contrario.</p><p data-lang="en">Many of us absorbed those rules before we could question them, and they still shape how much weight we put on the bar. This project is everything opposite.</p>
+<span class="tag" data-lang="es">Más músculo. Menos culpa.</span><span class="tag" data-lang="en">More muscle. Less guilt.</span>
+</div>
+<div class="principles-grid">
+<div class="principle">
+  <div class="p-txt reveal">
+    <div class="p-num">01</div>
+    <h3 class="p-title" data-lang="es">Deja de<br>hacerte pequeña.</h3>
+    <h3 class="p-title" data-lang="en">Stop making<br>yourself smaller.</h3>
+    <p class="p-text" data-lang="es">Años comiendo menos, escondida en la clase grupal, esperando a que se desocupe la zona de pesas, diciendo que sí cuando quieres decir que no. Aquí se ocupa espacio. En el gym, en la mesa y en la sala de reuniones.</p>
+    <p class="p-text" data-lang="en">You've spent years hiding — eating less, stuck in group classes, waiting for the weights area to empty, saying yes when you meant no. Here you take up space. In the gym, at the table, in the boardroom.</p>
+  </div>
+  <div class="p-poster"><img src="assets/img/principle-01.webp" alt="Calling all women. Done making themselves smaller." loading="lazy"></div>
+</div>
+
+<div class="principle">
+  <div class="p-txt reveal">
+    <div class="p-num">02</div>
+    <h3 class="p-title" data-lang="es">El músculo no es<br>un efecto secundario.</h3>
+    <h3 class="p-title" data-lang="en">Muscle is not<br>a side effect.</h3>
+    <p class="p-text" data-lang="es">El músculo no llega de rebote mientras persigues otra cosa. Se busca, se planea y se construye a propósito. Tonificar es una palabra de revista. Aquí se entrena fuerza para no depender de nadie a los 70. Tampoco ahora. Fuerte, capaz y libre, dentro del gym y fuera de él.</p>
+    <p class="p-text" data-lang="en">Muscle doesn't come as a side effect while chasing something else. You search for it, plan it and build it on purpose. Toning is a magazine word. Here we train for strength so you don't need anyone at 70. Not now either. Strong, capable and free — inside the gym and out.</p>
+  </div>
+  <div class="p-poster"><img src="assets/img/principle-03.webp" alt="Muscle is not a side effect. It's the point." loading="lazy"></div>
+</div>
+
+<div class="principle">
+  <div class="p-txt reveal">
+    <div class="p-num">03</div>
+    <h3 class="p-title" data-lang="es">Constancia,<br>no perfección.</h3>
+    <h3 class="p-title" data-lang="en">Consistency over<br>perfection.</h3>
+    <p class="p-text" data-lang="es">Perfección es una palabra que aquí no se usa. Motivación y disciplina tampoco, porque se acaban un martes cualquiera. Lo que queda es entender cómo decide tu cerebro, para que la culpa pierda su sitio y armes un sistema a tu medida. Aquí las pecadoras son bienvenidas.</p>
+    <p class="p-text" data-lang="en">Perfection is a word we don't use here. Motivation and discipline either, because they disappear any Tuesday. What's left is understanding how your brain decides, so guilt loses its place and you build a system that fits you. Here sinners are welcome.</p>
+  </div>
+  <div class="p-poster"><img src="assets/img/principle-07.webp" alt="Sinners welcome. Consistency over perfection." loading="lazy"></div>
+</div>
+</div>
+
+
+</section>
+
 
 <!-- CTA -->
 <section class="cta-f">
   <h2 data-lang="es">¿Lista para dejar de<br>pelear con tu cuerpo?</h2>
   <h2 data-lang="en">Ready to stop<br>fighting your body?</h2>
-  <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:.5rem">
-    <a href="index.html#niveles" class="btn-p"><span data-lang="es">Conoce The Andy Lab →</span><span data-lang="en">Discover The Andy Lab →</span></a>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:.5rem">
+    <a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">AGENDA TU LLAMADA GRATIS →</span><span data-lang="en">BOOK YOUR FREE CALL →</span></a>
     <a href="newsletter.html" class="btn-f"><span data-lang="es">Suscríbete a The Brain →</span><span data-lang="en">Subscribe to The Brain →</span></a>
   </div>
 </section>
 
 <footer class="site-footer">
-  <a href="index.html" class="flogo"><img src="assets/img/pepper.png" class="flogo-pepper" alt=""><span style="color: rgb(255, 255, 255)">The Andy <span style="color:#FF3737">Lab</span></span></a>
-
-  <a class="fcontact" href="mailto:hello.theandylab@gmail.com"><span data-lang="es">Contacto</span><span data-lang="en">Contact</span></a>
+  <a href="index.html" class="flogo"><img src="assets/img/pepper.png" class="flogo-pepper" alt=""><span style="color:#fff">The Andy <span style="color:#FF3737">Lab</span></span></a>
+  <ul class="flinks">
+    <li><a href="faq.html"><span data-lang="es">Preguntas frecuentes</span><span data-lang="en">FAQ</span></a></li>
+    <li><a href="mailto:hello.theandylab@gmail.com"><span data-lang="es">Contacto</span><span data-lang="en">Contact</span></a></li>
+  </ul>
   <span class="fcopy">© 2026 The Andy Lab</span>
-  <span class="ftagline" style="color: #FFFFFF">Más músculo. Menos culpa.</span>
+  <span class="ftagline" data-lang="es">Más músculo. Menos culpa.</span>
+  <span class="ftagline" data-lang="en">More muscle. Less guilt.</span>
 </footer>
 
-<script src="assets/site.js?v=20261011b"></script>
+<script>(function(){var mh=document.querySelector('.manif-head');if(mh){var rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;var strike=function(){var lang=document.documentElement.lang==='en'?'en':'es';var s=mh.querySelectorAll('.m-rules[data-lang="'+lang+'"] span');[].forEach.call(s,function(e,i){setTimeout(function(){e.classList.add('x')},rm?0:400+i*600)})};if('IntersectionObserver' in window&&!rm){var o=new IntersectionObserver(function(en){if(en[0].isIntersecting){o.disconnect();strike()}},{threshold:.4});o.observe(mh)}else strike();new MutationObserver(function(){[].forEach.call(mh.querySelectorAll('.m-rules span'),function(e){e.classList.add('x')})}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']})}})();</script>
+<script>(function(){var els=document.querySelectorAll('.rv');if(window.matchMedia('(prefers-reduced-motion:reduce)').matches||!('IntersectionObserver' in window)){[].forEach.call(els,function(e){e.classList.add('in')});return}var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.08});[].forEach.call(els,function(e){io.observe(e)})})();</script>
+<script src="assets/site.js?v=20261025b"></script>
 </body>
 </html>

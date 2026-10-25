@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE Lab — The Andy Lab</title>
+<meta name="description" id="md" data-es="La app, mi panel y lo que dicen las clientas de The Andy Lab." data-en="The app, my dashboard and what The Andy Lab clients say." content="La app, mi panel y lo que dicen las clientas de The Andy Lab.">
+<link rel="canonical" href="https://theandylab.com/metodo.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Andy Lab">
+<meta property="og:title" content="THE Lab — The Andy Lab">
+<meta property="og:description" content="La app, mi panel y lo que dicen las clientas.">
+<meta property="og:url" content="https://theandylab.com/metodo.html">
+<meta property="og:image" content="https://theandylab.com/assets/img/og-logo.png">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/pepper.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20261025b">
+<style>
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:clamp(8rem,12vw,12rem) var(--gut) clamp(4rem,8vw,7rem);overflow:hidden;gap:clamp(2rem,5vw,5rem)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 44%,rgba(212,14,38,.08) 0%,transparent 62%);pointer-events:none}
+.hero-content{position:relative;flex:1;display:flex;flex-direction:column;align-items:flex-start;z-index:2;min-width:0}
+.hero-tag{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--b50);margin-bottom:2rem}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.8rem,8vw,9.5rem);line-height:.84;letter-spacing:.01em;color:#fff;margin-bottom:2rem}
+.hero-hook{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.7rem,2.8vw,2.4rem);line-height:1;color:var(--accent-bright);margin:0 0 1.2rem;letter-spacing:.01em}
+.hero-sub{font-size:clamp(1rem,1.2vw,1.16rem);font-weight:300;color:var(--b85);max-width:52ch;margin:0 0 2.5rem;line-height:1.88;text-align:left}
+.hero-ctas{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
+.hero-text-link{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--b50);text-decoration:none;transition:color .25s;white-space:nowrap}
+.hero-text-link:hover{color:#fff}
+.hero-fine{font-size:.9rem;color:var(--b70);margin-top:1rem}
+.hero-cap{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent-bright);margin-top:1.2rem}
+.scroll-hint{position:absolute;bottom:clamp(2rem,4vw,3.5rem);right:var(--gut);display:flex;align-items:center;gap:.85rem;font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--b25);z-index:2}
+.scroll-hint::before{content:'';display:block;width:42px;height:1px;background:var(--accent)}
+.hero-photo-col{position:relative;flex:1;display:flex;align-items:flex-start;justify-content:center;min-width:0;z-index:1;margin-top:3.1rem}
+.hero-photo-wrap{position:relative;width:min(500px,100%)}
+.hero-photo{width:100%;height:auto;-webkit-mask-image:radial-gradient(ellipse 96% 96% at 50% 46%,#000 72%,transparent 97%);mask-image:radial-gradient(ellipse 96% 96% at 50% 46%,#000 72%,transparent 97%)}
+
+/* ---------- sections ---------- */
+.lv{padding:clamp(3.5rem,7vw,6rem) var(--gut);border-top:1px solid var(--line)}
+.lv-in{max-width:1100px;margin:0 auto}
+.lv h2{font-family:'Bebas Neue',sans-serif;color:#fff;line-height:.9;letter-spacing:.01em;text-transform:uppercase}
+.lv-h2{font-size:clamp(2.2rem,5vw,4rem);margin:.6rem 0 clamp(1.5rem,3vw,2.5rem)}
+.lv-p{font-size:clamp(1rem,1.15vw,1.15rem);font-weight:300;color:var(--b70);line-height:1.8;max-width:62ch;margin:0 0 1rem}
+.lv-p strong{color:#fff;font-weight:500}
+.lv-cta{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-top:1.6rem}
+
+/* ---------- tiers ---------- */
+.tier-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin:0 0 1.6rem}
+.tier-strip a{text-decoration:none;display:flex;flex-direction:column;gap:.2rem;padding:.9rem .8rem;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(41,4,5,.35);color:#fff;min-height:44px;transition:border-color .3s}
+.tier-strip a.feat{border-color:rgba(255,56,56,.5)}
+.tier-strip a:hover{border-color:rgba(255,56,56,.6);color:#fff}
+.tier-strip b{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:.03em;font-weight:400;line-height:1}
+.tier-strip span{font-size:.8rem;color:var(--b70);line-height:1.3}
+.tier-strip span em{font-style:normal;color:var(--accent-bright);font-weight:500}
+.lv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2vw,1.5rem);align-items:stretch}
+.lv-tier{position:relative;background:linear-gradient(160deg,rgba(74,1,1,.28),rgba(41,4,5,.5));border:1px solid rgba(212,14,38,.14);border-radius:16px;padding:clamp(1.6rem,2.8vw,2.4rem);display:flex;flex-direction:column;gap:1rem;scroll-margin-top:5.5rem}
+.lv-tier.feat{border-color:rgba(255,56,56,.55);box-shadow:0 24px 48px -20px rgba(212,14,38,.35)}
+.lv-badge{position:absolute;top:-.7rem;left:1.4rem;background:#D40E26;color:#fff;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;padding:.3rem .7rem;border-radius:99px;white-space:nowrap}
+.lv-tier h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,3vw,2.6rem);line-height:.9;color:#fff}
+.lv-for{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-bright);margin:-.3rem 0 0;line-height:1.4;font-weight:500}
+.lv-price{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,4.5vw,3.8rem);line-height:1;color:var(--accent-bright)}
+.lv-price small{font-family:'Inter',sans-serif;font-size:.9rem;font-weight:300;color:#fff;letter-spacing:0;margin-left:.3rem}
+.lv-sub{font-size:.9rem;color:#fff;margin:-.4rem 0 0;line-height:1.5}
+.lv-h{font-size:1.1rem;font-weight:500;color:#fff;line-height:1.4}
+.lv-tier>p{font-size:1rem;font-weight:300;color:rgba(255,255,255,.88);line-height:1.7;margin:0}
+.lv-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.lv-list li{display:flex;gap:.6rem;padding:.6rem 0;border-bottom:1px solid var(--b08);font-size:1rem;font-weight:300;color:var(--b85);line-height:1.5}
+.lv-list li::before{content:"\2192";color:var(--accent-bright);flex-shrink:0}
+.lv-alt{font-size:.9rem;color:var(--b70);line-height:1.6;margin:0}
+.lv-tier .btn-p{justify-content:center;margin-top:auto;text-align:center}
+.lv-fine{text-align:center;margin:-.2rem 0 0;font-size:.85rem}
+.lv-peps{display:inline-flex;gap:.12em;margin-left:.3em;vertical-align:middle}
+.lv-peps img{height:.8em;width:auto;display:block}
+.tier-more{margin-top:.2rem}
+.tier-more summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:center;gap:.6rem;min-height:44px;padding:.5rem 1rem;border:1px solid rgba(255,56,56,.45);border-radius:99px;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;transition:background .25s}
+.tier-more summary::-webkit-details-marker{display:none}
+.tier-more summary::after{content:"+";color:#FF3838;font-size:1rem}
+.tier-more[open] summary::after{content:"\2212"}
+.tier-more summary:hover{background:rgba(212,14,38,.15)}
+.tier-more .lv-list{margin-top:.8rem}
+.tier-more .lv-alt{margin-top:.9rem}
+
+/* ---------- talk + video ---------- */
+.lt2{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.lt2-vid{display:flex;justify-content:center}
+.lt2-frame{width:100%;max-width:280px;aspect-ratio:9/16;border-radius:22px;overflow:hidden;border:2px solid rgba(255,255,255,.1);box-shadow:0 30px 60px -20px rgba(0,0,0,.9);background:#150101}
+.lt2-frame video{width:100%;height:100%;object-fit:cover;display:block}
+.lt2-note{font-size:.9rem;color:var(--b70);margin-top:1.4rem}
+
+/* ---------- testimonials ---------- */
+.tq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,2vw,1.5rem)}
+.tq{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem}
+.tq.feat{background:rgba(212,14,38,.06);border-color:rgba(212,14,38,.2)}
+.tq-q{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.4rem,2vw,1.7rem);color:#fff;line-height:1.05}
+.tq-b{font-size:1rem;font-weight:300;color:var(--b85);line-height:1.7;margin:0}
+.tq-n{font-size:.85rem;font-weight:500;color:var(--accent-bright);margin-top:auto}
+
+/* ---------- faq ---------- */
+.lv-faq details{border-top:1px solid rgba(255,255,255,.1);padding:1.1rem 0}
+.lv-faq details:last-child{border-bottom:1px solid rgba(255,255,255,.1)}
+.lv-faq summary{cursor:pointer;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.3rem,2vw,1.7rem);color:#fff;letter-spacing:.02em;list-style:none;display:flex;justify-content:space-between;gap:1rem;min-height:44px;align-items:center}
+.lv-faq summary::-webkit-details-marker{display:none}
+.lv-faq summary::after{content:"+";color:var(--accent-bright);flex-shrink:0}
+.lv-faq details[open] summary::after{content:"\2212"}
+.lv-faq details p{font-size:1rem;font-weight:300;color:var(--b70);line-height:1.8;margin:.8rem 0 0;max-width:68ch}
+.faq2{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.faq2-img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;border-radius:14px;display:block;position:sticky;top:6rem}
+
+/* ---------- more ---------- */
+.lv-split{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2vw,1.5rem)}
+.lv-split a{position:relative;min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;text-decoration:none;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:clamp(1.4rem,2.5vw,2rem);background:linear-gradient(to top,rgba(21,1,1,.94) 22%,rgba(21,1,1,.45) 62%,rgba(21,1,1,.15)),var(--bg) var(--pos)/cover;transition:border-color .3s,transform .3s}
+.lv-split a:hover{border-color:rgba(255,56,56,.6);transform:translateY(-3px)}
+.lv-split h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,2.6vw,2.3rem);color:#fff;margin-bottom:.5rem}
+.lv-split p{font-size:1rem;font-weight:300;color:rgba(255,255,255,.88);line-height:1.7;margin:0}
+
+/* ---------- responsive ---------- */
+@media(max-width:960px){
+  .hero{flex-direction:column;gap:2.5rem;padding-top:8.5rem;min-height:auto;align-items:center}
+  .hero-content{flex:none;width:100%}
+  .hero-photo-col{margin-top:1rem}
+  .scroll-hint{display:none}
+}
+@media(max-width:900px){.tq-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.tq-grid{display:flex}}
+@media(max-width:820px){
+  .faq2{grid-template-columns:1fr;gap:1.6rem}.faq2-img{order:-1;aspect-ratio:16/10;object-position:center 22%;position:static}
+  .lt2{grid-template-columns:1fr;gap:2.2rem}.lt2-frame{max-width:230px}
+}
+@media(max-width:768px){
+  .hero{padding:5.6rem var(--gut) 2.2rem;gap:1.6rem}
+  .hero-content{display:contents}
+  .hero-tag{order:1;margin-bottom:.9rem}
+  .hero-quote{order:1;font-size:1.35rem}
+  .hero h1{order:2;margin-bottom:1rem}
+  .hero-hook{order:3}
+  .hero-ctas{order:4;width:100%}
+  .hero-fine{order:5;margin-top:.2rem}
+  .hero-cap{order:6;margin-top:.4rem}
+  .hero-sub{order:7;font-size:1rem;line-height:1.75;margin:1.2rem 0 0}
+  .hero-photo-col{order:8;margin:.6rem 0 0;width:100%}
+  .hero-photo-wrap{width:100%;display:flex;justify-content:center}
+  .hero-photo{height:auto;max-height:60vh;width:auto;max-width:100%;margin:0 auto;display:block;object-fit:contain}
+  .hero-ctas{flex-direction:column;align-items:stretch;gap:.6rem}
+  .hero-ctas .btn-p,.hero-ctas .hero-text-link{text-align:center;justify-content:center}
+  .lv-split{grid-template-columns:1fr}.lv-split a{min-height:240px}
+}
+@media(max-width:560px){
+  .hero{padding-top:6.4rem}
+  .hero h1{font-size:clamp(2.7rem,12vw,4rem);line-height:.9}
+  .lv-cta .btn-p,.lv-cta .btn-f,.lv-tier .btn-p{width:100%;justify-content:center;text-align:center}
+  .tier-strip{gap:.4rem}.tier-strip a{padding:.7rem .5rem}.tier-strip b{font-size:1.1rem}.tier-strip span{font-size:.75rem}
+}
+@media (prefers-reduced-motion:reduce){.hero-content>*,.hero-photo-col,.hero-tag,.hero h1,.hero-hook,.hero-sub,.hero-ctas{animation:none!important}}
+
+/* ===== v2 ===== */
+.hero{min-height:auto;padding-bottom:clamp(3rem,6vw,5rem)}
+.hero-quote{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,2.6vw,2.3rem);line-height:1.05;letter-spacing:.03em;color:var(--b50);margin:0 0 1.6rem;display:flex;flex-direction:column;gap:.25rem;align-items:flex-start}
+.hero-quote span{position:relative;display:inline-block;white-space:nowrap}
+.hero-quote span::after{content:'';position:absolute;left:-2%;right:auto;top:52%;height:2px;width:0;background:var(--accent-bright);transition:width .55s var(--ease)}
+.hero-quote span.x::after{width:104%}
+.hero-quote span.x{color:var(--b35)}
+.hero h1{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.hero.ready h1{opacity:1;transform:none}
+.hero-content>*{animation:none}
+.hero-content>:not(h1){opacity:0;transform:translateY(10px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.hero.ready .hero-content>:not(h1){opacity:1;transform:none}
+.hero.ready .hero-hook{transition-delay:.15s}.hero.ready .hero-sub{transition-delay:.3s}.hero.ready .hero-ctas{transition-delay:.4s}.hero.ready .hero-fine{transition-delay:.5s}.hero.ready .hero-cap{transition-delay:.55s}
+.hero-quote{opacity:1!important;transform:none!important}
+.hero-photo{filter:saturate(.85) contrast(1.05)}
+.app-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(.8rem,1.5vw,1.2rem)}
+.app-shot{display:flex;flex-direction:column;gap:.9rem}
+.app-shot img{width:100%;height:auto;border-radius:18px;border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 50px -24px rgba(0,0,0,.9)}
+.app-shot p{font-size:.95rem;font-weight:300;color:var(--b85);line-height:1.5;margin:0}
+.app-shot b{display:block;font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:1.1rem;letter-spacing:.1em;color:var(--accent-bright);margin-bottom:.2rem}
+@media(max-width:1000px){.app-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:768px){.app-grid{display:flex}.app-grid>*{flex-basis:70%!important}}
+.coach{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.coach-img{width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 60px -30px rgba(0,0,0,.95)}
+.coach-cap{font-size:.85rem;color:var(--b50);margin-top:.8rem}
+@media(max-width:820px){.coach{grid-template-columns:1fr;gap:1.6rem}.coach-vis{order:-1}}
+.lv-tier h3{display:flex;align-items:center;justify-content:space-between;gap:.8rem;flex-wrap:wrap}
+.lv-tier .lv-peps{margin:0;gap:.15em}
+.lv-tier .lv-peps img{height:1.6rem}
+.lv-tier.feat .lv-peps img{filter:drop-shadow(0 0 8px rgba(255,55,55,.55))}
+.lv-tier.hot .lv-peps img{filter:drop-shadow(0 0 12px rgba(255,55,55,.9))}
+.lv-tier.hot{border-color:rgba(255,56,56,.3);background:linear-gradient(160deg,rgba(94,3,3,.42),rgba(41,4,5,.6))}
+.lv-tier.feat .lv-badge{right:auto}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.lv-h2{clip-path:inset(0 0 100% 0);transition:clip-path .8s var(--ease)}
+.in .lv-h2,.lv-h2.in{clip-path:inset(0 0 -10% 0)}
+@media(prefers-reduced-motion:reduce){.hero h1,.hero-content>*{opacity:1!important;transform:none!important;transition:none!important}.hero-quote span::after{transition:none}.ticker-track{animation:none}.rv,.lv-h2{opacity:1!important;transform:none!important;clip-path:none!important;transition:none!important}}
+
+.mt-hero{position:relative;padding:clamp(6.5rem,10vw,9rem) var(--gut) clamp(2rem,4vw,3rem);overflow:hidden}
+.mt-hero::before{content:'';position:absolute;inset:auto -10% -30% auto;width:70%;aspect-ratio:1;background:radial-gradient(circle,rgba(212,14,38,.22),transparent 65%);pointer-events:none}
+.mt-hero-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(2rem,5vw,4rem);align-items:center;position:relative}
+.mt-copy{position:relative;z-index:2}
+.mt-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(4.2rem,10vw,10rem);line-height:.84;color:#fff;margin:.6rem 0 1rem}
+.mt-arrows{display:flex;gap:.6rem;font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3.4rem);line-height:1;margin:0 0 1.4rem}
+.mt-arrows span{width:1.4em;height:1.4em;display:grid;place-items:center;border-radius:10px;border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.35)}
+.mt-arrows .up{color:#4ADE80}.mt-arrows .mid{color:#fff}.mt-arrows .dn{color:var(--accent-bright)}
+.mt-hero .lv-p{font-size:clamp(1.05rem,1.3vw,1.25rem);max-width:46ch}
+.mt-stack{position:relative;height:clamp(380px,46vw,620px);perspective:1200px}
+.mt-stack img{position:absolute;left:50%;top:50%;width:min(58%,300px);height:auto;border-radius:22px;border:1px solid rgba(255,255,255,.1);box-shadow:0 40px 80px -30px rgba(0,0,0,.95);transform-origin:50% 100%;opacity:0;transition:transform 1.1s var(--ease),opacity .8s var(--ease)}
+.mt-stack .s1{transform:translate(-50%,-50%) rotate(0) translateX(0)}
+.mt-stack .s3{transform:translate(-50%,-50%) rotate(0) translateX(0)}
+.mt-stack .s2{transform:translate(-50%,-50%) rotate(0) translateY(40px);z-index:2}
+.mt-stack.in img{opacity:1}
+.mt-stack.in .s1{transform:translate(-50%,-50%) rotate(-11deg) translateX(-34%) translateY(4%);filter:brightness(.65)}
+.mt-stack.in .s3{transform:translate(-50%,-50%) rotate(11deg) translateX(34%) translateY(4%);filter:brightness(.65)}
+.mt-stack.in .s2{transform:translate(-50%,-50%) translateY(-4%)}
+@media(max-width:820px){.mt-hero-in{grid-template-columns:1fr;gap:1rem}.mt-stack{height:min(62vw,420px);overflow:visible}.mt-stack img{width:min(52%,230px)}.mt-stack.in .s1{transform:translate(-50%,-50%) rotate(-12deg) translateX(-42%) translateY(6%)}.mt-stack.in .s3{transform:translate(-50%,-50%) rotate(12deg) translateX(42%) translateY(6%)}}
+@media(max-width:560px){.mt-hero h1{font-size:clamp(3.4rem,15vw,4.8rem)}}
+@media(prefers-reduced-motion:reduce){.mt-stack img{transition:none}}
+.mt-globe{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.mt-globe #globe{max-width:440px}
+.mt-globe #globe [data-ll] span{white-space:normal!important;width:max-content;max-width:96px;line-height:1.25!important;text-shadow:0 1px 6px rgba(0,0,0,.9)}
+@media(max-width:820px){.mt-globe{grid-template-columns:1fr}.mt-globe #globe{max-width:300px}}
+#testimonials{padding:clamp(3.5rem,7vw,6rem) var(--gut)!important}
+#testimonials>h2{display:none}
+#testimonials>div>div:hover{transform:translateY(-3px);border-color:rgba(212,14,38,.15);box-shadow:0 16px 32px -12px rgba(0,0,0,.5)}
+#testimonials [data-swipe] p{font-size:1rem!important}
+#testimonials [data-swipe] p:last-child{font-size:.85rem!important;color:var(--accent-bright)!important}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="assets/img/pepper.png" class="logo-pepper" alt=""><span>The Andy <span style="color:#FF3737">Lab</span></span></a>
+  <ul class="nav-links">
+    <li><a href="andy.html">Andy</a></li>
+    <li><a href="metodo.html" class="active">THE Lab</a></li>
+    <li><a href="newsletter.html">THE Brain</a></li>
+    <li class="nav-cta-m"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener"><span data-lang="es">Agendar llamada</span><span data-lang="en">Book a call</span></a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-setlang="es">ES</button>
+      <button type="button" data-setlang="en">EN</button>
+    </div>
+    <button class="nav-toggle" type="button" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="mt-hero">
+<div class="mt-hero-in">
+<div class="mt-copy">
+<span class="etiq">THE Lab</span>
+<h1 data-lang="es">¿Estás<br>más fuerte?</h1><h1 data-lang="en">Are you<br>getting stronger?</h1>
+<p class="lv-p" data-lang="es">Es la pregunta que más me importa, porque detrás del peso que levantas está todo lo demás: la salud a los setenta, el espacio que ocupas, la confianza en tu propio cuerpo. Yo leo tus datos y ajusto tu plan. Abajo, cómo funciona y lo que cuentan las mujeres que han trabajado conmigo.</p><p class="lv-p" data-lang="en">It’s the question I care about most, because behind the weight you lift is everything else: your health at seventy, the space you take up, the trust in your own body. I read your data and adjust your plan. Below, how it works and what the women who’ve worked with me say.</p>
+</div>
+<div class="mt-stack" aria-hidden="true">
+<img src="assets/img/app-v2-home.webp" width="760" height="1339" alt="" class="s1">
+<img src="assets/img/app-v2-cycle.webp" width="760" height="1339" alt="" class="s3">
+<img src="assets/img/app-v2-data.webp" width="760" height="1339" alt="" class="s2" fetchpriority="high">
+</div>
+</div>
+</section>
+<section class="lv"><div class="lv-in rv">
+<span class="etiq"><span data-lang="es">Y además</span><span data-lang="en">And then</span></span>
+<h2 class="lv-h2" data-lang="es">Sí, hay una app.<br>Y es muy buena.</h2><h2 class="lv-h2" data-lang="en">Yes, there’s an app.<br>And it’s very good.</h2>
+<p class="lv-p" data-lang="es">Tu plan, tus series, tu comida y tus datos, en el móvil. Y yo del otro lado.</p><p class="lv-p" data-lang="en">Your plan, your sets, your food and your data, on your phone. And me on the other side.</p>
+<div class="app-grid" data-swipe style="margin-top:2rem">
+<div class="app-shot"><img src="assets/img/app-v2-home.webp" width="760" height="1339" loading="lazy" alt="App home screen with the week's sessions, consistency and today's workout"><p><b>HOME</b><span data-lang="es">Tu día, de un vistazo.</span><span data-lang="en">Your day, at a glance.</span></p></div>
+<div class="app-shot"><img src="assets/img/app-v2-data.webp" width="760" height="1339" loading="lazy" alt="The Data screen comparing each exercise with the previous block"><p><b>THE DATA</b><span data-lang="es">¿Estás más fuerte? Arriba, igual o abajo, ejercicio por ejercicio.</span><span data-lang="en">Are you getting stronger? Up, steady or down, lift by lift.</span></p></div>
+<div class="app-shot"><img src="assets/img/app-v2-food.webp" width="760" height="1339" loading="lazy" alt="The Food screen with protein, carbs and fat remaining for the day"><p><b>THE FOOD</b><span data-lang="es">Apuntas lo que comes y la app te dice cuánto te queda.</span><span data-lang="en">Log what you eat and the app tells you what's left.</span></p></div>
+<div class="app-shot"><img src="assets/img/app-v2-cycle.webp" width="760" height="1339" loading="lazy" alt="Cycle complete screen with load increase and lift progression"><p><b>CYCLE COMPLETE</b><span data-lang="es">Al cerrar un ciclo, ves lo que construiste.</span><span data-lang="en">Finish a cycle and see what you built.</span></p></div>
+<div class="app-shot"><img src="assets/img/app-v2-checkin.webp" width="760" height="1339" loading="lazy" alt="Check-in screen to book a call with the coach"><p><b>CHECK-IN</b><span data-lang="es">Reservas tu llamada conmigo desde la app.</span><span data-lang="en">Book your call with me from the app.</span></p></div>
+</div></div></section>
+<section class="lv"><div class="lv-in coach rv">
+<div>
+<span class="etiq"><span data-lang="es">Lo que yo veo</span><span data-lang="en">What I see</span></span>
+<h2 class="lv-h2" data-lang="es">Tus datos no se leen solos.</h2><h2 class="lv-h2" data-lang="en">Your data won't read itself.</h2>
+<p class="lv-p" data-lang="es">Cada semana abro tu panel: qué sube, qué se estanca, qué baja, y las notas que me dejaste. De ahí salen los ajustes de tu plan.</p><p class="lv-p" data-lang="en">Every week I open your panel: what's going up, what's stuck, what's dropping, and the notes you left me. That's where your plan adjustments come from.</p>
+<p class="lv-p" data-lang="es">Cada decisión viene con su porqué.</p><p class="lv-p" data-lang="en">Every decision comes with its reasoning.</p>
+</div>
+<div class="coach-vis"><img class="coach-img" src="assets/img/coach-v2-table.webp" width="1600" height="860" loading="lazy" alt="Andy's coach dashboard: a client's lifts week by week, status per exercise and a progress chart"><p class="coach-cap" data-lang="es">Mi panel de una clienta: cada ejercicio semana a semana, su estado y la curva del bloque.</p><p class="coach-cap" data-lang="en">My view of a client: every exercise week by week, its status and the block's curve.</p></div>
+</div></section>
+<section class="lv"><div class="lv-in mt-globe rv">
+<div>
+<span class="etiq"><span data-lang="es">Clientas de The Andy Lab</span><span data-lang="en">The Andy Lab clients</span></span>
+<h2 class="lv-h2" data-lang="es">Lo que dicen ellas.</h2><h2 class="lv-h2" data-lang="en">In their words.</h2>
+<p class="lv-p" data-lang="es">Madrid, Londres, Hamburgo, Ámsterdam, Abu Dabi, México. Toca un punto para leer a las clientas de esa ciudad.</p><p class="lv-p" data-lang="en">Madrid, London, Hamburg, Amsterdam, Abu Dhabi, Mexico. Tap a pin to read the clients in that city.</p>
+</div>
+<div class="intro-globe">
+<!-- client map -->
+    <div>
+      <div id="globe" style="position:relative;width:100%;aspect-ratio:1/1;max-width:520px;margin:0 auto">
+        <div style="position:absolute;inset:2%;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(60,6,10,.6)"></div><canvas style="position:absolute;inset:0;display:block;width:100%;height:100%;touch-action:pan-y;cursor:grab" aria-hidden="true"></canvas>
+        <span data-ll="-99.13,19.43" style="opacity:0;pointer-events:none;position:absolute;width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%);width:14px;height:14px;background:var(--accent);box-shadow:0 0 0 5px rgba(212,14,38,.25),0 0 18px rgba(212,14,38,.7)"><span style="position:absolute;font-family:Inter,sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:#fff;line-height:1.2;left:18px;top:-6px;color:#fff"><span data-lang="es">México</span><span data-lang="en">Mexico</span></span></span>
+        <a href="metodo.html?city=Madrid#testimonials" data-ll="-3.7,40.42" style="opacity:0;pointer-events:none;position:absolute;width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%);background:var(--accent);box-shadow:0 0 0 5px rgba(212,14,38,.25),0 0 18px rgba(212,14,38,.7);text-decoration:none;display:block" aria-label="Madrid"><span style="position:absolute;font-family:Inter,sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:#fff;line-height:1.2;right:20px;top:-6px;text-decoration:none"><span data-lang="es">Madrid</span><span data-lang="en">Madrid</span></span></a>
+        <a href="metodo.html?city=London,Hamburg,Amsterdam#testimonials" data-ll="4.9,52.37" style="opacity:0;pointer-events:none;position:absolute;width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%);background:var(--accent);box-shadow:0 0 0 5px rgba(212,14,38,.25),0 0 18px rgba(212,14,38,.7);text-decoration:none;display:block" aria-label="London · Hamburg · Amsterdam"><span style="position:absolute;font-family:Inter,sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:#fff;line-height:1.2;left:20px;top:-18px;text-decoration:none"><span data-lang="es">Londres · Hamburgo · Ámsterdam</span><span data-lang="en">London · Hamburg · Amsterdam</span></span></a>
+        <span data-ll="54.37,24.45" style="opacity:0;pointer-events:none;position:absolute;width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%);width:14px;height:14px;background:var(--accent);box-shadow:0 0 0 5px rgba(212,14,38,.25),0 0 18px rgba(212,14,38,.7)"><span style="position:absolute;font-family:Inter,sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:#fff;line-height:1.2;left:18px;top:-6px;color:rgba(255,255,255,.7)"><span data-lang="es">Abu Dabi</span><span data-lang="en">Abu Dhabi</span></span></span>
+      </div>
+    </div>
+<a href="#testimonials" class="btn-p" style="margin:1.2rem auto 0;display:flex;width:fit-content"><span data-lang="es">LEER TESTIMONIOS ↓</span><span data-lang="en">READ TESTIMONIALS ↓</span></a>
+  </div>
+<script>
+(function(){var wrap=document.getElementById('globe');if(!wrap)return;
+var cv=wrap.querySelector('canvas'),pins=[].slice.call(wrap.querySelectorAll('[data-ll]'));
+function load(src,integ,cb){var s=document.createElement('script');s.src=src;s.integrity=integ;s.crossOrigin='anonymous';s.onload=cb;document.head.appendChild(s);}
+function init(land){var S=500,dpr=Math.min(2,window.devicePixelRatio||1);cv.width=cv.height=S*dpr;var c=cv.getContext('2d');c.scale(dpr,dpr);
+var proj=d3.geoOrthographic().scale(228).translate([250,250]).clipAngle(90).precision(.5),path=d3.geoPath(proj,c),grat=d3.geoGraticule10(),sph={type:'Sphere'};
+var rot=[25,-24],drag=false,hover=false,run=false,lx,ly,t0,still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function draw(){proj.rotate(rot);c.clearRect(0,0,S,S);
+c.beginPath();path(sph);c.fillStyle='rgba(60,6,10,.6)';c.fill();c.strokeStyle='rgba(255,255,255,.28)';c.lineWidth=1;c.stroke();
+c.beginPath();path(grat);c.strokeStyle='rgba(255,255,255,.06)';c.lineWidth=.6;c.stroke();
+c.beginPath();path(land);c.fillStyle='rgba(255,255,255,.24)';c.fill();c.strokeStyle='rgba(255,255,255,.4)';c.lineWidth=.5;c.stroke();
+pins.forEach(function(p){var g=p.getAttribute('data-ll').split(',').map(Number),xy=proj(g),v=d3.geoDistance(g,[-rot[0],-rot[1]])<1.4;
+p.style.left=(xy[0]/S*100)+'%';p.style.top=(xy[1]/S*100)+'%';p.style.opacity=v?1:0;p.style.pointerEvents=v?'auto':'none';p.style.transition='opacity .25s';});}
+function tick(t){if(!run)return;var dt=t0?Math.min(50,t-t0):16;t0=t;if(!drag&&!hover&&!still)rot[0]-=dt*0.008;draw();requestAnimationFrame(tick);}
+draw();
+if('IntersectionObserver' in window){new IntersectionObserver(function(en){var on=en[0].isIntersecting;if(on&&!run){run=true;t0=0;requestAnimationFrame(tick);}else if(!on)run=false;}).observe(wrap);}else{run=true;requestAnimationFrame(tick);}
+cv.addEventListener('pointerdown',function(e){drag=true;lx=e.clientX;ly=e.clientY;cv.style.cursor='grabbing';try{cv.setPointerCapture(e.pointerId)}catch(_){}});
+cv.addEventListener('pointermove',function(e){if(!drag)return;rot[0]+=(e.clientX-lx)*.4;rot[1]=Math.max(-60,Math.min(15,rot[1]+(e.clientY-ly)*.25));lx=e.clientX;ly=e.clientY;if(still)draw();});
+function up(){drag=false;cv.style.cursor='grab';}cv.addEventListener('pointerup',up);cv.addEventListener('pointercancel',up);
+wrap.addEventListener('mouseenter',function(){hover=true});wrap.addEventListener('mouseleave',function(){hover=false});}
+function go(){load('https://unpkg.com/d3@7.9.0/dist/d3.min.js','sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i',function(){load('https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js','sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67',function(){fetch('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json').then(function(r){return r.json()}).then(function(t){init(topojson.feature(t,t.objects.countries));}).catch(function(){});});});}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){if(en[0].isIntersecting){io.disconnect();go();}},{rootMargin:'400px'});io.observe(wrap);}else go();
+})();
+</script>
+</div>
+</div></section>
+<!-- TESTIMONIALS -->
+<section id="testimonials" style="padding:clamp(2rem,4vw,3rem) var(--gut);border-top:1px solid var(--line)">
+  <span class="etiq reveal" style="display:inline-flex;margin-bottom:clamp(1.5rem,3vw,2rem)"><span data-lang="es">Clientas de The Andy Lab</span><span data-lang="en">The Andy Lab clients</span></span>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;line-height:.9;margin-bottom:clamp(2rem,4vw,3rem)" data-lang="es">Clientas de The Andy Lab</h2>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;line-height:.9;margin-bottom:clamp(2rem,4vw,3rem)" data-lang="en">The Andy Lab clients</h2>
+  <div style="max-width:900px;margin:0 auto clamp(1.5rem,3vw,2.5rem);text-align:center">
+<p style="font-family:system-ui,-apple-system,sans-serif;font-size:clamp(1.3rem,2.4vw,1.9rem);line-height:1.15;font-weight:400;color:#fff;margin-bottom:1rem" data-lang="es">Programas genéricos hay muchos, todos están diseñados para la persona promedio.</p><p style="font-family:system-ui,-apple-system,sans-serif;font-size:clamp(1.3rem,2.4vw,1.9rem);line-height:1.15;font-weight:400;color:#fff;margin-bottom:1rem" data-lang="en">There are plenty of generic programs, but they're all designed for the average person.</p>
+<p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);line-height:.95;color:var(--accent);margin-bottom:1.6rem" data-lang="es">Y tú de promedio no tienes nada.</p><p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);line-height:.95;color:var(--accent);margin-bottom:1.6rem" data-lang="en">And you're anything but average.</p>
+<p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:.95;color:#fff;margin-bottom:clamp(1.8rem,3vw,2.6rem)" data-lang="es">Por eso existe The Andy Lab.</p><p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:.95;color:#fff;margin-bottom:clamp(1.8rem,3vw,2.6rem)" data-lang="en">That’s why The Andy Lab exists.</p>
+</div>
+
+<div data-swipe style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(1rem,2vw,1.5rem)" class="reveal-stagger">
+    <!-- Amy B — highlighted -->
+    <div style="background:rgba(212,14,38,.06);border:1px solid rgba(212,14,38,.18);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1">"I've literally never looked, or felt, better."</p>
+      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7">The Andy Lab has completely changed the way I see fitness as a way to feel stronger and healthier, rather than a way to stay 'small'. It's the first app I've tried that has helped me improve my nutrition without making me feel like I'm on a diet, and I've literally never looked (or felt!!) better. I recommend it to every woman I know.</p>
+      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Amy B. · London</p>
+    </div>
+    <!-- Laura C -->
+    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"Ese odio a las pesas se puede cambiar."</p>
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"That hatred of weights can change."</p>
+      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">Siempre me consideré deportista (correr, nadar, bici, pilates) pero las pesas siempre las vi con malos ojos. Hoy rindo mucho más en cardio, me siento más equilibrada, y todo empezó con un entrenamiento a mi medida. Soy una muestra fiel de que suma más de lo que uno cree.</p>
+      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">I always looked down on weights. Today I perform much better in cardio, I feel more balanced, and it all started with a program tailored to me. I'm living proof it adds up more than you think.</p>
+      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Laura C. · Madrid</p>
+    </div>
+    <!-- Bea C -->
+    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"El gran punto de inflexión."</p>
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"The turning point."</p>
+      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">Trabajar con Andrea me ha permitido ver que tenemos cierta barrera las mujeres. Poder enfrentarme a las máquinas desconocidas y que me hicieran un programa a mi medida ha sido el gran punto de inflexión, Andreíta. Y ya si además me lleva a bailar, fenomenal.</p>
+      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">Working with Andrea showed me the barriers we women carry. Facing unfamiliar machines with a program made for me was the real turning point.</p>
+      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Bea C. · Madrid</p>
+    </div>
+    <!-- Laura E — highlighted -->
+    <div style="background:rgba(212,14,38,.06);border:1px solid rgba(212,14,38,.18);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"Me ayudó a sentirme fuerte en el postparto."</p>
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"It helped me feel strong postpartum."</p>
+      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">The Andy Lab me dio las herramientas para volver poco a poco a sentirme fuerte después de dar a luz. Tomar conciencia de mi cuerpo y su capacidad ha sido clave.</p>
+      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">The Andy Lab gave me the tools to gradually feel strong again after giving birth. Becoming aware of my body and its capacity has been key.</p>
+      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Laura E. · Madrid</p>
+    </div>
+    <!-- Laura G -->
+    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"No sabía que iba a ser tan fácil engancharme."</p>
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"I didn't know it'd be so easy to get hooked."</p>
+      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">Yo sabía que tener fuerza era esencial para mi salud. Lo que no sabía es que iba a ser tan fácil engancharme y ver resultados. ¡Gracias Andy por guiarme y siempre estar ahí!</p>
+      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">I knew strength was essential for my health. What I didn't know was how easy it'd be to get hooked and see results. Thank you Andy for guiding me and always being there!</p>
+      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Laura G. · Madrid</p>
+    </div>
+    <!-- Nicole R -->
+    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1">"Every session leaves me feeling stronger."</p>
+      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7">The training is challenging, engaging, and incredibly effective. Even when you're unable to do certain movements, Andy tweaks the program so you don't lose out. I can't recommend The Andy Lab enough!</p>
+      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Nicole R. · Hamburg</p>
+    </div>
+    <!-- Sarah — highlighted -->
+    <div style="background:rgba(212,14,38,.06);border:1px solid rgba(212,14,38,.18);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1">"I finally just... go to the gym."</p>
+      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7">I'd been going to the gym on and off for years before working with Andrea. Having an actual program makes it so much easier to just show up, but what really changed things is how she thinks about behavior. She's helped me figure out how to fit healthier habits into my actual life, not some ideal version of it. It's not just about the workouts. It's how I eat, how I build routines, what's realistic for me. It adapts instead of fighting against how I actually live.</p>
+      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Sarah · Amsterdam</p>
+    </div>
+    <!-- Juliana -->
+    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"Totalmente personalizado. Eso lo hace diferente."</p>
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"Fully personalized. That's what makes it different."</p>
+      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">Me gusta esta propuesta de The Andy Lab porque se centra en la individualización, y no en lo masivo. Es totalmente personalizado y eso lo hace diferente. El componente de conocimiento, rigor y ejemplo que brinda Andrea como guía en el proceso generan confianza y despiertan un gran compromiso. Su plataforma es intuitiva y útil, lo que hace más agradable el entrenamiento.</p>
+      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">What I like about The Andy Lab is that it focuses on the individual, not the masses. It's fully personalized and that's what makes it different. Andrea's knowledge, rigor, and the example she sets as a guide build trust and create real commitment. The platform is intuitive and useful, which makes training more enjoyable.</p>
+      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Juliana O. · Abu Dhabi</p>
+    </div>
+    <!-- Cecilia -->
+    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"Tenía miedo de ir al gimnasio. Ni un paso atrás."</p>
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"I was afraid of the gym. Not one step back."</p>
+      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">Antes de comenzar el entrenamiento con Andy, tenía miedo de ir al gimnasio, sin ningún tipo de guía ni de formación. El plan individualizado y su cercanía me ayudaron a vencer ese miedo. Los vídeos explicativos son muy claros, y el plan de incremento de pesos te anima al ver el avance. La revisión de mi alimentación me ayudó a mejorar la distribución de nutrientes, tener mayor energía a lo largo del día y facilitar la construcción muscular. El proceso de cambio en mi cuerpo y los hábitos a largo plazo están siendo algo real.</p>
+      <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">Before training with Andy, I was afraid of the gym, with no guidance or training. The individualized plan and her closeness helped me overcome that fear. The explanatory videos are very clear, and the progressive weight plan motivates you as you see progress. The nutrition review helped me improve how I distribute nutrients, have more energy throughout the day, and build muscle. The changes in my body and the long-term habits are becoming something real.</p>
+      <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Cecilia P. · Madrid</p>
+    </div>
+  </div>
+</section>
+<script>
+(function(){var q=new URLSearchParams(location.search).get('city');if(!q)return;
+var want=q.split(',').map(function(s){return s.trim().toLowerCase()});
+var g=document.querySelector('#testimonials [data-swipe]');if(!g)return;
+Array.prototype.forEach.call(g.children,function(c){var p=c.querySelectorAll('p'),t=p[p.length-1].textContent.toLowerCase();
+if(!want.some(function(w){return t.indexOf('· '+w)>-1}))c.style.display='none';});
+var bar=document.createElement('div');bar.style.cssText='display:flex;align-items:center;gap:1rem;margin-bottom:1.4rem;font-size:.8rem;color:rgba(255,255,255,.7)';
+bar.innerHTML='<span>'+q.replace(/,/g,' · ')+'</span><a href="metodo.html#testimonials" style="color:var(--accent)">&times; <span data-lang="es">Ver todas</span><span data-lang="en">Show all</span></a>';
+g.parentNode.insertBefore(bar,g);})();
+</script>
+
+<section class="lv"><div class="lv-in rv" style="text-align:center">
+<h2 class="lv-h2" data-lang="es">¿Hablamos?</h2><h2 class="lv-h2" data-lang="en">Shall we talk?</h2>
+<p class="lv-p" data-lang="es" style="margin:0 auto 1.6rem">20 minutos, gratis. Me cuentas dónde estás y te digo si puedo ayudarte.</p><p class="lv-p" data-lang="en" style="margin:0 auto 1.6rem">20 minutes, free. You tell me where you are and I tell you if I can help.</p>
+<div class="lv-cta" style="justify-content:center"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">AGENDA TU LLAMADA GRATIS →</span><span data-lang="en">BOOK YOUR FREE CALL →</span></a><a href="index.html#niveles" class="btn-f"><span data-lang="es">Ver los tres niveles →</span><span data-lang="en">See the three levels →</span></a></div>
+</div></section>
+
+<footer class="site-footer">
+  <a href="index.html" class="flogo"><img src="assets/img/pepper.png" class="flogo-pepper" alt=""><span style="color:#fff">The Andy <span style="color:#FF3737">Lab</span></span></a>
+  <ul class="flinks">
+    <li><a href="faq.html"><span data-lang="es">Preguntas frecuentes</span><span data-lang="en">FAQ</span></a></li>
+    <li><a href="mailto:hello.theandylab@gmail.com"><span data-lang="es">Contacto</span><span data-lang="en">Contact</span></a></li>
+  </ul>
+  <span class="fcopy">© 2026 The Andy Lab</span>
+  <span class="ftagline" data-lang="es">Más músculo. Menos culpa.</span>
+  <span class="ftagline" data-lang="en">More muscle. Less guilt.</span>
+</footer>
+
+<script>(function(){var m=document.getElementById('md');function u(){m.setAttribute('content',m.getAttribute('data-'+(document.documentElement.lang==='en'?'en':'es')))}u();new MutationObserver(u).observe(document.documentElement,{attributes:true,attributeFilter:['lang']})})();</script>
+<script>
+(function(){
+var rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches,hero=document.querySelector('.hero');
+function strike(){var q=document.querySelector('.hero-quote[data-lang="'+(document.documentElement.lang==='en'?'en':'es')+'"]');var s=q?q.querySelectorAll('span'):[];
+ if(rm){[].forEach.call(document.querySelectorAll('.hero-quote span'),function(e){e.classList.add('x')});if(hero)hero.classList.add('ready');return;}
+ [].forEach.call(s,function(e,i){setTimeout(function(){e.classList.add('x')},350+i*520)});setTimeout(function(){if(hero)hero.classList.add('ready')},350+s.length*520+150);}
+if(document.readyState==='complete')strike();else window.addEventListener('load',strike);
+new MutationObserver(function(){[].forEach.call(document.querySelectorAll('.hero-quote span'),function(e){e.classList.add('x')});}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+var els=document.querySelectorAll('.rv');
+if(rm||!('IntersectionObserver' in window)){[].forEach.call(els,function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -8% 0px'});[].forEach.call(els,function(e){io.observe(e)});}
+})();
+</script>
+<script>(function(){var s=document.querySelector('.mt-stack');if(!s)return;var go=function(){s.classList.add('in')};if(document.readyState==='complete')setTimeout(go,120);else window.addEventListener('load',function(){setTimeout(go,120)});})();</script>
+<script src="assets/site.js?v=20261025b"></script>
+</body>
+</html>

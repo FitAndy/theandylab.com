@@ -80,7 +80,7 @@
   }
 
   /* ---- mobile swipe carousels ---- */
-  document.querySelectorAll('[data-swipe],.principles-grid,.action-grid,.lv-grid,.guide-grid,.pgrid').forEach(function(g){
+  document.querySelectorAll('[data-swipe],.principles-grid,.action-grid,.lv-grid:not([data-noswipe]),.guide-grid,.pgrid').forEach(function(g){
     if(g.children.length<2) return;
     var vis=function(){return Array.prototype.filter.call(g.children,function(c){return c.offsetParent!==null||getComputedStyle(c).display!=='none';});};
     g.classList.add('swipe');
@@ -100,12 +100,14 @@
     var sb=document.createElement('div'); sb.className='sticky-cta';
     sb.innerHTML='<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener"><span data-lang="es">Reserva tu llamada gratis · 20 min</span><span data-lang="en">Book your free 20-min call</span></a>';
     document.body.appendChild(sb); document.body.classList.add('has-sticky');
-    var st=function(){sb.classList.toggle('show',window.scrollY>window.innerHeight*0.7);};
+    var hero=document.querySelector('.hero');
+    var st=function(){var th=hero?hero.offsetTop+hero.offsetHeight-120:window.innerHeight*0.7;sb.classList.toggle('show',window.scrollY>th);};
     st(); window.addEventListener('scroll',st,{passive:true});
   }
 
-  /* ---- collapsible tier details (mobile) ---- */
+  /* ---- collapsible tier details (mobile) — only when a tier has no native <details> expander ---- */
   document.querySelectorAll('.lv-tier').forEach(function(t){
+    if(t.querySelector('details.tier-more')) return;
     var kids=[].slice.call(t.children),subs=kids.filter(function(e){return e.classList.contains('lv-sub')}),btn=t.querySelector('.btn-p');
     if(!subs.length||!btn) return;
     var from=kids.indexOf(subs[subs.length-1])+1;while(kids[from]&&kids[from].classList.contains('lv-h'))from++;var to=kids.indexOf(btn),more=document.createElement('div');
@@ -123,7 +125,7 @@
   var META={
    'index.html':['The Andy Lab','The Andy Lab — More muscle. Less guilt. Strength training and nutrition made for you, with criteria, not motivation.'],
    'manifesto.html':['The Andy Lab — Manifesto','The Andy Lab manifesto — the five principles everything I do is built on.'],
-   'newsletter.html':['The Brain — Newsletter and guides — The Andy Lab','My brain, in your inbox. Muscle, food, and why your brain refuses to cooperate. Every week.'],
+   'newsletter.html':['The Brain — Newsletter — The Andy Lab','My brain, in your inbox. Muscle, food, and why your brain refuses to cooperate. Every week.'],
    'andy.html':['Andy — The Andy Lab','Economist. Colombian. Obsessed with understanding why people don’t do what they know they should.'],
    'guia-proteina.html':['Protein — The Andy Lab','Your brain has spent years overcomplicating something that fits in one multiplication. The complete protein guide, with the mechanism nobody explains.'],
    'proteina.html':['Protein — The Andy Lab','How much protein you need, where to get it, and how not to give up halfway.'],

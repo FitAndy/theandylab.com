@@ -51,7 +51,7 @@ body{
   line-height:1.75;
   color:var(--off-white);
   overflow-x:clip;
-  /* v5 burgundy gradient background */
+  /* burgundy gradient background */
   background:
     radial-gradient(125% 95% at 50% -8%, #5a0202 0%, var(--burg) 26%, var(--burg-deep) 58%, var(--burg-abyss) 100%)
     var(--burg-abyss);
@@ -80,7 +80,7 @@ a:hover{color:#fff}
 
 /* film grain — sits over the whole page, very subtle */
 body::after{
-  content:'';position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  content:'';position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.05;mix-blend-mode:overlay;display:var(--grain,block);
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -143,7 +143,7 @@ nav.scrolled{background:rgba(21,1,1,0.95);border-bottom-color:rgba(255,255,255,.
 nav.open .nav-toggle span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 nav.open .nav-toggle span:nth-child(2){opacity:0}
 nav.open .nav-toggle span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.nav-cta-m a{color:var(--accent)}
+.nav-cta-m a{color:var(--accent-bright)}
 
 /* ============================================================
    FOOTER (shared)
@@ -155,10 +155,10 @@ nav.open .nav-toggle span:nth-child(3){transform:translateY(-6.5px) rotate(-45de
 .flinks{display:flex;gap:2rem;list-style:none;flex-wrap:wrap}
 .flinks a{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--b25);text-decoration:none;transition:color .25s}
 .flinks a:hover{color:var(--blanco)}
-.fcopy{font-size:.65rem;color:rgba(255,255,255,.18)}
+.fcopy{font-size:.75rem;color:rgba(255,255,255,.45)}
 .fcontact{font-size:.8rem;letter-spacing:.08em;color:rgba(255,255,255,.6);text-decoration:none;transition:color .3s}
 .fcontact:hover{color:#FF3737}
-.ftagline{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:#fff}
+.ftagline{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:#fff}
 
 /* ============================================================
    LIGHT THEME (free guide) — nav/footer overrides
@@ -199,8 +199,12 @@ body.theme-light::after{display:none}
   .nav-toggle{display:flex}
   .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;gap:1.4rem;background:rgba(21,1,1,0.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.04);padding:1.75rem var(--gut) 2.1rem;transform:translateY(-10px);opacity:0;visibility:hidden;transition:opacity .3s var(--ease),transform .3s var(--ease),visibility .3s}
   nav.open .nav-links{opacity:1;visibility:visible;transform:none}
-  .nav-links a{font-size:.82rem;letter-spacing:.16em}
-  .lang-switch button{font-size:.52rem;padding:.4rem .5rem}
+  .nav-links{gap:.4rem}
+  .nav-links a{font-size:.92rem;letter-spacing:.14em;display:flex;align-items:center;min-height:44px}
+  .nav-links .nav-cta-m a{color:#fff}
+  .lang-switch button{font-size:.7rem;padding:.4rem .5rem}
+  .nav-toggle{width:44px;height:44px}
+  :root{--grain:none}
 }
 @media (max-width:560px){
   nav{padding:.95rem var(--gut)}
@@ -258,7 +262,7 @@ body.theme-light::after{display:none}
   .hero-ctas .hero-text-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.5rem 0}
   .lv-faq summary,.lv-faq details>summary{min-height:44px;display:flex;align-items:center}
   .site-footer a,.fsocial a,.site-footer .flinks a{display:inline-flex;align-items:center;min-height:44px;padding:0 .4rem}
-  .etiq,.lv-badge,.lv-for,.hero-tag{font-size:max(.7rem,11px)!important}
+  .etiq,.lv-badge,.lv-for,.hero-tag{font-size:max(.75rem,12px)!important;letter-spacing:.2em!important}
   #globe [data-ll] span{font-size:.62rem!important}
   .sticky-cta a{font-size:1.2rem}
 }
