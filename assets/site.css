@@ -51,12 +51,13 @@ body{
   line-height:1.75;
   color:var(--off-white);
   overflow-x:clip;
-  /* burgundy gradient background */
-  background:
-    radial-gradient(125% 95% at 50% -8%, #5a0202 0%, var(--burg) 26%, var(--burg-deep) 58%, var(--burg-abyss) 100%)
-    var(--burg-abyss);
-  background-attachment:fixed;
+  background:var(--burg-abyss);
+  position:relative;
 }
+/* burgundy gradient on a fixed layer (iOS ignores background-attachment:fixed) */
+body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:
+  radial-gradient(125% 95% at 50% -8%, #5a0202 0%, var(--burg) 26%, var(--burg-deep) 58%, var(--burg-abyss) 100%) var(--burg-abyss)}
+@media(max-width:768px){body::before{background:radial-gradient(160% 70% at 50% -10%, #5a0202 0%, var(--burg) 30%, var(--burg-deep) 62%, var(--burg-abyss) 100%) var(--burg-abyss)}}
 img{max-width:100%;display:block}
 ::selection{background:var(--accent);color:#fff}
 .hl{color:#fff}
