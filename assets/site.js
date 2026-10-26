@@ -126,7 +126,7 @@
    'index.html':['The Andy Lab','The Andy Lab — More muscle. Less guilt. Strength training and nutrition made for you, with criteria, not motivation.'],
    'manifesto.html':['The Andy Lab — Manifesto','The Andy Lab manifesto — the five principles everything I do is built on.'],
    'newsletter.html':['The Brain — Newsletter — The Andy Lab','My brain, in your inbox. Muscle, food, and why your brain refuses to cooperate. Every week.'],
-   'andy.html':['Andy — The Andy Lab','Economist. Colombian. Obsessed with understanding why people don’t do what they know they should.'],
+   'andy.html':['Andy — The Andy Lab','A small club for women who want to get stronger and are curious about understanding their own bodies. 1:1 coaching with Andy, ten women at a time.'],
    'guia-proteina.html':['Protein — The Andy Lab','Your brain has spent years overcomplicating something that fits in one multiplication. The complete protein guide, with the mechanism nobody explains.'],
    'proteina.html':['Protein — The Andy Lab','How much protein you need, where to get it, and how not to give up halfway.'],
    'suplementos.html':['Supplements — The Andy Lab','The short list for building muscle and losing fat. The ones that work, the ones that don’t, and why.'],
