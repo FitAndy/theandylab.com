@@ -50,7 +50,7 @@
     try{ localStorage.setItem(KEY, lang); }catch(e){}
   }
   var saved; try{ saved = localStorage.getItem(KEY); }catch(e){}
-  applyLang(saved || html.getAttribute('lang') || 'es');
+  applyLang(saved || 'en');
   btns.forEach(function(b){
     b.addEventListener('click', function(){ applyLang(b.getAttribute('data-setlang')); });
   });
