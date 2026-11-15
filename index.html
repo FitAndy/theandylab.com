@@ -289,6 +289,22 @@
 @media(max-width:768px){.hx-c .hx-pic{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:auto;margin:0 calc(var(--gut) * -1);aspect-ratio:4/5;max-width:none}.hx-c .hx-pic img{object-position:50% 25%}.hx-c .hx-pic{border-left:0;border-bottom:1px solid rgba(250,249,246,.35)}.hx-c .hx-in{margin-top:2rem}}
 @media(max-width:768px){.hx-c{flex-direction:column;align-items:stretch;justify-content:flex-start;min-height:0;padding-top:0;padding-bottom:2.6rem}.hx-c .hx-pic{flex:none}.hx-c .hx-in{width:100%;margin-top:1.75rem}.hx-c h1{font-size:clamp(2.6rem,11.5vw,3.6rem)}}
 @media(max-width:768px){.hx-c .hx-pic{aspect-ratio:1/1;height:auto;min-height:0}.hx-c .hx-pic img{object-position:50% 40%}.hx-c .hx-in{display:flex;flex-direction:column;margin-top:1.1rem}.hx-c .hx-in>*{order:5}.hx-c .hx-in>h1{order:1;margin-bottom:.6rem}.hx-c .hx-in>.hx-line{order:2}.hx-c .hx-in>.hx-ctas{order:3;margin-top:1.1rem}.hx-c .hx-in>.hero-fine{order:4}.hx-c .hx-in>.hx-sub{order:6}.hx-c .hx-in>.hx-club{order:7}.hx-c .hero-text-link{width:auto!important;height:auto!important;min-height:44px;display:flex;align-items:center;justify-content:center}.hx-c .hero-text-link span{font-size:13px!important}}
+
+/* ===== how it works + newsletter block ===== */
+.hw{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(2rem,5vw,4rem);align-items:center;margin-top:1.4rem}
+.hw-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1.6rem}
+.hw-list li{display:grid;grid-template-columns:2rem minmax(0,1fr);gap:1rem;align-items:start}
+.hw-n{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;line-height:.9;color:var(--accent-bright)}
+.hw-list b{display:block;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,2.2vw,2rem);letter-spacing:.03em;font-weight:400;color:#fff;line-height:1;margin-bottom:.35rem}
+.hw-list p{margin:0;font-size:1rem;font-weight:300;color:var(--b85);line-height:1.7}
+.hw-shot img{display:block;width:100%;max-width:300px;height:auto;margin:0 auto;border-radius:18px;border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 50px -24px rgba(0,0,0,.9)}
+.proof-more{font-size:.9rem;color:var(--b70);margin:.8rem 0 0}
+.nlb{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(2rem,5vw,4rem);align-items:center}
+.nlb-h{font-size:clamp(1.9rem,3.4vw,3rem)!important;line-height:1}
+.nlb-form{background:rgba(21,1,1,.55);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:clamp(1.2rem,2.5vw,1.8rem)}
+.nlb-form iframe{width:100%;border:none;min-height:120px;display:block}
+.nlb-form .lv-fine{margin:.8rem 0 0}
+@media(max-width:820px){.hw,.nlb{grid-template-columns:1fr}.hw-shot{margin-top:.6rem}}
 </style>
 </head>
 <body>
@@ -315,44 +331,30 @@
 <div class="hx-pic"><img src="assets/img/andy-selfie.webp" srcset="assets/img/andy-selfie-800.webp 800w, assets/img/andy-selfie.webp 1400w" sizes="(min-width:769px) 50vw, 100vw" width="1400" height="1867" alt="Andy riendo en la playa" fetchpriority="high"></div>
 <div class="hx-in">
 <p class="hx-eyebrow">THE ANDY LAB</p>
-<h1 data-lang="es" style="font-size:clamp(2.6rem,7vw,100px)"><em style="color:#D40E26">Te enseñaron</em><br>a tenerle miedo<br>a tu cuerpo.</h1><h1 data-lang="en" style="font-size:clamp(2.6rem,7vw,100px)"><em style="color:#D40E26">You were taught</em><br>to be afraid of<br>your own body.</h1>
-<p class="hx-line" data-lang="es" style="font-size:20px">Levanta poco.<br>Ocupa poco espacio.<br>No te pongas grande.</p><p class="hx-line" data-lang="en" style="font-size:20px">Lift light.<br>Take up little space.<br>Don’t get too big.</p>
-<p class="hx-sub" data-lang="es">Muchas absorbimos esas reglas antes de poder cuestionarlas.</p><p class="hx-sub" data-lang="en">Many of us absorbed those rules before we could question them.</p>
-<p class="hx-club" data-lang="es">The Andy Lab es un club pequeño para mujeres que quieren ser más fuertes y sienten curiosidad por entender su cuerpo mejor. Lo lleva alguien de quien te gustaría ser amiga.</p><p class="hx-club" data-lang="en">The Andy Lab is a small club for women who want to get stronger and are curious about understanding their own bodies. Run by someone you’d want to be friends with.</p>
-<div class="hx-ctas"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">AGENDA TU LLAMADA GRATIS →</span><span data-lang="en">BOOK YOUR FREE CALL →</span></a><a href="#niveles" class="hero-text-link" style="width:146px;height:21px"><span data-lang="es" style="font-size:10px">Ver los tres niveles</span><span data-lang="en" style="font-size:10px">See the three levels</span></a></div>
-<p class="hero-fine" data-lang="es">Llamada gratis de 20 minutos. Vemos si encajamos.</p><p class="hero-fine" data-lang="en">Free 20-minute call. We see if we fit.</p>
+<h1 data-lang="es" style="font-size:clamp(2.2rem,5.2vw,5.4rem)">Tienes tres horas a la semana para entrenar.<br><em style="color:#D40E26">Cuatro, con suerte.</em></h1><h1 data-lang="en" style="font-size:clamp(2.2rem,5.2vw,5.4rem)">You have three hours a week to train.<br><em style="color:#D40E26">Four if we’re lucky.</em></h1>
+<p class="hx-line" data-lang="es" style="font-size:20px">Mi trabajo es que ninguna se desperdicie.</p><p class="hx-line" data-lang="en" style="font-size:20px">My job is that none of them is wasted.</p>
+<p class="hero-hook" style="margin-top:1rem;order:3;color:#D40E26">Más músculo. Menos culpa.</p>
+<div class="hx-ctas"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">AGENDA UNA LLAMADA GRATIS DE 20 MINUTOS →</span><span data-lang="en">BOOK A FREE 20-MINUTE CALL →</span></a><a href="#como-funciona" class="hero-text-link" style="width:146px;height:21px"><span data-lang="es" style="font-size:10px">Mira cómo trabajo</span><span data-lang="en" style="font-size:10px">See how I work</span></a></div>
 </div></section>
 
-<section class="lv" id="niveles"><div class="lv-in rv">
-<span class="etiq"><span data-lang="es">Los tres niveles</span><span data-lang="en">The three levels</span></span>
-<h2 class="lv-h2" data-lang="es">Elige cuánto de mí necesitas.</h2><h2 class="lv-h2" data-lang="en">Choose how much of me you need.</h2>
-<div class="tier-strip">
-<a href="#tier-mild"><b>Mild</b><span><em>€100</em> <span data-lang="es">/ mes</span><span data-lang="en">/ month</span></span></a>
-<a href="#tier-spicy"><b>Spicy</b><span><em>€250</em> <span data-lang="es">/ mes</span><span data-lang="en">/ month</span></span></a>
-<a href="#tier-extra"><b>Extra Spicy</b><span><em>€350</em> <span data-lang="es">/ mes</span><span data-lang="en">/ month</span></span></a>
+<section class="lv" id="quien-soy"><div class="lv-in rv">
+<span class="etiq"><span data-lang="es">Quién soy</span><span data-lang="en">Who I am</span></span>
+<p class="lv-p" data-lang="es">Soy Andy. Colombiana, economista, en Madrid. Me atraen los problemas que parecen un desorden pero tienen una estructura debajo. Tu semana de entrenamiento es uno de ellos: cuando encuentras lo que de verdad la mueve y cambias eso, lo demás deja de ser una pelea.</p><p class="lv-p" data-lang="en">I’m Andy. Colombian, economist, in Madrid. I’m drawn to problems that look messy but have a structure underneath. Your training week is one of them: find what’s really driving it, change that, and the rest stops being a fight.</p>
+<p class="lv-p" data-lang="es">The Andy Lab es un club pequeño para mujeres que quieren ser más fuertes y sienten curiosidad por entender su propio cuerpo. Llevo más de diez años entrenando y construí mi propia app para poder leer bien los datos de mis clientas.</p><p class="lv-p" data-lang="en">The Andy Lab is a small club for women who lift and are curious about their own bodies. I’ve lifted for over ten years, and I built my own app so I could read my clients’ data properly.</p>
+</div></section>
+
+<section class="lv" id="como-funciona"><div class="lv-in rv">
+<span class="etiq"><span data-lang="es">Cómo funciona</span><span data-lang="en">How it works</span></span>
+<div class="hw">
+<ol class="hw-list">
+<li><span class="hw-n">1</span><div><b data-lang="es">Entrenas.</b><b data-lang="en">You train.</b><p data-lang="es">Registras cada serie en tu app, entre ejercicios.</p><p data-lang="en">You log every set in your app, between exercises.</p></div></li>
+<li><span class="hw-n">2</span><div><b data-lang="es">Yo lo leo.</b><b data-lang="en">I read it.</b><p data-lang="es">Cada semana reviso tus números: qué subió, qué se estancó, qué martes desapareció.</p><p data-lang="en">Every week I go through your numbers: what went up, what stalled, which Tuesday went missing.</p></div></li>
+<li><span class="hw-n">3</span><div><b data-lang="es">Ajustamos.</b><b data-lang="en">We adjust.</b><p data-lang="es">Cada cuatro semanas recibes un bloque nuevo, construido con lo que dicen tus datos. Yo arreglo el plan, no a ti.</p><p data-lang="en">Every four weeks you get a new block built on what your data says. I fix the plan, not you.</p></div></li>
+</ol>
+<div class="hw-shot"><img src="assets/img/app-v2-data.webp" width="760" height="1339" loading="lazy" alt="The Data: How are we doing? Each exercise compared with the previous block"></div>
 </div>
-<div class="lv-grid" data-noswipe>
-<div class="lv-tier" id="tier-mild">
-<h3>Mild <span class="lv-peps"><img src="assets/img/pepper.png" alt=""></span></h3><p class="lv-for" data-lang="es">Para quien ya tiene el hábito de entrenar y quiere un plan bien hecho y personalizado.</p><p class="lv-for" data-lang="en">For people who already train and want a well-built, personalized plan.</p><div class="lv-price">€100<small data-lang="es">/ mes</small><small data-lang="en">/ month</small></div>
-<p class="lv-sub" data-lang="es">€300 / 3 meses · Pago único · Renueva cada 3 meses</p><p class="lv-sub" data-lang="en">€300 / 3 months · One-time payment · Renews every 3 months</p>
-<p class="lv-tag" data-lang="es">Tú entrenas. Yo me ocupo de los números, sin que tengas que escribirme.</p><p class="lv-tag" data-lang="en">You train. I handle the numbers, and you never have to write to me.</p>
-<p data-lang="es">Hablamos una vez y armo tu plan y tu app. Cada 4 semanas completadas de entrenamiento reviso tus datos y te dejo el plan ajustado para las 4 siguientes. Sin WhatsApp, sin check-ins, sin ningún ser superior al que rendirle cuentas (yo). Síguelo durante tres meses y vas a estar más fuerte que hoy, con las gráficas para demostrarlo. Si quieres hablar entre medias, son 30 minutos por €80.</p><p data-lang="en">We talk once, and I build your plan and your app. After every 4 completed weeks of training, I go through your data and adjust your plan for the next 4. No WhatsApp, no check-ins, no higher power to answer to (me). Follow it for three months and you’ll be stronger than you are today, with the charts to prove it. If you want to talk in between, it’s 30 minutes for €80.</p>
-<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar llamada →</span><span data-lang="en">Book a call →</span></a><p class="lv-alt lv-fine" data-lang="es">Primero una llamada gratis de 20 minutos. No pagas nada hasta que hablemos.</p><p class="lv-alt lv-fine" data-lang="en">First a free 20-minute call. You pay nothing until we talk.</p></div>
-<div class="lv-tier" id="tier-spicy">
-<h3>Spicy <span class="lv-peps"><img src="assets/img/pepper.png" alt=""><img src="assets/img/pepper.png" alt=""></span></h3><p class="lv-for" data-lang="es">Para quien quiere trabajar con alguien y entender lo que hace.</p><p class="lv-for" data-lang="en">For women who want to work with someone and understand what they’re doing.</p><div class="lv-price">€250<small data-lang="es">/ mes</small><small data-lang="en">/ month</small></div>
-<p class="lv-sub" data-lang="es">€250 / mes · Solo entrenamiento · Mínimo 3 meses (3 bloques de 4 semanas)</p><p class="lv-sub" data-lang="en">€250 / month · Training only · 3-month minimum (3 blocks of 4 weeks)</p>
-<p class="lv-tag" data-lang="es">Tú entrenas y me tienes en el bolsillo para cualquier duda.</p><p class="lv-tag" data-lang="en">You train, and you have me in your pocket for any question.</p>
-<p data-lang="es">Armo tu plan sobre tu semana y tus objetivos, para que llegues al gym sabiendo qué te toca. Cada 4 semanas completadas de entrenamiento nos sentamos con tu informe a ver qué funcionó, qué se estancó y por qué, para que entiendas cada decisión y adivines menos. Entre llamadas me tienes por WhatsApp, con respuesta en 48 horas laborables: cuando algo no te cuadra, me preguntas y lo resolvemos. Si lo sigues, te vuelves más fuerte, entiendes tu entrenamiento y empiezas a mirar tu cuerpo con otros ojos.</p><p data-lang="en">I build your plan around your week and your goals, so you walk into the gym already knowing what to do. After every 4 completed weeks of training, we sit down with your report and go through what worked, what stalled and why, so you understand every decision and guess less. Between calls, you have me on WhatsApp, with replies within 48 business hours: when something doesn’t add up, you ask and we sort it out. Follow it and you get stronger, you understand your training, and you start seeing your body differently.</p>
-<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar llamada →</span><span data-lang="en">Book a call →</span></a><p class="lv-alt lv-fine" data-lang="es">Primero una llamada gratis de 20 minutos. No pagas nada hasta que hablemos.</p><p class="lv-alt lv-fine" data-lang="en">First a free 20-minute call. You pay nothing until we talk.</p></div>
-<div class="lv-tier hot" id="tier-extra">
-<h3>Extra Spicy <span class="lv-peps"><img src="assets/img/pepper.png" alt=""><img src="assets/img/pepper.png" alt=""><img src="assets/img/pepper.png" alt=""></span></h3><p class="lv-for" data-lang="es">Para quien sabe que entrenar es la mitad de la ecuación y quiere aprender a comer.</p><p class="lv-for" data-lang="en">For women who know training is half the equation and want to learn how to eat.</p><div class="lv-price">€350<small data-lang="es">/ mes</small><small data-lang="en">/ month</small></div>
-<p class="lv-sub" data-lang="es">€350 / mes · Entrenamiento y comida · Mínimo 3 meses (3 bloques de 4 semanas)</p><p class="lv-sub" data-lang="en">€350 / month · Training and food · 3-month minimum (3 blocks of 4 weeks)</p>
-<p class="lv-tag" data-lang="es">Tú entrenas y además me meto en tu cocina para que aprendas a comer.</p><p class="lv-tag" data-lang="en">You train, and on top of that I get into your kitchen so you learn how to eat.</p>
-<p data-lang="es">Todo lo de Spicy, y tu comida. Armamos tu plan de alimentación sobre lo que te gusta, lo que estás dispuesta a hacer y tus innegociables, y lo ajustamos cada 4 semanas completadas. En la app ves cuánta proteína, carbohidratos y grasa te quedan en el día, y si comes fuera y no tienes ni idea de los macros, marcas que la comiste y sigues, sin culpa. Viajo mucho y me gusta el vino, así que aprendes a comer bien en un vuelo y en una cena de sábado. Síguelo y te vuelves más fuerte, entiendes mejor la nutrición y tomar decisiones con la comida se vuelve más fácil.</p><p data-lang="en">Everything in Spicy, plus your food. We build your eating plan around what you like, what you’re willing to do and your non-negotiables, and we adjust it after every 4 completed weeks. In the app you see how much protein, carbs and fat you have left for the day, and if you eat out and have no idea of the macros, you mark that you ate it and move on, guilt-free. I travel a lot and I like wine, so you learn to eat well on a flight and at a Saturday dinner. Follow it and you get stronger, you understand nutrition better, and making food decisions gets easier.</p>
-<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar llamada →</span><span data-lang="en">Book a call →</span></a><p class="lv-alt lv-fine" data-lang="es">Primero una llamada gratis de 20 minutos. No pagas nada hasta que hablemos.</p><p class="lv-alt lv-fine" data-lang="en">First a free 20-minute call. You pay nothing until we talk.</p></div>
-</div></div>
-<script>(function(){var tabs=document.querySelectorAll('.tier-strip a'),cards=document.querySelectorAll('#niveles .lv-tier');function show(id,scroll){tabs.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id)});cards.forEach(function(c){c.classList.toggle('on',c.id===id)});if(scroll){var s=document.querySelector('.tier-strip');var y=s.getBoundingClientRect().top+window.pageYOffset-80;if(Math.abs(window.pageYOffset-y)>120)window.scrollTo({top:y,behavior:'smooth'})}}tabs.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();show(a.getAttribute('href').slice(1),false)})});document.querySelectorAll('a[href^="#tier-"]:not(.tier-strip a)').forEach(function(a){a.addEventListener('click',function(){show(a.getAttribute('href').slice(1),false)})});var h=location.hash.replace('#','');show(/^tier-/.test(h)?h:'tier-mild',false);})();</script>
-</section>
+</div></section>
+
 <section class="lv"><div class="lv-in proof rv">
 
 <div class="proof-txt">
@@ -360,21 +362,69 @@
 <h2 class="lv-h2" data-lang="es">Vas a dejar de empezar<br>de cero cada lunes.</h2><h2 class="lv-h2" data-lang="en">You’ll stop starting<br>over every Monday.</h2>
 <p class="lv-p" data-lang="es">Entrenar deja de ser algo que te obligas a hacer y pasa a ser parte de quien eres. Comes como adulta, levantas pesas sin pedir permiso y entiendes qué cambia en tu cuerpo y por qué.</p><p class="lv-p" data-lang="en">Training stops being something you force yourself to do and becomes part of who you are. You eat like an adult, lift without asking permission, and understand what is changing in your body and why.</p>
 <blockquote class="proof-q"><p>"I've literally never looked, or felt, better."</p><cite>Amy B. · London</cite></blockquote>
+<p class="proof-more" data-lang="es">Clientas en Madrid, Londres, Hamburgo, Ámsterdam, Abu Dabi y México.</p><p class="proof-more" data-lang="en">Clients in Madrid, London, Hamburg, Amsterdam, Abu Dhabi and Mexico.</p>
 <div class="lv-cta"><a href="lab.html" class="btn-f"><span data-lang="es">Entra al Lab →</span><span data-lang="en">Enter the Lab →</span></a></div>
 </div>
 </div></section>
 
+<section class="lv" id="niveles"><div class="lv-in rv">
+<span class="etiq"><span data-lang="es">Los tres niveles</span><span data-lang="en">The three levels</span></span>
+<h2 class="lv-h2" data-lang="es">Tres formas de tenerme en tu semana.</h2><h2 class="lv-h2" data-lang="en">Three ways to have me in your week.</h2>
+<div class="tier-strip">
+<a href="#tier-mild"><b>Mild</b><span><em>€100</em> <span data-lang="es">/ mes</span><span data-lang="en">/ month</span></span></a>
+<a href="#tier-spicy"><b>Spicy</b><span><em>€250</em> <span data-lang="es">/ mes</span><span data-lang="en">/ month</span></span></a>
+<a href="#tier-extra"><b>Extra Spicy</b><span><em>€350</em> <span data-lang="es">/ mes</span><span data-lang="en">/ month</span></span></a>
+</div>
+<div class="lv-grid" data-noswipe>
+<div class="lv-tier" id="tier-mild">
+<h3>Mild <span class="lv-peps"><img src="assets/img/pepper.png" alt=""></span></h3><p class="lv-for" data-lang="es">Para la mujer que quiere que otra persona se encargue de todo y no necesita escribirme.</p><p class="lv-for" data-lang="en">For the woman who wants someone else to take care of everything and doesn’t need to text.</p><div class="lv-price">€100<small data-lang="es">/ mes</small><small data-lang="en">/ month</small></div>
+<p class="lv-sub" data-lang="es">€300 / 3 meses · Pago único · Renueva cada 3 meses</p><p class="lv-sub" data-lang="en">€300 / 3 months · One-time payment · Renews every 3 months</p>
+<p class="lv-tag" data-lang="es">Tú entrenas. Yo me ocupo de los números, sin que tengas que escribirme.</p><p class="lv-tag" data-lang="en">You train. I handle the numbers, and you never have to write to me.</p>
+<p data-lang="es">Un plan hecho para tu semana y tus objetivos, en tu app. Tú registras tus series. Cada cuatro semanas completadas reviso tus números y armo el siguiente bloque. No hablamos entre medias; si quieres una llamada, son 30 minutos por €80.</p><p data-lang="en">A plan built for your week and your goals, in your app. You log your sets. Every four completed weeks I go through your numbers and build the next block. We don’t talk in between; if you want a call, it’s 30 minutes for €80.</p>
+<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar llamada →</span><span data-lang="en">Book a call →</span></a><p class="lv-alt lv-fine" data-lang="es">Primero una llamada gratis de 20 minutos. No pagas nada hasta que hablemos.</p><p class="lv-alt lv-fine" data-lang="en">First a free 20-minute call. You pay nothing until we talk.</p></div>
+<div class="lv-tier" id="tier-spicy">
+<h3>Spicy <span class="lv-peps"><img src="assets/img/pepper.png" alt=""><img src="assets/img/pepper.png" alt=""></span></h3><p class="lv-for" data-lang="es">Para quien quiere trabajar con alguien y entender lo que hace.</p><p class="lv-for" data-lang="en">For women who want to work with someone and understand what they’re doing.</p><div class="lv-price">€250<small data-lang="es">/ mes</small><small data-lang="en">/ month</small></div>
+<p class="lv-sub" data-lang="es">€250 / mes · Solo entrenamiento · Mínimo 3 meses (3 bloques de 4 semanas)</p><p class="lv-sub" data-lang="en">€250 / month · Training only · 3-month minimum (3 blocks of 4 weeks)</p>
+<p class="lv-tag" data-lang="es">Tú entrenas y me tienes en el bolsillo para cualquier duda.</p><p class="lv-tag" data-lang="en">You train, and you have me in your pocket for any question.</p>
+<p data-lang="es">Todo lo de Mild, y yo en tu semana. Una revisión juntas cada cuatro semanas y WhatsApp cuando surge algo: el viaje, el hombro que molesta, la semana que se vino abajo. Respondo en 48 horas laborables, con tus números delante.</p><p data-lang="en">Everything in Mild, plus me in your week. A review together every four weeks, and WhatsApp when something comes up: the trip, the sore shoulder, the week that fell apart. I reply within 48 business hours, with your numbers in front of me.</p>
+<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar llamada →</span><span data-lang="en">Book a call →</span></a><p class="lv-alt lv-fine" data-lang="es">Primero una llamada gratis de 20 minutos. No pagas nada hasta que hablemos.</p><p class="lv-alt lv-fine" data-lang="en">First a free 20-minute call. You pay nothing until we talk.</p></div>
+<div class="lv-tier hot" id="tier-extra">
+<h3>Extra Spicy <span class="lv-peps"><img src="assets/img/pepper.png" alt=""><img src="assets/img/pepper.png" alt=""><img src="assets/img/pepper.png" alt=""></span></h3><p class="lv-for" data-lang="es">Para quien sabe que entrenar es la mitad de la ecuación y quiere aprender a comer.</p><p class="lv-for" data-lang="en">For women who know training is half the equation and want to learn how to eat.</p><div class="lv-price">€350<small data-lang="es">/ mes</small><small data-lang="en">/ month</small></div>
+<p class="lv-sub" data-lang="es">€350 / mes · Entrenamiento y comida · Mínimo 3 meses (3 bloques de 4 semanas)</p><p class="lv-sub" data-lang="en">€350 / month · Training and food · 3-month minimum (3 blocks of 4 weeks)</p>
+<p class="lv-tag" data-lang="es">Tú entrenas y además me meto en tu cocina para que aprendas a comer.</p><p class="lv-tag" data-lang="en">You train, and on top of that I get into your kitchen so you learn how to eat.</p>
+<p data-lang="es">Todo lo de Spicy, más la comida. Un plan de alimentación construido igual que tu entrenamiento, para que nunca más te quedes frente a la nevera a las 6 de la tarde haciendo cuentas. La app ya las hizo. Con pan incluido.</p><p data-lang="en">Everything in Spicy, plus food. A nutrition plan built the same way as your training, so you never again stand in front of the fridge at 6 pm doing maths. The app did it. Bread included.</p>
+<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar llamada →</span><span data-lang="en">Book a call →</span></a><p class="lv-alt lv-fine" data-lang="es">Primero una llamada gratis de 20 minutos. No pagas nada hasta que hablemos.</p><p class="lv-alt lv-fine" data-lang="en">First a free 20-minute call. You pay nothing until we talk.</p></div>
+</div>
+<p class="lv-fine" data-lang="es" style="margin-top:1.2rem">Spicy y Extra Spicy tienen lista de espera cuando el club está lleno.</p><p class="lv-fine" data-lang="en" style="margin-top:1.2rem">Spicy and Extra Spicy have a waitlist when the club is full.</p></div>
+<script>(function(){var tabs=document.querySelectorAll('.tier-strip a'),cards=document.querySelectorAll('#niveles .lv-tier');function show(id,scroll){tabs.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id)});cards.forEach(function(c){c.classList.toggle('on',c.id===id)});if(scroll){var s=document.querySelector('.tier-strip');var y=s.getBoundingClientRect().top+window.pageYOffset-80;if(Math.abs(window.pageYOffset-y)>120)window.scrollTo({top:y,behavior:'smooth'})}}tabs.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();show(a.getAttribute('href').slice(1),false)})});document.querySelectorAll('a[href^="#tier-"]:not(.tier-strip a)').forEach(function(a){a.addEventListener('click',function(){show(a.getAttribute('href').slice(1),false)})});var h=location.hash.replace('#','');show(/^tier-/.test(h)?h:'tier-mild',false);})();</script>
+</section>
+
 <section class="lv lv-talk2"><div class="lv-in rv">
 <div class="lt2-txt">
 <span class="etiq"><span data-lang="es">El primer paso</span><span data-lang="en">The first step</span></span>
-<h2 class="lv-h2" data-lang="es">Aquí se habla primero.</h2><h2 class="lv-h2" data-lang="en">Here, we talk first.</h2>
-<p class="lv-p" data-lang="es" >Primero hacemos una llamada de 20 minutos. Nos conocemos mejor y decidimos si The Andy Lab es para ti.</p><p class="lv-p" data-lang="en" >We do a free 20-minute call. You tell me what your week looks like and what you’ve tried before, and I tell you if this is for you. If it isn’t, I’ll tell you that too.</p>
-<p class="lv-p" data-lang="es" >Si no hay cupo en Spicy o Extra Spicy, te apunto a la lista de espera.</p><p class="lv-p" data-lang="en" >If Spicy and Extra Spicy are full, I put you on the waitlist.</p>
-<div class="lv-cta"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar llamada de 20 minutos →</span><span data-lang="en">Book a 20-minute call →</span></a><a href="lab.html" class="btn-f"><span data-lang="es">Mira cómo trabajo →</span><span data-lang="en">See how I work →</span></a></div>
+<h2 class="lv-h2" data-lang="es">Aquí no se compra nada sin hablar antes.</h2><h2 class="lv-h2" data-lang="en">Nothing here is bought without talking first.</h2>
+<p class="lv-p" data-lang="es">Veinte minutos, gratis, sin discurso de venta. Me cuentas cómo entrenas y en qué llevas tiempo dando vueltas sin avanzar. Yo te digo con honestidad qué nivel te encaja, o si no soy la persona indicada.</p><p class="lv-p" data-lang="en">Twenty minutes, free, no pitch. You tell me how you train and what has been going in circles. I tell you honestly which level fits, or whether I’m the wrong person for you.</p>
+<div class="lv-cta"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar la llamada →</span><span data-lang="en">Book the call →</span></a></div>
 <p class="lt2-note" data-lang="es">Mild es un plan que reviso por ti. Spicy y Extra Spicy son trabajo conmigo.</p><p class="lt2-note" data-lang="en">Mild is a plan I review for you. Spicy and Extra Spicy are work with me.</p>
 </div>
 
 </div>
+</section>
+
+<section class="lv" id="newsletter"><div class="lv-in rv">
+<div class="nlb">
+<div>
+<span class="etiq">Newsletter</span>
+<h2 class="lv-h2 nlb-h" data-lang="es">Mi newsletter. Una idea por semana sobre por qué no hacemos lo que sabemos que deberíamos hacer.</h2><h2 class="lv-h2 nlb-h" data-lang="en">My newsletter. One idea a week on why we don’t do what we know we should.</h2>
+<p class="lv-p" data-lang="es">El estudio que la respalda, sus límites y un sistema lo bastante pequeño para una mala semana. Escrita para mujeres que entrenan fuerza y les gusta leer. Gratis, en inglés.</p><p class="lv-p" data-lang="en">The study behind it, its limits, and a system small enough for a bad week. Written for women who lift and read. Free, in English.</p>
+</div>
+<div class="nlb-form">
+<iframe data-tally-src="https://tally.so/embed/ja8X0R?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&theme=dark" loading="lazy" width="100%" height="120" frameborder="0" marginheight="0" marginwidth="0" title="Newsletter"></iframe>
+<p class="lv-fine" data-lang="es">Se llama The Brain. Ya verás por qué.</p><p class="lv-fine" data-lang="en">It’s called The Brain. You’ll see why.</p>
+</div>
+</div>
+</div>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc})};if("undefined"!=typeof Tally)v();else if(!d.querySelector('script[src="'+w+'"]')){var sc=d.createElement("script");sc.src=w;sc.onload=v;sc.onerror=v;d.body.appendChild(sc)}</script>
 </section>
 
 <!-- FOOTER -->
