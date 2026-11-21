@@ -98,7 +98,7 @@
   /* ---- sticky mobile CTA ---- */
   if(!document.body.classList.contains('theme-light')){
     var sb=document.createElement('div'); sb.className='sticky-cta';
-    sb.innerHTML='<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener"><span data-lang="es">Reserva tu llamada gratis · 20 min</span><span data-lang="en">Book your free 20-min call</span></a>';
+    sb.innerHTML='<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener"><span data-lang="es">Reserva tu llamada · 20 min</span><span data-lang="en">Book your 20-min call</span></a>';
     document.body.appendChild(sb); document.body.classList.add('has-sticky');
     var hero=document.querySelector('.hero');
     var st=function(){var th=hero?hero.offsetTop+hero.offsetHeight-120:window.innerHeight*0.7;sb.classList.toggle('show',window.scrollY>th);};
@@ -126,11 +126,11 @@
    'index.html':['The Andy Lab','The Andy Lab — More muscle. Less guilt. Strength training and nutrition made for you, with criteria, not motivation.'],
    'manifesto.html':['The Andy Lab — Manifesto','The Andy Lab manifesto — the five principles everything I do is built on.'],
    'newsletter.html':['The Brain — Newsletter — The Andy Lab','My brain, in your inbox. Muscle, food, and why your brain refuses to cooperate. Every week.'],
-   'andy.html':['Andy — The Andy Lab','A small club for women who want to get stronger and are curious about understanding their own bodies. 1:1 coaching with Andy, ten women at a time.'],
+   'andy.html':['Andy — The Andy Lab','A small club for women who want to get stronger and are curious about understanding their own bodies. 1:1 coaching with Andy.'],
    'guia-proteina.html':['Protein — The Andy Lab','Your brain has spent years overcomplicating something that fits in one multiplication. The complete protein guide, with the mechanism nobody explains.'],
    'proteina.html':['Protein — The Andy Lab','How much protein you need, where to get it, and how not to give up halfway.'],
    'suplementos.html':['Supplements — The Andy Lab','The short list for building muscle and losing fat. The ones that work, the ones that don’t, and why.'],
-   'viaje.html':['Training and eating when you travel — The Andy Lab','The free guide I use myself when I travel. No gym, no guilt, no pretending to be an elite athlete in a hotel.'],
+   'viaje.html':['Training and eating when you travel — The Andy Lab','The guide I use myself when I travel. No gym, no guilt, no pretending to be an elite athlete in a hotel.'],
    'proteina-leadmagnet.html':['Protein Guide — The Andy Lab','Your exact protein number. My real sources. And why your brain says no on day three.']
   };
   var pg=(location.pathname.split('/').pop()||'index.html'),M=META[pg],T0=document.title;

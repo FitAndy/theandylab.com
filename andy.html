@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/pepper.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css?v=20261026b">
 <style>
 /* PRINCIPLES */
@@ -28,8 +28,8 @@
 .p-poster img{width:100%;height:auto;object-fit:contain;display:block;transition:transform 1.4s var(--ease);filter:contrast(1.04)}
 .principle:hover .p-poster img{transform:scale(1.04)}
 .p-txt{padding:clamp(1.8rem,3vw,2.4rem);display:flex;flex-direction:column;gap:.8rem;flex:1;justify-content:center}
-.p-num{font-family:'Bebas Neue',sans-serif;font-size:.85rem;line-height:1;color:var(--accent);letter-spacing:.02em}
-.p-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.1rem,1.3vw,1.3rem);line-height:.95;letter-spacing:.01em;color:#fff;text-wrap:balance;margin-bottom:1rem}
+.p-num{font-family:'Inter',sans-serif;font-size:0.68rem;line-height:1;color:var(--accent);font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
+.p-title{font-family:'Inter',sans-serif;font-size:clamp(0.88rem,1.04vw,1.04rem);line-height:.95;color:#fff;text-wrap:balance;margin-bottom:1rem;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .p-text{font-size:.95rem;font-weight:300;color:rgba(255,255,255,.9);line-height:1.8;max-width:none}
 .p-text strong{color:#fff;font-weight:500}
 
@@ -40,14 +40,14 @@
 .manif-head{max-width:1100px;margin:0 auto clamp(2rem,4vw,3rem);display:grid;grid-template-columns:minmax(220px,320px) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:end}
 .manif-pic{aspect-ratio:4/5;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
 .manif-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 10%;filter:grayscale(1) contrast(1.05)}
-.m-rules{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.6rem,3.6vw,3.2rem);line-height:1;letter-spacing:.03em;color:var(--b35);margin:0 0 1rem;display:flex;flex-wrap:wrap;gap:.2em .6em}
+.m-rules{font-family:'Inter',sans-serif;font-size:clamp(1.28rem,2.88vw,2.56rem);line-height:1;color:var(--b35);margin:0 0 1rem;display:flex;flex-wrap:wrap;gap:.2em .6em;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .m-rules span{position:relative;display:inline-block}
 .m-rules span::after{content:'';position:absolute;left:-2%;top:52%;height:.09em;width:0;background:var(--accent-bright);transition:width .55s var(--ease)}
 .m-rules span.x::after{width:104%}
 .m-rules span.x{color:var(--b25)}
-.manif-head h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,6.5vw,5.6rem);max-width:14ch;line-height:.88;color:#fff;margin:.6rem 0 1rem}
+.manif-head h2{font-family:'Inter',sans-serif;font-size:clamp(2.24rem,5.2vw,4.48rem);max-width:14ch;line-height:1;color:#fff;margin:.6rem 0 1rem;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .manif-head p{font-size:clamp(1rem,1.15vw,1.15rem);font-weight:300;color:var(--b85);line-height:1.8;max-width:52ch;margin:0}
-.manif-head .tag{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.22em;color:var(--accent-bright);display:block;margin-top:1rem}
+.manif-head .tag{font-family:'Inter',sans-serif;font-size:0.88rem;color:var(--accent-bright);display:block;margin-top:1rem;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .manif .principles-grid{max-width:1100px;margin:0 auto;grid-template-columns:1fr;gap:1rem;background:transparent}
 .manif .principle{border:1px solid var(--line)!important;border-radius:12px}
 .manif .principle:nth-child(even) .p-poster{order:-1}
@@ -60,10 +60,10 @@
 .op-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;filter:grayscale(1) contrast(1.05) brightness(.8)}
 .op::after{content:'';position:absolute;inset:0;z-index:0;background:linear-gradient(to top,rgba(21,1,1,1) 0%,rgba(21,1,1,.85) 25%,rgba(21,1,1,.25) 60%,rgba(21,1,1,.4) 100%),linear-gradient(160deg,rgba(212,14,38,.3),transparent 50%)}
 .op-in{position:relative;z-index:1;max-width:1100px;margin:0 auto;width:100%}
-.op h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(6rem,18vw,15rem);line-height:.9;letter-spacing:.01em;color:#fff;margin:0 0 1.2rem;display:block}
+.op h1{font-family:'Inter',sans-serif;font-size:clamp(4.8rem,14.4vw,12rem);line-height:1;color:#fff;margin:0 0 1.2rem;display:block;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .op h1 span{display:inline-block}
 .op h1 span{color:var(--accent-bright)}
-.op-line{margin-top:.6rem;position:relative;z-index:2;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,2.8vw,2.5rem);letter-spacing:.04em;color:#fff;line-height:1.05;max-width:30ch}
+.op-line{margin-top:.6rem;position:relative;z-index:2;font-family:'Inter',sans-serif;font-size:clamp(1.2rem,2.24vw,2rem);color:#fff;line-height:1.05;max-width:30ch;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .op-sub{position:relative;z-index:2;margin:1.1rem 0 0;max-width:52ch;font-size:clamp(.95rem,1.15vw,1.08rem);font-weight:300;color:var(--b85);line-height:1.7}
 /* story */
 .st{padding:clamp(3.5rem,7vw,6rem) var(--gut)}
@@ -74,25 +74,25 @@
 .st-lead{font-size:clamp(1.25rem,1.7vw,1.7rem);font-weight:400;color:#fff;line-height:1.5;margin:0 0 1.8rem;text-wrap:pretty}
 .st-txt p{font-size:clamp(1.02rem,1.15vw,1.15rem);font-weight:300;color:var(--b85);line-height:1.85;margin:0 0 1.3rem;max-width:62ch}
 .st-txt p strong{color:#fff;font-weight:500}
-.st-pull{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,4.5vw,4rem);line-height:.92;color:#fff;margin:2.2rem 0;padding-left:1rem;border-left:3px solid var(--accent-bright);max-width:16ch}
+.st-pull{font-family:'Inter',sans-serif;font-size:clamp(1.76rem,3.6vw,3.2rem);line-height:1;color:#fff;margin:2.2rem 0;padding-left:1rem;border-left:3px solid var(--accent-bright);max-width:16ch;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .st-mid{display:none}
 /* statement */
 .stmt{padding:clamp(4rem,8vw,7rem) var(--gut);text-align:center;border-top:1px solid var(--line)}
-.stmt h2{position:relative;font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,5.5vw,5.2rem);line-height:.92;color:#fff;max-width:22ch;margin:0 auto}
+.stmt h2{position:relative;font-family:'Inter',sans-serif;font-size:clamp(1.92rem,4.4vw,4.16rem);line-height:1;color:#fff;max-width:22ch;margin:0 auto;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .stmt h2 span{color:var(--accent-bright)}
 .stmt p{position:relative;font-size:clamp(1rem,1.2vw,1.15rem);font-weight:300;color:var(--b85);max-width:50ch;margin:1.6rem auto 0;line-height:1.75}
 .stmt p a{color:var(--accent-bright)}
 .tl{padding:0 var(--gut) clamp(3.5rem,7vw,6rem)}
 .tl-in{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.1)}
 .tl-row{border-bottom:1px solid rgba(255,255,255,.1);padding:1.3rem 0}
-.tl-row p{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,3vw,2.6rem);line-height:1.05;color:var(--b70);margin:0;letter-spacing:.01em}
+.tl-row p{font-family:'Inter',sans-serif;font-size:clamp(1.2rem,2.4vw,2.08rem);line-height:1.05;color:var(--b70);margin:0;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .tl-row b{font-weight:400;color:#fff;display:block}
 .today{padding-top:0}
 .today .etiq{margin-bottom:1.2rem}
 .today .st-txt{grid-column:1/9}
 /* cta */
 .cta-f{position:relative;padding:clamp(5rem,10vw,8rem) var(--gut);text-align:center;border-top:1px solid var(--borde);overflow:hidden}
-.cta-f h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,7rem);line-height:.86;color:#fff;margin-bottom:1.5rem}
+.cta-f h2{font-family:'Inter',sans-serif;font-size:clamp(2.4rem,6.4vw,5.6rem);line-height:1;color:#fff;margin-bottom:1.5rem;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 @media(max-width:880px){
     .st-in{display:block}.st-pic{position:static;margin:0 0 1.8rem}.st-pic img{aspect-ratio:4/5;object-fit:cover;object-position:50% 25%}
   .st-mid{display:block;margin:1.6rem 0 2rem}.st-mid img{width:100%;height:auto;aspect-ratio:16/11;object-fit:cover;object-position:50% 30%;border-radius:14px;filter:grayscale(1) contrast(1.05)}
@@ -170,10 +170,10 @@
 
 <!-- CTA -->
 <section class="cta-f">
-  <h2 data-lang="es">¿hablamos?</h2>
-  <h2 data-lang="en">shall we talk?</h2>
+  <h2 data-lang="es">¿<span class="sf">hablamos</span>?</h2>
+  <h2 data-lang="en">shall we <span class="sf">talk</span>?</h2>
   <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:.5rem">
-    <a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">AGENDA TU LLAMADA GRATIS →</span><span data-lang="en">BOOK YOUR FREE CALL →</span></a>
+    <a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">AGENDA TU LLAMADA →</span><span data-lang="en">BOOK YOUR CALL →</span></a>
     <a href="newsletter.html" class="btn-f"><span data-lang="es">Suscríbete a The Brain →</span><span data-lang="en">Subscribe to The Brain →</span></a>
   </div>
 </section>
@@ -187,8 +187,8 @@
   <span class="fcopy">© 2026 The Andy Lab</span>
   <span class="ftagline" data-lang="es">Más músculo. Menos culpa.</span>
   <span class="ftagline" data-lang="en">More muscle. Less guilt.</span>
-  <p class="fdisc" data-lang="es" style="flex:0 0 100%;max-width:78ch;margin:.6rem 0 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.08);font-size:.72rem;line-height:1.7;font-weight:300;color:rgba(255,255,255,.5);letter-spacing:0;text-transform:none">The Andy Lab ofrece entrenamiento de fuerza y planificación nutricional para adultos sanos. Es un servicio de coaching, no un servicio médico ni sanitario, y no diagnostica, trata ni previene ninguna enfermedad. Andy no es nutricionista ni entrenadora personal certificada. Nada de lo que aparece aquí sustituye el consejo de tu médico u otro profesional sanitario colegiado. Consulta con tu médico antes de empezar cualquier plan de entrenamiento o nutrición, sobre todo si estás embarazada, te recuperas de una lesión o enfermedad, o tienes una condición médica o relacionada con la alimentación. Los resultados dependen de muchos factores, entre ellos tu constancia, y no están garantizados.</p>
-  <p class="fdisc" data-lang="en" style="flex:0 0 100%;max-width:78ch;margin:.6rem 0 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.08);font-size:.72rem;line-height:1.7;font-weight:300;color:rgba(255,255,255,.5);letter-spacing:0;text-transform:none">The Andy Lab offers strength training and nutrition planning for healthy adults. It is a coaching service, not a medical or healthcare service, and it does not diagnose, treat or prevent any condition. Andy is not a certified nutritionist or personal trainer. Nothing here replaces the advice of your doctor or another licensed health professional. Talk to your doctor before starting any training or nutrition plan, especially if you are pregnant, recovering from an injury or illness, or have a medical or eating-related condition. Results depend on many factors, including your own consistency, and are not guaranteed.</p>
+  <p class="fdisc" data-lang="es" style="flex:0 0 100%;max-width:none;width:100%;margin:.6rem 0 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.08);font-size:.72rem;line-height:1.7;font-weight:300;color:rgba(255,255,255,.5);letter-spacing:0;text-transform:none">The Andy Lab ofrece entrenamiento de fuerza y planificación nutricional para adultos sanos. Es un servicio de coaching, no un servicio médico ni sanitario, y no diagnostica, trata ni previene ninguna enfermedad. Andy no es nutricionista ni entrenadora personal certificada. Nada de lo que aparece aquí sustituye el consejo de tu médico u otro profesional sanitario colegiado. Consulta con tu médico antes de empezar cualquier plan de entrenamiento o nutrición, sobre todo si estás embarazada, te recuperas de una lesión o enfermedad, o tienes una condición médica o relacionada con la alimentación. Los resultados dependen de muchos factores, entre ellos tu constancia, y no están garantizados.</p>
+  <p class="fdisc" data-lang="en" style="flex:0 0 100%;max-width:none;width:100%;margin:.6rem 0 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.08);font-size:.72rem;line-height:1.7;font-weight:300;color:rgba(255,255,255,.5);letter-spacing:0;text-transform:none">The Andy Lab offers strength training and nutrition planning for healthy adults. It is a coaching service, not a medical or healthcare service, and it does not diagnose, treat or prevent any condition. Andy is not a certified nutritionist or personal trainer. Nothing here replaces the advice of your doctor or another licensed health professional. Talk to your doctor before starting any training or nutrition plan, especially if you are pregnant, recovering from an injury or illness, or have a medical or eating-related condition. Results depend on many factors, including your own consistency, and are not guaranteed.</p>
 </footer>
 
 <script>(function(){var els=document.querySelectorAll('.rv');if(window.matchMedia('(prefers-reduced-motion:reduce)').matches||!('IntersectionObserver' in window)){[].forEach.call(els,function(e){e.classList.add('in')});return}var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.08});[].forEach.call(els,function(e){io.observe(e)})})();</script>

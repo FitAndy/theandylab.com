@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/pepper.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css?v=20261026b">
 <style>
 /* ---------- hero ---------- */
@@ -24,8 +24,8 @@
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 44%,rgba(212,14,38,.08) 0%,transparent 62%);pointer-events:none}
 .hero-content{position:relative;flex:1;display:flex;flex-direction:column;align-items:flex-start;z-index:2;min-width:0}
 .hero-tag{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--b50);margin-bottom:2rem}
-.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.8rem,8vw,9.5rem);line-height:.84;letter-spacing:.01em;color:#fff;margin-bottom:2rem}
-.hero-hook{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.7rem,2.8vw,2.4rem);line-height:1;color:var(--accent-bright);margin:0 0 1.2rem;letter-spacing:.01em}
+.hero h1{font-family:'Inter',sans-serif;font-size:clamp(3.04rem,6.4vw,7.6rem);line-height:1;color:#fff;margin-bottom:2rem;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
+.hero-hook{font-family:'Inter',sans-serif;font-size:clamp(1.36rem,2.24vw,1.92rem);line-height:1;color:var(--accent-bright);margin:0 0 1.2rem;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .hero-sub{font-size:clamp(1rem,1.2vw,1.16rem);font-weight:300;color:var(--b85);max-width:52ch;margin:0 0 2.5rem;line-height:1.88;text-align:left}
 .hero-ctas{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
 .hero-text-link{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--b50);text-decoration:none;transition:color .25s;white-space:nowrap}
@@ -41,7 +41,7 @@
 /* ---------- sections ---------- */
 .lv{padding:clamp(3.5rem,7vw,6rem) var(--gut);border-top:1px solid var(--line)}
 .lv-in{max-width:1100px;margin:0 auto}
-.lv h2{font-family:'Bebas Neue',sans-serif;color:#fff;line-height:.9;letter-spacing:.01em;text-transform:uppercase}
+.lv h2{font-family:'Inter',sans-serif;color:#fff;line-height:1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .lv-h2{font-size:clamp(2.2rem,5vw,4rem);margin:.6rem 0 clamp(1.5rem,3vw,2.5rem)}
 .lv-p{font-size:clamp(1rem,1.15vw,1.15rem);font-weight:300;color:var(--b70);line-height:1.8;max-width:62ch;margin:0 0 1rem}
 .lv-p strong{color:#fff;font-weight:500}
@@ -52,16 +52,16 @@
 .tier-strip a{text-decoration:none;display:flex;flex-direction:column;gap:.2rem;padding:.9rem .8rem;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(41,4,5,.35);color:#fff;min-height:44px;transition:border-color .3s}
 .tier-strip a.feat{border-color:rgba(255,56,56,.5)}
 .tier-strip a:hover{border-color:rgba(255,56,56,.6);color:#fff}
-.tier-strip b{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:.03em;font-weight:400;line-height:1}
+.tier-strip b{font-family:'Inter',sans-serif;font-size:1.25rem;line-height:1;font-weight:800;letter-spacing:-.02em}
 .tier-strip span{font-size:.8rem;color:var(--b70);line-height:1.3}
 .tier-strip span em{font-style:normal;color:var(--accent-bright);font-weight:500}
 .lv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2vw,1.5rem);align-items:stretch}
 .lv-tier{position:relative;background:linear-gradient(160deg,rgba(74,1,1,.28),rgba(41,4,5,.5));border:1px solid rgba(212,14,38,.14);border-radius:16px;padding:clamp(1.6rem,2.8vw,2.4rem);display:flex;flex-direction:column;gap:1rem;scroll-margin-top:5.5rem}
 .lv-tier.feat{border-color:rgba(255,56,56,.55);box-shadow:0 24px 48px -20px rgba(212,14,38,.35)}
 .lv-badge{position:absolute;top:-.7rem;left:1.4rem;background:#D40E26;color:#fff;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;padding:.3rem .7rem;border-radius:99px;white-space:nowrap}
-.lv-tier h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,3vw,2.6rem);line-height:.9;color:#fff}
+.lv-tier h3{font-family:'Inter',sans-serif;font-size:clamp(1.6rem,2.4vw,2.08rem);line-height:1;color:#fff;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .lv-for{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-bright);margin:-.3rem 0 0;line-height:1.4;font-weight:500}
-.lv-price{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,4.5vw,3.8rem);line-height:1;color:var(--accent-bright)}
+.lv-price{font-family:'Inter',sans-serif;font-size:clamp(2.24rem,3.6vw,3.04rem);line-height:1;color:var(--accent-bright);font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .lv-price small{font-family:'Inter',sans-serif;font-size:.9rem;font-weight:300;color:#fff;letter-spacing:0;margin-left:.3rem}
 .lv-sub{font-size:.9rem;color:#fff;margin:-.4rem 0 0;line-height:1.5}
 .lv-h{font-size:1.1rem;font-weight:500;color:#fff;line-height:1.4}
@@ -94,14 +94,14 @@
 .tq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,2vw,1.5rem)}
 .tq{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem}
 .tq.feat{background:rgba(212,14,38,.06);border-color:rgba(212,14,38,.2)}
-.tq-q{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.4rem,2vw,1.7rem);color:#fff;line-height:1.05}
+.tq-q{font-family:'Inter',sans-serif;font-size:clamp(1.12rem,1.6vw,1.36rem);color:#fff;line-height:1.05;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .tq-b{font-size:1rem;font-weight:300;color:var(--b85);line-height:1.7;margin:0}
 .tq-n{font-size:.85rem;font-weight:500;color:var(--accent-bright);margin-top:auto}
 
 /* ---------- faq ---------- */
 .lv-faq details{border-top:1px solid rgba(255,255,255,.1);padding:1.1rem 0}
 .lv-faq details:last-child{border-bottom:1px solid rgba(255,255,255,.1)}
-.lv-faq summary{cursor:pointer;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.3rem,2vw,1.7rem);color:#fff;letter-spacing:.02em;list-style:none;display:flex;justify-content:space-between;gap:1rem;min-height:44px;align-items:center}
+.lv-faq summary{cursor:pointer;font-family:'Inter',sans-serif;font-size:clamp(1.04rem,1.6vw,1.36rem);color:#fff;list-style:none;display:flex;justify-content:space-between;gap:1rem;min-height:44px;align-items:center;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .lv-faq summary::-webkit-details-marker{display:none}
 .lv-faq summary::after{content:"+";color:var(--accent-bright);flex-shrink:0}
 .lv-faq details[open] summary::after{content:"\2212"}
@@ -113,7 +113,7 @@
 .lv-split{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2vw,1.5rem)}
 .lv-split a{position:relative;min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;text-decoration:none;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:clamp(1.4rem,2.5vw,2rem);background:linear-gradient(to top,rgba(21,1,1,.94) 22%,rgba(21,1,1,.45) 62%,rgba(21,1,1,.15)),var(--bg) var(--pos)/cover;transition:border-color .3s,transform .3s}
 .lv-split a:hover{border-color:rgba(255,56,56,.6);transform:translateY(-3px)}
-.lv-split h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,2.6vw,2.3rem);color:#fff;margin-bottom:.5rem}
+.lv-split h3{font-family:'Inter',sans-serif;font-size:clamp(1.44rem,2.08vw,1.84rem);color:#fff;margin-bottom:.5rem;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .lv-split p{font-size:1rem;font-weight:300;color:rgba(255,255,255,.88);line-height:1.7;margin:0}
 
 /* ---------- responsive ---------- */
@@ -157,7 +157,7 @@
 
 /* ===== v2 ===== */
 .hero{min-height:auto;padding-bottom:clamp(3rem,6vw,5rem)}
-.hero-quote{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,2.6vw,2.3rem);line-height:1.05;letter-spacing:.03em;color:var(--b50);margin:0 0 1.6rem;display:flex;flex-direction:column;gap:.25rem;align-items:flex-start}
+.hero-quote{font-family:'Inter',sans-serif;font-size:clamp(1.2rem,2.08vw,1.84rem);line-height:1.05;color:var(--b50);margin:0 0 1.6rem;display:flex;flex-direction:column;gap:.25rem;align-items:flex-start;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .hero-quote span{position:relative;display:inline-block;white-space:nowrap}
 .hero-quote span::after{content:'';position:absolute;left:-2%;right:auto;top:52%;height:2px;width:0;background:var(--accent-bright);transition:width .55s var(--ease)}
 .hero-quote span.x::after{width:104%}
@@ -174,7 +174,7 @@
 .app-shot{display:flex;flex-direction:column;gap:.9rem}
 .app-shot img{width:100%;height:auto;border-radius:18px;border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 50px -24px rgba(0,0,0,.9)}
 .app-shot p{font-size:.95rem;font-weight:300;color:var(--b85);line-height:1.5;margin:0}
-.app-shot b{display:block;font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:1.1rem;letter-spacing:.1em;color:var(--accent-bright);margin-bottom:.2rem}
+.app-shot b{display:block;font-family:'Inter',sans-serif;font-size:1.1rem;color:var(--accent-bright);margin-bottom:.2rem;font-weight:800;letter-spacing:-.02em}
 @media(max-width:1000px){.app-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:768px){.app-grid{display:flex}.app-grid>*{flex-basis:70%!important}}
 .coach{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
@@ -198,8 +198,8 @@
 .mt-hero::before{content:'';position:absolute;inset:auto -10% -30% auto;width:70%;aspect-ratio:1;background:radial-gradient(circle,rgba(212,14,38,.22),transparent 65%);pointer-events:none}
 .mt-hero-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(2rem,5vw,4rem);align-items:center;position:relative}
 .mt-copy{position:relative;z-index:2}
-.mt-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(4.2rem,10vw,10rem);line-height:.84;color:#fff;margin:.6rem 0 1rem}
-.mt-arrows{display:flex;gap:.6rem;font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3.4rem);line-height:1;margin:0 0 1.4rem}
+.mt-hero h1{font-family:'Inter',sans-serif;font-size:clamp(3.36rem,8vw,8rem);line-height:1;color:#fff;margin:.6rem 0 1rem;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
+.mt-arrows{display:flex;gap:.6rem;font-family:'Inter',sans-serif;font-size:clamp(1.6rem,3.2vw,2.72rem);line-height:1;margin:0 0 1.4rem;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .mt-arrows span{width:1.4em;height:1.4em;display:grid;place-items:center;border-radius:10px;border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.35)}
 .mt-arrows .up{color:#4ADE80}.mt-arrows .mid{color:#fff}.mt-arrows .dn{color:var(--accent-bright)}
 .mt-hero .lv-p{font-size:clamp(1.05rem,1.3vw,1.25rem);max-width:46ch}
@@ -249,7 +249,7 @@
 <div class="mt-hero-in">
 <div class="mt-copy">
 <span class="etiq">THE Lab</span>
-<h1 data-lang="es">Ganar músculo<br>cuesta.</h1><h1 data-lang="en">Building muscle<br>is hard.</h1>
+<h1 data-lang="es">Ganar músculo<br><span class="sf">cuesta</span>.</h1><h1 data-lang="en">Building muscle<br>is <span class="sf">hard</span>.</h1>
 <p class="lv-p" data-lang="es">Hacerlo a ciegas, más. Aquí tendrás un plan hecho para ti, una app que te muestra tu progreso y a mí al otro lado, leyendo tus datos y ajustando tu plan.</p><p class="lv-p" data-lang="en">Doing it blind is harder. Here you’ll have a plan made for you, an app that shows your progress, and me on the other side, reading your data and adjusting your plan.</p>
 </div>
 <div class="mt-stack" aria-hidden="true">
@@ -261,7 +261,7 @@
 </section>
 <section class="lv"><div class="lv-in rv">
 <span class="etiq"><span data-lang="es">Y además</span><span data-lang="en">And then</span></span>
-<h2 class="lv-h2" data-lang="es">Sí, hay una app.<br>Y es muy buena.</h2><h2 class="lv-h2" data-lang="en">Yes, there’s an app.<br>And it’s very good.</h2>
+<h2 class="lv-h2" data-lang="es">Sí, hay una app.<br>Y es <span class="sf">muy buena</span>.</h2><h2 class="lv-h2" data-lang="en">Yes, there’s an app.<br>And it’s <span class="sf">very good</span>.</h2>
 <p class="lv-p" data-lang="es">Tu plan, tus series, tu comida y tus datos, en el móvil. Y yo del otro lado.</p><p class="lv-p" data-lang="en">Your plan, your sets, your food and your data, on your phone. And me on the other side.</p>
 <div class="app-grid" data-swipe style="margin-top:2rem">
 <div class="app-shot"><img src="assets/img/app-v2-home.webp" width="760" height="1339" loading="lazy" alt="App home screen with the week's sessions, consistency and today's workout"><p><b>HOME</b><span data-lang="es">Tu día, de un vistazo.</span><span data-lang="en">Your day, at a glance.</span></p></div>
@@ -281,18 +281,18 @@
 </div></section>
 <section class="lv" id="niveles-resumen"><div class="lv-in rv">
 <span class="etiq"><span data-lang="es">Los tres niveles</span><span data-lang="en">The three levels</span></span>
-<h2 class="lv-h2" data-lang="es">Elige cuánto de mí necesitas.</h2><h2 class="lv-h2" data-lang="en">Choose how much of me you need.</h2>
+<h2 class="lv-h2" data-lang="es">Elige cuánto de <span class="sf">mí</span> necesitas.</h2><h2 class="lv-h2" data-lang="en">Choose how much of <span class="sf">me</span> you need.</h2>
 <div style="display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.2rem 0 1rem;-webkit-overflow-scrolling:touch" data-swipe>
-<div style="padding:1.3rem 1.4rem;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(21,1,1,.4);display:flex;flex-direction:column;gap:.5rem;min-width:240px;scroll-snap-align:start"><b style="font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.03em;color:#fff;font-weight:400;line-height:1">Mild</b><span style="color:#FF3838;font-weight:500"><span data-lang="es">€100 / mes</span><span data-lang="en">€100 / month</span></span><span style="color:var(--b70);font-size:.95rem;line-height:1.55"><span data-lang="es">Tú entrenas. Yo miro los números. Y tan amigas.</span><span data-lang="en">You train. I handle the numbers. No messages required.</span></span></div>
-<div style="padding:1.3rem 1.4rem;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(21,1,1,.4);display:flex;flex-direction:column;gap:.5rem;min-width:240px;scroll-snap-align:start"><b style="font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.03em;color:#fff;font-weight:400;line-height:1">Spicy</b><span style="color:#FF3838;font-weight:500"><span data-lang="es">€250 / mes</span><span data-lang="en">€250 / month</span></span><span style="color:var(--b70);font-size:.95rem;line-height:1.55"><span data-lang="es">Tú entrenas. Yo estoy pendiente.</span><span data-lang="en">You train. I’m in your corner.</span></span></div>
-<div style="padding:1.3rem 1.4rem;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(21,1,1,.4);display:flex;flex-direction:column;gap:.5rem;min-width:240px;scroll-snap-align:start"><b style="font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.03em;color:#fff;font-weight:400;line-height:1">Extra Spicy</b><span style="color:#FF3838;font-weight:500"><span data-lang="es">€300 / mes</span><span data-lang="en">€300 / month</span></span><span style="color:var(--b70);font-size:.95rem;line-height:1.55"><span data-lang="es">Tú entrenas. Y yo también me meto en tu cocina.</span><span data-lang="en">You train. We work on what goes on your plate, too.</span></span></div>
+<div style="padding:1.3rem 1.4rem;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(21,1,1,.4);display:flex;flex-direction:column;gap:.5rem;min-width:240px;scroll-snap-align:start"><b style="font-family:'Inter',sans-serif;font-size:1.36rem;color:#fff;line-height:1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase">Mild</b><span style="color:#FF3838;font-weight:500"><span data-lang="es">€100 / mes</span><span data-lang="en">€100 / month</span></span><span style="color:var(--b70);font-size:.95rem;line-height:1.55"><span data-lang="es">Tú entrenas. Yo miro los números. Y tan amigas.</span><span data-lang="en">You train. I handle the numbers. No messages required.</span></span></div>
+<div style="padding:1.3rem 1.4rem;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(21,1,1,.4);display:flex;flex-direction:column;gap:.5rem;min-width:240px;scroll-snap-align:start"><b style="font-family:'Inter',sans-serif;font-size:1.36rem;color:#fff;line-height:1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase">Spicy</b><span style="color:#FF3838;font-weight:500"><span data-lang="es">€250 / mes</span><span data-lang="en">€250 / month</span></span><span style="color:var(--b70);font-size:.95rem;line-height:1.55"><span data-lang="es">Tú entrenas. Yo estoy pendiente.</span><span data-lang="en">You train. I’m in your corner.</span></span></div>
+<div style="padding:1.3rem 1.4rem;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(21,1,1,.4);display:flex;flex-direction:column;gap:.5rem;min-width:240px;scroll-snap-align:start"><b style="font-family:'Inter',sans-serif;font-size:1.36rem;color:#fff;line-height:1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase">Extra Spicy</b><span style="color:#FF3838;font-weight:500"><span data-lang="es">€300 / mes</span><span data-lang="en">€300 / month</span></span><span style="color:var(--b70);font-size:.95rem;line-height:1.55"><span data-lang="es">Tú entrenas. Y yo también me meto en tu cocina.</span><span data-lang="en">You train. We work on what goes on your plate, too.</span></span></div>
 </div>
 <p class="lv-p" style="margin-top:1rem"><a href="index.html#niveles" style="color:var(--accent-bright);text-decoration:none;border-bottom:1px solid currentColor;padding:.4rem 0;display:inline-block"><span data-lang="es">Ver todo lo que incluye cada nivel →</span><span data-lang="en">See everything each level includes →</span></a></p>
 </div></section>
 <section class="lv"><div class="lv-in mt-globe rv">
 <div>
 <span class="etiq"><span data-lang="es">Clientas de The Andy Lab</span><span data-lang="en">The Andy Lab clients</span></span>
-<h2 class="lv-h2" data-lang="es">Lo que dicen ellas.</h2><h2 class="lv-h2" data-lang="en">In their words.</h2>
+<h2 class="lv-h2" data-lang="es">Lo que dicen <span class="sf">ellas</span>.</h2><h2 class="lv-h2" data-lang="en">In <span class="sf">their words</span>.</h2>
 <p class="lv-p" data-lang="es">Madrid, Londres, Hamburgo, Ámsterdam, Abu Dabi, México. Toca un punto para leer a las clientas de esa ciudad.</p><p class="lv-p" data-lang="en">Madrid, London, Hamburg, Amsterdam, Abu Dhabi, Mexico. Tap a pin to read the clients in that city.</p>
 </div>
 <div class="intro-globe">
@@ -336,77 +336,77 @@ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en
 <!-- TESTIMONIALS -->
 <section id="testimonials" style="padding:clamp(2rem,4vw,3rem) var(--gut);border-top:1px solid var(--line)">
   <span class="etiq reveal" style="display:inline-flex;margin-bottom:clamp(1.5rem,3vw,2rem)"><span data-lang="es">Clientas de The Andy Lab</span><span data-lang="en">The Andy Lab clients</span></span>
-  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;line-height:.9;margin-bottom:clamp(2rem,4vw,3rem)" data-lang="es">Clientas de The Andy Lab</h2>
-  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;line-height:.9;margin-bottom:clamp(2rem,4vw,3rem)" data-lang="en">The Andy Lab clients</h2>
+  <h2 style="font-family:'Inter',sans-serif;font-size:clamp(1.6rem,4vw,2.8rem);color:#fff;line-height:1;margin-bottom:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="es">Clientas de The Andy Lab</h2>
+  <h2 style="font-family:'Inter',sans-serif;font-size:clamp(1.6rem,4vw,2.8rem);color:#fff;line-height:1;margin-bottom:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="en">The Andy Lab clients</h2>
   <div style="max-width:900px;margin:0 auto clamp(1.5rem,3vw,2.5rem);text-align:center">
 <p style="font-family:system-ui,-apple-system,sans-serif;font-size:clamp(1.3rem,2.4vw,1.9rem);line-height:1.15;font-weight:400;color:#fff;margin-bottom:1rem" data-lang="es">Programas genéricos hay muchos, todos están diseñados para la persona promedio.</p><p style="font-family:system-ui,-apple-system,sans-serif;font-size:clamp(1.3rem,2.4vw,1.9rem);line-height:1.15;font-weight:400;color:#fff;margin-bottom:1rem" data-lang="en">There are plenty of generic programs, but they're all designed for the average person.</p>
-<p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);line-height:.95;color:var(--accent);margin-bottom:1.6rem" data-lang="es">Y tú de promedio no tienes nada.</p><p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);line-height:.95;color:var(--accent);margin-bottom:1.6rem" data-lang="en">And you're anything but average.</p>
-<p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:.95;color:#fff;margin-bottom:clamp(1.8rem,3vw,2.6rem)" data-lang="es">Por eso existe The Andy Lab.</p><p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:.95;color:#fff;margin-bottom:clamp(1.8rem,3vw,2.6rem)" data-lang="en">That’s why The Andy Lab exists.</p>
+<p style="font-family:'Inter',sans-serif;font-size:clamp(1.6rem,3.2vw,2.4rem);line-height:.95;color:var(--accent);margin-bottom:1.6rem;font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="es">Y tú de promedio no tienes nada.</p><p style="font-family:'Inter',sans-serif;font-size:clamp(1.6rem,3.2vw,2.4rem);line-height:.95;color:var(--accent);margin-bottom:1.6rem;font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="en">And you're anything but average.</p>
+<p style="font-family:'Inter',sans-serif;font-size:clamp(1.36rem,2.72vw,2.08rem);line-height:.95;color:#fff;margin-bottom:clamp(1.8rem,3vw,2.6rem);font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="es">Por eso existe The Andy Lab.</p><p style="font-family:'Inter',sans-serif;font-size:clamp(1.36rem,2.72vw,2.08rem);line-height:.95;color:#fff;margin-bottom:clamp(1.8rem,3vw,2.6rem);font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="en">That’s why The Andy Lab exists.</p>
 </div>
 
 <div data-swipe style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(1rem,2vw,1.5rem)" class="reveal-stagger">
     <!-- Sarah — highlighted -->
     <div style="background:rgba(212,14,38,.06);border:1px solid rgba(212,14,38,.18);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1">"I finally just... go to the gym."</p>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(0.96rem,1.44vw,1.2rem);color:#fff;line-height:1.1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase">"I finally just... go to the gym."</p>
       <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7">I'd been going to the gym on and off for years before working with Andrea. Having an actual program makes it so much easier to just show up, but what really changed things is how she thinks about behavior. She's helped me figure out how to fit healthier habits into my actual life, not some ideal version of it. It's not just about the workouts. It's how I eat, how I build routines, what's realistic for me. It adapts instead of fighting against how I actually live.</p>
       <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Sarah · Amsterdam</p>
     </div>
     <!-- Juliana -->
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"Totalmente personalizado. Eso lo hace diferente."</p>
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"Fully personalized. That's what makes it different."</p>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(0.96rem,1.44vw,1.2rem);color:#fff;line-height:1.1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="es">"Totalmente personalizado. Eso lo hace diferente."</p>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(0.96rem,1.44vw,1.2rem);color:#fff;line-height:1.1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="en">"Fully personalized. That's what makes it different."</p>
       <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">Me gusta esta propuesta de The Andy Lab porque se centra en la individualización, y no en lo masivo. Es totalmente personalizado y eso lo hace diferente. El componente de conocimiento, rigor y ejemplo que brinda Andrea como guía en el proceso generan confianza y despiertan un gran compromiso. Su plataforma es intuitiva y útil, lo que hace más agradable el entrenamiento.</p>
       <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">What I like about The Andy Lab is that it focuses on the individual, not the masses. It's fully personalized and that's what makes it different. Andrea's knowledge, rigor, and the example she sets as a guide build trust and create real commitment. The platform is intuitive and useful, which makes training more enjoyable.</p>
       <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Juliana O. · Abu Dhabi</p>
     </div>
     <!-- Nicole R -->
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1">"Every session leaves me feeling stronger."</p>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(0.96rem,1.44vw,1.2rem);color:#fff;line-height:1.1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase">"Every session leaves me feeling stronger."</p>
       <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7">The training is challenging, engaging, and incredibly effective. Even when you're unable to do certain movements, Andy tweaks the program so you don't lose out. I can't recommend The Andy Lab enough!</p>
       <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Nicole R. · Hamburg</p>
     </div>
     <!-- Amy B — highlighted -->
     <div style="background:rgba(212,14,38,.06);border:1px solid rgba(212,14,38,.18);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1">"I've literally never looked, or felt, better."</p>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(0.96rem,1.44vw,1.2rem);color:#fff;line-height:1.1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase">"I've literally never looked, or felt, better."</p>
       <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7">The Andy Lab has completely changed the way I see fitness as a way to feel stronger and healthier, rather than a way to stay 'small'. It's the first app I've tried that has helped me improve my nutrition without making me feel like I'm on a diet, and I've literally never looked (or felt!!) better. I recommend it to every woman I know.</p>
       <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Amy B. · London</p>
     </div>
     <!-- Laura G -->
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"No sabía que iba a ser tan fácil engancharme."</p>
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"I didn't know it'd be so easy to get hooked."</p>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(0.96rem,1.44vw,1.2rem);color:#fff;line-height:1.1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="es">"No sabía que iba a ser tan fácil engancharme."</p>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(0.96rem,1.44vw,1.2rem);color:#fff;line-height:1.1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="en">"I didn't know it'd be so easy to get hooked."</p>
       <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">Yo sabía que tener fuerza era esencial para mi salud. Lo que no sabía es que iba a ser tan fácil engancharme y ver resultados. ¡Gracias Andy por guiarme y siempre estar ahí!</p>
       <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">I knew strength was essential for my health. What I didn't know was how easy it'd be to get hooked and see results. Thank you Andy for guiding me and always being there!</p>
       <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Laura G. · Madrid</p>
     </div>
     <!-- Laura C -->
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"Ese odio a las pesas se puede cambiar."</p>
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"That hatred of weights can change."</p>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(0.96rem,1.44vw,1.2rem);color:#fff;line-height:1.1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="es">"Ese odio a las pesas se puede cambiar."</p>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(0.96rem,1.44vw,1.2rem);color:#fff;line-height:1.1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="en">"That hatred of weights can change."</p>
       <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">Siempre me consideré deportista (correr, nadar, bici, pilates) pero las pesas siempre las vi con malos ojos. Hoy rindo mucho más en cardio, me siento más equilibrada, y todo empezó con un entrenamiento a mi medida. Soy una muestra fiel de que suma más de lo que uno cree.</p>
       <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">I always looked down on weights. Today I perform much better in cardio, I feel more balanced, and it all started with a program tailored to me. I'm living proof it adds up more than you think.</p>
       <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Laura C. · Madrid</p>
     </div>
     <!-- Bea C -->
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"El gran punto de inflexión."</p>
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"The turning point."</p>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(0.96rem,1.44vw,1.2rem);color:#fff;line-height:1.1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="es">"El gran punto de inflexión."</p>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(0.96rem,1.44vw,1.2rem);color:#fff;line-height:1.1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="en">"The turning point."</p>
       <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">Trabajar con Andrea me ha permitido ver que tenemos cierta barrera las mujeres. Poder enfrentarme a las máquinas desconocidas y que me hicieran un programa a mi medida ha sido el gran punto de inflexión, Andreíta. Y ya si además me lleva a bailar, fenomenal.</p>
       <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">Working with Andrea showed me the barriers we women carry. Facing unfamiliar machines with a program made for me was the real turning point.</p>
       <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Bea C. · Madrid</p>
     </div>
     <!-- Cecilia -->
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"Tenía miedo de ir al gimnasio. Ni un paso atrás."</p>
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"I was afraid of the gym. Not one step back."</p>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(0.96rem,1.44vw,1.2rem);color:#fff;line-height:1.1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="es">"Tenía miedo de ir al gimnasio. Ni un paso atrás."</p>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(0.96rem,1.44vw,1.2rem);color:#fff;line-height:1.1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="en">"I was afraid of the gym. Not one step back."</p>
       <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">Antes de comenzar el entrenamiento con Andy, tenía miedo de ir al gimnasio, sin ningún tipo de guía ni de formación. El plan individualizado y su cercanía me ayudaron a vencer ese miedo. Los vídeos explicativos son muy claros, y el plan de incremento de pesos te anima al ver el avance. La revisión de mi alimentación me ayudó a mejorar la distribución de nutrientes, tener mayor energía a lo largo del día y facilitar la construcción muscular. El proceso de cambio en mi cuerpo y los hábitos a largo plazo están siendo algo real.</p>
       <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">Before training with Andy, I was afraid of the gym, with no guidance or training. The individualized plan and her closeness helped me overcome that fear. The explanatory videos are very clear, and the progressive weight plan motivates you as you see progress. The nutrition review helped me improve how I distribute nutrients, have more energy throughout the day, and build muscle. The changes in my body and the long-term habits are becoming something real.</p>
       <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Cecilia P. · Madrid</p>
     </div>
     <!-- Laura E — highlighted -->
     <div style="background:rgba(212,14,38,.06);border:1px solid rgba(212,14,38,.18);border-radius:12px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s">
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="es">"Me ayudó a sentirme fuerte en el postparto."</p>
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,1.8vw,1.5rem);color:#fff;line-height:1.1" data-lang="en">"It helped me feel strong postpartum."</p>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(0.96rem,1.44vw,1.2rem);color:#fff;line-height:1.1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="es">"Me ayudó a sentirme fuerte en el postparto."</p>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(0.96rem,1.44vw,1.2rem);color:#fff;line-height:1.1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase" data-lang="en">"It helped me feel strong postpartum."</p>
       <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="es">The Andy Lab me dio las herramientas para volver poco a poco a sentirme fuerte después de dar a luz. Tomar conciencia de mi cuerpo y su capacidad ha sido clave.</p>
       <p style="font-size:.88rem;font-weight:300;color:#fff;line-height:1.7" data-lang="en">The Andy Lab gave me the tools to gradually feel strong again after giving birth. Becoming aware of my body and its capacity has been key.</p>
       <p style="font-size:.78rem;font-weight:500;color:var(--accent);margin-top:auto">Laura E. · Madrid</p>
@@ -425,9 +425,9 @@ g.parentNode.insertBefore(bar,g);})();
 </script>
 
 <section class="lv"><div class="lv-in rv" style="text-align:center">
-<h2 class="lv-h2" data-lang="es">¿Hablamos?</h2><h2 class="lv-h2" data-lang="en">Shall we talk?</h2>
-<p class="lv-p" data-lang="es" style="margin:0 auto 1.6rem">20 minutos, gratis. Me cuentas dónde estás y te digo si puedo ayudarte.</p><p class="lv-p" data-lang="en" style="margin:0 auto 1.6rem">20 minutes, free. You tell me where you are and I tell you if I can help.</p>
-<div class="lv-cta" style="justify-content:center"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">AGENDA TU LLAMADA GRATIS →</span><span data-lang="en">BOOK YOUR FREE CALL →</span></a><a href="index.html#niveles" class="btn-f"><span data-lang="es">Ver los tres niveles →</span><span data-lang="en">See the three levels →</span></a></div>
+<h2 class="lv-h2" data-lang="es">¿<span class="sf">Hablamos</span>?</h2><h2 class="lv-h2" data-lang="en">Shall we <span class="sf">talk</span>?</h2>
+<p class="lv-p" data-lang="es" style="margin:0 auto 1.6rem">20 minutos. Me cuentas dónde estás y te digo si puedo ayudarte.</p><p class="lv-p" data-lang="en" style="margin:0 auto 1.6rem">20 minutes. You tell me where you are and I tell you if I can help.</p>
+<div class="lv-cta" style="justify-content:center"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">AGENDA TU LLAMADA →</span><span data-lang="en">BOOK YOUR CALL →</span></a><a href="index.html#niveles" class="btn-f"><span data-lang="es">Ver los tres niveles →</span><span data-lang="en">See the three levels →</span></a></div>
 </div></section>
 
 <footer class="site-footer">
@@ -439,8 +439,8 @@ g.parentNode.insertBefore(bar,g);})();
   <span class="fcopy">© 2026 The Andy Lab</span>
   <span class="ftagline" data-lang="es">Más músculo. Menos culpa.</span>
   <span class="ftagline" data-lang="en">More muscle. Less guilt.</span>
-  <p class="fdisc" data-lang="es" style="flex:0 0 100%;max-width:78ch;margin:.6rem 0 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.08);font-size:.72rem;line-height:1.7;font-weight:300;color:rgba(255,255,255,.5);letter-spacing:0;text-transform:none">The Andy Lab ofrece entrenamiento de fuerza y planificación nutricional para adultos sanos. Es un servicio de coaching, no un servicio médico ni sanitario, y no diagnostica, trata ni previene ninguna enfermedad. Andy no es nutricionista ni entrenadora personal certificada. Nada de lo que aparece aquí sustituye el consejo de tu médico u otro profesional sanitario colegiado. Consulta con tu médico antes de empezar cualquier plan de entrenamiento o nutrición, sobre todo si estás embarazada, te recuperas de una lesión o enfermedad, o tienes una condición médica o relacionada con la alimentación. Los resultados dependen de muchos factores, entre ellos tu constancia, y no están garantizados.</p>
-  <p class="fdisc" data-lang="en" style="flex:0 0 100%;max-width:78ch;margin:.6rem 0 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.08);font-size:.72rem;line-height:1.7;font-weight:300;color:rgba(255,255,255,.5);letter-spacing:0;text-transform:none">The Andy Lab offers strength training and nutrition planning for healthy adults. It is a coaching service, not a medical or healthcare service, and it does not diagnose, treat or prevent any condition. Andy is not a certified nutritionist or personal trainer. Nothing here replaces the advice of your doctor or another licensed health professional. Talk to your doctor before starting any training or nutrition plan, especially if you are pregnant, recovering from an injury or illness, or have a medical or eating-related condition. Results depend on many factors, including your own consistency, and are not guaranteed.</p>
+  <p class="fdisc" data-lang="es" style="flex:0 0 100%;max-width:none;width:100%;margin:.6rem 0 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.08);font-size:.72rem;line-height:1.7;font-weight:300;color:rgba(255,255,255,.5);letter-spacing:0;text-transform:none">The Andy Lab ofrece entrenamiento de fuerza y planificación nutricional para adultos sanos. Es un servicio de coaching, no un servicio médico ni sanitario, y no diagnostica, trata ni previene ninguna enfermedad. Andy no es nutricionista ni entrenadora personal certificada. Nada de lo que aparece aquí sustituye el consejo de tu médico u otro profesional sanitario colegiado. Consulta con tu médico antes de empezar cualquier plan de entrenamiento o nutrición, sobre todo si estás embarazada, te recuperas de una lesión o enfermedad, o tienes una condición médica o relacionada con la alimentación. Los resultados dependen de muchos factores, entre ellos tu constancia, y no están garantizados.</p>
+  <p class="fdisc" data-lang="en" style="flex:0 0 100%;max-width:none;width:100%;margin:.6rem 0 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.08);font-size:.72rem;line-height:1.7;font-weight:300;color:rgba(255,255,255,.5);letter-spacing:0;text-transform:none">The Andy Lab offers strength training and nutrition planning for healthy adults. It is a coaching service, not a medical or healthcare service, and it does not diagnose, treat or prevent any condition. Andy is not a certified nutritionist or personal trainer. Nothing here replaces the advice of your doctor or another licensed health professional. Talk to your doctor before starting any training or nutrition plan, especially if you are pregnant, recovering from an injury or illness, or have a medical or eating-related condition. Results depend on many factors, including your own consistency, and are not guaranteed.</p>
 </footer>
 
 <script>(function(){var m=document.getElementById('md');function u(){m.setAttribute('content',m.getAttribute('data-'+(document.documentElement.lang==='en'?'en':'es')))}u();new MutationObserver(u).observe(document.documentElement,{attributes:true,attributeFilter:['lang']})})();</script>

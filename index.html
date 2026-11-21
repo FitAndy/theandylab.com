@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/pepper.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/andy-flex.webp" fetchpriority="high">
 <link rel="stylesheet" href="assets/site.css?v=20261026b">
 <style>
@@ -25,8 +25,8 @@
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 44%,rgba(212,14,38,.08) 0%,transparent 62%);pointer-events:none}
 .hero-content{position:relative;flex:1;display:flex;flex-direction:column;align-items:flex-start;z-index:2;min-width:0}
 .hero-tag{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--b50);margin-bottom:2rem}
-.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.8rem,8vw,9.5rem);line-height:.84;letter-spacing:.01em;color:#fff;margin-bottom:2rem}
-.hero-hook{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.7rem,2.8vw,2.4rem);line-height:1;color:var(--accent-bright);margin:0 0 1.2rem;letter-spacing:.01em}
+.hero h1{font-family:'Inter',sans-serif;font-size:clamp(3.04rem,6.4vw,7.6rem);line-height:1;color:#fff;margin-bottom:2rem;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
+.hero-hook{font-family:'Inter',sans-serif;font-size:clamp(1.36rem,2.24vw,1.92rem);line-height:1;color:var(--accent-bright);margin:0 0 1.2rem;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .hero-sub{font-size:clamp(.98rem,1.1vw,1.08rem);font-weight:300;color:var(--b70);max-width:48ch;margin:1.6rem 0 0;line-height:1.8;text-align:left}
 .hero-ctas{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
 .hero-text-link{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--b50);text-decoration:none;transition:color .25s;white-space:nowrap}
@@ -42,7 +42,7 @@
 /* ---------- sections ---------- */
 .lv{padding:clamp(3.5rem,7vw,6rem) var(--gut);border-top:1px solid var(--line)}
 .lv-in{max-width:1100px;margin:0 auto}
-.lv h2{font-family:'Bebas Neue',sans-serif;color:#fff;line-height:.9;letter-spacing:.01em;text-transform:uppercase}
+.lv h2{font-family:'Inter',sans-serif;color:#fff;line-height:1;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .lv-h2{font-size:clamp(2.2rem,5vw,4rem);margin:.6rem 0 clamp(1.5rem,3vw,2.5rem)}
 .lv-p{font-size:clamp(1rem,1.15vw,1.15rem);font-weight:300;color:var(--b70);line-height:1.8;max-width:62ch;margin:0 0 1rem}
 .lv-p strong{color:#fff;font-weight:500}
@@ -53,16 +53,16 @@
 .tier-strip a{text-decoration:none;display:flex;flex-direction:column;gap:.2rem;padding:.9rem .8rem;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(41,4,5,.35);color:#fff;min-height:44px;transition:border-color .3s}
 .tier-strip a.feat{border-color:rgba(255,56,56,.5)}
 .tier-strip a:hover{border-color:rgba(255,56,56,.6);color:#fff}
-.tier-strip b{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:.03em;font-weight:400;line-height:1}
+.tier-strip b{font-family:'Inter',sans-serif;font-size:1.25rem;line-height:1;font-weight:800;letter-spacing:-.02em}
 .tier-strip span{font-size:.8rem;color:var(--b70);line-height:1.3}
 .tier-strip span em{font-style:normal;color:#FF3838;font-weight:500}
 .lv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2vw,1.5rem);align-items:stretch}
 .lv-tier{position:relative;background:linear-gradient(160deg,rgba(74,1,1,.28),rgba(41,4,5,.5));border:1px solid rgba(212,14,38,.14);border-radius:16px;padding:clamp(1.6rem,2.8vw,2.4rem);display:flex;flex-direction:column;gap:1rem;scroll-margin-top:5.5rem}
 .lv-tier.feat{border-color:rgba(255,56,56,.55);box-shadow:0 24px 48px -20px rgba(212,14,38,.35)}
 .lv-badge{position:absolute;top:-.7rem;left:1.4rem;background:#D40E26;color:#fff;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;padding:.3rem .7rem;border-radius:99px;white-space:nowrap}
-.lv-tier h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,3vw,2.6rem);line-height:.9;color:#fff}
+.lv-tier h3{font-family:'Inter',sans-serif;font-size:clamp(1.6rem,2.4vw,2.08rem);line-height:1;color:#fff;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .lv-for{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-bright);margin:-.3rem 0 0;line-height:1.4;font-weight:500}
-.lv-price{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,4.5vw,3.8rem);line-height:1;color:var(--accent-bright)}
+.lv-price{font-family:'Inter',sans-serif;font-size:clamp(2.24rem,3.6vw,3.04rem);line-height:1;color:var(--accent-bright);font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .lv-price small{font-family:'Inter',sans-serif;font-size:.9rem;font-weight:300;color:#fff;letter-spacing:0;margin-left:.3rem}
 .lv-sub{font-size:.9rem;color:#fff;margin:-.4rem 0 0;line-height:1.5}
 .lv-price{color:#FF3838}.lv-tier .lv-more>p.lv-tag,.lv-tier>p.lv-tag{font-size:1.15rem;line-height:1.35;color:#fff;margin:.2rem 0 .4rem;font-weight:600}.lv-tier .lv-more>p.lv-sub,.lv-tier>p.lv-sub{font-size:.8rem;font-style:italic;font-weight:300;line-height:1.5}
@@ -96,14 +96,14 @@
 .tq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,2vw,1.5rem)}
 .tq{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:clamp(1.4rem,2.5vw,2rem);display:flex;flex-direction:column;gap:1rem}
 .tq.feat{background:rgba(212,14,38,.06);border-color:rgba(212,14,38,.2)}
-.tq-q{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.4rem,2vw,1.7rem);color:#fff;line-height:1.05}
+.tq-q{font-family:'Inter',sans-serif;font-size:clamp(1.12rem,1.6vw,1.36rem);color:#fff;line-height:1.05;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .tq-b{font-size:1rem;font-weight:300;color:var(--b85);line-height:1.7;margin:0}
 .tq-n{font-size:.85rem;font-weight:500;color:var(--accent-bright);margin-top:auto}
 
 /* ---------- faq ---------- */
 .lv-faq details{border-top:1px solid rgba(255,255,255,.1);padding:1.1rem 0}
 .lv-faq details:last-child{border-bottom:1px solid rgba(255,255,255,.1)}
-.lv-faq summary{cursor:pointer;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.3rem,2vw,1.7rem);color:#fff;letter-spacing:.02em;list-style:none;display:flex;justify-content:space-between;gap:1rem;min-height:44px;align-items:center}
+.lv-faq summary{cursor:pointer;font-family:'Inter',sans-serif;font-size:clamp(1.04rem,1.6vw,1.36rem);color:#fff;list-style:none;display:flex;justify-content:space-between;gap:1rem;min-height:44px;align-items:center;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .lv-faq summary::-webkit-details-marker{display:none}
 .lv-faq summary::after{content:"+";color:var(--accent-bright);flex-shrink:0}
 .lv-faq details[open] summary::after{content:"\2212"}
@@ -115,7 +115,7 @@
 .lv-split{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2vw,1.5rem)}
 .lv-split a{position:relative;min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;text-decoration:none;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:clamp(1.4rem,2.5vw,2rem);background:linear-gradient(to top,rgba(21,1,1,.94) 22%,rgba(21,1,1,.45) 62%,rgba(21,1,1,.15)),var(--bg) var(--pos)/cover;transition:border-color .3s,transform .3s}
 .lv-split a:hover{border-color:rgba(255,56,56,.6);transform:translateY(-3px)}
-.lv-split h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,2.6vw,2.3rem);color:#fff;margin-bottom:.5rem}
+.lv-split h3{font-family:'Inter',sans-serif;font-size:clamp(1.44rem,2.08vw,1.84rem);color:#fff;margin-bottom:.5rem;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .lv-split p{font-size:1rem;font-weight:300;color:rgba(255,255,255,.88);line-height:1.7;margin:0}
 
 /* ---------- responsive ---------- */
@@ -159,7 +159,7 @@
 
 /* ===== v2 ===== */
 .hero{min-height:auto;padding-bottom:clamp(3rem,6vw,5rem)}
-.hero-quote{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,2.6vw,2.3rem);line-height:1.05;letter-spacing:.03em;color:var(--b50);margin:0 0 1.6rem;display:flex;flex-direction:column;gap:.25rem;align-items:flex-start}
+.hero-quote{font-family:'Inter',sans-serif;font-size:clamp(1.2rem,2.08vw,1.84rem);line-height:1.05;color:var(--b50);margin:0 0 1.6rem;display:flex;flex-direction:column;gap:.25rem;align-items:flex-start;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .hero-quote span{position:relative;display:inline-block;white-space:nowrap}
 .hero-quote span::after{content:'';position:absolute;left:-2%;right:auto;top:52%;height:2px;width:0;background:var(--accent-bright);transition:width .55s var(--ease)}
 .hero-quote span.x::after{width:104%}
@@ -179,7 +179,7 @@
 .app-shot{display:flex;flex-direction:column;gap:.9rem}
 .app-shot img{width:100%;height:auto;border-radius:18px;border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 50px -24px rgba(0,0,0,.9)}
 .app-shot p{font-size:.95rem;font-weight:300;color:var(--b85);line-height:1.5;margin:0}
-.app-shot b{display:block;font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:1.1rem;letter-spacing:.1em;color:var(--accent-bright);margin-bottom:.2rem}
+.app-shot b{display:block;font-family:'Inter',sans-serif;font-size:1.1rem;color:var(--accent-bright);margin-bottom:.2rem;font-weight:800;letter-spacing:-.02em}
 @media(max-width:1000px){.app-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:768px){.app-grid{display:flex}.app-grid>*{flex-basis:70%!important}}
 .coach{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
@@ -201,7 +201,7 @@
 
 .proof{display:block}
 .proof-q{margin:1.6rem 0 0;padding:0 0 0 1.1rem;border-left:2px solid var(--accent-bright)}
-.proof-q p{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.4rem,2vw,1.8rem);color:#fff;line-height:1.05;margin:0 0 .4rem}
+.proof-q p{font-family:'Inter',sans-serif;font-size:clamp(1.12rem,1.6vw,1.44rem);color:#fff;line-height:1.05;margin:0 0 .4rem;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .proof-q cite{font-style:normal;font-size:.85rem;color:var(--accent-bright);font-weight:500}
 
 /* ===== hero v3 ===== */
@@ -240,16 +240,16 @@
 .hx-in{max-width:1100px;margin:0 auto;position:relative;z-index:2}
 .hx-ctas{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap;margin-top:2rem}
 .hx .hero-fine{margin-top:1rem}
-.hx-eyebrow{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--b50);margin-bottom:1.6rem}
+.hx-eyebrow{font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;color:#fff;font-weight:800;margin-bottom:1.6rem}
 @media(max-width:560px){.hx-ctas{flex-direction:column;align-items:stretch;gap:.6rem}.hx-ctas .btn-p,.hx-ctas .hero-text-link{text-align:center;justify-content:center}}
 
 .hx-c{min-height:100svh;display:flex;align-items:flex-end;padding-bottom:clamp(3rem,6vw,5rem)}
 .hx-pic{position:absolute;inset:0;z-index:0}
 .hx-pic img{width:100%;height:100%;object-fit:contain;object-position:50% 0;filter:grayscale(1) contrast(1.05) brightness(.8)}
 .hx-pic::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(21,1,1,1) 0%,rgba(21,1,1,.85) 25%,rgba(21,1,1,.25) 60%,rgba(21,1,1,.4) 100%),linear-gradient(160deg,rgba(212,14,38,.3),transparent 50%)}
-.hx-c h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,11vw,11.5rem);line-height:.84;color:#fff;margin:0 0 1.2rem;max-width:12ch}
+.hx-c h1{font-family:'Inter',sans-serif;font-size:clamp(3.2rem,8.8vw,9.2rem);line-height:1;color:#fff;margin:0 0 1.2rem;max-width:12ch;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .hx-c h1 em{font-style:normal;color:var(--accent-bright)}
-.hx-c .hx-line{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,3vw,2.6rem);letter-spacing:.03em;color:#fff;margin:0}
+.hx-c .hx-line{font-family:'Inter',sans-serif;font-size:clamp(1.2rem,2.4vw,2.08rem);color:#fff;margin:0;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .hx-c .hx-sub{font-size:clamp(1rem,1.15vw,1.12rem);font-weight:300;color:var(--b85);line-height:1.7;max-width:46ch;margin:1.2rem 0 0}
 .hx-c .hero-hook{margin:0}
 .hx-club{font-size:.88rem;font-weight:300;color:var(--b70);line-height:1.6;max-width:46ch;margin:1rem 0 0;padding-top:1rem;border-top:1px solid rgba(255,255,255,.14)}
@@ -289,14 +289,15 @@
 @media(max-width:768px){.hx-c .hx-pic{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:auto;margin:0 calc(var(--gut) * -1);aspect-ratio:4/5;max-width:none}.hx-c .hx-pic img{object-position:50% 25%}.hx-c .hx-pic{border-left:0;border-bottom:1px solid rgba(250,249,246,.35)}.hx-c .hx-in{margin-top:2rem}}
 @media(max-width:768px){.hx-c{flex-direction:column;align-items:stretch;justify-content:flex-start;min-height:0;padding-top:0;padding-bottom:2.6rem}.hx-c .hx-pic{flex:none}.hx-c .hx-in{width:100%;margin-top:1.75rem}.hx-c h1{font-size:clamp(2.6rem,11.5vw,3.6rem)}}
 @media(max-width:768px){.hx-c .hx-pic{aspect-ratio:1/1;height:auto;min-height:0}.hx-c .hx-pic img{object-position:50% 40%}.hx-c .hx-in{display:flex;flex-direction:column;margin-top:1.1rem}.hx-c .hx-in>*{order:5}.hx-c .hx-in>h1{order:1;margin-bottom:.6rem}.hx-c .hx-in>.hx-line{order:2}.hx-c .hx-in>.hx-ctas{order:3;margin-top:1.1rem}.hx-c .hx-in>.hero-fine{order:4}.hx-c .hx-in>.hx-sub{order:6}.hx-c .hx-in>.hx-club{order:7}.hx-c .hero-text-link{width:auto!important;height:auto!important;min-height:44px;display:flex;align-items:center;justify-content:center}.hx-c .hero-text-link span{font-size:13px!important}}
+@media(min-width:769px){.hx-c .hx-in{width:50%;padding-right:clamp(2.5rem,5vw,5.5rem);box-sizing:border-box}.hx-c h1{max-width:100%}}
 @media(max-width:768px){.hx-c .hx-pic{overflow:hidden;position:relative}.hx-c .hx-pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}.hx-c .hx-in{position:relative;z-index:3}}
 
 /* ===== how it works + newsletter block ===== */
 .hw{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(2rem,5vw,4rem);align-items:center;margin-top:1.4rem}
 .hw-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1.6rem}
 .hw-list li{display:grid;grid-template-columns:2rem minmax(0,1fr);gap:1rem;align-items:start}
-.hw-n{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;line-height:.9;color:var(--accent-bright)}
-.hw-list b{display:block;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,2.2vw,2rem);letter-spacing:.03em;font-weight:400;color:#fff;line-height:1;margin-bottom:.35rem}
+.hw-n{font-family:'Inter',sans-serif;font-size:2.2rem;line-height:1;color:var(--accent-bright);font-weight:800;letter-spacing:-.02em}
+.hw-list b{display:block;font-family:'Inter',sans-serif;font-size:clamp(1.2rem,1.76vw,1.6rem);color:#fff;line-height:1;margin-bottom:.35rem;font-weight:800;letter-spacing:-.04em;text-transform:lowercase}
 .hw-list p{margin:0;font-size:1rem;font-weight:300;color:var(--b85);line-height:1.7}
 .hw-shot img{display:block;width:100%;max-width:300px;height:auto;margin:0 auto;border-radius:18px;border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 50px -24px rgba(0,0,0,.9)}
 .proof-more{font-size:.9rem;color:var(--b70);margin:.8rem 0 0}
@@ -332,10 +333,10 @@
 <div class="hx-pic"><img src="assets/img/andy-hero-new.webp" width="814" height="966" alt="Andy sonriendo, flexionando el brazo" fetchpriority="high"></div>
 <div class="hx-in">
 <p class="hx-eyebrow">THE ANDY LAB</p>
-<h1 data-lang="es" style="font-size:clamp(2.2rem,5.2vw,5.4rem)">Tienes tres horas a la semana para entrenar.<br><em style="color:#D40E26">Cuatro, con suerte.</em></h1><h1 data-lang="en" style="font-size:clamp(2.2rem,5.2vw,5.4rem)">You have three hours a week to train.<br><em style="color:#D40E26">Four if we’re lucky.</em></h1>
+<h1 data-lang="es" style="font-size:clamp(2.2rem,4.4vw,4.6rem)">Tienes tres horas a la semana para entrenar.<br><em style="color:#D40E26">Cuatro, <span class="sf">con suerte</span>.</em></h1><h1 data-lang="en" style="font-size:clamp(2.2rem,4.4vw,4.6rem)">You have three hours a week to train.<br><em style="color:#D40E26">Four if we’re <span class="sf">lucky</span>.</em></h1>
 <p class="hx-line" data-lang="es" style="font-size:clamp(1.7rem,2.8vw,2.4rem);line-height:1.05">Mi trabajo es que ninguna se desperdicie.</p><p class="hx-line" data-lang="en" style="font-size:clamp(1.7rem,2.8vw,2.4rem);line-height:1.05">My job is that none of them is wasted.</p>
 <p class="hero-hook" style="margin-top:1rem;order:3;color:#D40E26">Más músculo. Menos culpa.</p>
-<div class="hx-ctas"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">AGENDA UNA LLAMADA GRATIS DE 20 MINUTOS →</span><span data-lang="en">BOOK A FREE 20-MINUTE CALL →</span></a><a href="#como-funciona" class="hero-text-link" style="width:146px;height:21px"><span data-lang="es" style="font-size:10px">Mira cómo trabajo</span><span data-lang="en" style="font-size:10px">See how I work</span></a></div>
+<div class="hx-ctas"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">AGENDA UNA LLAMADA DE 20 MINUTOS →</span><span data-lang="en">BOOK A 20-MINUTE CALL →</span></a><a href="#como-funciona" class="hero-text-link" style="width:146px;height:21px"><span data-lang="es" style="font-size:10px">Mira cómo trabajo</span><span data-lang="en" style="font-size:10px">See how I work</span></a></div>
 </div></section>
 
 <section class="lv" id="quien-soy"><div class="lv-in rv">
@@ -360,7 +361,7 @@
 
 <div class="proof-txt">
 <span class="etiq"><span data-lang="es">Lo que cambia</span><span data-lang="en">What changes</span></span>
-<h2 class="lv-h2" data-lang="es">Vas a dejar de empezar<br>de cero cada lunes.</h2><h2 class="lv-h2" data-lang="en">You’ll stop starting<br>over every Monday.</h2>
+<h2 class="lv-h2" data-lang="es">Vas a dejar de empezar<br>de cero <span class="sf">cada lunes</span>.</h2><h2 class="lv-h2" data-lang="en">You’ll stop starting<br><span class="sf">every Monday</span>.</h2>
 <p class="lv-p" data-lang="es">Entrenar deja de ser algo que te obligas a hacer y pasa a ser parte de quien eres. Comes como adulta, levantas pesas sin pedir permiso y entiendes qué cambia en tu cuerpo y por qué.</p><p class="lv-p" data-lang="en">Training stops being something you force yourself to do and becomes part of who you are. You eat like an adult, lift without asking permission, and understand what is changing in your body and why.</p>
 <blockquote class="proof-q"><p>"I've literally never looked, or felt, better."</p><cite>Amy B. · London</cite></blockquote>
 <p class="proof-more" data-lang="es">Clientas en Madrid, Londres, Hamburgo, Ámsterdam, Abu Dabi y México.</p><p class="proof-more" data-lang="en">Clients in Madrid, London, Hamburg, Amsterdam, Abu Dhabi and Mexico.</p>
@@ -370,7 +371,7 @@
 
 <section class="lv" id="niveles"><div class="lv-in rv">
 <span class="etiq"><span data-lang="es">Los tres niveles</span><span data-lang="en">The three levels</span></span>
-<h2 class="lv-h2" data-lang="es">Tres formas de tenerme en tu semana.</h2><h2 class="lv-h2" data-lang="en">Three ways to have me in your week.</h2>
+<h2 class="lv-h2" data-lang="es">Tres formas de <span class="sf">tenerme</span> en tu semana.</h2><h2 class="lv-h2" data-lang="en">Three ways to <span class="sf">have me</span> in your week.</h2>
 <div class="tier-strip">
 <a href="#tier-mild"><b>Mild</b><span><em>€100</em> <span data-lang="es">/ mes</span><span data-lang="en">/ month</span></span></a>
 <a href="#tier-spicy"><b>Spicy</b><span><em>€250</em> <span data-lang="es">/ mes</span><span data-lang="en">/ month</span></span></a>
@@ -383,21 +384,21 @@
 <p class="lv-tag" data-lang="es">Tú entrenas. Yo miro los números. Y tan amigas.</p><p class="lv-tag" data-lang="en">You train. I handle the numbers. No messages required.</p>
 <p data-lang="es" style="margin:0 0 .7rem">Preparo un programa de entrenamiento adaptado a tus objetivos, tu disponibilidad y tu nivel. Lo tienes todo en la app.</p><p data-lang="es" style="margin:0 0 .7rem">Tú registras tus entrenamientos y, cada cuatro semanas, reviso los datos, veo cómo estás progresando y preparo el siguiente bloque.</p><p data-lang="es" style="margin:0 0 .7rem">No hace falta que estemos hablando continuamente. Tú haces tu parte y yo me encargo de que el programa siga teniendo sentido.</p><p data-lang="es" style="margin:0 0 .7rem">¿Quieres hablar conmigo? Puedes reservar una llamada de 30 minutos por €80.</p>
 <p data-lang="en" style="margin:0 0 .7rem">A training programme built around your goals, schedule and experience, delivered through your app.</p><p data-lang="en" style="margin:0 0 .7rem">You log your workouts. Every four weeks, I review your training data, assess your progress and build your next training block.</p><p data-lang="en" style="margin:0 0 .7rem">No regular check-ins or ongoing messaging. Just a well-thought-out plan, reviewed by me with your training data in front of me.</p><p data-lang="en" style="margin:0 0 .7rem">Want to talk? You can book a 30-minute call for €80.</p>
-<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar llamada →</span><span data-lang="en">Book a call →</span></a><p class="lv-alt lv-fine" data-lang="es">Primero una llamada gratis de 20 minutos. No pagas nada hasta que hablemos.</p><p class="lv-alt lv-fine" data-lang="en">First a free 20-minute call. You pay nothing until we talk.</p></div>
+<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar llamada →</span><span data-lang="en">Book a call →</span></a><p class="lv-alt lv-fine" data-lang="es">Primero una llamada de 20 minutos. No pagas nada hasta que hablemos.</p><p class="lv-alt lv-fine" data-lang="en">First a 20-minute call. You pay nothing until we talk.</p></div>
 <div class="lv-tier" id="tier-spicy">
 <h3>Spicy <span class="lv-peps"><img src="assets/img/pepper.png" alt=""><img src="assets/img/pepper.png" alt=""></span></h3><p class="lv-for" data-lang="es">Para la que quiere algo más que una rutina: entender lo que hace y poder hablar conmigo durante el proceso.</p><p class="lv-for" data-lang="en">For the woman who wants to understand her training, ask questions and have me involved along the way.</p><div class="lv-price">€250<small data-lang="es">/ mes</small><small data-lang="en">/ month</small></div>
 <p class="lv-sub" data-lang="es">€250 / mes · Solo entrenamiento · Compromiso mínimo de 3 meses · Tres bloques de 4 semanas</p><p class="lv-sub" data-lang="en">€250 / month · Training only · 3-month minimum commitment · Three 4-week training blocks</p>
 <p class="lv-tag" data-lang="es">Tú entrenas. Yo estoy pendiente.</p><p class="lv-tag" data-lang="en">You train. I’m in your corner.</p>
 <p data-lang="es" style="margin:0 0 .7rem">Todo lo que incluye Mild, pero esta vez trabajamos más de cerca.</p><p data-lang="es" style="margin:0 0 .7rem">Cada cuatro semanas nos sentamos a revisar cómo vas, qué está funcionando y qué tenemos que ajustar.</p><p data-lang="es" style="margin:0 0 .7rem">Y tienes mi WhatsApp para cuando surjan preguntas o la vida se interponga en el entrenamiento: un viaje de trabajo, un hombro que da guerra o esa semana en la que no has conseguido hacer ni la mitad de lo previsto.</p><p data-lang="es" style="margin:0 0 .7rem">Me escribes, reviso tu situación y te respondo en un máximo de 48 horas laborables.</p><p data-lang="es" style="margin:0 0 .7rem">Porque un buen programa no consiste en cumplirlo a rajatabla. Consiste en saber qué hacer cuando las cosas no salen como estaban previstas.</p>
 <p data-lang="en" style="margin:0 0 .7rem">Everything in Mild, plus a more hands-on working relationship.</p><p data-lang="en" style="margin:0 0 .7rem">Every four weeks, we review your progress together. You also have access to me on WhatsApp for the questions and unexpected events that come with real life: the work trip, the sore shoulder, the week that went completely sideways.</p><p data-lang="en" style="margin:0 0 .7rem">I review your questions with your training data and context in mind, and reply within 48 business hours.</p><p data-lang="en" style="margin:0 0 .7rem">Because your programme should adapt to your life. Not the other way around.</p>
-<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar llamada →</span><span data-lang="en">Book a call →</span></a><p class="lv-alt lv-fine" data-lang="es">Primero una llamada gratis de 20 minutos. No pagas nada hasta que hablemos.</p><p class="lv-alt lv-fine" data-lang="en">First a free 20-minute call. You pay nothing until we talk.</p></div>
+<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar llamada →</span><span data-lang="en">Book a call →</span></a><p class="lv-alt lv-fine" data-lang="es">Primero una llamada de 20 minutos. No pagas nada hasta que hablemos.</p><p class="lv-alt lv-fine" data-lang="en">First a 20-minute call. You pay nothing until we talk.</p></div>
 <div class="lv-tier hot" id="tier-extra">
 <h3>Extra Spicy <span class="lv-peps"><img src="assets/img/pepper.png" alt=""><img src="assets/img/pepper.png" alt=""><img src="assets/img/pepper.png" alt=""></span></h3><p class="lv-for" data-lang="es">Para la que ya sabe que entrenar es solo una parte de la ecuación y quiere poner orden también en la alimentación.</p><p class="lv-for" data-lang="en">For the woman who knows that training is only part of the equation and wants to get her nutrition sorted, too.</p><div class="lv-price">€300<small data-lang="es">/ mes</small><small data-lang="en">/ month</small></div>
 <p class="lv-sub" data-lang="es">€300 / mes · Entrenamiento y nutrición · Compromiso mínimo de 3 meses · Tres bloques de 4 semanas</p><p class="lv-sub" data-lang="en">€300 / month · Training and nutrition · 3-month minimum commitment · Three 4-week training blocks</p>
 <p class="lv-tag" data-lang="es">Tú entrenas. Y yo también me meto en tu cocina.</p><p class="lv-tag" data-lang="en">You train. We work on what goes on your plate, too.</p>
 <p data-lang="es" style="margin:0 0 .7rem">Todo lo que incluye Spicy, más acompañamiento nutricional personalizado.</p><p data-lang="es" style="margin:0 0 .7rem">Trabajamos sobre tus hábitos, tus necesidades y tus objetivos para que sepas qué comer, cuánto necesitas y cómo organizarte sin vivir pendiente de la comida.</p><p data-lang="es" style="margin:0 0 .7rem">Nada de dietas imposibles ni menús que requieren tres horas de preparación. Tampoco de abrir la nevera a las seis de la tarde y ponerte a hacer cálculos.</p><p data-lang="es" style="margin:0 0 .7rem">Y sí, puedes comer pan.</p>
 <p data-lang="en" style="margin:0 0 .7rem">Everything in Spicy, plus personalised nutrition support.</p><p data-lang="en" style="margin:0 0 .7rem">We’ll work on your eating habits, nutritional needs and practical food choices, with a plan that complements your training and your goals.</p><p data-lang="en" style="margin:0 0 .7rem">No generic meal plans. No unnecessary food rules. No standing in front of the fridge at 6 pm wondering what on earth you’re supposed to eat.</p><p data-lang="en" style="margin:0 0 .7rem">And yes, bread is included.</p><p data-lang="en" style="margin:0 0 .7rem">Because the point isn’t to make eating another full-time job. It’s to help you understand how to eat well, make it work in real life and keep doing it.</p>
-<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar llamada →</span><span data-lang="en">Book a call →</span></a><p class="lv-alt lv-fine" data-lang="es">Primero una llamada gratis de 20 minutos. No pagas nada hasta que hablemos.</p><p class="lv-alt lv-fine" data-lang="en">First a free 20-minute call. You pay nothing until we talk.</p></div>
+<a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar llamada →</span><span data-lang="en">Book a call →</span></a><p class="lv-alt lv-fine" data-lang="es">Primero una llamada de 20 minutos. No pagas nada hasta que hablemos.</p><p class="lv-alt lv-fine" data-lang="en">First a 20-minute call. You pay nothing until we talk.</p></div>
 </div>
 <p class="lv-fine" data-lang="es" style="margin-top:1.2rem">Spicy y Extra Spicy tienen lista de espera cuando el club está lleno.</p><p class="lv-fine" data-lang="en" style="margin-top:1.2rem">Spicy and Extra Spicy have a waitlist when the club is full.</p></div>
 <script>(function(){var tabs=document.querySelectorAll('.tier-strip a'),cards=document.querySelectorAll('#niveles .lv-tier');function show(id,scroll){tabs.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id)});cards.forEach(function(c){c.classList.toggle('on',c.id===id)});if(scroll){var s=document.querySelector('.tier-strip');var y=s.getBoundingClientRect().top+window.pageYOffset-80;if(Math.abs(window.pageYOffset-y)>120)window.scrollTo({top:y,behavior:'smooth'})}}tabs.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();show(a.getAttribute('href').slice(1),false)})});document.querySelectorAll('a[href^="#tier-"]:not(.tier-strip a)').forEach(function(a){a.addEventListener('click',function(){show(a.getAttribute('href').slice(1),false)})});var h=location.hash.replace('#','');show(/^tier-/.test(h)?h:'tier-mild',false);})();</script>
@@ -406,8 +407,8 @@
 <section class="lv lv-talk2"><div class="lv-in rv">
 <div class="lt2-txt">
 <span class="etiq"><span data-lang="es">El primer paso</span><span data-lang="en">The first step</span></span>
-<h2 class="lv-h2" data-lang="es">Hablemos primero, a ver si encajamos.</h2><h2 class="lv-h2" data-lang="en">Let’s chat first, to see if we’re a good fit.</h2>
-<p class="lv-p" data-lang="es">Veinte minutos, gratis, sin discurso de venta. Me cuentas cómo entrenas y en qué llevas tiempo dando vueltas sin avanzar. Yo te digo con honestidad qué nivel te encaja, o si no soy la persona indicada.</p><p class="lv-p" data-lang="en">Twenty minutes, free, no pitch. You tell me how you train and what has been going in circles. I tell you honestly which level fits, or whether I’m the wrong person for you.</p>
+<h2 class="lv-h2" data-lang="es">Hablemos primero, a ver si <span class="sf">encajamos</span>.</h2><h2 class="lv-h2" data-lang="en">Let’s chat first, to see if we’re a <span class="sf">good fit</span>.</h2>
+<p class="lv-p" data-lang="es">Veinte minutos, sin discurso de venta. Me cuentas cómo entrenas y en qué llevas tiempo dando vueltas sin avanzar. Yo te digo con honestidad qué nivel te encaja, o si no soy la persona indicada.</p><p class="lv-p" data-lang="en">Twenty minutes, no pitch. You tell me how you train and what has been going in circles. I tell you honestly which level fits, or whether I’m the wrong person for you.</p>
 <div class="lv-cta"><a href="https://calendly.com/hello-theandylab/30min" target="_blank" rel="noopener" class="btn-p"><span data-lang="es">Agendar la llamada →</span><span data-lang="en">Book the call →</span></a></div>
 <p class="lt2-note" data-lang="es">Mild es un plan que reviso por ti. Spicy y Extra Spicy son trabajo conmigo.</p><p class="lt2-note" data-lang="en">Mild is a plan I review for you. Spicy and Extra Spicy are work with me.</p>
 </div>
@@ -419,8 +420,8 @@
 <div class="nlb">
 <div>
 <span class="etiq">Newsletter</span>
-<h2 class="lv-h2 nlb-h" data-lang="es">Mi newsletter. Una idea por semana sobre por qué no hacemos lo que sabemos que deberíamos hacer.</h2><h2 class="lv-h2 nlb-h" data-lang="en">My newsletter. One idea a week on why we don’t do what we know we should.</h2>
-<p class="lv-p" data-lang="es">El estudio que la respalda, sus límites y un sistema lo bastante pequeño para una mala semana. Escrita para mujeres que entrenan fuerza y les gusta leer. Gratis, en inglés.</p><p class="lv-p" data-lang="en">The study behind it, its limits, and a system small enough for a bad week. Written for women who lift and read. Free, in English.</p>
+<h2 class="lv-h2 nlb-h" data-lang="es">Mi newsletter. <span class="sf">Una idea por semana</span> sobre por qué no hacemos lo que sabemos que deberíamos hacer.</h2><h2 class="lv-h2 nlb-h" data-lang="en">My newsletter. <span class="sf">One idea a week</span> on why we don’t do what we know we should.</h2>
+<p class="lv-p" data-lang="es">El estudio que la respalda, sus límites y un sistema lo bastante pequeño para una mala semana. Escrita para mujeres que entrenan fuerza y les gusta leer. En inglés.</p><p class="lv-p" data-lang="en">The study behind it, its limits, and a system small enough for a bad week. Written for women who lift and read. In English.</p>
 </div>
 <div class="nlb-form">
 <iframe data-tally-src="https://tally.so/embed/ja8X0R?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&theme=dark" loading="lazy" width="100%" height="120" frameborder="0" marginheight="0" marginwidth="0" title="Newsletter"></iframe>
@@ -441,8 +442,8 @@
   <span class="fcopy">© 2026 The Andy Lab</span>
   <span class="ftagline" data-lang="es">Más músculo. Menos culpa.</span>
   <span class="ftagline" data-lang="en">More muscle. Less guilt.</span>
-  <p class="fdisc" data-lang="es" style="flex:0 0 100%;max-width:78ch;margin:.6rem 0 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.08);font-size:.72rem;line-height:1.7;font-weight:300;color:rgba(255,255,255,.5);letter-spacing:0;text-transform:none">The Andy Lab ofrece entrenamiento de fuerza y planificación nutricional para adultos sanos. Es un servicio de coaching, no un servicio médico ni sanitario, y no diagnostica, trata ni previene ninguna enfermedad. Andy no es nutricionista ni entrenadora personal certificada. Nada de lo que aparece aquí sustituye el consejo de tu médico u otro profesional sanitario colegiado. Consulta con tu médico antes de empezar cualquier plan de entrenamiento o nutrición, sobre todo si estás embarazada, te recuperas de una lesión o enfermedad, o tienes una condición médica o relacionada con la alimentación. Los resultados dependen de muchos factores, entre ellos tu constancia, y no están garantizados.</p>
-  <p class="fdisc" data-lang="en" style="flex:0 0 100%;max-width:78ch;margin:.6rem 0 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.08);font-size:.72rem;line-height:1.7;font-weight:300;color:rgba(255,255,255,.5);letter-spacing:0;text-transform:none">The Andy Lab offers strength training and nutrition planning for healthy adults. It is a coaching service, not a medical or healthcare service, and it does not diagnose, treat or prevent any condition. Andy is not a certified nutritionist or personal trainer. Nothing here replaces the advice of your doctor or another licensed health professional. Talk to your doctor before starting any training or nutrition plan, especially if you are pregnant, recovering from an injury or illness, or have a medical or eating-related condition. Results depend on many factors, including your own consistency, and are not guaranteed.</p>
+  <p class="fdisc" data-lang="es" style="flex:0 0 100%;max-width:none;width:100%;margin:.6rem 0 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.08);font-size:.72rem;line-height:1.7;font-weight:300;color:rgba(255,255,255,.5);letter-spacing:0;text-transform:none">The Andy Lab ofrece entrenamiento de fuerza y planificación nutricional para adultos sanos. Es un servicio de coaching, no un servicio médico ni sanitario, y no diagnostica, trata ni previene ninguna enfermedad. Andy no es nutricionista ni entrenadora personal certificada. Nada de lo que aparece aquí sustituye el consejo de tu médico u otro profesional sanitario colegiado. Consulta con tu médico antes de empezar cualquier plan de entrenamiento o nutrición, sobre todo si estás embarazada, te recuperas de una lesión o enfermedad, o tienes una condición médica o relacionada con la alimentación. Los resultados dependen de muchos factores, entre ellos tu constancia, y no están garantizados.</p>
+  <p class="fdisc" data-lang="en" style="flex:0 0 100%;max-width:none;width:100%;margin:.6rem 0 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.08);font-size:.72rem;line-height:1.7;font-weight:300;color:rgba(255,255,255,.5);letter-spacing:0;text-transform:none">The Andy Lab offers strength training and nutrition planning for healthy adults. It is a coaching service, not a medical or healthcare service, and it does not diagnose, treat or prevent any condition. Andy is not a certified nutritionist or personal trainer. Nothing here replaces the advice of your doctor or another licensed health professional. Talk to your doctor before starting any training or nutrition plan, especially if you are pregnant, recovering from an injury or illness, or have a medical or eating-related condition. Results depend on many factors, including your own consistency, and are not guaranteed.</p>
 </footer>
 
 
